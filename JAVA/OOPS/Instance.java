@@ -11,6 +11,7 @@ class Child{
     float display(int a){
         return a+c;
     }
+
 }
 class Instance {
     static int a=100;
