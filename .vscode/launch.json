@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Pyramid",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.Pyramid",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch FriendshipTest",
       "request": "launch",
       "mainClass": "Examly.FriendshipTest",
