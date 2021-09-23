@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ClassroomColor",
+      "request": "launch",
+      "mainClass": "Examly.ClassroomColor",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch HashMap1",
       "request": "launch",
       "mainClass": "Collections.HashMap1",
