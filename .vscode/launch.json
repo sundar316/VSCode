@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch YoungOld",
+      "request": "launch",
+      "mainClass": "Examly.YoungOld",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch FilmFestival",
+      "request": "launch",
+      "mainClass": "Examly.FilmFestival",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch VMS",
       "request": "launch",
       "mainClass": "Examly.VMS",
