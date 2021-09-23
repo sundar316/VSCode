@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch VMS",
+      "request": "launch",
+      "mainClass": "Examly.VMS",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch ClassroomColor",
       "request": "launch",
       "mainClass": "Examly.ClassroomColor",
