@@ -23,9 +23,6 @@ public class HashMap1 {
             System.out.println(A.get(sc.nextInt()));
             sc.close();
         }
-        catch(NullPointerException e){
-            System.out.println("Enter 0 to 10");
-        }
         catch(InputMismatchException e){
             System.out.println("Enter Number");
         }
