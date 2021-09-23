@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch a1",
+      "request": "launch",
+      "mainClass": "Arrays.a1",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Pyramid",
       "request": "launch",
       "mainClass": "Samples.Patterns.Pyramid",
