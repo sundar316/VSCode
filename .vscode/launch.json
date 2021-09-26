@@ -3,6 +3,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Collision",
+      "request": "launch",
+      "mainClass": "Examly.Collision",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Age",
+      "request": "launch",
+      "mainClass": "Examly.Age",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch HighestValueNumber",
+      "request": "launch",
+      "mainClass": "Examly.HighestValueNumber",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch FullIsland",
+      "request": "launch",
+      "mainClass": "Examly.FullIsland",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch CountNumberedCell",
+      "request": "launch",
+      "mainClass": "Examly.CountNumberedCell",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Main",
       "request": "launch",
       "mainClass": "Examly.Main",
