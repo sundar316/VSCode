@@ -11,11 +11,17 @@ public class Collision {
         int a=0;
         for(int i=0;i<N;i++)
         {
-            int count=0;
             for(int j=0;j<M;j++)
             {
                 arr[i][j]=sc.nextInt();
-                if(arr[i][j]==1)
+            }
+        }
+        for(int i=0;i<M;i++)
+        {
+            int count=0;
+            for(int j=0;j<N;j++)
+            {
+                if(arr[j][i]==1)
                 {
                     count++;
                 }
