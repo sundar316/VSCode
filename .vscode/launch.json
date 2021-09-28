@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch No",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.No",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch ArrayList1",
+      "request": "launch",
+      "mainClass": "Collections.ArrayList1",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Collision",
       "request": "launch",
       "mainClass": "Examly.Collision",
