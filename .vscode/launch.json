@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Nireah",
+      "request": "launch",
+      "mainClass": "Samples.Nireah",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch No",
       "request": "launch",
       "mainClass": "Samples.Patterns.No",
