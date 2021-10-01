@@ -3,6 +3,97 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch MoveNegativeElement",
+      "request": "launch",
+      "mainClass": "Examly.MoveNegativeElement",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch NumberChallenge",
+      "request": "launch",
+      "mainClass": "Examly.NumberChallenge",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch NelaBirthday",
+      "request": "launch",
+      "mainClass": "Examly.NelaBirthday",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch WildCardMatching",
+      "request": "launch",
+      "mainClass": "Examly.WildCardMatching",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch CaptionContest",
+      "request": "launch",
+      "mainClass": "Examly.CaptionContest",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MobileNoValidation",
+      "request": "launch",
+      "mainClass": "Examly.MobileNoValidation",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch CasperAtTheCarnival",
+      "request": "launch",
+      "mainClass": "Examly.CasperAtTheCarnival",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MailValidation",
+      "request": "launch",
+      "mainClass": "Examly.MailValidation",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch CamelCase",
+      "request": "launch",
+      "mainClass": "Examly.CamelCase",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch AlternatingCode",
+      "request": "launch",
+      "mainClass": "Examly.AlternatingCode",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch AdjacentChar",
+      "request": "launch",
+      "mainClass": "Examly.AdjacentChar",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch SingleDigit",
+      "request": "launch",
+      "mainClass": "Samples.SingleDigit",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "Strings.Solution",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Nireah",
       "request": "launch",
       "mainClass": "Samples.Nireah",
