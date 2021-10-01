@@ -10,10 +10,40 @@ public class Pyramid{
         {
             for(int j=0;j<n;j++)
             {
-                if(i+j>=n-1)
-                    System.out.print(" *");
+                if(n%2!=0)
+                {
+                    if(((i+j)%2==0 && i+j>=n-1))
+                        System.out.print("* ");
+                    else
+                        System.out.print("  ");
+                }
                 else
-                    System.out.print(" ");
+                {
+                    if(((i+j)%2!=0 && i+j>=n-1))
+                        System.out.print("* ");
+                    else
+                        System.out.print("  ");
+                }
+            }
+            if(n%2!=0)
+            {
+                for(int j=1;j<n;j++)
+                {
+                    if((i+j)%2==0 && i>=j)
+                        System.out.print("* ");
+                    else
+                        System.out.print("  ");
+                }
+            }
+            else
+            {
+                for(int j=0;j<n;j++)
+                {
+                    if((i+j)%2!=0 && i>=j)
+                        System.out.print("* ");
+                    else
+                        System.out.print("  ");
+                }
             }
             System.out.println();
         }
