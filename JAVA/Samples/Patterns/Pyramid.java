@@ -8,28 +8,18 @@ public class Pyramid{
         int n=sc.nextInt();
         for(int i=0;i<n;i++)
         {
-            for(int j=0;j<n;j++)
-            {
-                if(n%2!=0)
-                {
-                    if(((i+j)%2==0 && i+j>=n-1))
-                        System.out.print("* ");
-                    else
-                        System.out.print("  ");
-                }
-                else
-                {
-                    if(((i+j)%2!=0 && i+j>=n-1))
-                        System.out.print("* ");
-                    else
-                        System.out.print("  ");
-                }
-            }
             if(n%2!=0)
             {
+                for(int j=0;j<n;j++)
+                {
+                    if(((i+j)%2==0 && i<=j))
+                        System.out.print("* ");
+                    else
+                        System.out.print("  ");
+                }
                 for(int j=1;j<n;j++)
                 {
-                    if((i+j)%2==0 && i>=j)
+                    if((i+j)%2==0 && i+j<=n-1)
                         System.out.print("* ");
                     else
                         System.out.print("  ");
@@ -37,13 +27,20 @@ public class Pyramid{
             }
             else
             {
-                for(int j=0;j<n;j++)
+                for(int j=1;j<n;j++)
                 {
-                    if((i+j)%2!=0 && i>=j)
+                    if(((i+j)%2!=0 && i<=j))
                         System.out.print("* ");
                     else
                         System.out.print("  ");
                 }
+                for(int j=0;j<n;j++)
+                    {
+                        if((i+j)%2!=0 && i+j<=n-1)
+                            System.out.print("* ");
+                        else
+                            System.out.print("  ");
+                    }
             }
             System.out.println();
         }
