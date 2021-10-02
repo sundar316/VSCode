@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch StonePaperScissor",
+      "request": "launch",
+      "mainClass": "Samples.StonePaperScissor",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch TicTacToe",
+      "request": "launch",
+      "mainClass": "Samples.TicTacToe",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch MoveNegativeElement",
       "request": "launch",
       "mainClass": "Examly.MoveNegativeElement",
