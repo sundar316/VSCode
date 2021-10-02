@@ -6,10 +6,10 @@ import java.util.Scanner;
 import Arrays.Array;
 import Algorithms.Sorting.*;
 
-public class BinarySearch {
+public class BinarySearch extends Array{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        Integer arr[]=Array.arr();
+        Integer arr[]=arr();
         arr=BubbleSort.sort(arr);
         System.out.println(Arrays.toString(arr));
         int n=sc.nextInt();

@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ArraySort",
+      "request": "launch",
+      "mainClass": "Arrays.ArraySort",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch AbstractClass",
+      "request": "launch",
+      "mainClass": "OOPS.AbstractClass",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch GettersSetters",
+      "request": "launch",
+      "mainClass": "OOPS.GettersSetters",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch StonePaperScissor",
       "request": "launch",
       "mainClass": "Samples.StonePaperScissor",

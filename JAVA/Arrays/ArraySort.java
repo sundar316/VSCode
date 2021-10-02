@@ -3,9 +3,9 @@ package Arrays;
 // Java program to Sort square of the numbers
 // of the array
 import java.util.*;
-class ArraySort {
+class ArraySort extends Array {
     // Function to sort an square array
-    public static void sortSquares(int arr[])
+    public static void sortSquares(Integer[] arr)
     {
         int n = arr.length;
         // First convert each array elements
@@ -19,11 +19,11 @@ class ArraySort {
     // Driver program to test above function
     public static void main(String[] args)
     {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int arr[] =new int[n];
-        for(int i=0;i<n;i++)
-            arr[i]=sc.nextInt();
+        // Scanner sc=new Scanner(System.in);
+        int n=arr().length;
+        Integer[] arr =arr();
+        // for(int i=0;i<n;i++)
+        //     arr[i]=sc.nextInt();
         System.out.println("Before sort ");
         for (int i = 0; i < n; i++)
             System.out.print(arr[i] + " ");
@@ -32,6 +32,6 @@ class ArraySort {
         System.out.println("After Sort ");
         for (int i = 0; i < n; i++)
             System.out.print(arr[i] + " ");
-        sc.close();
+        // sc.close();
     }
 }

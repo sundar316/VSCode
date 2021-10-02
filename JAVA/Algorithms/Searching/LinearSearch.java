@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 import Arrays.Array;
 
-public class LinearSearch {
+public class LinearSearch extends Array{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        Integer[] arr=Array.arr();
+        Integer[] arr=arr();
         System.out.println(Arrays.toString(arr));
         int n=sc.nextInt();
         sc.close();

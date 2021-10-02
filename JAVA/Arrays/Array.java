@@ -3,7 +3,7 @@ package Arrays;
 import java.util.HashSet;
 import java.util.Random;
 
-public class Array {
+public abstract class Array {
     public static Integer[] arr()
     {
         Random r=new Random();
