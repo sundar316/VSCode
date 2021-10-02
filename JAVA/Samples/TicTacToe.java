@@ -1,7 +1,6 @@
 package Samples;
 
 import java.util.Scanner;
-
 public class TicTacToe {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -16,6 +15,11 @@ public class TicTacToe {
             {
                 int k=1;
                 System.out.println("\n TIC TAC TOE");
+
+                /* -------------------------------------------------------------------------- */
+                /*                              pattern printing                              */
+                /* -------------------------------------------------------------------------- */
+
                 for(int i=0;i<7;i++)
                 {
                     for(int j=0;j<7;j++)
@@ -72,6 +76,10 @@ public class TicTacToe {
                     System.out.println();
                 }
 
+                /* -------------------------------------------------------------------------- */
+                /*                                result blocks                               */
+                /* -------------------------------------------------------------------------- */
+
                 if((((arr1[1].equals(arr1[2]) && arr1[1].equals(arr1[3])) && (arr1[1].equals("X ")||arr1[1].equals("O ")))
                 ||((arr1[4].equals(arr1[5]) && arr1[4].equals(arr1[6])) && (arr1[4].equals("X ")||arr1[4].equals("O ")))
                 ||((arr1[7].equals(arr1[8]) && arr1[7].equals(arr1[9])) && (arr1[7].equals("X ")||arr1[7].equals("O ")))))
@@ -117,6 +125,10 @@ public class TicTacToe {
                     }
                 }
 
+                /* -------------------------------------------------------------------------- */
+                /*                                 user input                                 */
+                /* -------------------------------------------------------------------------- */
+
                 if(loop==0)
                 {
                     System.out.print("  Draw");
@@ -146,6 +158,11 @@ public class TicTacToe {
                     }
                 }
                 arr[val]=n;
+
+                /* -------------------------------------------------------------------------- */
+                /*                               position finder                              */
+                /* -------------------------------------------------------------------------- */
+
                 switch(n)
                 {
                     case 1:
