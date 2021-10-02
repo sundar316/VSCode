@@ -1,12 +1,12 @@
 package OOPS;
 
-class Child{
+class C{
     static int b=200;
     int c;
-    Child(int i){
+    C(int i){
         c=i;
     }
-    Child(){
+    C(){
     }
     float display(int a){
         return a+c;
@@ -15,10 +15,10 @@ class Child{
 class Instance {
     static int a=100;
     public static void main(String[] args) {
-        Child d=new Child(a);
-        Child e=new Child();
+        C d=new C(a);
+        C e=new C();
         e.c=d.c;
-        System.out.println(Child.b);
+        System.out.println(C.b);
         System.out.println(a);
         System.out.println(d.display(a)+" "+e.display(a));
 

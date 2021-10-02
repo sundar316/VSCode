@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Interface",
+      "request": "launch",
+      "mainClass": "OOPS.Interface",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch ArraySort",
       "request": "launch",
       "mainClass": "Arrays.ArraySort",
