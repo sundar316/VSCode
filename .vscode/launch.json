@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch OddOrEven",
+      "request": "launch",
+      "mainClass": "Samples.OddOrEven",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Method",
+      "request": "launch",
+      "mainClass": "Samples.Method",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch twoDsort",
+      "request": "launch",
+      "mainClass": "Arrays.twoDsort",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch ArrayNegativeCount",
       "request": "launch",
       "mainClass": "Arrays.ArrayNegativeCount",

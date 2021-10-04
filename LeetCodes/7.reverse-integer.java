@@ -7,15 +7,19 @@
 // @lc code=start
 class Solution1 {
     public int reverse(int x) {
-        int a=0;
-        while(x>0)
+        String s=x+"";
+        boolean flag=false;
+        int b=0;
+        for(int i=s.length()-1;i>-1;i--)
         {
-            int b=x%10;
-            a+=b;
+            if(s.charAt(0)=='-')
+            {
+                flag=true;
+                break;
+            }
+            int a=Integer.parseInt(s.charAt(i)+"");
             a*=10;
-            x/=10;
         }
-        return a;
     }
 }
 // @lc code=end

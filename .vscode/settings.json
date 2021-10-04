@@ -2,5 +2,8 @@
     "java.project.sourcePaths": [
         "JAVA",
         "LeetCodes"
+    ],
+    "cSpell.words": [
+        "Dsort"
     ]
 }
