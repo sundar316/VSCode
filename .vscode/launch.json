@@ -3,6 +3,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch WinterChallenge",
+      "request": "launch",
+      "mainClass": "Examly.WinterChallenge",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch ExpressionEvaluation",
+      "request": "launch",
+      "mainClass": "Examly.ExpressionEvaluation",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Addition_Challenge",
+      "request": "launch",
+      "mainClass": "Examly.Addition_Challenge",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Best_Mobile_Plan",
+      "request": "launch",
+      "mainClass": "Examly.Best_Mobile_Plan",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch RightTriangleOfDots",
+      "request": "launch",
+      "mainClass": "Examly.RightTriangleOfDots",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Nice_Number",
+      "request": "launch",
+      "mainClass": "Examly.Nice_Number",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch BestProgrammer",
+      "request": "launch",
+      "mainClass": "Examly.BestProgrammer",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch OddOrEven",
       "request": "launch",
       "mainClass": "Samples.OddOrEven",
