@@ -12,7 +12,6 @@ class AdditionChallenge{
         return sum;
     }
 }
-
 public class Addition_Challenge {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
