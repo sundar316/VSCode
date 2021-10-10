@@ -5,14 +5,14 @@ for i in range(n):
         if(i%2==0):
             a+=1
             if(a>=10):
-                print(a,end=" ")  
+                print(a,end=" ")
             else:
                 print(a,end="  ")
         else:
             if(j==0):
                 b=a+n
                 a=b
-            if(a>=10):
+            if(b>=10):
                 print(b,end=" ")
             else:
                 print(b,end="  ")

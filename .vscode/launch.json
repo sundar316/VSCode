@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch SortingMap",
+      "request": "launch",
+      "mainClass": "GUVI.SortingMap",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch WinterChallenge",
       "request": "launch",
       "mainClass": "Examly.WinterChallenge",
