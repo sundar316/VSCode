@@ -1,4 +1,4 @@
-package Samples;
+package Samples.Games;
 
 import java.util.Scanner;
 public class TicTacToe {
