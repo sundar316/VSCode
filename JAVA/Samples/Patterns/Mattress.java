@@ -1,3 +1,5 @@
+package Samples.Patterns;
+
 import java.util.*;
 
 class Solution {
