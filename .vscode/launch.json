@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Looping",
+      "request": "launch",
+      "mainClass": "Samples.Looping",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch StairCase",
       "request": "launch",
       "mainClass": "Samples.StairCase",
