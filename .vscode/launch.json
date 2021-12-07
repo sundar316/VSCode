@@ -3,6 +3,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch StairCase",
+      "request": "launch",
+      "mainClass": "Samples.StairCase",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch ModuloExponential",
+      "request": "launch",
+      "mainClass": "Samples.ModuloExponential",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MoserDeSequence",
+      "request": "launch",
+      "mainClass": "Samples.Series.MoserDeSequence",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch StringCounter",
+      "request": "launch",
+      "mainClass": "Samples.StringCounter",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Killer",
+      "request": "launch",
+      "mainClass": "Examly.Killer",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch hello",
       "request": "launch",
       "mainClass": "Samples.hello",
