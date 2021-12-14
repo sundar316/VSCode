@@ -3,6 +3,83 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Output",
+      "request": "launch",
+      "mainClass": "Samples.Output",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch JuniorCoders",
+      "request": "launch",
+      "mainClass": "Examly.JuniorCoders",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Recreation",
+      "request": "launch",
+      "mainClass": "Samples.Recreation",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch FibonacciExample1",
+      "request": "launch",
+      "mainClass": "Samples.Series.FibonacciSeries.FibonacciExample1",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Factors",
+      "request": "launch",
+      "mainClass": "Samples.Factors",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Regex_abcd",
+      "request": "launch",
+      "mainClass": "Samples.Regex.Regex_abcd",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch PrimeNoElementRev",
+      "request": "launch",
+      "mainClass": "Samples.PrimeNoElementRev",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch TicTacToe",
+      "request": "launch",
+      "mainClass": "Samples.Games.TicTacToe",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Cons",
+      "request": "launch",
+      "mainClass": "OOPS.Cons",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Constructor",
+      "request": "launch",
+      "mainClass": "OOPS.Constructor",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MaxSubArraySum",
+      "request": "launch",
+      "mainClass": "Samples.MaxSubArraySum",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Looping",
       "request": "launch",
       "mainClass": "Samples.Looping",

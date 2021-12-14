@@ -20,7 +20,7 @@ public class CountNumberedCell {
         System.out.print(count);
 
         // printing 2d array
-        // for(int row[]:arr)c
+        // for(int row[]:arr)
         // {
         //     System.out.println(Arrays.toString(row));
         // }
