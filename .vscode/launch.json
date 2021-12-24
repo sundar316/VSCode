@@ -3,6 +3,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch meen",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.meen",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch C",
+      "request": "launch",
+      "mainClass": "C",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch summa1",
+      "request": "launch",
+      "mainClass": "summa1",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "OOPS.Main",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch StallCategory",
+      "request": "launch",
+      "mainClass": "OOPS.StallCategory",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Trolly",
+      "request": "launch",
+      "mainClass": "Examly.Trolly",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Output",
       "request": "launch",
       "mainClass": "Samples.Output",

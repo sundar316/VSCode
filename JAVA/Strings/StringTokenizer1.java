@@ -1,12 +1,20 @@
 package Strings;
 
 import java.util.StringTokenizer;
+
 public class StringTokenizer1 {
+
     public static void main(String[] args) {
-        String str="HellopHowparepyou";
-        StringTokenizer st=new StringTokenizer(str,"p");
-        while(st.hasMoreTokens()){
-            System.out.print(st.nextToken()+" ");
+        String s="Hello How are you";
+        StringTokenizer st=new StringTokenizer(s," ");
+        while(st.hasMoreElements())
+            System.out.println(st.nextElement());
+
+        System.out.println();
+
+        String[] arr=s.split(" ");
+        for (String i : arr) {
+            System.out.println(i);
         }
     }
 }
