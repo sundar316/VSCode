@@ -3,6 +3,69 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch IndexRotating",
+      "request": "launch",
+      "mainClass": "Arrays.IndexRotating",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Login",
+      "request": "launch",
+      "mainClass": "ATM.Login",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Jumma1",
+      "request": "launch",
+      "mainClass": "Jumma1",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch solution",
+      "request": "launch",
+      "mainClass": "solution",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Inheritance4",
+      "request": "launch",
+      "mainClass": "OOPS.Inheritance.Inheritance4",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Inheritance3",
+      "request": "launch",
+      "mainClass": "OOPS.Inheritance.Inheritance3",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Inheritance1",
+      "request": "launch",
+      "mainClass": "Inheritance1",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Inheritance2",
+      "request": "launch",
+      "mainClass": "Inheritance2",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Inheritance",
+      "request": "launch",
+      "mainClass": "Inheritance",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch meen",
       "request": "launch",
       "mainClass": "Samples.Patterns.meen",

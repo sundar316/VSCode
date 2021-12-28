@@ -1,3 +1,4 @@
+package OOPS.Inheritance;
 import java.util.Scanner;
 
 class TicketBooking{
@@ -12,15 +13,18 @@ class TicketBooking{
     }
 
     public void makePayment(Double amount){
-
+        System.out.print(stageEvent+" "+customer+" "+noOfSeats+" ");
+        System.out.print(amount);
     }
 
     public void makePayment(Double amount, String walletNumber){
-
+        System.out.print(stageEvent+" "+customer+" "+noOfSeats+" ");
+        System.out.print(amount+" "+walletNumber);
     }
 
     public void makePayment(String name, Double amount, String creditCard, String ccv){
-
+        System.out.print(stageEvent+" "+customer+" "+noOfSeats+" ");
+        System.out.print(name+" "+amount+" "+creditCard+" "+ccv);
     }
 }
 
@@ -30,7 +34,7 @@ class Customer extends TicketBooking{
     }
 }
 
-class Main{
+public class Inheritance1{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         String details=sc.nextLine();
