@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Examly",
+      "request": "launch",
+      "mainClass": "OOPS.Inheritance.Examly",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Inheritance2",
+      "request": "launch",
+      "mainClass": "OOPS.Inheritance.Inheritance2",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Examly4",
+      "request": "launch",
+      "mainClass": "OOPS.Inheritance.Examly4",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch IndexRotating",
       "request": "launch",
       "mainClass": "Arrays.IndexRotating",
