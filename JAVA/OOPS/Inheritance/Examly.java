@@ -2,10 +2,10 @@ package OOPS.Inheritance;
 
 import java.util.Scanner;
 
-class Person{
+class Person1{
 }
 
-class Student extends Person{
+class Student extends Person1{
     String firstName;
     String lastName;
     int id;
