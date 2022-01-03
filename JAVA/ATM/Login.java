@@ -1,24 +1,43 @@
 package ATM;
 
+import java.util.Scanner;
 public class Login {
+    private static Scanner sc=new Scanner(System.in);
     public static void main(String[] args) {
-        int arr[]={5, 3, 1, 5, 1, 3, 4, 7, 4, 8, 8};
-        for(int i=0;i<arr.length;i++)
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        Admin ad;
+        User us;
+        t:while(true)
         {
-            int a=0;
-            for(int j=0;j<arr.length;j++)
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+            System.out.println("~~~~~~~~~~ATM~~~~~~~~~~\n");
+            System.out.println("1.Admin");
+            System.out.println("2.User");
+            System.out.println("3.Exit");
+            System.out.print("Enter Choice: ");
+            int choice=sc.nextInt();
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+            System.out.println();
+            switch(choice)
             {
-                if(i!=j)
-                {
-                    if(arr[i]==arr[j])
-                    {
-                        a++;
-                        break;
-                    }
-                }
+                case 1:
+                    ad=new Admin();
+                    ad.admin();
+                    break;
+                case 2:
+                    us=new User();
+                    us.user();
+                    break;
+                case 3:
+                    System.out.println("!!! Thank You !!!");
+                    break t;
+                default:
+                    System.out.println("Invalid Input");
             }
-            if(a==0)
-                System.out.println(arr[i]);
+            System.out.println();
         }
     }
 }

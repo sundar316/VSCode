@@ -3,6 +3,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Spiral",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.Spiral",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch C",
+      "request": "launch",
+      "mainClass": "OOPS.Inheritance.C",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Hi",
+      "request": "launch",
+      "mainClass": "OOPS.Inheritance.Hi",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Sample",
+      "request": "launch",
+      "mainClass": "OOPS.Inheritance.Sample",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch UpDown",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.UpDown",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch SqNo",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.SqNo",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Examly",
       "request": "launch",
       "mainClass": "OOPS.Inheritance.Examly",
