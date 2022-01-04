@@ -10,7 +10,7 @@ public class Admin {
     static
     {
         amt=0;
-        for(int i=0;i<4;i++)
+        for(int i=0;i<4;i++) 
         {
             amt+=denomination[i]*amount[i];
         }
