@@ -1,4 +1,4 @@
-package AppDev.ATM;
+package AppDev;
 
 import java.util.HashMap;
 import java.util.Scanner;
