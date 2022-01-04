@@ -5,13 +5,11 @@ public class Login {
     private static Scanner sc=new Scanner(System.in);
     public static void main(String[] args) {
         System.out.print("\033[H\033[2J");
-        System.out.flush();
         Admin ad;
         User us;
         t:while(true)
         {
             System.out.print("\033[H\033[2J");
-            System.out.flush();
             System.out.println("~~~~~~~~~~ATM~~~~~~~~~~\n");
             System.out.println("1.Admin");
             System.out.println("2.User");
@@ -19,7 +17,6 @@ public class Login {
             System.out.print("Enter Choice: ");
             int choice=sc.nextInt();
             System.out.print("\033[H\033[2J");
-            System.out.flush();
             System.out.println();
             switch(choice)
             {

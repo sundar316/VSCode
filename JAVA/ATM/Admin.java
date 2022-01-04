@@ -4,13 +4,20 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Admin {
-    static int amount[]={0,0,0,0};
-    static int denomination[]={2000,500,200,100};
+    static int amount[]={10, 10, 10, 10};
+    static int denomination[]={2000, 500, 200, 100};
     static int amt;
+    static
+    {
+        amt=0;
+        for(int i=0;i<4;i++)
+        {
+            amt+=denomination[i]*amount[i];
+        }
+    }
 
     public void logged(){
         System.out.print("\033[H\033[2J");
-        System.out.flush();
         System.out.println("!!! Welcome Admin !!!\n");
         t:while(true)
         {
@@ -25,14 +32,12 @@ public class Admin {
             System.out.print("Enter Choice: ");
             int choice=sc.nextInt();
             System.out.print("\033[H\033[2J");
-            System.out.flush();
             switch(choice)
             {
                 case 1:
                     System.out.print("1.Add\n2.Remove\n3.Exit\nEnter Choice: ");
                     int c=sc.nextInt();
                     System.out.print("\033[H\033[2J");
-                    System.out.flush();
                     if(c==1)
                     {
                         for(int i=0;i<4;i++)
@@ -61,14 +66,12 @@ public class Admin {
                     System.out.println("Invalid Input");
             }
             System.out.print("\033[H\033[2J");
-            System.out.flush();
         }
     }
 
     private static Scanner sc=new Scanner(System.in);
     public void admin(){
         System.out.print("\033[H\033[2J");
-        System.out.flush();
         Admin ad;
         HashMap<String,Integer> admins=new HashMap<>();
         admins.put("admin1", 1234);
@@ -93,7 +96,6 @@ public class Admin {
             catch(Exception e)
             {
                 System.out.print("\033[H\033[2J");
-                System.out.flush();
                 System.out.println("Enter Correct Username or Password.");
                 System.out.println();
                 sc.nextLine();
