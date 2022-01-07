@@ -212,14 +212,14 @@ public class Seller {
 
     public void sellersProduct(int sindex) {
         System.out.print("\033[H\033[2J");
-        System.out.println("--------------------------------------------------------------------------------------------------------------------");
-        System.out.println("| Product Name | Quantity | Warranty | Return Period | Product Rating | Product Description | No Of Buyers | Price |");
-        System.out.println("--------------------------------------------------------------------------------------------------------------------\n");
+        System.out.println("----------------------------------------------------------------------------------------------------------------");
+        System.out.printf("| %10s | %5s | %5s | %5s | %13s | %20s | %13s | %5s  |\n", "Product Name", "Quantity", "Warranty", "Return", "Product-Rating", "Product-Description", "No of Buyers", "Price");
+        System.out.println("----------------------------------------------------------------------------------------------------------------");
         for(Product i:Product.plist)
         {
             if(i.sellerCode==Seller.sellerList.get(sindex).userId)
             {
-                System.out.println(i.productName+"      |      "+i.quantity+"      |      "+i.warranty+"      |      "+i.returnPeriod+"      |      "+i.productRating+"      |      "+i.productDescription+"      |      "+i.noOfBuy+"      |      "+"\u20B9"+i.price+"\n");
+                System.out.printf("| %10s | %10s | %8s | %6s | %13s | %20s | %10s | %10s |\n\n", i.productName, i.quantity, i.warranty, i.return_, i.productRating, i.productDescription, i.noOfBuy, i.price);
             }
         }
         System.out.print("Press Enter to Continue...");
@@ -249,9 +249,9 @@ public class Seller {
             String description=Login.sc.nextLine();
             System.out.print("Warranty (by Year): ");
             int warranty=Login.sc.nextInt();
-            System.out.print("Return Period (by Days): ");
-            int returnPolicy=Login.sc.nextInt();
             Login.sc.nextLine();
+            System.out.print("Return (Y/N): ");
+            String returnPolicy=Login.sc.nextLine();
             Product.plist.add(new Product(name, quantity, sellerList.get(sindex).userId, description, 0, price, warranty, returnPolicy, 0));
             System.out.print("\033[H\033[2J");
             System.out.println("Product Added Successfully");
@@ -322,7 +322,7 @@ public class Seller {
                                     2. Price
                                     3. Description
                                     4. Warranty
-                                    5. Return Period
+                                    5. Return
 
                                     Enter to Choice:""");
                 int choice=Login.sc.nextInt();
@@ -349,9 +349,8 @@ public class Seller {
                         Login.sc.nextLine();
                         break;
                     case 5:
-                        System.out.print("Return Period (by Days): ");
-                        Product.plist.get(j).returnPeriod=Login.sc.nextInt();
-                        Login.sc.nextLine();
+                        System.out.print("Return (Y/N): ");
+                        Product.plist.get(j).return_=Login.sc.nextLine();
                         break;
                     default:
                         System.out.print("Invalid Input (Press Enter to Continue...)");
@@ -388,19 +387,19 @@ public class Seller {
         System.out.println("~~~~~~~~~~PRODUCT-COMPARE~~~~~~~~~~\n");
         System.out.print("Product Name: ");
         String pname=Login.sc.nextLine();
-        System.out.println("----------------------------------------------------------------------------------------------------------");
-        System.out.println("| Seller ID | Product Name | Quantity | Warranty | Return Period | Product Rating | No Of Buyers | Price |");
-        System.out.println("----------------------------------------------------------------------------------------------------------\n");
+        System.out.println("------------------------------------------------------------------------------------------------------------------------------");
+        System.out.printf("| %s | %10s | %5s | %5s | %5s | %13s | %20s | %13s | %5s    |\n", "Seller ID","Product Name", "Quantity", "Warranty", "Return", "Product-Rating", "Product-Description", "No of Buyers", "Price");
+        System.out.println("------------------------------------------------------------------------------------------------------------------------------");
         boolean flag=true;
         for(int i=0;i<Product.plist.size();i++)
         {
             if(Product.plist.get(i).productName.equals(pname))
             {
                 if(Product.plist.get(i).sellerCode==sellerList.get(sindex).userId)
-                    System.out.print("(YOURS)");
+                    System.out.print("(YOUR'S)");
                 else
                     System.out.print("(OTHERS)");
-                System.out.println(Product.plist.get(i).sellerCode+" |      "+Product.plist.get(i).productName+"      |      "+Product.plist.get(i).quantity+"      |      "+Product.plist.get(i).warranty+"      |      "+Product.plist.get(i).returnPeriod+"      |      "+Product.plist.get(i).productRating+"      |      "+Product.plist.get(i).noOfBuy+"      |      "+Product.plist.get(i).price+"\n");
+                System.out.printf("| %s | %10s | %10s | %8s | %6s | %13s | %20s | %10s | %10s |\n\n", Product.plist.get(i).sellerCode, Product.plist.get(i).productName, Product.plist.get(i).quantity, Product.plist.get(i).warranty, Product.plist.get(i).return_, Product.plist.get(i).productRating, Product.plist.get(i).productDescription, Product.plist.get(i).noOfBuy, Product.plist.get(i).price);
                 flag=false;
             }
         }

@@ -1,0 +1,847 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinarySearch",
+            "request": "launch",
+            "mainClass": "Algorithms.Searching.BinarySearch",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch LinearSearch",
+            "request": "launch",
+            "mainClass": "Algorithms.Searching.LinearSearch",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sorting",
+            "request": "launch",
+            "mainClass": "Algorithms.Sorting.Sorting",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Login",
+            "request": "launch",
+            "mainClass": "AppDev.AMAZON.Login",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Login(1)",
+            "request": "launch",
+            "mainClass": "AppDev.ATM.Login",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayNegativeCount",
+            "request": "launch",
+            "mainClass": "Arrays.ArrayNegativeCount",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArraySort",
+            "request": "launch",
+            "mainClass": "Arrays.ArraySort",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch CountBetween",
+            "request": "launch",
+            "mainClass": "Arrays.CountBetween",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch IndexRotating",
+            "request": "launch",
+            "mainClass": "Arrays.IndexRotating",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Majority",
+            "request": "launch",
+            "mainClass": "Arrays.Majority",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Reverse",
+            "request": "launch",
+            "mainClass": "Arrays.Reverse",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch twoDsort",
+            "request": "launch",
+            "mainClass": "Arrays.twoDsort",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayList1",
+            "request": "launch",
+            "mainClass": "Collections.ArrayList1",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayList2",
+            "request": "launch",
+            "mainClass": "Collections.ArrayList2",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch HashMap1",
+            "request": "launch",
+            "mainClass": "Collections.HashMap1",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch HashMap2",
+            "request": "launch",
+            "mainClass": "Collections.HashMap2",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch HashSet1",
+            "request": "launch",
+            "mainClass": "Collections.HashSet1",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch List1",
+            "request": "launch",
+            "mainClass": "Collections.List1",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortingWithRepetition",
+            "request": "launch",
+            "mainClass": "Collections.SortingWithRepetition",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Addition_Challenge",
+            "request": "launch",
+            "mainClass": "Examly.Addition_Challenge",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch AdjacentChar",
+            "request": "launch",
+            "mainClass": "Examly.AdjacentChar",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Age",
+            "request": "launch",
+            "mainClass": "Examly.Age",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch AlternatingCode",
+            "request": "launch",
+            "mainClass": "Examly.AlternatingCode",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch BestProgrammer",
+            "request": "launch",
+            "mainClass": "Examly.BestProgrammer",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Best_Mobile_Plan",
+            "request": "launch",
+            "mainClass": "Examly.Best_Mobile_Plan",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch BiPattern",
+            "request": "launch",
+            "mainClass": "Examly.BiPattern",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch CES",
+            "request": "launch",
+            "mainClass": "Examly.CES",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch CamelCase",
+            "request": "launch",
+            "mainClass": "Examly.CamelCase",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch CaptionContest",
+            "request": "launch",
+            "mainClass": "Examly.CaptionContest",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch CasperAtTheCarnival",
+            "request": "launch",
+            "mainClass": "Examly.CasperAtTheCarnival",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ClassroomColor",
+            "request": "launch",
+            "mainClass": "Examly.ClassroomColor",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Collision",
+            "request": "launch",
+            "mainClass": "Examly.Collision",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch CountNumberedCell",
+            "request": "launch",
+            "mainClass": "Examly.CountNumberedCell",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExpressionEvaluation",
+            "request": "launch",
+            "mainClass": "Examly.ExpressionEvaluation",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch FilmFestival",
+            "request": "launch",
+            "mainClass": "Examly.FilmFestival",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch FriendshipTest",
+            "request": "launch",
+            "mainClass": "Examly.FriendshipTest",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch FullIsland",
+            "request": "launch",
+            "mainClass": "Examly.FullIsland",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch HandShake",
+            "request": "launch",
+            "mainClass": "Examly.HandShake",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch HighestValueNumber",
+            "request": "launch",
+            "mainClass": "Examly.HighestValueNumber",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch JuniorCoders",
+            "request": "launch",
+            "mainClass": "Examly.JuniorCoders",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Killer",
+            "request": "launch",
+            "mainClass": "Examly.Killer",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lucy",
+            "request": "launch",
+            "mainClass": "Examly.Lucy",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch MailValidation",
+            "request": "launch",
+            "mainClass": "Examly.MailValidation",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Marriage",
+            "request": "launch",
+            "mainClass": "Examly.Marriage",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch MobileNoValidation",
+            "request": "launch",
+            "mainClass": "Examly.MobileNoValidation",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch NelaBirthday",
+            "request": "launch",
+            "mainClass": "Examly.NelaBirthday",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Nice_Number",
+            "request": "launch",
+            "mainClass": "Examly.Nice_Number",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch NumberChallenge",
+            "request": "launch",
+            "mainClass": "Examly.NumberChallenge",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch OddEven",
+            "request": "launch",
+            "mainClass": "Examly.OddEven",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch RightTriangleOfDots",
+            "request": "launch",
+            "mainClass": "Examly.RightTriangleOfDots",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Stock",
+            "request": "launch",
+            "mainClass": "Examly.Stock",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch TotalExpense",
+            "request": "launch",
+            "mainClass": "Examly.TotalExpense",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Trolly",
+            "request": "launch",
+            "mainClass": "Examly.Trolly",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch VMS",
+            "request": "launch",
+            "mainClass": "Examly.VMS",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch WildCardMatching",
+            "request": "launch",
+            "mainClass": "Examly.WildCardMatching",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch WinterChallenge",
+            "request": "launch",
+            "mainClass": "Examly.WinterChallenge",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch YoungOld",
+            "request": "launch",
+            "mainClass": "Examly.YoungOld",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortingMap",
+            "request": "launch",
+            "mainClass": "GUVI.SortingMap",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch MoveNegativeElement",
+            "request": "launch",
+            "mainClass": "GeeksForGeeks.MoveNegativeElement",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch AbstractClass",
+            "request": "launch",
+            "mainClass": "OOPS.AbstractClass",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cons",
+            "request": "launch",
+            "mainClass": "OOPS.Cons",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch GettersSetters",
+            "request": "launch",
+            "mainClass": "OOPS.GettersSetters",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Examly",
+            "request": "launch",
+            "mainClass": "OOPS.Inheritance.Examly",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inheritance1",
+            "request": "launch",
+            "mainClass": "OOPS.Inheritance.Inheritance1",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inheritance2",
+            "request": "launch",
+            "mainClass": "OOPS.Inheritance.Inheritance2",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inheritance3",
+            "request": "launch",
+            "mainClass": "OOPS.Inheritance.Inheritance3",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inheritance4",
+            "request": "launch",
+            "mainClass": "OOPS.Inheritance.Inheritance4",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inheritance5",
+            "request": "launch",
+            "mainClass": "OOPS.Inheritance.Inheritance5",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Instance",
+            "request": "launch",
+            "mainClass": "OOPS.Instance",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Interface",
+            "request": "launch",
+            "mainClass": "OOPS.Interface",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Factors",
+            "request": "launch",
+            "mainClass": "Samples.Factors",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileName",
+            "request": "launch",
+            "mainClass": "Samples.FileName",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch BINGO",
+            "request": "launch",
+            "mainClass": "Samples.Games.BINGO",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch OddOrEven",
+            "request": "launch",
+            "mainClass": "Samples.Games.OddOrEven",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch StonePaperScissor",
+            "request": "launch",
+            "mainClass": "Samples.Games.StonePaperScissor",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch TicTacToe",
+            "request": "launch",
+            "mainClass": "Samples.Games.TicTacToe",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Looping",
+            "request": "launch",
+            "mainClass": "Samples.Looping",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaxSubArraySum",
+            "request": "launch",
+            "mainClass": "Samples.MaxSubArraySum",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Method",
+            "request": "launch",
+            "mainClass": "Samples.Method",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ModuloExponential",
+            "request": "launch",
+            "mainClass": "Samples.ModuloExponential",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Nireah",
+            "request": "launch",
+            "mainClass": "Samples.Nireah",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReverseInteger",
+            "request": "launch",
+            "mainClass": "Samples.Palindrome.ReverseInteger",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReverseString",
+            "request": "launch",
+            "mainClass": "Samples.Palindrome.ReverseString",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch PasswordGenerator",
+            "request": "launch",
+            "mainClass": "Samples.PasswordGenerator",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch BiPattern(1)",
+            "request": "launch",
+            "mainClass": "Samples.Patterns.BiPattern",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloX",
+            "request": "launch",
+            "mainClass": "Samples.Patterns.HelloX",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch No",
+            "request": "launch",
+            "mainClass": "Samples.Patterns.No",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pyramid",
+            "request": "launch",
+            "mainClass": "Samples.Patterns.Pyramid",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Samples.Patterns.Solution",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Spiral",
+            "request": "launch",
+            "mainClass": "Samples.Patterns.Spiral",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch SqNo",
+            "request": "launch",
+            "mainClass": "Samples.Patterns.SqNo",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch UpDown",
+            "request": "launch",
+            "mainClass": "Samples.Patterns.UpDown",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch meen",
+            "request": "launch",
+            "mainClass": "Samples.Patterns.meen",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Paytm",
+            "request": "launch",
+            "mainClass": "Samples.Paytm",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch PrimeFactors",
+            "request": "launch",
+            "mainClass": "Samples.PrimeFactors",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch PrimeNoElementRev",
+            "request": "launch",
+            "mainClass": "Samples.PrimeNoElementRev",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Recreation",
+            "request": "launch",
+            "mainClass": "Samples.Recreation",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Regex",
+            "request": "launch",
+            "mainClass": "Samples.Regex.Regex",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Regex_abcd",
+            "request": "launch",
+            "mainClass": "Samples.Regex.Regex_abcd",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch UserName",
+            "request": "launch",
+            "mainClass": "Samples.Regex.UserName",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch FibonacciExample1",
+            "request": "launch",
+            "mainClass": "Samples.Series.FibonacciSeries.FibonacciExample1",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch FibonacciExample2",
+            "request": "launch",
+            "mainClass": "Samples.Series.FibonacciSeries.FibonacciExample2",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch FibonacciExample3",
+            "request": "launch",
+            "mainClass": "Samples.Series.FibonacciSeries.FibonacciExample3",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch MoserDeSequence",
+            "request": "launch",
+            "mainClass": "Samples.Series.MoserDeSequence",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch SingleDigit",
+            "request": "launch",
+            "mainClass": "Samples.SingleDigit",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch StairCase",
+            "request": "launch",
+            "mainClass": "Samples.StairCase",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringCounter",
+            "request": "launch",
+            "mainClass": "Samples.StringCounter",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch TernaryOperator",
+            "request": "launch",
+            "mainClass": "Samples.TernaryOperator",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch hello",
+            "request": "launch",
+            "mainClass": "Samples.hello",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch oddeven",
+            "request": "launch",
+            "mainClass": "Samples.oddeven",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch operators",
+            "request": "launch",
+            "mainClass": "Samples.operators",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch printer",
+            "request": "launch",
+            "mainClass": "Samples.printer",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch CharConvertion",
+            "request": "launch",
+            "mainClass": "Strings.CharConvertion",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReplaceAll",
+            "request": "launch",
+            "mainClass": "Strings.ReplaceAll",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReverseString(1)",
+            "request": "launch",
+            "mainClass": "Strings.ReverseString",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Split",
+            "request": "launch",
+            "mainClass": "Strings.Split",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringTokenizer1",
+            "request": "launch",
+            "mainClass": "Strings.StringTokenizer1",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cruise",
+            "request": "launch",
+            "mainClass": "TCS.Cruise",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
+            "name": "Launch SuperMarket",
+            "request": "launch",
+            "mainClass": "TCS.SuperMarket",
+            "projectName": "VS Code_85908032"
+        }
+    ]
+}

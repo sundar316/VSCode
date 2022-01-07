@@ -11,12 +11,12 @@ public class Product {
     int productRating;
     int price;
     int warranty;
-    int returnPeriod;
+    String return_;
     int noOfBuy;
 
     static List<Product> plist=new ArrayList<>();
 
-    Product(String productName, int quantity, int sellerCode, String productDescription, int productRating, int price, int warranty, int returnPeriod, int noOfBuy){
+    Product(String productName, int quantity, int sellerCode, String productDescription, int productRating, int price, int warranty, String return_, int noOfBuy){
         this.productName=productName;
         this.quantity=quantity;
         this.sellerCode=sellerCode;
@@ -24,7 +24,7 @@ public class Product {
         this.productRating=productRating;
         this.price=price;
         this.warranty=warranty;
-        this.returnPeriod=returnPeriod;
+        this.return_=return_;
         this.noOfBuy=noOfBuy;
     }
 
