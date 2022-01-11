@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Login",
+            "request": "launch",
+            "mainClass": "AppDev.RailWay.Login",
+            "projectName": "VS Code_85908032"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

@@ -323,6 +323,8 @@ public class User {
                 }
             }
         }
+        System.out.print("Press Enter to Continue...");
+        Login.sc.nextLine();
     }
 
     public void orderedList(int user) {
