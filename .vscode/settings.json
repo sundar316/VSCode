@@ -16,8 +16,8 @@
     "**/.factorypath": true,
     "**/.dist": true,
     ".dist": true,
-    "**/.vscode": true,
-    ".vscode": true
+    "**/.vscode": false,
+    ".vscode": false
   },
   "explorerExclude.backup": null,
   "cSpell.words": [
