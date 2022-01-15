@@ -205,7 +205,7 @@ public class User {
                 }
                 break;
         }
-        booked(choice-1, toChoice-1, user);
+        booked(choice-1, toChoice-2, user);
         // for(int[] i:User.ticket)
         // {
         //     for(int j:i)
@@ -245,7 +245,7 @@ public class User {
             boolean test=true;
             for(int i=0; i<5;i++)
             {
-                if(waitingList[i][0]==0 && waitingList[i][1]==0)
+                if(waitingList[i][0]==0 && waitingList[i][1]==0 && waitingList[i][2]==0)
                 {
                     test=false;
                     waitingList[i][0]=from;
