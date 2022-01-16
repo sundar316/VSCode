@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Login",
+      "request": "launch",
+      "mainClass": "AppDev.SPLIT_WISE.Login",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Solution",
       "request": "launch",
       "mainClass": "AppDev.AMAZON.Solution",

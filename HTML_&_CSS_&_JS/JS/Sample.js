@@ -3,7 +3,7 @@ console.log(a)
 var b=new Object();
 b.name="Hello"
 console.log(b.name)
-for(a;a>0;a--)
+for(let i=a;i>0;i--)
 {
     console.log(a)
 }

@@ -206,13 +206,6 @@ public class User {
                 break;
         }
         booked(choice-1, toChoice-2, user);
-        // for(int[] i:User.ticket)
-        // {
-        //     for(int j:i)
-        //         System.out.print(j+" ");
-        //     System.out.println();
-        // }
-        // Login.sc.nextLine();
     }
 
     public void booked(int from, int to, int user) {

@@ -16,11 +16,15 @@
     "**/.factorypath": true,
     "**/.dist": true,
     ".dist": true,
-    "**/.vscode": false,
-    ".vscode": false
+    "**/.vscode": true,
+    ".vscode": true,
+    "**/.gitignore": true
   },
   "explorerExclude.backup": null,
   "cSpell.words": [
+    "Bujji",
+    "Kulla",
+    "Nari",
     "Nireah",
     "pname"
   ],
