@@ -49,7 +49,7 @@ public class Expenses {
             System.out.println("~~~~~~~~~~VIEW/REPAY-EXPENSES~~~~~~~~~~\n");
             if(i.by.equals(User.uList.get(pos).name) || User.uList.get(pos).payments.contains(i.id+""))
                 continue;
-            System.out.println("Expense Name: " + i.expenseName + "\nExpense Amount: " + (i.amt / (User.uList.size() - 1)) + "\nRequested by: " + i.by+"\nExpense Date: " + i.date + "\n----   ----   ----");
+            System.out.println("Expense Name: " + i.expenseName + "\nExpense Amount: " + i.amt + "\nAmount you to Pay: " + i.amt / User.uList.size() + "\nRequested by: " + i.by+"\nExpense Date: " + i.date + "\n----   ----   ----");
             flag = false;
             System.out.print("\nEnter (1) Pay / (0) Cancel: ");
             String choice = Login.sc.nextLine();
@@ -68,14 +68,14 @@ public class Expenses {
                 viewExpense(pos);
                 return;
             }
-            User.uList.get(pos).payments += i.id + ":" + i.amt / (User.uList.size() - 1) + ",";
-            User.uList.get(pos).walletAmt -= i.amt / (User.uList.size() - 1);
+            User.uList.get(pos).payments += i.id + ":" + i.amt / User.uList.size() + ",";
+            User.uList.get(pos).walletAmt -= i.amt / User.uList.size();
             for (User j : User.uList)
             {
                 if (j.name.equals(i.by))
                 {
-                    j.walletAmt += i.amt / (User.uList.size() - 1);
-                    j.request.add(i.id + ":" + i.by + ":" + User.uList.get(pos).name + ":" + i.amt / (User.uList.size()));
+                    j.walletAmt += i.amt / User.uList.size();
+                    j.request.add(i.id + ":" + i.by + ":" + User.uList.get(pos).name + ":" + i.amt / User.uList.size());
                     break;
                 }
             }
@@ -106,7 +106,7 @@ public class Expenses {
                 if(arr[0].equals(j.id + ""))
                 {
                     flag = false;
-                    System.out.println("Expense Name: " + j.expenseName + "\nExpense Amount: " + arr[1] + "\nRequested by: " + j.by+"\nExpense Date: " + j.date + "\n----   ----   ----");
+                    System.out.println("Expense Name: " + j.expenseName + "\nAmount Payed: " + arr[1] + "\nRequested by: " + j.by+"\nExpense Date: " + j.date + "\n----   ----   ----");
                 }
             }
         }
@@ -133,7 +133,7 @@ public class Expenses {
                     {
                         if(arr[0].equals(k.id+""))
                         {
-                            System.out.println("Expense Name: " + k.expenseName + "\nExpense Amount: " + arr[3] + "\nPayed by: " + arr[2]+"\nExpense Date: " + k.date + "\n----   ----   ----");
+                            System.out.println("Expense Name: " + k.expenseName + "\nAmount Payed: " + arr[3] + "\nPayed by: " + arr[2]+"\nExpense Date: " + k.date + "\n----   ----   ----");
                         }
                     }
                     flag = false;
