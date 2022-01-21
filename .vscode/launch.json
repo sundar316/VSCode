@@ -5,6 +5,27 @@
       "type": "java",
       "name": "Launch Login",
       "request": "launch",
+      "mainClass": "AppDev.VEHICLE_RENTAL_SYSTEM.Login",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MainClass",
+      "request": "launch",
+      "mainClass": "Samples.MainClass",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "Collections.Solution",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Login",
+      "request": "launch",
       "mainClass": "AppDev.SPLIT_WISE.Login",
       "projectName": "VS Code_85908032"
     },
