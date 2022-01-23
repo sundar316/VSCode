@@ -49,7 +49,7 @@ public class Admin
                             | 9.  Vehicle Lost                    |
                             | 10. Vehicle Service                 |
                             | 11. Change Security Deposit Amount  |
-                            | 12. Generate Report                 |/
+                            | 12. Generate Report                 |
                             | 13. Change Password                 |
                             | 14. Logout                          |
                             |                                     |

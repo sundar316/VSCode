@@ -119,7 +119,7 @@ public class Login
                     break;
                 case 2:
                     userLogin();
-                    break;
+                    return;
                 case 3:
                     break t;
                 default:

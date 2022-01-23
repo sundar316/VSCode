@@ -339,6 +339,36 @@ public class Vehicle
 
     public void vehicleList()
     {
+        System.out.print("\033[H\033[2J");
+        System.out.println("~~~~~~~~~~LISTS~~~~~~~~~~\n");
+        System.out.println(" 1. Name Vise");
+        System.out.println(" 2. Rental Price Vise");
+        System.out.println(" 3. Car / Bike Vise");
+        System.out.println(" 4. Exit\n");
+        System.out.print("Enter the Choice: ");
+        String choice = Login.sc.nextLine();
+        if (choice.equals("4"))
+            return;
+        if (choice.equals("1"))
+            nameList();
+        else if (choice.equals("2"))
+            priceList();
+        else if (choice.equals("3"))
+        {
+            Transactions tr = new Transactions();
+            tr.lists();
+        }
+        else
+        {
+            System.out.print("\033[H\033[2J");
+            System.out.println("!!!Invalid Input!!!");
+            System.out.print("Press Enter to Continue...");
+            Login.sc.nextLine();
+        }
+    }
+
+    public void nameList()
+    {
         end :
         {
             int m = 0;
@@ -385,6 +415,61 @@ public class Vehicle
                 }
             }
         }
+    }
+
+    public void priceList()
+    {
+        List<Vehicle> temps = vList;
+
+        for(int i = 0, j; i < temps.size(); i++)
+        {
+            Vehicle temp = vList.get(i);
+            for(j = i-1; j>-1 && temps.get(j).rentPerDay > temp.rentPerDay; j--)
+            {
+                temps.set(j+1, temps.get(j));
+            }
+            temps.set(j+1, temp);
+        }
+        int m = 0;
+
+        for (Vehicle i : temps)
+        {
+            System.out.print("\033[H\033[2J");
+            System.out.println("~~~~~~~~~~VEHICLE-LIST~~~~~~~~~~\n");
+            System.out.println("\nVehicle's Name: "+i.name.toUpperCase());
+            System.out.println("Vehicle's Number Plate: "+i.numberPlate);
+            System.out.println("Vehicle's Price: Rs."+i.price);
+            System.out.println("Vehicle's Rent Per Day: Rs."+i.rentPerDay);
+            System.out.println("Vehicle's No. of Seats: "+i.seats);
+            System.out.println("Vehicle's Borrowed Count: "+i.borrowedCount);
+            System.out.println("Vehicle's Total Kilometer Traveled: "+i.totKms+"Kms");
+            System.out.println("Vehicle's Type (CAR / BIKE): "+i.type);
+            System.out.println("Vehicle's Remaining Service Kilometer: "+i.serviceKms+"Kms");
+            System.out.println("Vehicle Availability: "+ (i.isAvailable ? "Available" : "Not Available"));
+            System.out.println("Vehicle Serviced: "+ (i.isServiced ? "Yes" : "No"));
+            System.out.println("\n****************************************************\n");
+            for (int j = 0; j < vList.size(); j++)
+            {
+                if (m == j)
+                    System.out.print("^  ");
+                else
+                    System.out.print((j+1)+"  ");
+            }
+            m++;
+            System.out.println();
+            if (m == vList.size())
+            {
+                System.out.print("\nEnter (0) to Exit: ");
+            }
+            else
+            {
+                System.out.print("\nPress Enter to Next / (0) to Exit: ");
+            }
+            if (Login.sc.nextLine().equals("0"))
+                break;
+        }
+        System.out.print("\nPress Enter to Continue...");
+        Login.sc.nextLine();
     }
 
     public void service(Admin admin)

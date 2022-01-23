@@ -222,12 +222,244 @@ public class Transactions
 
     public void report()
     {
-        
+        t : while(true)
+        {
+            System.out.print("\033[H\033[2J");
+            System.out.print("""
+                            +==REPORTS====================+
+                            |                             |
+                            | 1. Service List             |
+                            | 2. Cars / Bikes List        |
+                            | 3. Rented Vehicles          |
+                            | 4. Not Been Rented Vehicles |
+                            | 5. Transactions             |
+                            | 6. Exit                     |
+                            |                             |
+                            +=============================+
+
+                            Enter the Choice:\u00A0""");
+            String choice = Login.sc.nextLine();
+            switch (choice)
+            {
+                case "1":
+                    service();
+                    break;
+                case "2":
+                    lists();
+                    break;
+                case "3":
+                    rented();
+                    break;
+                case "4":
+                    notRented();
+                    break;
+                case "5":
+                    transactions();
+                    break;
+                case "6":
+                    break t;
+                default:
+                    System.out.print("\033[H\033[2J");
+                    System.out.println("!!!Invalid Input!!!");
+                    System.out.print("Press Enter to Continue...");
+                    Login.sc.nextLine();
+            }
+        }
+    }
+
+    public void service()
+    {
+        System.out.print("\033[H\033[2J");
+        System.out.println("~~~~~~~~~~SERVICES~~~~~~~~~~\n");
+        boolean flag = true;
+        for (Vehicle i : Vehicle.vList)
+        {
+            if (!i.isServiced)
+            {
+                flag = false;
+                System.out.println("Vehicle Name: "+i.name);
+                System.out.println("Vehicle Number Plate: "+i.numberPlate);
+                System.out.println("\n***************************************************************\n");
+            }
+        }
+        if (flag)
+        {
+            System.out.println("All Vehicle are Serviced");
+            System.out.print("Press Enter to Continue...");
+            Login.sc.nextLine();
+            return;
+        }
+        System.out.print("Press Enter to Continue...");
+        Login.sc.nextLine();
+        return;
+    }
+
+    public void lists()
+    {
+        System.out.print("\033[H\033[2J");
+        System.out.println("~~~~~~~~~~VEHICLES-LIST~~~~~~~~~~\n");
+        System.out.println(" 1. Cars");
+        System.out.println(" 2. Bikes");
+        System.out.println(" 3. Exit\n");
+        System.out.print("Enter the Choice: ");
+        String choice = Login.sc.nextLine();
+        if (choice.equals("3"))
+            return;
+        if (choice.equals("1"))
+        {
+            System.out.print("\033[H\033[2J");
+            System.out.println("~~~~~~~~~~CAR-LISTS~~~~~~~~~~");
+        }
+        else
+        {
+            System.out.print("\033[H\033[2J");
+            System.out.println("~~~~~~~~~~BIKE-LISTS~~~~~~~~~~");
+        }
+        for (Vehicle i : Vehicle.vList)
+        {
+            if (i.type.equals("CAR") && choice.equals("1"))
+            {
+                System.out.println("\nVehicle's Name: "+i.name);
+                System.out.println("Vehicle's Number Plate: "+i.numberPlate);
+                System.out.println("Vehicle's Price: "+i.price);
+                System.out.println("Vehicle's Rent Per Day: "+i.rentPerDay);
+                System.out.println("****************************************************");
+            }
+            else if (i.type.equals("BIKE") && choice.equals("2"))
+            {
+                System.out.println("\nVehicle's Name: "+i.name);
+                System.out.println("Vehicle's Number Plate: "+i.numberPlate);
+                System.out.println("Vehicle's Price: "+i.price);
+                System.out.println("Vehicle's Rent Per Day: "+i.rentPerDay);
+                System.out.println("****************************************************");
+            }
+        }
+        System.out.print("\nPress Enter to Continue...");
+        Login.sc.nextLine();
+    }
+
+    public void rented()
+    {
+        System.out.print("\033[H\033[2J");
+        System.out.println("~~~~~~~~~~RENTED-VEHICLES~~~~~~~~~~\n");
+        boolean flag = true;
+        for (Transactions i : tList)
+        {
+            if (i.status.equals("Rented"))
+            {
+                flag = false;
+                System.out.println("Vehicle Name: "+i.vehicleName);
+                System.out.println("Vehicle Number Plate: "+i.vehicle.numberPlate);
+                System.out.println("\n***************************************************************\n");
+            }
+        }
+        if (flag)
+        {
+            System.out.println("No Vehicles has been Rented Currently");
+            System.out.print("Press Enter to Continue...");
+            Login.sc.nextLine();
+            return;
+        }
+        System.out.print("Press Enter to Continue...");
+        Login.sc.nextLine();
+        return;
+    }
+
+    public void notRented()
+    {
+        System.out.print("\033[H\033[2J");
+        System.out.println("~~~~~~~~~~NOT-BEEN-RENTED-VEHICLES~~~~~~~~~~\n");
+        boolean flag = true;
+        for (Vehicle i : Vehicle.vList)
+        {
+            if (i.isAvailable)
+            {
+                flag = false;
+                System.out.println("Vehicle Name: "+i.name);
+                System.out.println("Vehicle Number Plate: "+i.numberPlate);
+                System.out.println("***************************************************************\n");
+            }
+        }
+        if (flag)
+        {
+            System.out.println("All Vehicles has been Rented");
+            System.out.print("Press Enter to Continue...");
+            Login.sc.nextLine();
+            return;
+        }
+        System.out.print("Press Enter to Continue...");
+        Login.sc.nextLine();
+        return;
+    }
+
+    public void transactions()
+    {
+        if (tList.size() == 0)
+        {
+            System.out.print("\033[H\033[2J");
+            System.out.println("~~~~~~~~~~TRANSACTIONS~~~~~~~~~~\n");
+            System.out.println("No Transaction has been made");
+            System.out.print("Press Enter to Continue...");
+            Login.sc.nextLine();
+            return;
+        }
+        for (Transactions i : Transactions.tList)
+        {
+            System.out.print("\033[H\033[2J");
+            System.out.println("~~~~~~~~~~REPORT~~~~~~~~~~\n");
+            System.out.printf("%-25s%s\n", "Vehicle Name: ", i.vehicleName);
+            System.out.printf("%-25s%s\n", "Vehicle License Plate: ", i.vehicle.numberPlate);
+            System.out.printf("%-25s%s\n", "Vehicle Type: ", i.vehicle.type);
+            System.out.printf("%-25s%s\n", "Total KM Travelled: ", i.vehicle.totKms);
+            System.out.printf("%-25s%s\n", "Vehicle Rent per Day: ", i.vehicle.rentPerDay);
+            System.out.printf("%-25s%s\n", "Total Amount: ", i.amount);
+            System.out.printf("%-25s%s\n", "Status: ", i.status);
+            System.out.printf("%-25s%s\n", "Buyer's Name: ", i.user.name);
+            System.out.printf("%-25s%s\n", "Seller's Name: ", i.admin.name);
+            System.out.print("\nPress Enter to Next / (0) to Exit: ");
+            if (Login.sc.nextLine().equals("0"))
+                break;
+        }
+        System.out.println("\nNo More Transactions");
+        System.out.print("Press Enter to Continue...");
+        Login.sc.nextLine();
     }
 
     public void transactions(User user)
     {
-        
+        boolean flag = true;
+        for (Transactions i : Transactions.tList)
+        {
+            System.out.print("\033[H\033[2J");
+            System.out.println("~~~~~~~~~~TRANSACTIONS~~~~~~~~~~\n");
+            if (i.user.name.equals(user.name))
+            {
+                flag = false;
+                System.out.printf("%-25s%s\n", "Vehicle Name: ", i.vehicleName);
+                System.out.printf("%-25s%s\n", "Vehicle License Plate: ", i.vehicle.numberPlate);
+                System.out.printf("%-25s%s\n", "Vehicle Type: ", i.vehicle.type);
+                System.out.printf("%-25s%s\n", "Total KM Travelled: ", i.vehicle.totKms);
+                System.out.printf("%-25s%s\n", "Vehicle Rent per Day: ", i.vehicle.rentPerDay);
+                System.out.printf("%-25s%s\n", "Total Amount: ", i.amount);
+                System.out.printf("%-25s%s\n", "Status: ", i.status);
+                System.out.printf("%-25s%s\n", "Seller Name: ", i.admin.name);
+                System.out.print("\nPress Enter to Next / (0) to Exit: ");
+                if (Login.sc.nextLine().equals("0"))
+                    break;
+            }
+        }
+        if (flag)
+        {
+            System.out.print("\033[H\033[2J");
+            System.out.println("~~~~~~~~~~TRANSACTIONS~~~~~~~~~~\n");
+            System.out.println("No Transaction has been made by you");
+            System.out.print("Press Enter to Continue...");
+            Login.sc.nextLine();
+            return;
+        }
+        System.out.println("\nNo More Transactions");
+        System.out.print("Press Enter to Continue...");
+        Login.sc.nextLine();
     }
 
 }
