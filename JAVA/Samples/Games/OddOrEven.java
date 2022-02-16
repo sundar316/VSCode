@@ -12,7 +12,7 @@ public class OddOrEven {
         int n1=sc.nextInt();
         int n=new Random().nextInt(10);
         System.out.print("Me: "+n+"\nYou: "+n1);
-        if(s.equals("Odd")&&(n+n1)%2==0)
+        if(s.equalsIgnoreCase("Odd")&&(n+n1)%2==0)
         {
             System.out.print("\nI Win");
         }

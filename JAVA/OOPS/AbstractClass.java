@@ -2,16 +2,30 @@ package OOPS;
 
 abstract class Transport{
     int tax=10;
-    public abstract int fuel();
+    public int fuel()
+    {
+        return 1;
+    }
+    public abstract int apple();
 }
 class Bus extends Transport{
-    public int fuel(){
-        return 300+tax;
+    @Override
+    public int fuel()
+    {
+        return 1;
+    }
+    public int apple()
+    {
+        return 1;
     }
 }
 class Car extends Transport{
     public int fuel(){
         return 200+tax;
+    }
+    public int apple()
+    {
+        return 1;
     }
 }
 

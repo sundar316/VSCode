@@ -3,6 +3,118 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch SubStrConcat",
+      "request": "launch",
+      "mainClass": "InfyTq.SubStrConcat",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MinSwapReq",
+      "request": "launch",
+      "mainClass": "InfyTq.MinSwapReq",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch SortedStrIndDiff",
+      "request": "launch",
+      "mainClass": "InfyTq.SortedStrIndDiff",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch UniqueWordFromSentence",
+      "request": "launch",
+      "mainClass": "InfyTq.UniqueWordFromSentence",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch BitEncoding",
+      "request": "launch",
+      "mainClass": "InfyTq.BitEncoding",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch UniqueArmstrongNo",
+      "request": "launch",
+      "mainClass": "InfyTq.UniqueArmstrongNo",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MLargestNoFrom2Arr",
+      "request": "launch",
+      "mainClass": "InfyTq.MLargestNoFrom2Arr",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch SpecialNumber",
+      "request": "launch",
+      "mainClass": "InfyTq.SpecialNumber",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch StrArrCmpWithChArr",
+      "request": "launch",
+      "mainClass": "InfyTq.StrArrCmpWithChArr",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch HackWithInfy",
+      "request": "launch",
+      "mainClass": "InfyTq.HackWithInfy",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch PrimeSubstring",
+      "request": "launch",
+      "mainClass": "InfyTq.PrimeSubstring",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Samples",
+      "request": "launch",
+      "mainClass": "Samples.Samples",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch HackWithInfy",
+      "request": "launch",
+      "mainClass": "Samples.HackWithInfy",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch sol",
+      "request": "launch",
+      "mainClass": "Samples.sol",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Solution",
+      "request": "launch",
+      "mainClass": "Samples.Solution",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch B",
+      "request": "launch",
+      "mainClass": "Samples.B",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Login",
       "request": "launch",
       "mainClass": "AppDev.VEHICLE_RENTAL_SYSTEM.Login",
@@ -911,9 +1023,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "c:/Users/16sun/Documents/VS Code",
+      "cwd": "c:/Users/16sun/Documents/VS Code/JAVA",
       "environment": [],
-      "program": "c:/Users/16sun/Documents/VS Code/build/Debug/outDebug",
+      "program": "c:/Users/16sun/Documents/VS Code/JAVA/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",

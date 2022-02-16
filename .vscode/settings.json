@@ -18,16 +18,29 @@
     ".dist": true,
     "**/.vscode": true,
     ".vscode": true,
-    "**/.gitignore": true
+    "**/.gitignore": true,
+    "**/.cspell": true
   },
   "explorerExclude.backup": null,
   "cSpell.words": [
+    "aaabbcc",
+    "abcdefghijk",
     "Bajaj",
+    "Boinwless",
     "Bujji",
+    "dbabbca",
+    "eqrtw",
+    "Infy",
+    "Infytq",
+    "innum",
     "Kulla",
+    "lmnopqrstuvwxyz",
     "Nari",
     "Nireah",
+    "PANCARD",
     "pname",
+    "QUJDMT",
+    "Raines",
     "Vashikaran"
   ],
   "C_Cpp_Runner.cCompilerPath": "C:/MinGW/bin/gcc.exe",
@@ -57,5 +70,13 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ]
+  ],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:VS Code}/.cspell/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
+    }
+  }
 }
