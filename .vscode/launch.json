@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Login",
+      "request": "launch",
+      "mainClass": "Login",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch SubStrConcat",
       "request": "launch",
       "mainClass": "InfyTq.SubStrConcat",
