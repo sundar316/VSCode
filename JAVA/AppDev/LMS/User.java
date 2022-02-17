@@ -15,6 +15,11 @@ public class User {
     static int ids=9000;
     static Book bo;
     static List<User> uList=new ArrayList<>();
+    static {
+        uList.add(new User("Senthil", 1234, 5678, 609));
+        uList.add(new User("Guna", 1234, 5679, 609));
+        uList.add(new User("Velu", 1234, 5680, 609));
+    }
 
     User(String userName, int pin, int id, int aid){
         this.userName=userName;

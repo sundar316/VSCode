@@ -22,6 +22,9 @@ public class Admin {
     }
 
     static List<Admin> aList=new ArrayList<>();
+    static {
+        aList.add(new Admin("Rajan", 1234, 609));
+    }
     static List<String> log=new ArrayList<>();
 
     Admin(){}
