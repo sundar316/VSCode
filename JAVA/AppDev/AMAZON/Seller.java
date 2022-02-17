@@ -12,6 +12,10 @@ public class Seller {
     static int id=100;
 
     static List<Seller> sellerList=new ArrayList<>();
+    static {
+        sellerList.add(new Seller("Annachi01", 609, 1234, "Approved"));
+        sellerList.add(new Seller("Annachi02", 609, 1234, "Approved"));
+    }
 
     Seller(String userName, int userId, int pin, String status){
         this.userName=userName;

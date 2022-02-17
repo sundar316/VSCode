@@ -14,6 +14,10 @@ public class User {
     ArrayList<String> return_=new ArrayList<>();
 
     static List<User> uList=new ArrayList<>();
+    static {
+        uList.add(new User("Tom", 1234, 10000, false, "", "", ""));
+        uList.add(new User("Jerry", 1234, 10000, false, "", "", ""));
+    }
 
     User(String userName, int pin, int amount, boolean review, String cart, String buy ,String ret) {
         this.userName=userName;
