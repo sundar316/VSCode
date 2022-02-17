@@ -11,6 +11,11 @@ public class User {
 
     static int id=100;
     static List<User> uList=new ArrayList<>();
+    static {
+        uList.add(new User("Krishnan", 906, 1234, 0));
+        uList.add(new User("Meghna", 907, 1234, 0));
+    }
+
     static int ticket[][]=new int[10][6];
     static int waitingList[][]=new int[5][3];
 
