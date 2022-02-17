@@ -2,7 +2,7 @@ package InfyTq;
 
 import java.util.Scanner;
 
-public class MinSwapReq
+public class d_MinSwapReq
 {
 
     /* -------------------------------------------------------------------------- */

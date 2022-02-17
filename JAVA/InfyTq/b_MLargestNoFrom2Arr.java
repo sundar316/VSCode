@@ -7,14 +7,15 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-public class MLargestNoFrom2Arr
+public class b_MLargestNoFrom2Arr
 {
-    /*
-        input  : 101,101,610,447,389
-                 610,4,101,4,101
-        output : 447,610
-                 101,610
-    */
+    /* -------------------------------------------------------------------------- */
+    /*                        input  : 101,101,610,447,389                        */
+    /*                                 610,4,101,4,101                            */
+    /*                        output : 447,610                                    */
+    /*                                 101,610                                    */
+    /* -------------------------------------------------------------------------- */
+
     private static int singleDigit(int n)
     {
         while (n > 10)

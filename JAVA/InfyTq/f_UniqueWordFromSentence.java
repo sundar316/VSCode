@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class UniqueWordFromSentence
+public class f_UniqueWordFromSentence
 {
 
-    /*
-        input  : God sees the sees people,god is great great,people sees the god
-        output : god sees the people
-                 God is great
-                 X
-    */
+    /* -------------------------------------------------------------------------- */
+    /*  input  : God sees the sees people,god is great great,people sees the god  */
+    /*  output : god sees the people                                              */
+    /*           God is great                                                     */
+    /*           X                                                                */
+    /* -------------------------------------------------------------------------- */
 
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args)

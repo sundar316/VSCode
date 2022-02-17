@@ -3,13 +3,14 @@ package InfyTq;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class StrArrCmpWithChArr
+public class g_StrArrCmpWithChArr
 {
-    /*
-        input  : dbabbca
-                 bat,ball,rat,bat,bat,car,rat
-        output : ac
-    */
+    /* -------------------------------------------------------------------------- */
+    /*                              input  : dbabbca                              */
+    /*                                       bat,ball,rat,bat,bat,car,rat         */
+    /*                              output : ac                                   */
+    /* -------------------------------------------------------------------------- */
+
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args)
     {

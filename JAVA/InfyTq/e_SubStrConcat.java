@@ -2,7 +2,7 @@ package InfyTq;
 
 import java.util.Scanner;
 
-public class SubStrConcat
+public class e_SubStrConcat
 {
 
     /* -------------------------------------------------------------------------- */

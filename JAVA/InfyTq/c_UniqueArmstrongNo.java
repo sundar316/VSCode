@@ -3,12 +3,12 @@ package InfyTq;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-public class UniqueArmstrongNo
+public class c_UniqueArmstrongNo
 {
-    /*
-        input  : 15,3,1,70,53,71
-        output : 153,370,371
-    */
+    /* -------------------------------------------------------------------------- */
+    /*                          input  : 15,3,1,70,53,71                          */
+    /*                          output : 153,370,371                              */
+    /* -------------------------------------------------------------------------- */
 
     private static boolean isArmstrong(String str)
     {

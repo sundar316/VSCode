@@ -2,12 +2,14 @@ package InfyTq;
 
 import java.util.Scanner;
 
-public class PrimeSubstring
+public class a_PrimeSubstring
 {
-    /*
-        input : 60678
-        output : 67
-    */
+
+    /* -------------------------------------------------------------------------- */
+    /*                                input : 60678                               */
+    /*                                output: 67                                  */
+    /* -------------------------------------------------------------------------- */
+
     public static boolean isPrime(int n)
     {
         if (n < 2)
