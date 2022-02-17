@@ -3,7 +3,7 @@ package InfyTq;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class SortedStrIndDiff
+public class py_SortedStrIndDiff
 {
 
     /* -------------------------------------------------------------------------- */

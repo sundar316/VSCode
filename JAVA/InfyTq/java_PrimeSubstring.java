@@ -2,7 +2,7 @@ package InfyTq;
 
 import java.util.Scanner;
 
-public class a_PrimeSubstring
+public class java_PrimeSubstring
 {
 
     /* -------------------------------------------------------------------------- */

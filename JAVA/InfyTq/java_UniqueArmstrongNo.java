@@ -3,7 +3,7 @@ package InfyTq;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-public class c_UniqueArmstrongNo
+public class java_UniqueArmstrongNo
 {
     /* -------------------------------------------------------------------------- */
     /*                          input  : 15,3,1,70,53,71                          */

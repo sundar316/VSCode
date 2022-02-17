@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-public class b_MLargestNoFrom2Arr
+public class java_MLargestNoFrom2Arr
 {
     /* -------------------------------------------------------------------------- */
     /*                        input  : 101,101,610,447,389                        */

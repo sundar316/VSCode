@@ -2,7 +2,7 @@ package InfyTq;
 
 import java.util.Scanner;
 
-public class HackWithInfy
+public class py_HackWithInfy
 {
     public static boolean isPrime(int n)
     {

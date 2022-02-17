@@ -3,7 +3,7 @@ package InfyTq;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class zBitEncoding
+public class py_BitEncoding
 {
 
     /*
@@ -29,7 +29,7 @@ public class zBitEncoding
         String temp = "";
         for (int i = 0; i < str.length(); i++)
         {
-            if (!zBitEncoding.val.contains(str.charAt(i)+""))
+            if (!py_BitEncoding.val.contains(str.charAt(i)+""))
             {
                 System.out.println(-1);
                 return;

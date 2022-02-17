@@ -3,7 +3,7 @@ package InfyTq;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class g_StrArrCmpWithChArr
+public class java_StrArrCmpWithChArr
 {
     /* -------------------------------------------------------------------------- */
     /*                              input  : dbabbca                              */
