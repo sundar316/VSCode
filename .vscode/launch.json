@@ -3,6 +3,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch java_IntReplace",
+      "request": "launch",
+      "mainClass": "InfyTq.java_IntReplace",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch java_StrRotateConsAtEvInd",
+      "request": "launch",
+      "mainClass": "InfyTq.java_StrRotateConsAtEvInd",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch java_FormNoOnlyArray",
+      "request": "launch",
+      "mainClass": "InfyTq.java_FormNoOnlyArray",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch java_SumOfIntervals",
+      "request": "launch",
+      "mainClass": "InfyTq.java_SumOfIntervals",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch Login",
       "request": "launch",
       "mainClass": "Login",
