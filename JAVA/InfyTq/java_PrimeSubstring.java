@@ -12,7 +12,7 @@ public class java_PrimeSubstring
 
     public static boolean isPrime(int n)
     {
-        if (n < 2)
+        if (n <= 2)
             return false;
         for (int i = 2; i <= Math.sqrt(n); i++)
         {

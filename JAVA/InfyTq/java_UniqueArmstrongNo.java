@@ -1,7 +1,7 @@
 package InfyTq;
 
+import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.TreeSet;
 
 public class java_UniqueArmstrongNo
 {
@@ -28,13 +28,13 @@ public class java_UniqueArmstrongNo
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args)
     {
-        TreeSet<Integer> arms = new TreeSet<>();
+        ArrayList<Integer> arms = new ArrayList<>();
         String arr[] = sc.nextLine().split(",");
         for (int i = 0; i < arr.length; i++)
         {
             for (int j = i+1; j < arr.length; j++)
             {
-                if (isArmstrong(arr[i]+arr[j]))
+                if (isArmstrong(arr[i]+arr[j]) && !arms.contains(Integer.parseInt(arr[i]+arr[j])))
                 {
                     arms.add(Integer.parseInt(arr[i]+arr[j]));
                 }

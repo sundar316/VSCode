@@ -13,27 +13,19 @@ public class java_IntReplace {
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         String arr[] = sc.nextLine().split(",");
-        String str = "";
+        StringBuffer s;
+        double avg = 0;
         t : for (String i : arr) {
             for (int j = 0; j < i.length(); j++) {
                 if (i.charAt(j) == '6') {
-                    str += i.replace('6', '9')+",";
+                    s = new StringBuffer(i.replaceAll("6", "9"));
+                    s.reverse();
+                    avg += (Integer.parseInt(s.toString())/(double)arr.length);
                     continue t;
                 }
             }
-            str += i+",";
+            avg += (Integer.parseInt(i)/(double)arr.length);
         }
-        String out[] = str.split(",");
-        for (int i = 0; i < out.length; i++) {
-            StringBuffer s = new StringBuffer(out[i]);
-            out[i] = s.reverse().toString();
-        }
-
-
-        int n = 0;
-        for (String i : out) {
-            n += Integer.parseInt(i);
-        }
-        System.out.printf("%.2f", (float)(n/out.length));
+        System.out.println(avg);
     }
 }

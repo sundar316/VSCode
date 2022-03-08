@@ -3,6 +3,125 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch RemDupliFrSortArr",
+      "request": "launch",
+      "mainClass": "LeetCode.RemDupliFrSortArr",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch RomanToInt",
+      "request": "launch",
+      "mainClass": "LeetCode.RomanToInt",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch LongSubStrPalin",
+      "request": "launch",
+      "mainClass": "Strings.LongSubStrPalin",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch LandT",
+      "request": "launch",
+      "mainClass": "Python.LandT",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch AllInOne",
+      "request": "launch",
+      "mainClass": "Samples.AllInOne",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch AllInOne",
+      "request": "launch",
+      "mainClass": "Samples.Infosys.AllInOne",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch FactorOfThree",
+      "request": "launch",
+      "mainClass": "ZOHO.FactorOfThree",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch CubeEqualsSq",
+      "request": "launch",
+      "mainClass": "Samples.CubeEqualsSq",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch FacebookQue",
+      "request": "launch",
+      "mainClass": "Strings.FacebookQue",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch StrRev",
+      "request": "launch",
+      "mainClass": "ZOHO.StrRev",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Brackets",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.Brackets",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch HOPattern",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.HOPattern",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MaventicVowels",
+      "request": "launch",
+      "mainClass": "Samples.MaventicVowels",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch py_NextSmallIntNotInArr",
+      "request": "launch",
+      "mainClass": "InfyTq.py_NextSmallIntNotInArr",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch java_MaxSumOfCyclicArr",
+      "request": "launch",
+      "mainClass": "InfyTq.java_MaxSumOfCyclicArr",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch IntegerReplace",
+      "request": "launch",
+      "mainClass": "IntegerReplace",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch java_UniqueArmstrongNo",
+      "request": "launch",
+      "mainClass": "InfyTq.java_UniqueArmstrongNo",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch java_IntReplace",
       "request": "launch",
       "mainClass": "InfyTq.java_IntReplace",
