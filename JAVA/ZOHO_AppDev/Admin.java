@@ -1,3 +1,5 @@
+package ZOHO_AppDev;
+
 public class Admin {
 
     static int amount = 0;

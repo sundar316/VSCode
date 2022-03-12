@@ -1,3 +1,5 @@
+package ZOHO_AppDev;
+
 public class Transaction {
 
 
@@ -33,7 +35,7 @@ public class Transaction {
             booking(col, row, user, bus, gender);
             if (--size > 0) {
                 System.out.print("Enter Name of Co-Traveller: ");
-                String name = Login.sc.nextLine();
+                Login.sc.nextLine();
                 System.out.print("Gender [M/F]: ");
                 gender = Login.sc.nextLine();
             }
