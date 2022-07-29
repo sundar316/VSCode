@@ -15,17 +15,17 @@ public class Pyramid{
                 for(int j=0;j<n;j++)
                 {
                     if(((i+j)%2==0 && i<=j))
-                        System.out.print("* ");
+                        System.out.print("*");
                     else
-                        System.out.print("  ");
+                        System.out.print(" ");
                 }
                 //for right side pyramid
                 for(int j=1;j<n;j++)
                 {
                     if((i+j)%2==0 && i+j<=n-1)
-                        System.out.print("* ");
+                        System.out.print("*");
                     else
-                        System.out.print("  ");
+                        System.out.print(" ");
                 }
             }
             else
@@ -34,17 +34,17 @@ public class Pyramid{
                 for(int j=1;j<n;j++)
                 {
                     if(((i+j)%2!=0 && i<=j))
-                        System.out.print("* ");
+                        System.out.print("*");
                     else
-                        System.out.print("  ");
+                        System.out.print(" ");
                 }
                 //for right side pyramid
                 for(int j=0;j<n;j++)
                     {
                         if((i+j)%2!=0 && i+j<=n-1)
-                            System.out.print("* ");
+                            System.out.print("*");
                         else
-                            System.out.print("  ");
+                            System.out.print(" ");
                     }
             }
             System.out.println();
@@ -53,7 +53,7 @@ public class Pyramid{
 /*****************************************************************************/
 
         //for upward pyramid
-        for(int i=1;i<n;i++)
+        for(int i=0;i<n;i++)
         {
             if(n%2==0)
             {
@@ -61,17 +61,17 @@ public class Pyramid{
                 for(int j=0;j<n;j++)
                 {
                     if(((i+j)%2!=0 && i+j>=n-1))
-                        System.out.print("* ");
+                        System.out.print("*");
                     else
-                        System.out.print("  ");
+                        System.out.print(" ");
                 }
                 //for right side pyramid
                 for(int j=1;j<n;j++)
                 {
                     if((i+j)%2==0 && i>=j)
-                        System.out.print("* ");
+                        System.out.print("*");
                     else
-                        System.out.print("  ");
+                        System.out.print(" ");
                 }
             }
             else
@@ -80,17 +80,17 @@ public class Pyramid{
                 for(int j=0;j<n;j++)
                 {
                     if(((i+j)%2==0 && i+j>=n-1))
-                        System.out.print("* ");
+                        System.out.print("*");
                     else
-                        System.out.print("  ");
+                        System.out.print(" ");
                 }
                 //for right side pyramid
                 for(int j=1;j<n;j++)
                 {
                     if((i+j)%2==0 && i>=j)
-                        System.out.print("* ");
+                        System.out.print("*");
                     else
-                        System.out.print("  ");
+                        System.out.print(" ");
                 }
             }
             System.out.println();

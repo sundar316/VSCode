@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+body {
+  background-color:lightblue;
+  color: #000;
+}
+</style>
+</head>
+<body>
+  <button onclick = 'one()'>1</button>
+  <button onclick = 'two()'>2</button>
+  <button onclick = 'three()'>3</button><br>
+  <button onclick = 'four()'>4</button>
+  <button onclick = 'five()'>5</button>
+  <button onclick = 'six()'>6</button><br>
+  <button onclick = 'seven()'>7</button>
+  <button onclick = 'eight()'>8</button>
+  <button onclick = 'nine()'>9</button><br>
+  <button onclick = 'zero()'>0</button><br>
+  <button onclick = 'sum()'>&nbsp sum&nbsp</button>
+  <button onclick = 'minus()'>&nbsp minus&nbsp</button><br>
+  <button onclick = 'multiply()'>&nbsp multiply&nbsp</button>
+  <button onclick = 'divide()'>&nbsp divide&nbsp</button>
+  <p>result: </p>
+  <p id = 'ans'></p>
+<script id="jsbin-javascript">
+var a;
+var b;
+var c;
+function one() {
+  if (a === undefined) {
+    a = 1
+  } else {
+    b = 1
+  }
+}
+function two() {
+  if (a === undefined) {
+    a = 2
+  } else {
+    b = 2
+  }
+}
+function three() {
+  if (a === undefined) {
+    a = 3
+  } else {
+    b = 3
+  }
+}
+function four() {
+  if (a === undefined) {
+    a = 4
+  } else {
+    b = 4
+  }
+}
+function five() {
+  if (a === undefined) {
+    a = 5
+  } else {
+    b = 5
+  }
+}
+function six() {
+  if (a === undefined) {
+    a = 6
+  } else {
+    b = 6
+  }
+}
+function seven() {
+  if (a === undefined) {
+    a = 7
+  } else {
+    b = 7
+  }
+}
+function eight() {
+  if (a === undefined) {
+    a = 8
+  } else {
+    b = 8
+  }
+}
+function nine() {
+  if (a === undefined) {
+    a = 9
+  } else {
+    b = 9
+  }
+}
+function zero() {
+  if (a === undefined) {
+    a = 0
+  } else {
+    b = 0
+  }
+}
+function sum() {
+  document.getElementById('ans').innerHTML = a+b;
+  a = undefined;
+  b = undefined;
+}
+function minus() {
+  document.getElementById('ans').innerHTML = a-b;
+  a = undefined;
+  b = undefined;
+}
+function multiply() {
+  document.getElementById('ans').innerHTML = a*b;
+  a = undefined;
+  b = undefined;
+}
+function divide() {
+  document.getElementById('ans').innerHTML = a/b;
+  a = undefined;
+  b = undefined;
+}
+</script>
+</body>
+</html>

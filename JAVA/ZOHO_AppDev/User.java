@@ -40,7 +40,12 @@ public class User {
         String age = Login.sc.nextLine();
         System.out.print("Enter Gender:");
         String gender = Login.sc.nextLine();
-
+        for (User i : arr) {
+            if (i.name.equals(name)) {
+                System.out.println("User Name is Already Exits");
+                return;
+            }
+        }
         arr.add(new User(name, pass, age, gender));
         System.out.println("\nSign Up Successfully");
         System.out.print("Press Enter to Continue...");

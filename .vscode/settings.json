@@ -19,7 +19,8 @@
     "**/.vscode": true,
     ".vscode": true,
     "**/.gitignore": true,
-    "**/.cspell": true
+    "**/.cspell": true,
+    "Niresh": true
   },
   "explorerExclude.backup": null,
   "cSpell.words": [

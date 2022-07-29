@@ -3,6 +3,69 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch User",
+      "request": "launch",
+      "mainClass": "Samples.User",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch sd",
+      "request": "launch",
+      "mainClass": "sd",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Pattern",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.Pattern",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Login",
+      "request": "launch",
+      "mainClass": "ZOHO_AppDev.Login",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MergeSort",
+      "request": "launch",
+      "mainClass": "DataStructure.MergeSort",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch LIS",
+      "request": "launch",
+      "mainClass": "Strings.LIS",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Permutation",
+      "request": "launch",
+      "mainClass": "Strings.Permutation",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch TwoPairsWithSameAvg",
+      "request": "launch",
+      "mainClass": "Arrays.TwoPairsWithSameAvg",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch Mins",
+      "request": "launch",
+      "mainClass": "Samples.Mins",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch RemDupliFrSortArr",
       "request": "launch",
       "mainClass": "LeetCode.RemDupliFrSortArr",
