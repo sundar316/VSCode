@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ZOHO",
+      "request": "launch",
+      "mainClass": "Samples.Patterns.ZOHO",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
+      "name": "Launch MinUniqueSubString",
+      "request": "launch",
+      "mainClass": "Trilogy.MinUniqueSubString",
+      "projectName": "VS Code_85908032"
+    },
+    {
+      "type": "java",
       "name": "Launch User",
       "request": "launch",
       "mainClass": "Samples.User",

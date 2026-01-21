@@ -162,11 +162,16 @@ package Samples;
 // }
 
 
-public class Samples {
+// public class Samples {
 
-    public static void main(String[] args) {
-        for(int i=0;i<127;i++){
-            System.out.println((char)(i));
-        }
-    }
-}
+//     public static void main(String[] args) {
+//         int n=8;
+//         int t=0,e=0,c=0;
+//         while(e<=n){
+//             e+=2;
+//             c++;
+//         }
+//         System.out.println(c);
+//     }
+// }
+

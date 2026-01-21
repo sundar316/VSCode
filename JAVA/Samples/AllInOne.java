@@ -6,6 +6,7 @@ import java.util.*;
 // // import java.util.Map;
 // import java.util.List;
 // import java.util.Scanner;
+import java.util.function.Predicate;
 
 // public class AllInOne {
 
@@ -97,11 +98,36 @@ import java.util.*;
 //         a.setBalance(5000);
 //         System.out.println(a.getBalance());
 //     }
-//}
+// //}
 
-public class AllInOne{
-    public static void main(String[] args) {
-        System.out.println("Hello");
-    }
-}
-
+// public class AllInOne{
+    // public static void main(String[] args) {
+    //     // System.out.println("Hello");
+    //     int arr[]=new int[26];
+    //     String a="satchinrohit";
+    //     for(int i=0;i<a.length();i++){
+    //     arr[a.charAt(i)-'a']++;
+    //     }
+    //     for(int i=0;i<a.length();i++){
+    //         if("aeiou".contains(a.charAt(i)+"")){
+    //             System.out.print(arr[a.charAt(i)-'a']);
+    //         }else{
+    //             System.out.print(a.charAt(i)+"");
+    //         }
+    //     }
+    // }
+//     private static Scanner sc=new Scanner(System.in);
+//     public static void main(String[] args) {
+//         String a=sc.nextLine();
+//         int n = a.length();
+//         String temp = "";
+//         for (int i = 0; i < n; i++) {
+//             if (i%2 == 0) {
+//                 temp += a.charAt(i);
+//                 // i = 0;
+//                 // n = temp.length();
+//             }
+//         }
+//         System.out.println(temp);
+//     }
+// }
