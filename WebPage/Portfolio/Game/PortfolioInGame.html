@@ -1,66 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Game Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Cyberpunk Portfolio</title>
     <style>
-        body { margin: 0; overflow: hidden; background: #222; color: white; font-family: sans-serif; }
-        canvas { display: block; background: #3a5a40; }
-        #ui { position: absolute; top: 20px; left: 20px; pointer-events: none; }
+        body { margin: 0; background-color: #000; overflow: hidden; font-family: 'Courier New', monospace; }
+        #overlay { position: absolute; bottom: 20px; left: 20px; color: #0ff; text-shadow: 0 0 5px #0ff; }
     </style>
 </head>
 <body>
-    <div id="ui">
-        <h1>Dev Quest: Portfolio</h1>
-        <p>Use WASD to explore my career</p>
-    </div>
-    <canvas id="gameCanvas"></canvas>
+    <div id="overlay"><h1>SYSTEM ONLINE: Portfolio v1.0</h1></div>
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
 
-    <script>
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+    <script type="module">
+        import * as THREE from 'three';
 
-        const player = {
-            x: canvas.width / 2,
-            y: canvas.height / 2,
-            size: 30,
-            speed: 5,
-            color: '#a3b18a'
-        };
+        // 1. Scene Setup
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x000000, 0.05);
 
-        const keys = {};
+        const camera = new THREE.Camera(); 
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
 
-        window.addEventListener('keydown', (e) => keys[e.key.toLowerCase()] = true);
-        window.addEventListener('keyup', (e) => keys[e.key.toLowerCase()] = false);
+        // 2. The "Cyber Floor"
+        const grid = new THREE.GridHelper(100, 50, 0xff00ff, 0x222222);
+        scene.add(grid);
 
-        function update() {
-            if (keys['w'] || keys['arrowup']) player.y -= player.speed;
-            if (keys['s'] || keys['arrowdown']) player.y += player.speed;
-            if (keys['a'] || keys['arrowleft']) player.x -= player.speed;
-            if (keys['d'] || keys['arrowright']) player.x += player.speed;
+        // 3. A Glowing "Project" Pillar
+        const geometry = new THREE.BoxGeometry(1, 4, 1);
+        const material = new THREE.MeshBasicMaterial({ 
+            color: 0x00ffff, 
+            wireframe: true 
+        });
+        const projectPillar = new THREE.Mesh(geometry, material);
+        projectPillar.position.set(0, 2, -5);
+        scene.add(projectPillar);
+
+        // 4. Lighting (Neon Glow)
+        const light = new THREE.PointLight(0x00ffff, 10, 10);
+        light.position.set(0, 5, -5);
+        scene.add(light);
+
+        // Camera Positioning
+        const mainCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        mainCamera.position.z = 5;
+        mainCamera.position.y = 1.5;
+
+        // 5. Animation Loop
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // Subtle rotation for the project
+            projectPillar.rotation.y += 0.01;
+            
+            // Hover effect
+            projectPillar.position.y = 2 + Math.sin(Date.now() * 0.002) * 0.2;
+
+            renderer.render(scene, mainCamera);
         }
 
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            // Draw a "Project" Zone
-            ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
-            ctx.fillRect(200, 200, 150, 150);
-            ctx.fillStyle = "white";
-            ctx.fillText("PROJECTS ZONE", 230, 280);
+        animate();
 
-            // Draw Player
-            ctx.fillStyle = player.color;
-            ctx.fillRect(player.x, player.y, player.size, player.size);
-            
-            requestAnimationFrame(() => {
-                update();
-                draw();
-            });
+        // Handle Window Resize
+        window.addEventListener('resize', () => {
+            mainCamera.aspect = window.innerWidth / window.innerHeight;
+            mainCamera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        import { GLTFLoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
+
+// 1. Initialize the Loader
+const loader = new GLTFLoader();
+
+// 2. Load your Cyberpunk Model 
+// (Replace the URL with your hosted .glb file)
+loader.load(
+    'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/DamagedHelmet/glTF-Binary/DamagedHelmet.glb', 
+    function (gltf) {
+        const model = gltf.scene;
+        
+        // Scale and position your asset
+        model.scale.set(1.5, 1.5, 1.5);
+        model.position.set(0, 1.5, -5);
+        
+        // Add to scene
+        scene.add(model);
+        
+        // Let's make it spin like a trophy
+        function rotateModel() {
+            requestAnimationFrame(rotateModel);
+            model.rotation.y += 0.005;
         }
-
-        draw();
+        rotateModel();
+        
+        console.log("Cyber-Asset Loaded Successfully");
+    },
+    undefined, 
+    function (error) {
+        console.error("An error happened loading the model", error);
+    }
+);
     </script>
 </body>
 </html>

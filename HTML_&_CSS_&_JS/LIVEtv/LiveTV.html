@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tamil Live TV</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0f;--surface:#13131c;--surface2:#1c1c2e;--border:#2a2a40;
+  --accent:#e63946;--accent2:#f4a261;--text:#f0f0f8;--muted:#6b6b8a;
+  --card:#16162a;--live:#ff3b30;--green:#2ed573;--orange:#ffa502;
+  --broken:#3a1015;
+}
+html,body{width:100%;height:100%;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow:hidden}
+
+/* ─── LANDING ─── */
+#landing{position:fixed;inset:0;background:var(--bg);z-index:100;display:flex;flex-direction:column;overflow:hidden;}
+#landing.hidden{display:none}
+.land-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:18px 28px;border-bottom:1px solid var(--border);background:var(--surface);flex-shrink:0;}
+.land-logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--accent);display:flex;align-items:center;gap:10px;}
+.land-logo .dot{width:10px;height:10px;border-radius:50%;background:var(--live);animation:pulse 1.5s ease-in-out infinite;}
+.land-header-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.land-search{display:flex;align-items:center;gap:8px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:8px 14px;width:260px;}
+.land-search input{background:none;border:none;outline:none;color:var(--text);font-size:14px;width:100%;font-family:'Inter',sans-serif;}
+.land-search input::placeholder{color:var(--muted)}
+.add-btn{padding:9px 16px;background:var(--accent);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'Inter',sans-serif;transition:opacity .2s;}
+.add-btn:hover{opacity:.85}
+.land-tabs{display:flex;gap:2px;padding:14px 28px 0;border-bottom:1px solid var(--border);background:var(--surface);flex-shrink:0;overflow-x:auto;}
+.tab-btn{padding:9px 18px;border:none;background:none;color:var(--muted);font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab-btn:hover:not(.active){color:var(--text)}
+.land-body{flex:1;overflow-y:auto;padding:20px 28px 28px}
+.land-body::-webkit-scrollbar{width:5px}
+.land-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.section-label{display:flex;justify-content:space-between;align-items:center;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px;color:var(--muted);margin-bottom:14px;margin-top:6px; flex-wrap:wrap; gap:10px;}
+.manage-actions{display:flex;gap:10px;}
+.channel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;}
+.ch-card{background:var(--card);border:2px solid var(--border);border-radius:12px;padding:14px 10px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:8px;position:relative;overflow:hidden;}
+.ch-card:hover,.ch-card:focus{border-color:var(--accent);transform:translateY(-2px);background:var(--surface2);outline:none;}
+.ch-card.status-broken{border-color:#ff3b30; opacity: 0.6;}
+.ch-card.status-broken:hover{opacity: 1; background: var(--broken);}
+.ch-avatar{width:50px;height:50px;border-radius:10px;background:linear-gradient(135deg,var(--surface2),var(--border));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--accent2);text-align:center;line-height:1.2;padding:4px;}
+.ch-name-card{font-size:11px;font-weight:500;text-align:center;color:var(--text);line-height:1.4;}
+.ch-type-badge{font-size:8px;padding:2px 6px;border-radius:3px;font-weight:700;letter-spacing:.5px;}
+.badge-m3u8{background:rgba(46,213,115,.15);color:var(--green)}
+.badge-mpd{background:rgba(255,165,0,.15);color:var(--orange)}
+.badge-yupptv{background:rgba(230,57,70,.15);color:var(--accent)}
+.badge-missing{background:rgba(255,255,255,.1);color:#aaa}
+.fav-btn{position:absolute;top:7px;right:7px;background:none;border:none;cursor:pointer;font-size:13px;opacity:.35;transition:opacity .2s;color:var(--accent2);padding:3px;}
+.fav-btn:hover,.fav-btn.faved{opacity:1}
+.ch-num{position:absolute;top:7px;left:9px;font-size:9px;color:var(--muted);font-family:'Bebas Neue',sans-serif;letter-spacing:1px;}
+.no-results{text-align:center;color:var(--muted);padding:60px 20px;font-size:15px;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.6)}100%{transform:scale(1)}}
+.fav-btn.pop{animation:pop .3s ease}
+
+/* ─── ADD/EDIT CHANNEL MODAL ─── */
+#add-modal{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:500;display:none;align-items:center;justify-content:center;padding:20px;}
+#add-modal.show{display:flex}
+.modal-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;width:100%;max-width:480px;}
+.modal-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--accent);margin-bottom:20px;}
+.modal-field{margin-bottom:14px;}
+.modal-field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:500;letter-spacing:.5px;}
+.modal-field input,.modal-field select{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color .2s;}
+.modal-field input:focus,.modal-field select:focus{border-color:var(--accent)}
+.modal-actions{display:flex;gap:10px;margin-top:20px;}
+.modal-save{flex:1;padding:11px;background:var(--accent);border:none;border-radius:8px;color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
+.modal-delete{padding:11px;background:#3a1015;border:1px solid #ff3b30;border-radius:8px;color:#ff3b30;font-size:14px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;display:none;}
+.modal-cancel{padding:11px 20px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--muted);font-size:14px;cursor:pointer;font-family:'Inter',sans-serif;}
+.modal-note{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.6;}
+
+/* ─── PLAYER ─── */
+#player-view{position:fixed;inset:0;background:#000;z-index:200;display:none;flex-direction:column;}
+#player-view.active{display:flex}
+#video-container{position:relative;width:100%;height:100%;background:#000;overflow:hidden;}
+video,#embed-iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;}
+#embed-iframe{border:none;display:none;pointer-events:none;}
+
+/* ─── OSD & UI ─── */
+#ch-osd{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.88) 60%);padding:60px 36px 28px;opacity:0;transition:opacity .4s;pointer-events:none;}
+#ch-osd.show{opacity:1}
+.osd-num{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:3px;color:var(--muted);margin-bottom:3px;}
+.osd-name{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:2px;color:#fff;line-height:1;}
+.osd-live{display:inline-flex;align-items:center;gap:5px;background:var(--live);border-radius:4px;padding:3px 9px;font-size:10px;font-weight:700;letter-spacing:1px;margin-top:8px;}
+.osd-live .dot{width:6px;height:6px;border-radius:50%;background:#fff;animation:pulse 1s infinite}
+#loading-overlay{position:absolute;inset:0;background:rgba(0,0,0,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:10;}
+#loading-overlay.hidden{display:none}
+.spinner{width:48px;height:48px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-name{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;color:var(--text)}
+.loading-sub{font-size:12px;color:var(--muted)}
+#error-overlay{position:absolute;inset:0;background:rgba(0,0,0,.92);display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:11;}
+#error-overlay.show{display:flex}
+.err-icon{font-size:44px}
+.err-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--accent)}
+.err-msg{font-size:13px;color:var(--muted);max-width:320px;text-align:center;line-height:1.7}
+.err-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:6px;}
+.err-btn{padding:10px 22px;background:var(--accent);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
+.err-btn.sec{background:var(--surface2);border:1px solid var(--border);color:var(--muted);}
+.err-skip{font-size:12px;color:var(--muted);cursor:pointer;text-decoration:underline;margin-top:4px;}
+#tv-topbar{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;background:linear-gradient(rgba(0,0,0,.8),transparent);opacity:0;transition:opacity .4s;pointer-events:none;z-index:5;}
+#tv-topbar.show{opacity:1;pointer-events:auto}
+.tv-logo{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;color:var(--accent)}
+.topbar-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:8px 14px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;backdrop-filter:blur(8px);transition:all .2s;display:flex;align-items:center;gap:5px;min-height:44px;min-width:44px;justify-content:center;}
+.topbar-btn:hover,.topbar-btn:focus{background:rgba(255,255,255,.22);outline:none;}
+.topbar-right{display:flex;gap:8px;align-items:center}
+#clock-tv{font-size:12px;color:rgba(255,255,255,.55);min-width:42px;}
+#mute-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.8);border:2px solid rgba(255,255,255,.2);border-radius:16px;padding:14px 24px;font-size:28px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:15;}
+#mute-badge.show{opacity:1}
+#ch-sidebar{position:absolute;right:0;top:0;bottom:0;width:280px;background:rgba(8,8,14,.95);backdrop-filter:blur(20px);border-left:1px solid var(--border);transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;z-index:9;overflow:hidden;}
+#ch-sidebar.open{transform:translateX(0)}
+.sidebar-head{display:flex;align-items:center;justify-content:space-between;padding:16px 14px 12px;border-bottom:1px solid var(--border);flex-shrink:0;}
+.sidebar-title{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;color:var(--accent);}
+.sidebar-close{background:rgba(255,255,255,.08);border:1px solid var(--border);color:var(--muted);width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.sidebar-close:hover,.sidebar-close:focus{background:var(--accent);color:#fff;border-color:var(--accent);outline:none;}
+.sidebar-search{padding:8px 10px;border-bottom:1px solid var(--border);flex-shrink:0;}
+.sidebar-search input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:7px 11px;color:var(--text);font-size:13px;font-family:'Inter',sans-serif;outline:none;}
+.sidebar-search input:focus{border-color:var(--accent)}
+.sidebar-search input::placeholder{color:var(--muted)}
+.sidebar-list{flex:1;overflow-y:auto;}
+.sidebar-list::-webkit-scrollbar{width:3px}
+.sidebar-list::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.sidebar-item{display:flex;align-items:center;gap:8px;padding:11px 13px;cursor:pointer;transition:background .15s;border-bottom:1px solid rgba(42,42,64,.3);}
+.sidebar-item:hover,.sidebar-item:focus{background:var(--surface2);outline:none;}
+.sidebar-item.active-si{background:rgba(230,57,70,.12);border-left:3px solid var(--accent)}
+.si-num{font-family:'Bebas Neue',sans-serif;font-size:13px;color:var(--muted);width:24px;flex-shrink:0;}
+.si-name{font-size:12px;font-weight:500;flex:1;line-height:1.3}
+.si-badge{font-size:8px;padding:2px 5px;border-radius:3px;font-weight:700;flex-shrink:0;}
+#ch-switcher{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.82);backdrop-filter:blur(14px);border:1px solid var(--border);border-radius:16px;padding:18px 28px;display:flex;flex-direction:column;align-items:center;gap:3px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:20;min-width:200px;}
+#ch-switcher.show{opacity:1}
+.sw-arrow{font-size:16px;color:var(--muted)}
+.sw-prev,.sw-next{font-size:12px;color:var(--muted)}
+.sw-curr{font-family:'Bebas Neue',sans-serif;font-size:26px;color:#fff;letter-spacing:1px;text-align:center;}
+#kb-hints{position:absolute;bottom:0;right:0;padding:10px 16px;background:rgba(0,0,0,.55);border-top-left-radius:10px;opacity:0;transition:opacity .4s;font-size:10px;color:var(--muted);line-height:2;pointer-events:none;}
+#kb-hints.show{opacity:1}
+.kb-row{display:flex;align-items:center;gap:5px;}
+.kb-key{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:3px;padding:0 5px;font-size:9px;color:#fff;font-weight:600;}
+#remote-btns{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:10px;opacity:0;transition:opacity .4s;pointer-events:none;z-index:6;}
+#remote-btns.show{opacity:1;pointer-events:auto}
+.remote-btn{background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);border-radius:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;transition:all .2s;color:#fff;touch-action:manipulation;}
+.remote-btn:hover,.remote-btn:focus{background:rgba(230,57,70,.6);border-color:var(--accent);outline:none;}
+.remote-btn:active{transform:scale(.9)}
+#skip-banner{position:absolute;top:20px;left:50%;transform:translateX(-50%);background:rgba(230,57,70,.9);border-radius:24px;padding:8px 18px;font-size:12px;font-weight:600;letter-spacing:.5px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:12;}
+#skip-banner.show{opacity:1}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style>
+</head>
+<body>
+
+<div id="landing">
+  <div class="land-header">
+    <div class="land-logo"><div class="dot"></div>TAMIL LIVE TV</div>
+    <div class="land-header-right">
+      <div class="land-search">
+        <span style="color:var(--muted)">🔍</span>
+        <input type="text" id="search-input" placeholder="Search channels…" autocomplete="off"/>
+      </div>
+      <button class="add-btn" onclick="openAddModal()">+ Add Channel</button>
+    </div>
+  </div>
+  <div class="land-tabs" id="main-tabs">
+    <button class="tab-btn active" data-tab="all">All Channels</button>
+    <button class="tab-btn" data-tab="fav">❤ Favourites</button>
+    <button class="tab-btn" data-tab="m3u8">HLS</button>
+    <button class="tab-btn" data-tab="yupptv">Embeds</button>
+    
+    <button class="tab-btn" id="tab-working" data-tab="working" style="display:none; color:var(--green)">🟢 Working</button>
+    <button class="tab-btn" id="tab-broken" data-tab="broken" style="display:none; color:#ff3b30">🔴 Broken</button>
+    
+    <button class="tab-btn" data-tab="manage" style="color:var(--accent2); margin-left:auto;">⚙ Manage / Edit</button>
+  </div>
+  <div class="land-body" id="land-body">
+    <div class="section-label" id="section-label">
+      <span id="section-text">ALL CHANNELS</span>
+      <div class="manage-actions" id="manage-actions" style="display:none;">
+        <button class="add-btn" style="background:#0984e3;font-size:11px;padding:6px 12px" onclick="exportM3U()">📺 Export to .m3u (For TiviMate)</button>
+        <button class="add-btn" style="background:var(--orange);font-size:11px;padding:6px 12px" onclick="runHealthScanner()">🩺 Run Real Stream Scanner</button>
+        <button class="add-btn" style="background:var(--green);font-size:11px;padding:6px 12px" onclick="exportMasterJSON()" id="sync-btn">💾 Download Updated JSON</button>
+      </div>
+    </div>
+    <div class="channel-grid" id="channel-grid"></div>
+  </div>
+</div>
+
+<div id="add-modal">
+  <div class="modal-box">
+    <div class="modal-title" id="modal-main-title">+ ADD CHANNEL</div>
+    <div class="modal-field">
+      <label>CHANNEL NAME</label>
+      <input type="text" id="add-name" placeholder="e.g. My Local TV"/>
+    </div>
+    <div class="modal-field">
+      <label>STREAM URL</label>
+      <input type="text" id="add-url" placeholder="https://… .m3u8 or embed URL"/>
+    </div>
+    <div class="modal-field">
+      <label>STREAM TYPE</label>
+      <select id="add-type">
+        <option value="m3u8">HLS / m3u8</option>
+        <option value="mpd">DASH / mpd</option>
+        <option value="yupptv">YuppTV</option>
+        <option value="embed">Embed (YouTube, Iframe)</option>
+      </select>
+    </div>
+    <div class="modal-actions">
+      <button class="modal-save" onclick="saveChannel()">Save Channel</button>
+      <button class="modal-delete" id="delete-btn" onclick="deleteChannel()">Delete</button>
+      <button class="modal-cancel" onclick="closeAddModal()">Cancel</button>
+    </div>
+    <div class="modal-note" id="modal-note-area">
+      💡 Changes are securely saved in this browser. To update your free hosting site, go to Manage, click <b>Download Updated JSON</b>, and replace the file on your host!
+    </div>
+  </div>
+</div>
+
+<div id="player-view">
+  <div id="video-container">
+    <video id="video-el" playsinline></video>
+    <iframe id="embed-iframe" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    <div id="loading-overlay"><div class="spinner"></div><div class="loading-name" id="loading-name">Loading…</div><div class="loading-sub" id="loading-sub">Connecting to stream</div></div>
+    <div id="error-overlay"><div class="err-icon">📡</div><div class="err-title">Stream Unavailable</div><div id="err-msg" class="err-msg">This channel may be offline or geo-restricted.</div><div class="err-actions"><button class="err-btn" onclick="retryStream()">↺ Retry</button><button class="err-btn sec" onclick="goHome()">⌂ Home</button></div><div class="err-skip" onclick="skipToNext()">Skip to next channel →</div></div>
+    <div id="mute-badge">🔇</div>
+    <div id="skip-banner">⏭ Skipping to next…</div>
+    <div id="tv-topbar"><div class="tv-logo">Tamil Live TV</div><div class="topbar-right"><div id="clock-tv"></div><button class="topbar-btn" onclick="toggleMute()">🔊</button><button class="topbar-btn" id="fav-topbar-btn" onclick="toggleFavCurrent()">♡</button><button class="topbar-btn" onclick="toggleSidebar()">☰</button><button class="topbar-btn" onclick="goHome()">⌂</button></div></div>
+    <div id="ch-osd"><div class="osd-num" id="osd-num">CH 1</div><div class="osd-name" id="osd-name">Channel</div><div class="osd-live"><div class="dot"></div>LIVE</div></div>
+    <div id="remote-btns"><button class="remote-btn" onclick="changeChannel(-1)">▲</button><button class="remote-btn" onclick="toggleMute()">🔊</button><button class="remote-btn" onclick="toggleFavCurrent()" id="fav-remote-btn">♡</button><button class="remote-btn" onclick="toggleSidebar()">☰</button><button class="remote-btn" onclick="toggleFullScreen()">⛶</button><button class="remote-btn" onclick="changeChannel(1)">▼</button></div>
+    <div id="kb-hints"><div class="kb-row"><span class="kb-key">↑↓</span> Channel</div><div class="kb-row"><span class="kb-key">M</span> Mute</div><div class="kb-row"><span class="kb-key">L</span> List</div><div class="kb-row"><span class="kb-key">F</span> Fav</div><div class="kb-row"><span class="kb-key">H</span> Home</div></div>
+    <div id="ch-switcher"><div class="sw-arrow">▲</div><div class="sw-prev" id="sw-prev"></div><div class="sw-curr" id="sw-curr"></div><div class="sw-next" id="sw-next"></div><div class="sw-arrow">▼</div></div>
+    <div id="ch-sidebar">
+      <div class="sidebar-head"><div class="sidebar-title">📺 CHANNELS</div><button class="sidebar-close" onclick="closeSidebar()">✕</button></div>
+      <div class="sidebar-search"><input type="text" id="sidebar-search" placeholder="Search channels…" autocomplete="off"/></div>
+      <div class="sidebar-list" id="sidebar-list"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════ CORE DATA & FETCH ═══════════
+let CHANNELS = [];
+let failedSlugs = JSON.parse(localStorage.getItem('tltv_failed') || '[]');
+
+// Local edits cache for Static Web Hosting
+let localChanges = JSON.parse(localStorage.getItem('tltv_local_changes') || '{"added":[], "edited":[], "deleted":[]}');
+
+async function loadMasterJSON() {
+  try {
+    const res = await fetch('tamil_tv_sources.json?t=' + new Date().getTime());
+    if (!res.ok) throw new Error("JSON not found");
+    let fetchedChannels = await res.json();
+    
+    // Apply local modifications on top of the server JSON
+    CHANNELS = fetchedChannels.filter(c => !localChanges.deleted.includes(c.slug));
+    
+    localChanges.edited.forEach(edit => {
+      const idx = CHANNELS.findIndex(c => c.slug === edit.slug);
+      if (idx !== -1) CHANNELS[idx] = edit;
+    });
+
+    localChanges.added.forEach(add => {
+      if (!CHANNELS.some(c => c.slug === add.slug)) CHANNELS.push(add);
+    });
+
+  } catch(err) {
+    console.warn("Could not load tamil_tv_sources.json.", err);
+    CHANNELS = localChanges.added; 
+  }
+
+  buildLanding();
+  buildSidebar();
+}
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(err => {
+      console.log(`Error: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+
+function saveLocalChanges() {
+  localStorage.setItem('tltv_local_changes', JSON.stringify(localChanges));
+}
+
+// ═══════════ STATE ═══════════
+let currentIdx  = 0;
+let hls         = null;
+let uiTimer     = null, osdTimer = null, switcherTimer = null, muteTimer = null;
+let currentTab  = 'all';
+let searchQ     = '';
+let sidebarOpen = false;
+let uiVisible   = true;
+let isMuted     = false;
+let failCount   = 0;
+let editingSlug = null; 
+
+window.onload = () => {
+  loadMasterJSON();
+  setInterval(updateClock, 1000); updateClock();
+};
+const isTVMode = () => window.matchMedia('(hover:none) and (pointer:coarse)').matches || navigator.userAgent.includes('TV');
+
+// ═══════════ LANDING ═══════════
+function buildLanding() {
+  renderGrid();
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      currentTab = b.dataset.tab;
+      renderGrid();
+    });
+  });
+  document.getElementById('search-input').addEventListener('input', e => {
+    searchQ = e.target.value.toLowerCase();
+    renderGrid();
+  });
+}
+
+function filteredChannels() {
+  let list = CHANNELS;
+  if (currentTab !== 'manage' && currentTab !== 'broken') list = list.filter(c => c.url && !failedSlugs.includes(c.slug));
+  
+  if (currentTab === 'fav')    list = list.filter(c => c.fav === true);
+  if (currentTab === 'm3u8')   list = list.filter(c => c.type === 'm3u8' || c.type === 'mpd');
+  if (currentTab === 'yupptv') list = list.filter(c => c.type === 'yupptv' || c.type === 'embed');
+  if (currentTab === 'working') list = list.filter(c => c.status === 'working');
+  if (currentTab === 'broken') list = list.filter(c => c.status === 'broken');
+  if (searchQ) list = list.filter(c => c.name.toLowerCase().includes(searchQ));
+  return list;
+}
+
+function renderGrid() {
+  const grid  = document.getElementById('channel-grid');
+  let list  = filteredChannels();
+  const labels = {all:'ALL CHANNELS',fav:'FAVOURITES',m3u8:'HLS STREAMS',yupptv:'YUPPTV & EMBEDS',manage:'EDIT & MANAGE (ALL)', working:'🟢 WORKING CHANNELS', broken:'🔴 BROKEN CHANNELS'};
+  
+  document.getElementById('section-text').textContent = (labels[currentTab] || 'CHANNELS') + (searchQ ? ` — "${searchQ}"` : '') + ` (${list.length})`;
+  document.getElementById('manage-actions').style.display = currentTab === 'manage' ? 'flex' : 'none';
+
+  if (!list.length) {
+    grid.innerHTML = `<div class="no-results">No channels found in this category</div>`;
+    return;
+  }
+
+  grid.innerHTML = list.map(ch => {
+    const idx = CHANNELS.indexOf(ch) >= 0 ? CHANNELS.indexOf(ch) : -1;
+    const isFav = ch.fav === true;
+    const initials = ch.name.split(' ').slice(0,2).map(w=>w[0]||'').join('').toUpperCase();
+    const tc = {'m3u8':'badge-m3u8','mpd':'badge-mpd','yupptv':'badge-yupptv','embed':'badge-yupptv'}[ch.type] || 'badge-m3u8';
+    
+    // Visual indicators for manage/broken tabs
+    let statusClass = ch.status === 'broken' ? 'status-broken' : '';
+    let statusText = !ch.url ? 'NEEDS URL' : (ch.status === 'broken' ? 'BROKEN' : (ch.type||'').toUpperCase());
+
+    if (currentTab === 'manage' || currentTab === 'broken') {
+      return `<div class="ch-card ${statusClass}" tabindex="0" onclick="openEditModal(event, '${ch.slug}')">
+        <div class="ch-avatar" style="background:var(--accent2);color:#000">✎</div>
+        <div class="ch-name-card">${ch.name}</div>
+        <span class="ch-type-badge ${!ch.url || ch.status==='broken' ? 'badge-missing' : tc}">${statusText}</span>
+      </div>`;
+    }
+
+    return `<div class="ch-card" tabindex="0" onclick="launchChannel(${idx})">
+      <span class="ch-num">${idx >= 0 ? idx+1 : '+'}</span>
+      <button class="fav-btn ${isFav?'faved':''}" onclick="toggleFav(event,'${ch.slug}')">${isFav?'❤':'♡'}</button>
+      <div class="ch-avatar">${initials}</div>
+      <div class="ch-name-card">${ch.name}</div>
+      <span class="ch-type-badge ${tc}">${(ch.type||'').toUpperCase()}</span>
+    </div>`;
+  }).join('');
+}
+
+function toggleFav(e, slug) {
+  e.stopPropagation();
+  const btn = e.currentTarget;
+  const ch = CHANNELS.find(c => c.slug === slug);
+  if(ch) {
+      ch.fav = !ch.fav;
+      const editIdx = localChanges.edited.findIndex(x => x.slug === slug);
+      if(editIdx >= 0) localChanges.edited[editIdx] = ch; else localChanges.edited.push(ch);
+      saveLocalChanges();
+      
+      btn.classList.toggle('faved', ch.fav);
+      btn.textContent = ch.fav ? '❤' : '♡';
+  }
+  btn.classList.add('pop');
+  btn.addEventListener('animationend', () => btn.classList.remove('pop'), {once:true});
+  if (currentTab === 'fav') renderGrid();
+  updateFavBtns();
+}
+
+// ═══════════ REAL HEALTH SCANNER ═══════════
+async function runHealthScanner() {
+  if(!confirm(`This will perform a deep manifest check on ${CHANNELS.length} channels. It may take 1-2 minutes. Continue?`)) return;
+  
+  // Show the dynamic tabs
+  document.getElementById('tab-working').style.display = 'block';
+  document.getElementById('tab-broken').style.display = 'block';
+  
+  let active = 0, broken = 0;
+  
+  for(let i = 0; i < CHANNELS.length; i++) {
+     let ch = CHANNELS[i];
+     document.getElementById('section-text').textContent = `🩺 SCANNING... (${i+1}/${CHANNELS.length}) - ${ch.name}`;
+     
+     if (!ch.url) { ch.status = 'broken'; broken++; continue; }
+     if (ch.type === 'embed' || ch.type === 'yupptv' || ch.url.includes('youtube') || ch.url.includes('youtu.be')) { 
+         ch.status = 'working'; active++; continue; // Browsers can't easily ping iframes, assume working
+     }
+
+     // Physically test the stream
+     let isWorking = await testHLSStream(ch.url);
+     ch.status = isWorking ? 'working' : 'broken';
+     if(isWorking) active++; else broken++;
+  }
+  
+  document.getElementById('section-text').textContent = `🩺 SCAN COMPLETE: ${active} Working | ${broken} Broken`;
+  
+  // Auto switch to working tab
+  document.querySelectorAll('.tab-btn').forEach(x => x.classList.remove('active'));
+  document.getElementById('tab-working').classList.add('active');
+  currentTab = 'working';
+  renderGrid();
+}
+
+// Spins up a hidden HLS instance to verify the manifest actually parses
+function testHLSStream(url) {
+  return new Promise(resolve => {
+    // 5 second max wait time
+    const timeout = setTimeout(() => resolve(false), 5000); 
+    
+    if (url.includes('.m3u8') && Hls.isSupported()) {
+       const hlsTest = new Hls({manifestLoadingTimeOut: 4000, manifestLoadingMaxRetry: 0});
+       hlsTest.loadSource(url);
+       hlsTest.on(Hls.Events.MANIFEST_PARSED, () => { clearTimeout(timeout); hlsTest.destroy(); resolve(true); });
+       hlsTest.on(Hls.Events.ERROR, (e, data) => { if(data.fatal) { clearTimeout(timeout); hlsTest.destroy(); resolve(false); } });
+    } else {
+       // Fallback test for MPD or native players
+       const v = document.createElement('video');
+       v.src = url;
+       v.onloadedmetadata = () => { clearTimeout(timeout); resolve(true); };
+       v.onerror = () => { clearTimeout(timeout); resolve(false); };
+    }
+  });
+}
+
+// ═══════════ EXPORT M3U FOR SMART TV APPS ═══════════
+function exportM3U() {
+    let m3u = "#EXTM3U\n";
+    CHANNELS.forEach(ch => {
+        if(ch.url && ch.type !== 'embed' && !ch.url.includes('youtube')) {
+            m3u += `#EXTINF:-1 tvg-id="${ch.slug}" tvg-name="${ch.name}",${ch.name}\n${ch.url}\n`;
+        }
+    });
+    const blob = new Blob([m3u], {type:'text/plain'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'Tamil_Live_TV.m3u';
+    a.click();
+}
+
+
+// ═══════════ LAUNCH ═══════════
+function launchChannel(idx) {
+  if (idx < 0 || idx >= CHANNELS.length) return;
+  const ch = CHANNELS[idx];
+  if (!ch.url) { alert("This channel is missing a Stream URL. Use 'Manage/Edit' to add one!"); return; }
+
+  currentIdx = idx;
+  failCount  = 0;
+  clearTimeout(window._skipTimeout); 
+  document.getElementById('landing').classList.add('hidden');
+  document.getElementById('player-view').classList.add('active');
+  loadStream(ch);
+  showOSD();
+  showUI();
+  buildSidebar();
+  updateFavBtns();
+  document.getElementById('remote-btns').classList.add('show');
+}
+
+function goHome() {
+  stopStream();
+  clearTimeout(window._skipTimeout);
+  document.getElementById('player-view').classList.remove('active');
+  document.getElementById('landing').classList.remove('hidden');
+  document.getElementById('ch-sidebar').classList.remove('open');
+  sidebarOpen = false;
+  renderGrid();
+}
+
+// ═══════════ STREAM LOADER ═══════════
+function loadStream(ch) {
+  hideError();
+  showLoading(ch.name);
+  document.getElementById('loading-sub').textContent = 'Connecting…';
+  clearTimeout(window._loadTimeout);
+  clearTimeout(window._skipTimeout);
+
+  const video  = document.getElementById('video-el');
+  const iframe = document.getElementById('embed-iframe');
+  video.style.display = 'block';
+  iframe.style.display = 'none';
+  video.pause();
+  video.removeAttribute('src');
+  video.load();
+  if (hls) { hls.destroy(); hls = null; }
+  iframe.src = 'about:blank';
+
+  let finalUrl = ch.url;
+
+  // ─── YOUTUBE AND EMBED FIX ───
+  if (ch.type === 'yupptv' || ch.type === 'embed' || finalUrl.includes('youtube.com') || finalUrl.includes('youtu.be')) {
+    iframe.style.display = 'block';
+    video.style.display  = 'none';
+    
+    let isYT = false;
+    let vId = null;
+
+    if (finalUrl.includes('youtube.com/watch?v=')) { vId = new URL(finalUrl).searchParams.get('v'); } 
+    else if (finalUrl.includes('youtu.be/')) { vId = finalUrl.split('youtu.be/')[1].split('?')[0]; } 
+    else if (finalUrl.includes('youtube.com/embed/')) { vId = finalUrl.split('youtube.com/embed/')[1].split('?')[0]; } 
+    else if (finalUrl.includes('youtube.com/live/')) { vId = finalUrl.split('youtube.com/live/')[1].split('?')[0]; }
+
+    if (vId) {
+      const ytMute = isMuted ? 1 : 0;
+      finalUrl = `https://www.youtube.com/embed/${vId}?autoplay=1&mute=${ytMute}&controls=0&disablekb=1&enablejsapi=1&playsinline=1&rel=0`;
+      isYT = true;
+    }
+
+    iframe.onload = null;
+    iframe.src = finalUrl;
+
+    if (isYT) {
+      iframe.onload = () => {
+        setTimeout(() => {
+          if (iframe.contentWindow) iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'playVideo' }), '*');
+        }, 400); 
+      };
+    }
+    hideLoading();
+    return;
+  }
+
+  // ─── HLS AND NATIVE VIDEO ───
+  const isHLS = finalUrl.includes('.m3u8') || finalUrl.includes('m3u8') || finalUrl.includes('chunks') || finalUrl.includes('playlist') || finalUrl.includes('index');
+  
+  if (isHLS && Hls.isSupported()) {
+    hls = new Hls({
+      enableWorker: true, lowLatencyMode: true, backBufferLength: 30,
+      manifestLoadingTimeOut: 12000, manifestLoadingMaxRetry: 1,
+    });
+    hls.loadSource(finalUrl);
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      video.muted = isMuted;
+      video.play().catch(()=>{ video.muted = true; video.play().catch(()=>{}); });
+      hideLoading();
+    });
+    hls.on(Hls.Events.ERROR, (_, data) => {
+      if (data.fatal) onStreamError(ch);
+    });
+  } else if (isHLS && video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = finalUrl;
+    video.muted = isMuted;
+    video.addEventListener('loadedmetadata', () => { video.play().catch(()=>{}); hideLoading(); }, {once:true});
+    video.addEventListener('error', () => onStreamError(ch), {once:true});
+  } else {
+    video.src = finalUrl;
+    video.muted = isMuted;
+    const onCan = () => { video.play().catch(()=>{}); hideLoading(); };
+    const onErr = () => onStreamError(ch);
+    video.addEventListener('canplay', onCan, {once:true});
+    video.addEventListener('error',   onErr, {once:true});
+  }
+
+  window._loadTimeout = setTimeout(() => {
+    const overlay = document.getElementById('loading-overlay');
+    if (!overlay.classList.contains('hidden')) onStreamError(ch);
+  }, 12000);
+}
+
+function onStreamError(ch) {
+  clearTimeout(window._loadTimeout);
+  if (!failedSlugs.includes(ch.slug)) {
+    failedSlugs.push(ch.slug);
+    localStorage.setItem('tltv_failed', JSON.stringify(failedSlugs));
+  }
+  failCount++;
+  if (failCount < 10) {
+    showSkipBanner();
+    clearTimeout(window._skipTimeout);
+    window._skipTimeout = setTimeout(() => skipToNext(), 2000);
+  } else {
+    failCount = 0;
+    showError("Too many failures. Please select another channel.");
+  }
+}
+
+function skipToNext() {
+  hideError();
+  document.getElementById('skip-banner').classList.remove('show');
+  let tries = 0;
+  do {
+    currentIdx = (currentIdx + 1) % CHANNELS.length;
+    tries++;
+  } while ((failedSlugs.includes(CHANNELS[currentIdx].slug) || !CHANNELS[currentIdx].url) && tries < CHANNELS.length);
+  
+  loadStream(CHANNELS[currentIdx]);
+  showOSD();
+  buildSidebar();
+  updateFavBtns();
+}
+
+function showSkipBanner() {
+  const b = document.getElementById('skip-banner');
+  b.classList.add('show');
+  setTimeout(() => b.classList.remove('show'), 2400);
+}
+
+function retryStream() {
+  failedSlugs = failedSlugs.filter(s => s !== CHANNELS[currentIdx].slug);
+  localStorage.setItem('tltv_failed', JSON.stringify(failedSlugs));
+  failCount = 0;
+  hideError();
+  loadStream(CHANNELS[currentIdx]);
+}
+
+function stopStream() {
+  clearTimeout(window._loadTimeout);
+  clearTimeout(window._skipTimeout);
+  const video = document.getElementById('video-el');
+  const iframe = document.getElementById('embed-iframe');
+  if (hls) { hls.destroy(); hls = null; }
+  video.pause(); video.removeAttribute('src'); video.load();
+  iframe.src = 'about:blank';
+}
+
+function showLoading(name) { document.getElementById('loading-overlay').classList.remove('hidden'); document.getElementById('loading-name').textContent = name || 'Loading…'; }
+function hideLoading() { clearTimeout(window._loadTimeout); document.getElementById('loading-overlay').classList.add('hidden'); }
+function showError(msg) { hideLoading(); document.getElementById('error-overlay').classList.add('show'); if (msg) document.getElementById('err-msg').textContent = msg; }
+function hideError() { document.getElementById('error-overlay').classList.remove('show'); }
+
+// ═══════════ OSD & UI ═══════════
+function showOSD() {
+  if (currentIdx < 0 || currentIdx >= CHANNELS.length) return;
+  const ch = CHANNELS[currentIdx];
+  document.getElementById('osd-num').textContent  = `CH ${currentIdx + 1}`;
+  document.getElementById('osd-name').textContent = ch.name;
+  const osd = document.getElementById('ch-osd');
+  osd.classList.add('show');
+  clearTimeout(osdTimer);
+  osdTimer = setTimeout(() => osd.classList.remove('show'), 2200);
+}
+
+function toggleMute() {
+  isMuted = !isMuted;
+  const video = document.getElementById('video-el');
+  video.muted = isMuted;
+
+  const iframe = document.getElementById('embed-iframe');
+  if (iframe.style.display === 'block') {
+     if(iframe.contentWindow) iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func: isMuted ? 'mute' : 'unMute' }), '*');
+  }
+
+  const badge = document.getElementById('mute-badge');
+  badge.textContent = isMuted ? '🔇' : '🔊';
+  badge.classList.add('show');
+  clearTimeout(muteTimer);
+  muteTimer = setTimeout(() => badge.classList.remove('show'), 1400);
+  document.querySelector('.topbar-btn[onclick="toggleMute()"]').textContent = isMuted ? '🔇' : '🔊';
+  showUI();
+}
+
+function showUI() {
+  uiVisible = true;
+  document.getElementById('tv-topbar').classList.add('show');
+  document.getElementById('kb-hints').classList.add('show');
+  document.getElementById('remote-btns').classList.add('show');
+  clearTimeout(uiTimer);
+  uiTimer = setTimeout(hideUI, 5000);
+}
+function hideUI() {
+  if (sidebarOpen) return;
+  uiVisible = false;
+  document.getElementById('tv-topbar').classList.remove('show');
+  document.getElementById('kb-hints').classList.remove('show');
+  if (!isTVMode()) document.getElementById('remote-btns').classList.remove('show');
+}
+document.getElementById('player-view').addEventListener('mousemove', showUI);
+document.getElementById('player-view').addEventListener('click', e => {
+  const sidebar = document.getElementById('ch-sidebar');
+  if (!sidebar.contains(e.target) && !e.target.closest('#tv-topbar') && !e.target.closest('#remote-btns')) {
+    if (!uiVisible) showUI(); else hideUI();
+  }
+});
+
+// ═══════════ CHANNEL NAVIGATION & SIDEBAR ═══════════
+function changeChannel(dir) {
+  clearTimeout(window._skipTimeout);
+  let next = (currentIdx + dir + CHANNELS.length) % CHANNELS.length;
+  let tries = 0;
+  while ((failedSlugs.includes(CHANNELS[next].slug) || !CHANNELS[next].url) && tries < CHANNELS.length) {
+    next = (next + dir + CHANNELS.length) % CHANNELS.length;
+    tries++;
+  }
+  currentIdx = next;
+  failCount = 0;
+  showSwitcher();
+  loadStream(CHANNELS[currentIdx]);
+  showOSD();
+  buildSidebar();
+  updateFavBtns();
+}
+
+function showSwitcher() {
+  const len  = CHANNELS.length;
+  const prev = CHANNELS[(currentIdx - 1 + len) % len];
+  const curr = CHANNELS[currentIdx];
+  const next = CHANNELS[(currentIdx + 1) % len];
+  document.getElementById('sw-prev').textContent = `▲ ${prev.name}`;
+  document.getElementById('sw-curr').textContent = curr.name;
+  document.getElementById('sw-next').textContent = `▼ ${next.name}`;
+  const sw = document.getElementById('ch-switcher');
+  sw.classList.add('show');
+  clearTimeout(switcherTimer);
+  switcherTimer = setTimeout(() => sw.classList.remove('show'), 2000);
+}
+
+function buildSidebar() {
+  const q = document.getElementById('sidebar-search').value.toLowerCase();
+  const list = CHANNELS.filter(c => c.url && (!q || c.name.toLowerCase().includes(q)));
+  document.getElementById('sidebar-list').innerHTML = list.map(ch => {
+    const idx = CHANNELS.indexOf(ch);
+    const tc  = {'m3u8':'badge-m3u8','mpd':'badge-mpd','yupptv':'badge-yupptv','embed':'badge-yupptv'}[ch.type] || 'badge-m3u8';
+    return `<div class="sidebar-item ${idx===currentIdx?'active-si':''}" tabindex="0"
+      onclick="launchChannel(${idx})" onkeydown="if(event.key==='Enter')launchChannel(${idx})">
+      <span class="si-num">${idx+1}</span>
+      <span class="si-name">${ch.name}</span>
+      <span class="si-badge ${tc}">${(ch.type||'').toUpperCase()}</span>
+    </div>`;
+  }).join('');
+  
+  const active = document.querySelector('.sidebar-item.active-si');
+  if (active && sidebarOpen) active.scrollIntoView({block:'center',behavior:'smooth'});
+}
+document.getElementById('sidebar-search').addEventListener('input', buildSidebar);
+
+function toggleSidebar() {
+  sidebarOpen = !sidebarOpen;
+  document.getElementById('ch-sidebar').classList.toggle('open', sidebarOpen);
+  if (sidebarOpen) { buildSidebar(); showUI(); }
+}
+function closeSidebar() { sidebarOpen = false; document.getElementById('ch-sidebar').classList.remove('open'); }
+
+function toggleFavCurrent() {
+  if (!CHANNELS[currentIdx]) return;
+  const slug = CHANNELS[currentIdx].slug;
+  const ch = CHANNELS.find(c => c.slug === slug);
+  if(ch) {
+      ch.fav = !ch.fav;
+      const editIdx = localChanges.edited.findIndex(x => x.slug === slug);
+      if(editIdx >= 0) localChanges.edited[editIdx] = ch; else localChanges.edited.push(ch);
+      saveLocalChanges();
+  }
+  updateFavBtns();
+  showUI();
+}
+function updateFavBtns() {
+  if (!CHANNELS[currentIdx]) return;
+  const isFav = CHANNELS[currentIdx].fav === true;
+  document.getElementById('fav-topbar-btn').textContent  = isFav ? '❤' : '♡';
+  document.getElementById('fav-remote-btn').textContent  = isFav ? '❤' : '♡';
+}
+
+// ═══════════ ADD/EDIT/DELETE CHANNEL ═══════════
+function openAddModal()  { 
+  editingSlug = null;
+  document.getElementById('modal-main-title').textContent = '+ ADD CHANNEL';
+  document.getElementById('add-name').value = '';
+  document.getElementById('add-url').value  = '';
+  document.getElementById('add-type').value = 'm3u8';
+  document.getElementById('delete-btn').style.display = 'none';
+  document.getElementById('add-modal').classList.add('show'); 
+}
+
+function openEditModal(e, slug) {
+  if(e) e.stopPropagation();
+  const ch = CHANNELS.find(c => c.slug === slug);
+  if (!ch) return;
+  editingSlug = slug;
+  document.getElementById('modal-main-title').textContent = '✎ EDIT CHANNEL';
+  document.getElementById('add-name').value = ch.name || '';
+  document.getElementById('add-url').value  = ch.url || '';
+  document.getElementById('add-type').value = ch.type || 'm3u8';
+  document.getElementById('delete-btn').style.display = 'block';
+  document.getElementById('add-modal').classList.add('show');
+}
+
+function closeAddModal() { document.getElementById('add-modal').classList.remove('show'); }
+
+function saveChannel() {
+  const name = document.getElementById('add-name').value.trim();
+  const url  = document.getElementById('add-url').value.trim();
+  const type = document.getElementById('add-type').value;
+  if (!name || !url) { alert('Please fill in name and URL.'); return; }
+  
+  if (editingSlug) {
+    let ch = CHANNELS.find(c => c.slug === editingSlug);
+    if(ch) {
+        ch.name = name; ch.url = url; ch.type = type;
+        const editIdx = localChanges.edited.findIndex(x => x.slug === editingSlug);
+        if(editIdx >= 0) localChanges.edited[editIdx] = ch; else localChanges.edited.push(ch);
+    }
+  } else {
+    const slug = 'custom-' + name.toLowerCase().replace(/[^a-z0-9]+/g,'-') + '-' + Date.now();
+    const newCh = {name, slug, url, type, custom: true};
+    CHANNELS.push(newCh);
+    localChanges.added.push(newCh);
+  }
+  
+  saveLocalChanges();
+  closeAddModal();
+  renderGrid();
+  buildSidebar();
+}
+
+function deleteChannel() {
+  if (!editingSlug) return;
+  CHANNELS = CHANNELS.filter(c => c.slug !== editingSlug);
+  localChanges.deleted.push(editingSlug);
+  
+  localChanges.added = localChanges.added.filter(c => c.slug !== editingSlug);
+  localChanges.edited = localChanges.edited.filter(c => c.slug !== editingSlug);
+  
+  saveLocalChanges();
+  closeAddModal();
+  renderGrid();
+  buildSidebar();
+}
+
+function exportMasterJSON() {
+  const blob = new Blob([JSON.stringify(CHANNELS, null, 2)], {type:'application/json'});
+  const a    = document.createElement('a');
+  a.href     = URL.createObjectURL(blob);
+  a.download = 'tamil_tv_sources.json';
+  a.click();
+  
+  // Clear local temporary cache after exporting
+  localChanges = {added:[], edited:[], deleted:[]};
+  saveLocalChanges();
+  alert("File downloaded! Go to your free hosting provider (like Netlify or GitHub) and replace your old tamil_tv_sources.json with this new one.");
+}
+
+// ═══════════ SYSTEM LOGIC ═══════════
+function updateClock() { document.getElementById('clock-tv').textContent = new Date().toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit'}); }
+
+const KEY_MAP = {
+  'ArrowUp':     () => changeChannel(-1), 'ArrowDown':   () => changeChannel(1),
+  'ArrowLeft':   () => changeChannel(-1), 'ArrowRight':  () => changeChannel(1),
+  'PageUp':      () => changeChannel(-1), 'PageDown':    () => changeChannel(1),
+  'ChannelUp':   () => changeChannel(-1), 'ChannelDown': () => changeChannel(1),
+  'MediaTrackPrevious': () => changeChannel(-1), 'MediaTrackNext': () => changeChannel(1),
+  'm': () => toggleMute(), 'M': () => toggleMute(),
+  'AudioVolumeMute': () => toggleMute(), 'MediaVolumeMute': () => toggleMute(), 'VolumeMute': () => toggleMute(),
+  'l': () => toggleSidebar(), 'L': () => toggleSidebar(), 'Enter': () => {},
+  'h': () => goHome(), 'H': () => goHome(),
+  'GoBack': () => { if(sidebarOpen) closeSidebar(); else goHome(); },
+  'Back': () => { if(sidebarOpen) closeSidebar(); else goHome(); },
+  'BrowserBack': () => { if(sidebarOpen) closeSidebar(); else goHome(); },
+  'f': () => { toggleFavCurrent(); updateFavBtns(); }, 'F': () => { toggleFavCurrent(); updateFavBtns(); },
+  'Escape': () => { if(sidebarOpen) closeSidebar(); else hideUI(); },
+  'MediaPlay': () => { document.getElementById('video-el').play().catch(()=>{}); },
+  'MediaPause': () => { document.getElementById('video-el').pause(); },
+  'MediaPlayPause': () => { const v = document.getElementById('video-el'); v.paused ? v.play().catch(()=>{}) : v.pause(); },
+  '427': () => changeChannel(1), '428': () => changeChannel(-1),
+  'VolumeUp': () => {}, 'VolumeDown': () => {},
+};
+
+document.addEventListener('keydown', e => {
+  const inPlayer = document.getElementById('player-view').classList.contains('active');
+  if (!inPlayer) return;
+  const handler = KEY_MAP[e.key] || KEY_MAP[e.keyCode];
+  if (handler && e.key !== 'VolumeUp' && e.key !== 'VolumeDown') {
+    e.preventDefault(); handler(); showUI();
+  }
+});
+
+let touchStartX = null, touchStartY = null;
+document.getElementById('player-view').addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].clientX; touchStartY = e.touches[0].clientY;
+}, {passive:true});
+document.getElementById('player-view').addEventListener('touchend', e => {
+  if (touchStartY === null || touchStartX === null) return;
+  const dy = touchStartY - e.changedTouches[0].clientY;
+  const dx = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(dy) > 80 && Math.abs(dy) > Math.abs(dx)) { changeChannel(dy > 0 ? 1 : -1); showUI(); } 
+  else if (Math.abs(dx) > 80 && Math.abs(dx) > Math.abs(dy)) { if (dx > 0) toggleSidebar(); else goHome(); }
+  touchStartX = touchStartY = null;
+}, {passive:true});
+
+window.resetFailed = function() {
+  failedSlugs = [];
+  localStorage.removeItem('tltv_failed');
+  CHANNELS = CHANNELS.map(c => c);
+  renderGrid(); buildSidebar();
+  alert('Cleared failed channel list. All channels restored.');
+};
+</script>
+</body>
+</html>

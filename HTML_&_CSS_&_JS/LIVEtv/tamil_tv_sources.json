@@ -1,0 +1,4022 @@
+{
+  "working": [
+    {
+      "name": "Polimer TV",
+      "slug": "polimer-tv",
+      "url": "https://cdn-2.pishow.tv/live/1241/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Makkal TV",
+      "slug": "makkal-tv",
+      "url": "https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vendhar TV",
+      "slug": "vendhar-tv",
+      "url": "https://cdn-3.pishow.tv/live/1271/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "DD Tamil",
+      "slug": "dd-tamil",
+      "url": "https://cdn-2.pishow.tv/live/26/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Isai Aruvi TV",
+      "slug": "isai-aruvi-tv",
+      "url": "https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Chithiram TV",
+      "slug": "chithiram-tv",
+      "url": "https://cdn-6.pishow.tv/live/1243/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Kids"
+    },
+    {
+      "name": "Kalaignar TV",
+      "slug": "kalaignar-tv",
+      "url": "https://segment.yuppcdn.net/240122/kalaignartv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "News Tamil 24x7",
+      "slug": "news-tamil-24x7",
+      "url": "https://www.yupptv.com/yupptvnew/channels/news-tamil/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "News"
+    },
+    {
+      "name": "IBC Bakthi",
+      "slug": "ibc-bakthi",
+      "url": "https://webcast.emn.onl/IBC2/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "IBC Tamil",
+      "slug": "ibc-tamil",
+      "url": "https://webcast.emn.onl/IBC/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Angel TV",
+      "slug": "angel-tv",
+      "url": "https://www.yupptv.com/yupptvnew/channels/angel-tv/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Sri Sankara Tamil",
+      "slug": "sri-sankara-tamil",
+      "url": "https://www.yupptv.com/yupptvnew/channels/sri-sankara-tamil/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "SVBC TTD",
+      "slug": "svbc-ttd",
+      "url": "https://www.yupptv.com/yupptvnew/channels/svbc-2/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Madha TV",
+      "slug": "madha-tv",
+      "url": "https://60e68b19dd194.streamlock.net:55/madhahd1/smil:madhatv.smil/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Kalaignar Seithigal TV",
+      "slug": "kalaignar-seithigal-tv",
+      "url": "https://www.yupptv.com/yupptvnew/channels/seithigal-tv/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "News"
+    },
+    {
+      "name": "Sana TV",
+      "slug": "sana-tv",
+      "url": "https://galaxyott.live/hls/sanatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Tamilan TV",
+      "slug": "tamilan-tv",
+      "url": "https://cdn.zionmediait.com/zionmediaitserver2024/97484f5ce6da96e496a9b87c439835d0.sdp/chunks.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Polimer News",
+      "slug": "polimer-news",
+      "url": "https://www.yupptv.com/yupptvnew/channels/polimer-news/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "News"
+    },
+    {
+      "name": "Peppers TV",
+      "slug": "peppers-tv",
+      "url": "https://cdn-2.pishow.tv/live/1383/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Murasu TV",
+      "slug": "murasu-tv",
+      "url": "https://segment.yuppcdn.net/050522/murasu/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Moon TV",
+      "slug": "moon-tv",
+      "url": "https://player.mslivestream.net/mslive/e10bb900976df9177b9a080314f26f86.sdp/chunks.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sirippoli TV",
+      "slug": "sirippoli-tv",
+      "url": "https://yuppmedtaorire.akamaized.net/v1/manifest/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/siripoli_nim_https/c4e6500f-ea05-4226-810e-2833ee0075ff/0.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vaanavil TV",
+      "slug": "vaanavil-tv",
+      "url": "https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/chunks.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Athavan TV",
+      "slug": "athavan-tv",
+      "url": "https://www.yupptv.com/yupptvnew/channels/athavan-tv-hd/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thalaa TV",
+      "slug": "thalaa-tv",
+      "url": "https://www.yupptv.com/yupptvnew/channels/thalaa-tv/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MN Music",
+      "slug": "mn-music",
+      "url": "https://mntv.livebox.co.in/musichls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "U TV Tamil",
+      "slug": "u-tv-tamil",
+      "url": "https://stream.galaxyott.live/live/utv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Subin TV",
+      "slug": "subin-tv",
+      "url": "https://stream.galaxyott.live/live/subintv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Marutham Nelli TV",
+      "slug": "mn-tv",
+      "url": "https://mntv.livebox.co.in/mntvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Nambikkai TV",
+      "slug": "nambikkai-tv",
+      "url": "https://mk9qa7n8qwyb-hls-live.wmncdn.net/nambikkaitv/live.stream/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Deva TV",
+      "slug": "deva-tv",
+      "url": "https://play.applelive.in/devatv/devatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "TVI TV",
+      "slug": "tvi-tv",
+      "url": "https://live.cmr24.fm/TVI/HD/chunks.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Mullai TV",
+      "slug": "mullai-tv",
+      "url": "https://ipcloud.live/mullaitv/mullaitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Malar TV",
+      "slug": "malar-tv",
+      "url": "https://cdn-3.pishow.tv/live/473/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SJ Surya TV",
+      "slug": "sj-surya-tv",
+      "url": "https://ipcloud.live/nellaitv/suriyatv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Maniway TV",
+      "slug": "maniway-tv",
+      "url": "https://live.singamcloud.in/bsctv/bsctv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "STN TV",
+      "slug": "stn-tv",
+      "url": "https://play.applelive.in/stntv/stntv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Boss TV",
+      "slug": "boss-tv",
+      "url": "https://play.applelive.in/vasantv/vasantv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MCN HD",
+      "slug": "mcn-hd",
+      "url": "https://play.applelive.in/mcntv/mcntv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sana Plus HD",
+      "slug": "sana-tv-hd",
+      "url": "https://galaxyott.live//hls/sanaplus.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Irattaipaathai TV",
+      "slug": "irattaipaathai-tv",
+      "url": "https://account31.livebox.co.in/IRATTAIPAATHAITVhls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "CTN",
+      "slug": "ctn",
+      "url": "https://rtmp.bmlive.net/ctn/ctntn/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Senthur TV",
+      "slug": "senthur-tv",
+      "url": "https://senthurtv-hls.suriyantv.in/live/senthurtv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Roja TV",
+      "slug": "roja-tv",
+      "url": "https://live.rojatv.cloud/rojatv/rojatv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Roja Movies",
+      "slug": "roja-movies",
+      "url": "https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Movies"
+    },
+    {
+      "name": "Tharun Movies HD",
+      "slug": "tharun-movies-hd",
+      "url": "https://streaming.livebox.co.in/tharunmovieshls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Movies"
+    },
+    {
+      "name": "MN TV",
+      "slug": "mn-tv-2",
+      "url": "https://mntv.livebox.co.in/mntvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SK TV",
+      "slug": "sk-tv",
+      "url": "https://stream.galaxyott.live/live/sktv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "NTV HD",
+      "slug": "ntv-hd",
+      "url": "https://galaxyott.live//hls/ntv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Gem TV",
+      "slug": "gem-tv",
+      "url": "https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Eason TV",
+      "slug": "eason-tv",
+      "url": "https://amigofx.com:1936/easontv/easontv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Tamil Oli TV",
+      "slug": "tamil-oli-tv",
+      "url": "https://view.rcserver.in/tmp_hls7/tamilolitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "KCTV",
+      "slug": "kctv",
+      "url": "https://rtmp.bmlive.net/bms/kctv/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jith TV",
+      "slug": "jith-tv",
+      "url": "https://sscloud7.com/live/jithtv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JCV Musix",
+      "slug": "jcv-musix",
+      "url": "https://play.applelive.in/jcvtv/jcvmusix.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Raga TV",
+      "slug": "raga-tv",
+      "url": "https://live.onecloudlive.in/ragatv/ragatvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Oli TV HD",
+      "slug": "oli-tv-hd",
+      "url": "https://live.olidigital.in/olitv/olitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kumari TV",
+      "slug": "kumari-tv",
+      "url": "https://rtmp.applelive.in/gvkumaritv/gvkumaritv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Prime TV",
+      "slug": "prime-tv",
+      "url": "https://live.applelive.in/primetv/primetv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "TDN HD",
+      "slug": "tdn-hd",
+      "url": "https://live.maxtn.in/tdn/tdn/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Surya TV Tamil",
+      "slug": "surya-tv-tamil",
+      "url": "https://galaxyott.live/hls//suryatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Yet TV",
+      "slug": "yet-tv",
+      "url": "https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Dark TV",
+      "slug": "dark-tv",
+      "url": "https://play.applelive.in/darktv/darktv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Manasu TV",
+      "slug": "manasu-tv",
+      "url": "https://stream6.livebox.co.in/manasutvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Om Sakthi TV",
+      "slug": "om-sakthi-tv",
+      "url": "https://sscloud7.com/live/omsakthitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Sakthi TV HD",
+      "slug": "sakthi-tv-hd",
+      "url": "https://live.sscloud7.in/live/sakthitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Deiva Oli",
+      "slug": "deiva-oli",
+      "url": "https://stream.sscloud7.in/live/deivaoli/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "NTN TV",
+      "slug": "ntn-tv",
+      "url": "https://live.skystream.in/live/ntntv/index.m3u8?hls_ctx=1314owa2",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "PR TV",
+      "slug": "pr-tv",
+      "url": "https://play.applelive.in/prtv/prtv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "DTV",
+      "slug": "dtv",
+      "url": "https://stream.d6-pro.com/Dtv/live/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thalapathy TV",
+      "slug": "thalapathy-tv",
+      "url": "https://play.applelive.in/thalapathytv/thalapathytv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Riya TV",
+      "slug": "riya-tv",
+      "url": "https://play.applelive.in/riyatv/riyatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Harin TV",
+      "slug": "harin-tv",
+      "url": "https://ipcloud.live/harintv/harintvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Time TV",
+      "slug": "time-tv",
+      "url": "https://live.olidigital.in/timetv/timetv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Phoenix TV Tamil",
+      "slug": "phoenix-tv-tamil",
+      "url": "https://stream.onecloudlive.in/phoenixtv/phoenixtv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Imai TV",
+      "slug": "imai-tv",
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/imaitv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Nila TV",
+      "slug": "nila-tv",
+      "url": "https://live.olidigital.in/nilatv/nilatv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "WE Baduga TV",
+      "slug": "we-baduga-tv",
+      "url": "https://rtmp.bmlive.net/webaduga/webaduga/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sky Plus TV",
+      "slug": "sky-plus-tv",
+      "url": "https://ipcloud.live/skytv/skytv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jeyam Television",
+      "slug": "jeyam-television",
+      "url": "https://jeyamtv.livebox.co.in/JeyamTelevisionhls/JeyamTelevision.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SMCV HD",
+      "slug": "smcv-hd",
+      "url": "https://singamcloud.in/smcvtv/smcvtv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Maran TV",
+      "slug": "maran-tv",
+      "url": "https://server.sscloud7.in/marantv/marantv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aaryaa TV",
+      "slug": "aarya-tv",
+      "url": "https://live.sscloud7.in/live/aaryaatv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Isai TV",
+      "slug": "isai-tv",
+      "url": "https://server.sscloud7.in/isaihd/isaihd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Dharshan TV",
+      "slug": "dharshan-tv",
+      "url": "https://galaxyott.live/hls/dharshantv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sha TV",
+      "slug": "sha-tv",
+      "url": "https://play.applelive.in/shatv/shatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sachin TV",
+      "slug": "sachin-tv",
+      "url": "https://ipcloud.live/sachintv/sachintvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sachin TV Music",
+      "slug": "sachin-tv-music",
+      "url": "https://ipcloud.live/sachintv/musichd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "EET TV",
+      "slug": "eet-tv",
+      "url": "https://eu.streamjo.com/eetlive/eettv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Namma Gopi TV",
+      "slug": "namma-gopi-tv",
+      "url": "https://stream.rojatv.cloud/nammagobi/tv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "M Television",
+      "slug": "m-television",
+      "url": "https://ipcloud.live/mtv/menhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aadvik TV",
+      "slug": "aadvik-tv",
+      "url": "https://ipcloud.live/sachintv/aadviktv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Maruthi TV",
+      "slug": "maruthi-tv",
+      "url": "https://stream.onecloudlive.in/maruthitv/maruthitvhd/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JCV",
+      "slug": "jcv",
+      "url": "https://play.applelive.in/jcvtv/jcvtv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Velicham TV",
+      "slug": "velicham-tv",
+      "url": "https://cdn.smartstream.video/smartstream-us/velichamtv/velichamtv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Minnal HD",
+      "slug": "minnal-hd",
+      "url": "https://ipcloud.live/app/minnaltv/minnalhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Urchagam TV",
+      "slug": "urchagam-tv",
+      "url": "https://rtmp.bmlive.net/bms/urchagamtv/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Eagle TV",
+      "slug": "eagle-tv",
+      "url": "https://rtmp.bmlive.net/bms/eagletv/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Ashoka TV",
+      "slug": "ashoka-tv",
+      "url": "https://app.ashokadigital.net/app/12f5e922/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Anbu TV",
+      "slug": "anbu-tv",
+      "url": "https://ipcloud.live/anbutv/anbutvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Nellai TV",
+      "slug": "nellai-tv",
+      "url": "https://stream.onecloudlive.in/nellaitv/nellaitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Params TV",
+      "slug": "params-tv",
+      "url": "https://app.ashokadigital.net/app/a3e0b02f/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Rock TV",
+      "slug": "rock-tv",
+      "url": "https://apis.avmediawork.in/tvhls/rocktv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Karthick TV",
+      "slug": "karthick-tv",
+      "url": "https://ipcloud.live/karthick/karthicktvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Akilam TV",
+      "slug": "akilam-tv",
+      "url": "https://stream.onecloudlive.in/akilamtv/akilamtvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "7 Green 4K",
+      "slug": "7-green-4k",
+      "url": "https://account33.livebox.co.in/7GREEN4Khls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vedha TV",
+      "slug": "vedha-tv",
+      "url": "https://skystream.in/live/vedha6528/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "NTC TV",
+      "slug": "ntc-tv",
+      "url": "https://galaxyott.live/hls/ntv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Ultimate TV",
+      "slug": "ultimate-tv",
+      "url": "https://stream.galaxyott.live/live/utv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MSN TV",
+      "slug": "msn-tv",
+      "url": "https://ipcloud.live/msntv/msntv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "King TV",
+      "slug": "king-tv",
+      "url": "https://rtmp.bmlive.net/kingtv/kingtv/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Durai TV",
+      "slug": "durai-tv",
+      "url": "https://ipcloud.live/duraitv/live/index.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Apple TV Nagercoil",
+      "slug": "apple-tv-nagercoil",
+      "url": "https://play.applelive.in/appletv/appletv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jeyson TV",
+      "slug": "jeyson-tv",
+      "url": "https://play.applelive.in/jeysontv/jeysontv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kumari Kathir TV",
+      "slug": "kumari-kathir-tv",
+      "url": "https://play.applelive.in/jjmax/jjmax.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JC TV",
+      "slug": "jc-tv",
+      "url": "https://play.applelive.in/jctv/jctv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Digital TV",
+      "slug": "digital-tv",
+      "url": "https://play.applelive.in/digitaltv/digitaltv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "S TV",
+      "slug": "s-tv",
+      "url": "https://play.applelive.in/stv/stv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Dheiveegam TV",
+      "slug": "dheiveegam-tv",
+      "url": "https://stream.singamcloud.in/Dheiveegamtv/Dheiveegamtv/index.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Oscar TV",
+      "slug": "oscar-tv",
+      "url": "https://account21.livebox.co.in/oscartvhls/live.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thamil TV",
+      "slug": "thamil-tv",
+      "url": "https://amigofx.com:1936/tv360/tv360/playlist.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "24x7 Live Tamil Songs",
+      "slug": "custom-24x7-live-tamil-songs-1779723567027",
+      "url": "https://www.youtube.com/embed/Yb8kSxx9z9M?si=tuWttx1clVWKHSA3",
+      "type": "embed",
+      "custom": true,
+      "fav": true,
+      "status": "working",
+      "category": "Music"
+    }
+  ],
+  "broken": [
+    {
+      "name": "Colors Tamil HD",
+      "slug": "colors-tamil-hd",
+      "url": "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=429&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJg_QL6EHJ9XkQqFgNq_aibPaKTEFkZQD0eliNhaBIIa0pgtMqdKkTr50X0wZXG6BeglPUf1Nid0AyVifvi1T2-RSD4R6-1S5-_Hk6AMISUc8WBgItB4Vyxs3GrqueiP_J4&vtoken=",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Z Tamil HD",
+      "slug": "z-tamil-hd",
+      "url": "https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(ZeeThi)/master.mpd&keyId=bd7282e920e5437a9b1f01bc6f81795c&key=99763370f0763b0f7119aab091cc70c8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Discovery Kids Tamil",
+      "slug": "discovery-kids-tamil",
+      "url": "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Kids"
+    },
+    {
+      "name": "CN Tamil",
+      "slug": "cn-tamil",
+      "url": "https://login.bheem.tv/bpk-tv/22602/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Kids"
+    },
+    {
+      "name": "History TV18 HD Tamil",
+      "slug": "history-tv18-hd-tamil",
+      "url": "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Documentary"
+    },
+    {
+      "name": "Jaya Max",
+      "slug": "jaya-max",
+      "url": "https://login.bheem.tv/bpk-tv/22374/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jaya Movie",
+      "slug": "jaya-movie",
+      "url": "https://login.bheem.tv/bpk-tv/22373/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Movies"
+    },
+    {
+      "name": "Discovery Tamil",
+      "slug": "discovery-tamil-2",
+      "url": "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Documentary"
+    },
+    {
+      "name": "Animal Planet HD",
+      "slug": "animal-planet-hd",
+      "url": "https://login.bheem.tv/bpk-tv/22052/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Documentary"
+    },
+    {
+      "name": "Jaya TV",
+      "slug": "jaya-tv",
+      "url": "https://login.bheem.tv/bpk-tv/22376/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sony YAY Tamil",
+      "slug": "sony-yay-tamil",
+      "url": "https://tamilradios.org/dashplayer.php?mpd=https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(SonyYay)/master.mpd?&keyId=582e9e382cb0495886afbabdbdb6fbf7&key=c0f550839b235443724cd007392b6e40",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Kids"
+    },
+    {
+      "name": "Surya TV",
+      "slug": "surya-tv",
+      "url": "https://livestream11.sunnxt.com/DolbyVision/SuryaTV_HDR/SuryaTV_HDR_Endpoints/SuryaTV-HDR10-IN-index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vasanth TV",
+      "slug": "vasanth-tv",
+      "url": "https://mumt04.tangotv.in/VASANTHTV/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Raj Musix",
+      "slug": "raj-musix",
+      "url": "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=748&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJh3tepA8ORw14DtCDzOVkxjc940IAz9qp-JQQ2CU9Gulmib4NMLR5Wn2jJQc-Np8VEGs1_udl7a75pS0S9Z2bSEb7vBLNGG2YjFczeQjmigK6VV33KE1-_WhtXJn5KOquk&vtoken=",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Music"
+    },
+    {
+      "name": "Raj Digital Plus",
+      "slug": "raj-digital-plus",
+      "url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sathiyam TV",
+      "slug": "sathiyam-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Raj TV",
+      "slug": "raj-tv",
+      "url": "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=707&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJjffKNdaGUvlXh2jVwOT81feTIM8_xKkfzkcjp8XgDggDdRx6nE9yVeFGwxZ_G54VDbSH1-TSoiuGGXz_x6_lxBVLtL9Q4SlaY8EyT6ZXpUJg&vtoken=",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Puthiya Thalaimurai",
+      "slug": "928",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Malai Murasu TV",
+      "slug": "malai-murasu-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Chanakyaa TV",
+      "slug": "chanakyaa-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Tamil Janam TV",
+      "slug": "tamil-janam-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "News J",
+      "slug": "news-j",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Thanthi TV",
+      "slug": "thanthi-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Sun News",
+      "slug": "sun-news",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "7 Star TV",
+      "slug": "7-star-tv",
+      "url": "http://media.7starcloud.com:1935/live/7star/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aus Tamil TV",
+      "slug": "aus-tamil-tv",
+      "url": "http://bk7l2pn7dx53-hls-live.5centscdn.com/austamil/fe01ce2a7fbac8fafaed7c982a04e229.sdp/chunks.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Royal TV",
+      "slug": "royal-tv",
+      "url": "https://streamspace.live/hls/jptv/livestream.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vasantham TV",
+      "slug": "vasantham-tv",
+      "url": "https://edge3-moblive.yuppcdn.net/trans1sd/smil:vatv07.smil/chunklist_w260511746_b596000.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Udhayam TV",
+      "slug": "udhayam-tv",
+      "url": "https://ipcloud.live/udhayamtv/live/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thendral TV",
+      "slug": "thendral-tv",
+      "url": "https://ipcloud.live/thendralmdu/madurai/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kavin TV",
+      "slug": "kavin-tv",
+      "url": "https://live.skystream.in/live/kavintv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Anandham TV",
+      "slug": "anandham-tv",
+      "url": "https://stream.galaxyott.live/live/anandhamtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "No 1 TV",
+      "slug": "no-1-tv",
+      "url": "https://live.skystream.in/live/no1tv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "D TV",
+      "slug": "d-tv",
+      "url": "https://dtv.livebox.co.in/Dtvhls/Live.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aasirvadham TV",
+      "slug": "aasirvadham-tv",
+      "url": "https://stream.blessingtv.tv:1443/blessingtv-tamillive/mystream_720p/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "D Bhakti TV",
+      "slug": "d-bhakti-tv",
+      "url": "https://dtv.livebox.co.in/DBhaktihls/Live.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Tamil 3 TV",
+      "slug": "tamil-3-tv",
+      "url": "https://6n3yogbnd9ok-hls-live.5centscdn.com/threetamil/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Tamil Star TV",
+      "slug": "tamil-star-tv",
+      "url": "http://media.7starcloud.com:1935/live/7star/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Eye Tamil TV",
+      "slug": "eye-tamil-tv",
+      "url": "https://live.eyetamil.tv/tv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SLS TV",
+      "slug": "sls-tv",
+      "url": "http://nextgeninfotech.ddns.net:8080/reachtwo/reachtwo.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jupiter Tamil TV",
+      "slug": "jupiter-tamil-tv",
+      "url": "https://rtmp.applelive.in/esprimetv/esprimetv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Shalini TV",
+      "slug": "shalini-tv",
+      "url": "http://ipcloud.live:8080/shalinitv/shalinitv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Bharathi TV",
+      "slug": "bharathi-tv",
+      "url": "https://server.sscloud7.in/live/bharathitv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Rasi Music",
+      "slug": "rasi-music",
+      "url": "https://mumbai-edge.smartplaytv.in/Rasimusic/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Music"
+    },
+    {
+      "name": "Bright Simrose TV",
+      "slug": "bright-simrose-tv",
+      "url": "https://notvstream.in/brightsimrosetv/brightsimrosetv.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thillai TV",
+      "slug": "thillai-tv",
+      "url": "https://stream.onecloudlive.in/tcn/tcntv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Enthiran TV",
+      "slug": "enthiran-tv",
+      "url": "https://live.applelive.in/enthirantv/enthirantv/tracks-v1a1/mono.ts.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jayam TV",
+      "slug": "jayam-tv",
+      "url": "https://ipcloud.live/jayamtv/jayamtvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kovai TV",
+      "slug": "kovai-tv",
+      "url": "https://account31.livebox.co.in/Kovaitvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Velan TV",
+      "slug": "velan-tv",
+      "url": "https://anywhere.pwisetthon.com/http://velantv.phoenixcreations.online/velantv/velantv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MS Mathan TV",
+      "slug": "ms-mathan-tv",
+      "url": "https://anywhere.pwisetthon.com/http://madhantv.phoenixcreations.online/madhantv/madhantv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Velavan TV",
+      "slug": "velavan-tv",
+      "url": "https://rtmp.applelive.in/srivelavantvultrahd/srivelavantvultrahd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vani TV HD",
+      "slug": "vani-tv-hd",
+      "url": "https://live.sscloud7.in/live/vanitvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Max Movies HD",
+      "slug": "max-movies-hd",
+      "url": "https://live.maxtn.in/maxmovies/maxmovies/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Movies"
+    },
+    {
+      "name": "Max Music HD",
+      "slug": "max-music-hd",
+      "url": "https://live.maxtn.in/maxmusic/maxmusic/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Music"
+    },
+    {
+      "name": "Thaai TV",
+      "slug": "thaai-tv",
+      "url": "https://cdn.anystream.uk:8082/thaitv/thailive/chunks.m3u8?nimblesessionid=970322632",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "BTV HD",
+      "slug": "btv-hd",
+      "url": "https://rtmp.applelive.in/boobsh/boobsh/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Suriyan TV",
+      "slug": "suriyan-tv",
+      "url": "https://stream.galaxyott.live/live/suriyantv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Tamil TV HD",
+      "slug": "tamil-tv-hd",
+      "url": "https://stream.onecloudlive.in/tamiltv/tamiltvhd/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JR Malar TV",
+      "slug": "jr-malar-tv",
+      "url": "https://server.sscloud7.in/live/malartv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MP TV",
+      "slug": "mp-tv",
+      "url": "https://stream.sscloud7.in/live/mptv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "G Music",
+      "slug": "g-music",
+      "url": "https://rtmp.applelive.in/gmusic/gmusic/tracks-v1a1/mono.ts.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Music"
+    },
+    {
+      "name": "Tamil Television Network",
+      "slug": "tamil-television-network",
+      "url": "https://5e5679f71b925.streamlock.net:442/live/ttntv/chunklist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "A2A TV",
+      "slug": "a2a-tv",
+      "url": "https://live.sscloud7.in/live/a2atv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Succes TV Tamil",
+      "slug": "succes-tv-tamil",
+      "url": "https://stream.onecloudlive.in/successtv/successtvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Asoka TV",
+      "slug": "asoka-tv",
+      "url": "https://ipcloud.live/asokatv/asokahd/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Nila TV Nellai",
+      "slug": "nila-tv-nellai",
+      "url": "https://ipcloud.live/nilatvnellai/nilahd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vasantham",
+      "slug": "vasantham",
+      "url": "https://stream.onecloudlive.in/dhandapani/vasanthamtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Devathai TV",
+      "slug": "devathai-tv",
+      "url": "https://hdbox.singamcloud.in/Deavathaitv/Deavathaitv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Yogaa TV",
+      "slug": "yogaa-tv",
+      "url": "https://ipcloud.live/yogaatv/yogaatv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Roja TV 2",
+      "slug": "roja-tv-2",
+      "url": "https://anywhere.pwisetthon.com/http://rojatv.phoenixcreations.online/rojatv/rojatv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sasi TV",
+      "slug": "sasi-tv",
+      "url": "https://anywhere.pwisetthon.com/http://sasitv.phoenixcreations.online/sasitv/sasitv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jose TV",
+      "slug": "jose-tv",
+      "url": "https://anywhere.pwisetthon.com/http://josetv.phoenixcreations.online/josetv/josetv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "TOP TV",
+      "slug": "top-tv",
+      "url": "https://anywhere.pwisetthon.com/http://toptv.phoenixcreations.online/toptv/toptv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "RK TV",
+      "slug": "rk-tv",
+      "url": "https://anywhere.pwisetthon.com/http://rktv.phoenixcreations.online/rktv/rktv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Surya HD Digital",
+      "slug": "surya-hd-digital",
+      "url": "https://live.sscloud7.in/live/suryatv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Britain Tamil Bhakthi TV",
+      "slug": "britain-tamil-bhakthi-tv",
+      "url": "https://stream.onecloudlive.in/britaintamil/britaintamil/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Dhoni TV HD",
+      "slug": "dhoni-tv-hd",
+      "url": "https://ipcloud.live/sachintv/dhonitv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thendral TV Madurai",
+      "slug": "thendral-tv-madurai",
+      "url": "https://ipcloud.live/thendralmdu/madurai/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jeyam TV",
+      "slug": "jeyam-tv",
+      "url": "https://stream.onecloudlive.in/jeyam/jeyammdu/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thirumagal TV",
+      "slug": "thirumagal-tv",
+      "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/thirumagal/tv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aadhavan TV",
+      "slug": "aadhavan-tv",
+      "url": "https://ipcloud.live/aadhavantv/aadhavan/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "3 Star TV",
+      "slug": "3-star-tv",
+      "url": "https://stream.onecloudlive.in/threestartv/threestarhd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Hai TV",
+      "slug": "hai-tv",
+      "url": "https://play.applelive.in/haitv/haitv.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "KCTN TV",
+      "slug": "kctn-tv",
+      "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/kctn/tv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JJ News Tamil",
+      "slug": "jj-news-tamil",
+      "url": "https://live.skystream.in/live/jjnewstamil/index.m3u8?hls_ctx=141308l7",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Anandam TV",
+      "slug": "anandam-tv",
+      "url": "https://live1.sscloud7.com/live/anandhamtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thendral TV 2",
+      "slug": "thendral-tv-2",
+      "url": "https://live.thendralcloud.in/thendraltv/d0dbe915091d400bd8ee7f27f0791303.sdp/chunks.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Rainbow TV",
+      "slug": "rainbow-tv",
+      "url": "https://live.skystream.in/live/rainbowtv/index.m3u8?hls_ctx=a7618r13",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sai TV",
+      "slug": "sai-tv",
+      "url": "https://app.ashokadigital.net/hls/saitvmdu/index.m3u8?token=DPyPa8qHDyZ2q3",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Apple TV",
+      "slug": "apple-tv",
+      "url": "https://stream.iplive.xyz/appletv/4kpondy/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "RJ Tamil TV",
+      "slug": "rj-tamil-tv",
+      "url": "https://ipcloud.live/rjtamiltv/rjtamil/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "King 24x7",
+      "slug": "king-24x7",
+      "url": "https://notvstream.in/kingtv/kingtv.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Rio TV",
+      "slug": "rio-tv",
+      "url": "https://app.ashokadigital.net/hls/riotv/index.m3u8?token=hYUbjDHukIyAv3",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Saami TV",
+      "slug": "saami-tv",
+      "url": "https://ipcloud.live/msntv/saamitv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Queens TV",
+      "slug": "queens-tv",
+      "url": "https://notvstream.in/queens/queens.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jayam TV 2",
+      "slug": "jayam-tv-2",
+      "url": "https://app.ashokadigital.net/app/db285ebc/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Smiley TV",
+      "slug": "smiley-tv",
+      "url": "https://live1.sscloud7.com/live/smileytv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vanavil TV Kallakurichi",
+      "slug": "vanavil-tv-kallakurichi",
+      "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vaanavil/tv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Visil Max",
+      "slug": "visil-max",
+      "url": "https://stream.sscloud7.in/live/vishiltv2/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "VCTN TV",
+      "slug": "vctn-tv",
+      "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vctn/tv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jothibala TV",
+      "slug": "jothibala-tv",
+      "url": "https://anywhere.pwisetthon.com/http://jothibalatv.phoenixcreations.online/jothibalatv/jothibalatv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Akash TV",
+      "slug": "akash-tv",
+      "url": "https://account2.livebox.co.in/AkashTvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vikatan TV",
+      "slug": "vikatan-tv",
+      "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/vikatan-tv/master.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Anandham TV 2",
+      "slug": "anandham-tv-2",
+      "url": "https://stream.galaxyott.live/live/anandhamtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Strawberry TV",
+      "slug": "aaryaa-tv",
+      "url": "https://stream.onecloudlive.in/sachintv/strawberrytv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thulir TV",
+      "slug": "thulir-tv",
+      "url": "https://view.apserver.in/tmp_hls6/thulirtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kumaran TV",
+      "slug": "kumaran-tv",
+      "url": "https://stream.rojatv.cloud/kumarantv/gobi/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Ganesh TV",
+      "slug": "ganesh-tv",
+      "url": "https://live.thendralcloud.in/ganeshtvlive/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Mathi TV",
+      "slug": "mathi-tv",
+      "url": "https://notvstream.in/mathitv/mathitv.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Visil TV",
+      "slug": "visil-tv",
+      "url": "https://stream.sscloud7.in/live/vishiltv1/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Veera TV",
+      "slug": "veera-tv",
+      "url": "https://ipcloud.live/veeratv/veeratvhd/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Subash TV",
+      "slug": "subash-tv",
+      "url": "https://ipcloud.live/subashtv/subashhd/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "NTV Trichy",
+      "slug": "ntv-trichy",
+      "url": "https://notvstream.in/ntv/ntv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Arunai TV",
+      "slug": "arunai-tv",
+      "url": "https://notvstream.in/arunaitv/arunaitv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "RR TV",
+      "slug": "rr-tv",
+      "url": "https://notvstream.in/rrtv/rrtv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SS TV",
+      "slug": "ss-tv",
+      "url": "https://notvstream.in/sstv/sstv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "UTV Mayuram",
+      "slug": "utv-mayuram",
+      "url": "https://notvstream.in/utv/utv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thirumalai TV",
+      "slug": "thirumalai-tv",
+      "url": "https://notvstream.in/thirumalaitv/thirumalaitv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Subi TV",
+      "slug": "subi-tv",
+      "url": "https://notvstream.in/subitv/subitv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Hitech TV",
+      "slug": "hitech-tv",
+      "url": "https://notvstream.in/hitechtv/hitechtv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Orange TV",
+      "slug": "orange-tv",
+      "url": "https://notvstream.in/orangetv/orangetv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Leo TV",
+      "slug": "leo-tv",
+      "url": "https://ipcloud.live/leotv/leotvhd/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aasai TV",
+      "slug": "aasai-tv",
+      "url": "https://notvstream.in/aasaitv/aasaitv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aalaya Magimai TV",
+      "slug": "aalaya-magimai-tv",
+      "url": "https://app.ashokadigital.net/aalayamagimaitv/aalayamagimaitv/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Amman TV",
+      "slug": "amman-tv",
+      "url": "https://app.ashokadigital.net/app/7d1a23ef/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Temble TV",
+      "slug": "temble-tv",
+      "url": "https://notvstream.in/tembletv/tembletv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Palkar TV",
+      "slug": "palkar-tv",
+      "url": "https://rtmp.applelive.in/palkartv/palkartv/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    }
+  ],
+  "hidden": [],
+  "all_raw": [
+    {
+      "name": "Colors Tamil HD",
+      "slug": "colors-tamil-hd",
+      "url": "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=429&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJg_QL6EHJ9XkQqFgNq_aibPaKTEFkZQD0eliNhaBIIa0pgtMqdKkTr50X0wZXG6BeglPUf1Nid0AyVifvi1T2-RSD4R6-1S5-_Hk6AMISUc8WBgItB4Vyxs3GrqueiP_J4&vtoken=",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Z Tamil HD",
+      "slug": "z-tamil-hd",
+      "url": "https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(ZeeThi)/master.mpd&keyId=bd7282e920e5437a9b1f01bc6f81795c&key=99763370f0763b0f7119aab091cc70c8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Discovery Kids Tamil",
+      "slug": "discovery-kids-tamil",
+      "url": "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Kids"
+    },
+    {
+      "name": "CN Tamil",
+      "slug": "cn-tamil",
+      "url": "https://login.bheem.tv/bpk-tv/22602/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Kids"
+    },
+    {
+      "name": "History TV18 HD Tamil",
+      "slug": "history-tv18-hd-tamil",
+      "url": "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Documentary"
+    },
+    {
+      "name": "Jaya Max",
+      "slug": "jaya-max",
+      "url": "https://login.bheem.tv/bpk-tv/22374/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jaya Movie",
+      "slug": "jaya-movie",
+      "url": "https://login.bheem.tv/bpk-tv/22373/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Movies"
+    },
+    {
+      "name": "Discovery Tamil",
+      "slug": "discovery-tamil-2",
+      "url": "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Documentary"
+    },
+    {
+      "name": "Animal Planet HD",
+      "slug": "animal-planet-hd",
+      "url": "https://login.bheem.tv/bpk-tv/22052/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Documentary"
+    },
+    {
+      "name": "Jaya TV",
+      "slug": "jaya-tv",
+      "url": "https://login.bheem.tv/bpk-tv/22376/output/index.mpd?",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sony YAY Tamil",
+      "slug": "sony-yay-tamil",
+      "url": "https://tamilradios.org/dashplayer.php?mpd=https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(SonyYay)/master.mpd?&keyId=582e9e382cb0495886afbabdbdb6fbf7&key=c0f550839b235443724cd007392b6e40",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Kids"
+    },
+    {
+      "name": "Surya TV",
+      "slug": "surya-tv",
+      "url": "https://livestream11.sunnxt.com/DolbyVision/SuryaTV_HDR/SuryaTV_HDR_Endpoints/SuryaTV-HDR10-IN-index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Polimer TV",
+      "slug": "polimer-tv",
+      "url": "https://cdn-2.pishow.tv/live/1241/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vasanth TV",
+      "slug": "vasanth-tv",
+      "url": "https://mumt04.tangotv.in/VASANTHTV/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Makkal TV",
+      "slug": "makkal-tv",
+      "url": "https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vendhar TV",
+      "slug": "vendhar-tv",
+      "url": "https://cdn-3.pishow.tv/live/1271/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "DD Tamil",
+      "slug": "dd-tamil",
+      "url": "https://cdn-2.pishow.tv/live/26/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Isai Aruvi TV",
+      "slug": "isai-aruvi-tv",
+      "url": "https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Chithiram TV",
+      "slug": "chithiram-tv",
+      "url": "https://cdn-6.pishow.tv/live/1243/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Kids"
+    },
+    {
+      "name": "Kalaignar TV",
+      "slug": "kalaignar-tv",
+      "url": "https://segment.yuppcdn.net/240122/kalaignartv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Raj Musix",
+      "slug": "raj-musix",
+      "url": "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=748&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJh3tepA8ORw14DtCDzOVkxjc940IAz9qp-JQQ2CU9Gulmib4NMLR5Wn2jJQc-Np8VEGs1_udl7a75pS0S9Z2bSEb7vBLNGG2YjFczeQjmigK6VV33KE1-_WhtXJn5KOquk&vtoken=",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Music"
+    },
+    {
+      "name": "Raj Digital Plus",
+      "slug": "raj-digital-plus",
+      "url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sathiyam TV",
+      "slug": "sathiyam-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Raj TV",
+      "slug": "raj-tv",
+      "url": "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=707&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJjffKNdaGUvlXh2jVwOT81feTIM8_xKkfzkcjp8XgDggDdRx6nE9yVeFGwxZ_G54VDbSH1-TSoiuGGXz_x6_lxBVLtL9Q4SlaY8EyT6ZXpUJg&vtoken=",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Puthiya Thalaimurai",
+      "slug": "928",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "News Tamil 24x7",
+      "slug": "news-tamil-24x7",
+      "url": "https://www.yupptv.com/yupptvnew/channels/news-tamil/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "News"
+    },
+    {
+      "name": "Malai Murasu TV",
+      "slug": "malai-murasu-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Chanakyaa TV",
+      "slug": "chanakyaa-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Tamil Janam TV",
+      "slug": "tamil-janam-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "News J",
+      "slug": "news-j",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "IBC Bakthi",
+      "slug": "ibc-bakthi",
+      "url": "https://webcast.emn.onl/IBC2/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "IBC Tamil",
+      "slug": "ibc-tamil",
+      "url": "https://webcast.emn.onl/IBC/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Angel TV",
+      "slug": "angel-tv",
+      "url": "https://www.yupptv.com/yupptvnew/channels/angel-tv/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Sri Sankara Tamil",
+      "slug": "sri-sankara-tamil",
+      "url": "https://www.yupptv.com/yupptvnew/channels/sri-sankara-tamil/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "SVBC TTD",
+      "slug": "svbc-ttd",
+      "url": "https://www.yupptv.com/yupptvnew/channels/svbc-2/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Madha TV",
+      "slug": "madha-tv",
+      "url": "https://60e68b19dd194.streamlock.net:55/madhahd1/smil:madhatv.smil/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Kalaignar Seithigal TV",
+      "slug": "kalaignar-seithigal-tv",
+      "url": "https://www.yupptv.com/yupptvnew/channels/seithigal-tv/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "News"
+    },
+    {
+      "name": "Sana TV",
+      "slug": "sana-tv",
+      "url": "https://galaxyott.live/hls/sanatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Tamilan TV",
+      "slug": "tamilan-tv",
+      "url": "https://cdn.zionmediait.com/zionmediaitserver2024/97484f5ce6da96e496a9b87c439835d0.sdp/chunks.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thanthi TV",
+      "slug": "thanthi-tv",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Polimer News",
+      "slug": "polimer-news",
+      "url": "https://www.yupptv.com/yupptvnew/channels/polimer-news/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "News"
+    },
+    {
+      "name": "Peppers TV",
+      "slug": "peppers-tv",
+      "url": "https://cdn-2.pishow.tv/live/1383/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Murasu TV",
+      "slug": "murasu-tv",
+      "url": "https://segment.yuppcdn.net/050522/murasu/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Moon TV",
+      "slug": "moon-tv",
+      "url": "https://player.mslivestream.net/mslive/e10bb900976df9177b9a080314f26f86.sdp/chunks.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sirippoli TV",
+      "slug": "sirippoli-tv",
+      "url": "https://yuppmedtaorire.akamaized.net/v1/manifest/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/siripoli_nim_https/c4e6500f-ea05-4226-810e-2833ee0075ff/0.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sun News",
+      "slug": "sun-news",
+      "url": null,
+      "type": null,
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "7 Star TV",
+      "slug": "7-star-tv",
+      "url": "http://media.7starcloud.com:1935/live/7star/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vaanavil TV",
+      "slug": "vaanavil-tv",
+      "url": "https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/chunks.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aus Tamil TV",
+      "slug": "aus-tamil-tv",
+      "url": "http://bk7l2pn7dx53-hls-live.5centscdn.com/austamil/fe01ce2a7fbac8fafaed7c982a04e229.sdp/chunks.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Royal TV",
+      "slug": "royal-tv",
+      "url": "https://streamspace.live/hls/jptv/livestream.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Athavan TV",
+      "slug": "athavan-tv",
+      "url": "https://www.yupptv.com/yupptvnew/channels/athavan-tv-hd/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thalaa TV",
+      "slug": "thalaa-tv",
+      "url": "https://www.yupptv.com/yupptvnew/channels/thalaa-tv/live/embed",
+      "type": "yupptv",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MN Music",
+      "slug": "mn-music",
+      "url": "https://mntv.livebox.co.in/musichls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Vasantham TV",
+      "slug": "vasantham-tv",
+      "url": "https://edge3-moblive.yuppcdn.net/trans1sd/smil:vatv07.smil/chunklist_w260511746_b596000.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Udhayam TV",
+      "slug": "udhayam-tv",
+      "url": "https://ipcloud.live/udhayamtv/live/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thendral TV",
+      "slug": "thendral-tv",
+      "url": "https://ipcloud.live/thendralmdu/madurai/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "U TV Tamil",
+      "slug": "u-tv-tamil",
+      "url": "https://stream.galaxyott.live/live/utv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kavin TV",
+      "slug": "kavin-tv",
+      "url": "https://live.skystream.in/live/kavintv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Anandham TV",
+      "slug": "anandham-tv",
+      "url": "https://stream.galaxyott.live/live/anandhamtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Subin TV",
+      "slug": "subin-tv",
+      "url": "https://stream.galaxyott.live/live/subintv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Marutham Nelli TV",
+      "slug": "mn-tv",
+      "url": "https://mntv.livebox.co.in/mntvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "No 1 TV",
+      "slug": "no-1-tv",
+      "url": "https://live.skystream.in/live/no1tv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "D TV",
+      "slug": "d-tv",
+      "url": "https://dtv.livebox.co.in/Dtvhls/Live.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aasirvadham TV",
+      "slug": "aasirvadham-tv",
+      "url": "https://stream.blessingtv.tv:1443/blessingtv-tamillive/mystream_720p/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Nambikkai TV",
+      "slug": "nambikkai-tv",
+      "url": "https://mk9qa7n8qwyb-hls-live.wmncdn.net/nambikkaitv/live.stream/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Deva TV",
+      "slug": "deva-tv",
+      "url": "https://play.applelive.in/devatv/devatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "D Bhakti TV",
+      "slug": "d-bhakti-tv",
+      "url": "https://dtv.livebox.co.in/DBhaktihls/Live.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "TVI TV",
+      "slug": "tvi-tv",
+      "url": "https://live.cmr24.fm/TVI/HD/chunks.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Tamil 3 TV",
+      "slug": "tamil-3-tv",
+      "url": "https://6n3yogbnd9ok-hls-live.5centscdn.com/threetamil/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Tamil Star TV",
+      "slug": "tamil-star-tv",
+      "url": "http://media.7starcloud.com:1935/live/7star/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Eye Tamil TV",
+      "slug": "eye-tamil-tv",
+      "url": "https://live.eyetamil.tv/tv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SLS TV",
+      "slug": "sls-tv",
+      "url": "http://nextgeninfotech.ddns.net:8080/reachtwo/reachtwo.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Mullai TV",
+      "slug": "mullai-tv",
+      "url": "https://ipcloud.live/mullaitv/mullaitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jupiter Tamil TV",
+      "slug": "jupiter-tamil-tv",
+      "url": "https://rtmp.applelive.in/esprimetv/esprimetv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Shalini TV",
+      "slug": "shalini-tv",
+      "url": "http://ipcloud.live:8080/shalinitv/shalinitv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Malar TV",
+      "slug": "malar-tv",
+      "url": "https://cdn-3.pishow.tv/live/473/master.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Bharathi TV",
+      "slug": "bharathi-tv",
+      "url": "https://server.sscloud7.in/live/bharathitv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SJ Surya TV",
+      "slug": "sj-surya-tv",
+      "url": "https://ipcloud.live/nellaitv/suriyatv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Rasi Music",
+      "slug": "rasi-music",
+      "url": "https://mumbai-edge.smartplaytv.in/Rasimusic/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Music"
+    },
+    {
+      "name": "Bright Simrose TV",
+      "slug": "bright-simrose-tv",
+      "url": "https://notvstream.in/brightsimrosetv/brightsimrosetv.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thillai TV",
+      "slug": "thillai-tv",
+      "url": "https://stream.onecloudlive.in/tcn/tcntv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Maniway TV",
+      "slug": "maniway-tv",
+      "url": "https://live.singamcloud.in/bsctv/bsctv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Enthiran TV",
+      "slug": "enthiran-tv",
+      "url": "https://live.applelive.in/enthirantv/enthirantv/tracks-v1a1/mono.ts.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "STN TV",
+      "slug": "stn-tv",
+      "url": "https://play.applelive.in/stntv/stntv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Boss TV",
+      "slug": "boss-tv",
+      "url": "https://play.applelive.in/vasantv/vasantv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MCN HD",
+      "slug": "mcn-hd",
+      "url": "https://play.applelive.in/mcntv/mcntv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jayam TV",
+      "slug": "jayam-tv",
+      "url": "https://ipcloud.live/jayamtv/jayamtvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kovai TV",
+      "slug": "kovai-tv",
+      "url": "https://account31.livebox.co.in/Kovaitvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sana Plus HD",
+      "slug": "sana-tv-hd",
+      "url": "https://galaxyott.live//hls/sanaplus.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Velan TV",
+      "slug": "velan-tv",
+      "url": "https://anywhere.pwisetthon.com/http://velantv.phoenixcreations.online/velantv/velantv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MS Mathan TV",
+      "slug": "ms-mathan-tv",
+      "url": "https://anywhere.pwisetthon.com/http://madhantv.phoenixcreations.online/madhantv/madhantv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Irattaipaathai TV",
+      "slug": "irattaipaathai-tv",
+      "url": "https://account31.livebox.co.in/IRATTAIPAATHAITVhls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "CTN",
+      "slug": "ctn",
+      "url": "https://rtmp.bmlive.net/ctn/ctntn/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Senthur TV",
+      "slug": "senthur-tv",
+      "url": "https://senthurtv-hls.suriyantv.in/live/senthurtv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Velavan TV",
+      "slug": "velavan-tv",
+      "url": "https://rtmp.applelive.in/srivelavantvultrahd/srivelavantvultrahd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vani TV HD",
+      "slug": "vani-tv-hd",
+      "url": "https://live.sscloud7.in/live/vanitvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Max Movies HD",
+      "slug": "max-movies-hd",
+      "url": "https://live.maxtn.in/maxmovies/maxmovies/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Movies"
+    },
+    {
+      "name": "Max Music HD",
+      "slug": "max-music-hd",
+      "url": "https://live.maxtn.in/maxmusic/maxmusic/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Music"
+    },
+    {
+      "name": "Roja TV",
+      "slug": "roja-tv",
+      "url": "https://live.rojatv.cloud/rojatv/rojatv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Roja Movies",
+      "slug": "roja-movies",
+      "url": "https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Movies"
+    },
+    {
+      "name": "Tharun Movies HD",
+      "slug": "tharun-movies-hd",
+      "url": "https://streaming.livebox.co.in/tharunmovieshls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Movies"
+    },
+    {
+      "name": "Thaai TV",
+      "slug": "thaai-tv",
+      "url": "https://cdn.anystream.uk:8082/thaitv/thailive/chunks.m3u8?nimblesessionid=970322632",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MN TV",
+      "slug": "mn-tv-2",
+      "url": "https://mntv.livebox.co.in/mntvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "BTV HD",
+      "slug": "btv-hd",
+      "url": "https://rtmp.applelive.in/boobsh/boobsh/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SK TV",
+      "slug": "sk-tv",
+      "url": "https://stream.galaxyott.live/live/sktv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Suriyan TV",
+      "slug": "suriyan-tv",
+      "url": "https://stream.galaxyott.live/live/suriyantv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "NTV HD",
+      "slug": "ntv-hd",
+      "url": "https://galaxyott.live//hls/ntv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Gem TV",
+      "slug": "gem-tv",
+      "url": "https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Eason TV",
+      "slug": "eason-tv",
+      "url": "https://amigofx.com:1936/easontv/easontv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Tamil Oli TV",
+      "slug": "tamil-oli-tv",
+      "url": "https://view.rcserver.in/tmp_hls7/tamilolitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Tamil TV HD",
+      "slug": "tamil-tv-hd",
+      "url": "https://stream.onecloudlive.in/tamiltv/tamiltvhd/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "KCTV",
+      "slug": "kctv",
+      "url": "https://rtmp.bmlive.net/bms/kctv/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jith TV",
+      "slug": "jith-tv",
+      "url": "https://sscloud7.com/live/jithtv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JR Malar TV",
+      "slug": "jr-malar-tv",
+      "url": "https://server.sscloud7.in/live/malartv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JCV Musix",
+      "slug": "jcv-musix",
+      "url": "https://play.applelive.in/jcvtv/jcvmusix.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Raga TV",
+      "slug": "raga-tv",
+      "url": "https://live.onecloudlive.in/ragatv/ragatvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Oli TV HD",
+      "slug": "oli-tv-hd",
+      "url": "https://live.olidigital.in/olitv/olitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kumari TV",
+      "slug": "kumari-tv",
+      "url": "https://rtmp.applelive.in/gvkumaritv/gvkumaritv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Prime TV",
+      "slug": "prime-tv",
+      "url": "https://live.applelive.in/primetv/primetv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MP TV",
+      "slug": "mp-tv",
+      "url": "https://stream.sscloud7.in/live/mptv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "G Music",
+      "slug": "g-music",
+      "url": "https://rtmp.applelive.in/gmusic/gmusic/tracks-v1a1/mono.ts.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Music"
+    },
+    {
+      "name": "Tamil Television Network",
+      "slug": "tamil-television-network",
+      "url": "https://5e5679f71b925.streamlock.net:442/live/ttntv/chunklist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "TDN HD",
+      "slug": "tdn-hd",
+      "url": "https://live.maxtn.in/tdn/tdn/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Surya TV Tamil",
+      "slug": "surya-tv-tamil",
+      "url": "https://galaxyott.live/hls//suryatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Yet TV",
+      "slug": "yet-tv",
+      "url": "https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Dark TV",
+      "slug": "dark-tv",
+      "url": "https://play.applelive.in/darktv/darktv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "A2A TV",
+      "slug": "a2a-tv",
+      "url": "https://live.sscloud7.in/live/a2atv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Succes TV Tamil",
+      "slug": "succes-tv-tamil",
+      "url": "https://stream.onecloudlive.in/successtv/successtvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Manasu TV",
+      "slug": "manasu-tv",
+      "url": "https://stream6.livebox.co.in/manasutvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Om Sakthi TV",
+      "slug": "om-sakthi-tv",
+      "url": "https://sscloud7.com/live/omsakthitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Sakthi TV HD",
+      "slug": "sakthi-tv-hd",
+      "url": "https://live.sscloud7.in/live/sakthitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Deiva Oli",
+      "slug": "deiva-oli",
+      "url": "https://stream.sscloud7.in/live/deivaoli/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Asoka TV",
+      "slug": "asoka-tv",
+      "url": "https://ipcloud.live/asokatv/asokahd/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "NTN TV",
+      "slug": "ntn-tv",
+      "url": "https://live.skystream.in/live/ntntv/index.m3u8?hls_ctx=1314owa2",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "PR TV",
+      "slug": "pr-tv",
+      "url": "https://play.applelive.in/prtv/prtv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "DTV",
+      "slug": "dtv",
+      "url": "https://stream.d6-pro.com/Dtv/live/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thalapathy TV",
+      "slug": "thalapathy-tv",
+      "url": "https://play.applelive.in/thalapathytv/thalapathytv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Riya TV",
+      "slug": "riya-tv",
+      "url": "https://play.applelive.in/riyatv/riyatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Nila TV Nellai",
+      "slug": "nila-tv-nellai",
+      "url": "https://ipcloud.live/nilatvnellai/nilahd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Harin TV",
+      "slug": "harin-tv",
+      "url": "https://ipcloud.live/harintv/harintvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Time TV",
+      "slug": "time-tv",
+      "url": "https://live.olidigital.in/timetv/timetv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Phoenix TV Tamil",
+      "slug": "phoenix-tv-tamil",
+      "url": "https://stream.onecloudlive.in/phoenixtv/phoenixtv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Imai TV",
+      "slug": "imai-tv",
+      "url": "https://live20.bozztv.com/akamaissh101/ssh101/imaitv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Nila TV",
+      "slug": "nila-tv",
+      "url": "https://live.olidigital.in/nilatv/nilatv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "WE Baduga TV",
+      "slug": "we-baduga-tv",
+      "url": "https://rtmp.bmlive.net/webaduga/webaduga/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sky Plus TV",
+      "slug": "sky-plus-tv",
+      "url": "https://ipcloud.live/skytv/skytv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vasantham",
+      "slug": "vasantham",
+      "url": "https://stream.onecloudlive.in/dhandapani/vasanthamtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Devathai TV",
+      "slug": "devathai-tv",
+      "url": "https://hdbox.singamcloud.in/Deavathaitv/Deavathaitv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Jeyam Television",
+      "slug": "jeyam-television",
+      "url": "https://jeyamtv.livebox.co.in/JeyamTelevisionhls/JeyamTelevision.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SMCV HD",
+      "slug": "smcv-hd",
+      "url": "https://singamcloud.in/smcvtv/smcvtv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Yogaa TV",
+      "slug": "yogaa-tv",
+      "url": "https://ipcloud.live/yogaatv/yogaatv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Roja TV 2",
+      "slug": "roja-tv-2",
+      "url": "https://anywhere.pwisetthon.com/http://rojatv.phoenixcreations.online/rojatv/rojatv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sasi TV",
+      "slug": "sasi-tv",
+      "url": "https://anywhere.pwisetthon.com/http://sasitv.phoenixcreations.online/sasitv/sasitv/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jose TV",
+      "slug": "jose-tv",
+      "url": "https://anywhere.pwisetthon.com/http://josetv.phoenixcreations.online/josetv/josetv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "TOP TV",
+      "slug": "top-tv",
+      "url": "https://anywhere.pwisetthon.com/http://toptv.phoenixcreations.online/toptv/toptv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "RK TV",
+      "slug": "rk-tv",
+      "url": "https://anywhere.pwisetthon.com/http://rktv.phoenixcreations.online/rktv/rktv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Maran TV",
+      "slug": "maran-tv",
+      "url": "https://server.sscloud7.in/marantv/marantv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Surya HD Digital",
+      "slug": "surya-hd-digital",
+      "url": "https://live.sscloud7.in/live/suryatv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aaryaa TV",
+      "slug": "aarya-tv",
+      "url": "https://live.sscloud7.in/live/aaryaatv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Isai TV",
+      "slug": "isai-tv",
+      "url": "https://server.sscloud7.in/isaihd/isaihd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Dharshan TV",
+      "slug": "dharshan-tv",
+      "url": "https://galaxyott.live/hls/dharshantv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Britain Tamil Bhakthi TV",
+      "slug": "britain-tamil-bhakthi-tv",
+      "url": "https://stream.onecloudlive.in/britaintamil/britaintamil/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Sha TV",
+      "slug": "sha-tv",
+      "url": "https://play.applelive.in/shatv/shatv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sachin TV",
+      "slug": "sachin-tv",
+      "url": "https://ipcloud.live/sachintv/sachintvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sachin TV Music",
+      "slug": "sachin-tv-music",
+      "url": "https://ipcloud.live/sachintv/musichd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Music"
+    },
+    {
+      "name": "Dhoni TV HD",
+      "slug": "dhoni-tv-hd",
+      "url": "https://ipcloud.live/sachintv/dhonitv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "EET TV",
+      "slug": "eet-tv",
+      "url": "https://eu.streamjo.com/eetlive/eettv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thendral TV Madurai",
+      "slug": "thendral-tv-madurai",
+      "url": "https://ipcloud.live/thendralmdu/madurai/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Namma Gopi TV",
+      "slug": "namma-gopi-tv",
+      "url": "https://stream.rojatv.cloud/nammagobi/tv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jeyam TV",
+      "slug": "jeyam-tv",
+      "url": "https://stream.onecloudlive.in/jeyam/jeyammdu/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "M Television",
+      "slug": "m-television",
+      "url": "https://ipcloud.live/mtv/menhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aadvik TV",
+      "slug": "aadvik-tv",
+      "url": "https://ipcloud.live/sachintv/aadviktv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thirumagal TV",
+      "slug": "thirumagal-tv",
+      "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/thirumagal/tv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Maruthi TV",
+      "slug": "maruthi-tv",
+      "url": "https://stream.onecloudlive.in/maruthitv/maruthitvhd/tracks-v1a1/mono.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aadhavan TV",
+      "slug": "aadhavan-tv",
+      "url": "https://ipcloud.live/aadhavantv/aadhavan/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "3 Star TV",
+      "slug": "3-star-tv",
+      "url": "https://stream.onecloudlive.in/threestartv/threestarhd/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JCV",
+      "slug": "jcv",
+      "url": "https://play.applelive.in/jcvtv/jcvtv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Velicham TV",
+      "slug": "velicham-tv",
+      "url": "https://cdn.smartstream.video/smartstream-us/velichamtv/velichamtv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Minnal HD",
+      "slug": "minnal-hd",
+      "url": "https://ipcloud.live/app/minnaltv/minnalhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Hai TV",
+      "slug": "hai-tv",
+      "url": "https://play.applelive.in/haitv/haitv.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "KCTN TV",
+      "slug": "kctn-tv",
+      "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/kctn/tv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JJ News Tamil",
+      "slug": "jj-news-tamil",
+      "url": "https://live.skystream.in/live/jjnewstamil/index.m3u8?hls_ctx=141308l7",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Anandam TV",
+      "slug": "anandam-tv",
+      "url": "https://live1.sscloud7.com/live/anandhamtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Urchagam TV",
+      "slug": "urchagam-tv",
+      "url": "https://rtmp.bmlive.net/bms/urchagamtv/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thendral TV 2",
+      "slug": "thendral-tv-2",
+      "url": "https://live.thendralcloud.in/thendraltv/d0dbe915091d400bd8ee7f27f0791303.sdp/chunks.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Eagle TV",
+      "slug": "eagle-tv",
+      "url": "https://rtmp.bmlive.net/bms/eagletv/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Rainbow TV",
+      "slug": "rainbow-tv",
+      "url": "https://live.skystream.in/live/rainbowtv/index.m3u8?hls_ctx=a7618r13",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Ashoka TV",
+      "slug": "ashoka-tv",
+      "url": "https://app.ashokadigital.net/app/12f5e922/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Sai TV",
+      "slug": "sai-tv",
+      "url": "https://app.ashokadigital.net/hls/saitvmdu/index.m3u8?token=DPyPa8qHDyZ2q3",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Anbu TV",
+      "slug": "anbu-tv",
+      "url": "https://ipcloud.live/anbutv/anbutvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Apple TV",
+      "slug": "apple-tv",
+      "url": "https://stream.iplive.xyz/appletv/4kpondy/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Nellai TV",
+      "slug": "nellai-tv",
+      "url": "https://stream.onecloudlive.in/nellaitv/nellaitv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Params TV",
+      "slug": "params-tv",
+      "url": "https://app.ashokadigital.net/app/a3e0b02f/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Rock TV",
+      "slug": "rock-tv",
+      "url": "https://apis.avmediawork.in/tvhls/rocktv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "RJ Tamil TV",
+      "slug": "rj-tamil-tv",
+      "url": "https://ipcloud.live/rjtamiltv/rjtamil/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "King 24x7",
+      "slug": "king-24x7",
+      "url": "https://notvstream.in/kingtv/kingtv.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "News"
+    },
+    {
+      "name": "Karthick TV",
+      "slug": "karthick-tv",
+      "url": "https://ipcloud.live/karthick/karthicktvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Akilam TV",
+      "slug": "akilam-tv",
+      "url": "https://stream.onecloudlive.in/akilamtv/akilamtvhd/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Rio TV",
+      "slug": "rio-tv",
+      "url": "https://app.ashokadigital.net/hls/riotv/index.m3u8?token=hYUbjDHukIyAv3",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Saami TV",
+      "slug": "saami-tv",
+      "url": "https://ipcloud.live/msntv/saamitv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "7 Green 4K",
+      "slug": "7-green-4k",
+      "url": "https://account33.livebox.co.in/7GREEN4Khls/live.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Queens TV",
+      "slug": "queens-tv",
+      "url": "https://notvstream.in/queens/queens.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jayam TV 2",
+      "slug": "jayam-tv-2",
+      "url": "https://app.ashokadigital.net/app/db285ebc/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Smiley TV",
+      "slug": "smiley-tv",
+      "url": "https://live1.sscloud7.com/live/smileytv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vanavil TV Kallakurichi",
+      "slug": "vanavil-tv-kallakurichi",
+      "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vaanavil/tv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Visil Max",
+      "slug": "visil-max",
+      "url": "https://stream.sscloud7.in/live/vishiltv2/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "VCTN TV",
+      "slug": "vctn-tv",
+      "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vctn/tv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jothibala TV",
+      "slug": "jothibala-tv",
+      "url": "https://anywhere.pwisetthon.com/http://jothibalatv.phoenixcreations.online/jothibalatv/jothibalatv/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Akash TV",
+      "slug": "akash-tv",
+      "url": "https://account2.livebox.co.in/AkashTvhls/live.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vikatan TV",
+      "slug": "vikatan-tv",
+      "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/vikatan-tv/master.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Vedha TV",
+      "slug": "vedha-tv",
+      "url": "https://skystream.in/live/vedha6528/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "NTC TV",
+      "slug": "ntc-tv",
+      "url": "https://galaxyott.live/hls/ntv.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Ultimate TV",
+      "slug": "ultimate-tv",
+      "url": "https://stream.galaxyott.live/live/utv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Anandham TV 2",
+      "slug": "anandham-tv-2",
+      "url": "https://stream.galaxyott.live/live/anandhamtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Strawberry TV",
+      "slug": "aaryaa-tv",
+      "url": "https://stream.onecloudlive.in/sachintv/strawberrytv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thulir TV",
+      "slug": "thulir-tv",
+      "url": "https://view.apserver.in/tmp_hls6/thulirtv/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "MSN TV",
+      "slug": "msn-tv",
+      "url": "https://ipcloud.live/msntv/msntv/index.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "King TV",
+      "slug": "king-tv",
+      "url": "https://rtmp.bmlive.net/kingtv/kingtv/stream.m3u8",
+      "type": "m3u8",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kumaran TV",
+      "slug": "kumaran-tv",
+      "url": "https://stream.rojatv.cloud/kumarantv/gobi/index.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Ganesh TV",
+      "slug": "ganesh-tv",
+      "url": "https://live.thendralcloud.in/ganeshtvlive/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Mathi TV",
+      "slug": "mathi-tv",
+      "url": "https://notvstream.in/mathitv/mathitv.m3u8",
+      "type": "m3u8",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Visil TV",
+      "slug": "visil-tv",
+      "url": "https://stream.sscloud7.in/live/vishiltv1/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Durai TV",
+      "slug": "durai-tv",
+      "url": "https://ipcloud.live/duraitv/live/index.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Apple TV Nagercoil",
+      "slug": "apple-tv-nagercoil",
+      "url": "https://play.applelive.in/appletv/appletv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Jeyson TV",
+      "slug": "jeyson-tv",
+      "url": "https://play.applelive.in/jeysontv/jeysontv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Kumari Kathir TV",
+      "slug": "kumari-kathir-tv",
+      "url": "https://play.applelive.in/jjmax/jjmax.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "JC TV",
+      "slug": "jc-tv",
+      "url": "https://play.applelive.in/jctv/jctv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Digital TV",
+      "slug": "digital-tv",
+      "url": "https://play.applelive.in/digitaltv/digitaltv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Veera TV",
+      "slug": "veera-tv",
+      "url": "https://ipcloud.live/veeratv/veeratvhd/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Subash TV",
+      "slug": "subash-tv",
+      "url": "https://ipcloud.live/subashtv/subashhd/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "NTV Trichy",
+      "slug": "ntv-trichy",
+      "url": "https://notvstream.in/ntv/ntv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Arunai TV",
+      "slug": "arunai-tv",
+      "url": "https://notvstream.in/arunaitv/arunaitv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "RR TV",
+      "slug": "rr-tv",
+      "url": "https://notvstream.in/rrtv/rrtv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "SS TV",
+      "slug": "ss-tv",
+      "url": "https://notvstream.in/sstv/sstv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "UTV Mayuram",
+      "slug": "utv-mayuram",
+      "url": "https://notvstream.in/utv/utv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thirumalai TV",
+      "slug": "thirumalai-tv",
+      "url": "https://notvstream.in/thirumalaitv/thirumalaitv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Subi TV",
+      "slug": "subi-tv",
+      "url": "https://notvstream.in/subitv/subitv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Hitech TV",
+      "slug": "hitech-tv",
+      "url": "https://notvstream.in/hitechtv/hitechtv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Orange TV",
+      "slug": "orange-tv",
+      "url": "https://notvstream.in/orangetv/orangetv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Leo TV",
+      "slug": "leo-tv",
+      "url": "https://ipcloud.live/leotv/leotvhd/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "S TV",
+      "slug": "s-tv",
+      "url": "https://play.applelive.in/stv/stv.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aasai TV",
+      "slug": "aasai-tv",
+      "url": "https://notvstream.in/aasaitv/aasaitv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Aalaya Magimai TV",
+      "slug": "aalaya-magimai-tv",
+      "url": "https://app.ashokadigital.net/aalayamagimaitv/aalayamagimaitv/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Dheiveegam TV",
+      "slug": "dheiveegam-tv",
+      "url": "https://stream.singamcloud.in/Dheiveegamtv/Dheiveegamtv/index.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Devotional"
+    },
+    {
+      "name": "Amman TV",
+      "slug": "amman-tv",
+      "url": "https://app.ashokadigital.net/app/7d1a23ef/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Oscar TV",
+      "slug": "oscar-tv",
+      "url": "https://account21.livebox.co.in/oscartvhls/live.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Temble TV",
+      "slug": "temble-tv",
+      "url": "https://notvstream.in/tembletv/tembletv.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Devotional"
+    },
+    {
+      "name": "Palkar TV",
+      "slug": "palkar-tv",
+      "url": "https://rtmp.applelive.in/palkartv/palkartv/index.m3u8",
+      "type": "mpd",
+      "status": "broken",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thamil TV",
+      "slug": "thamil-tv",
+      "url": "https://amigofx.com:1936/tv360/tv360/playlist.m3u8",
+      "type": "mpd",
+      "status": "working",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Thanthi TV",
+      "slug": "custom-thanthi-tv-1779646726592",
+      "url": "https://www.youtube.com/embed/8kjza8MzPXE?si=ifY8JMybVuv2XZvR",
+      "type": "embed",
+      "custom": true,
+      "status": null,
+      "category": "News"
+    },
+    {
+      "name": "24x7 Live Tamil Songs",
+      "slug": "custom-24x7-live-tamil-songs-1779723567027",
+      "url": "https://www.youtube.com/embed/Yb8kSxx9z9M?si=tuWttx1clVWKHSA3",
+      "type": "embed",
+      "custom": true,
+      "fav": true,
+      "status": "working",
+      "category": "Music"
+    }
+  ]
+}

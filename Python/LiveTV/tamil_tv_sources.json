@@ -1,0 +1,1745 @@
+[
+  {
+    "name": "Colors Tamil HD",
+    "slug": "colors-tamil-hd",
+    "page_url": "https://tamilradios.org/livetv/colors-tamil-hd",
+    "url": "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=429&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJg_QL6EHJ9XkQqFgNq_aibPaKTEFkZQD0eliNhaBIIa0pgtMqdKkTr50X0wZXG6BeglPUf1Nid0AyVifvi1T2-RSD4R6-1S5-_Hk6AMISUc8WBgItB4Vyxs3GrqueiP_J4&vtoken=",
+    "type": "m3u8"
+  },
+  {
+    "name": "Z Tamil HD",
+    "slug": "z-tamil-hd",
+    "page_url": "https://tamilradios.org/livetv/z-tamil-hd",
+    "url": "https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(ZeeThi)/master.mpd&keyId=bd7282e920e5437a9b1f01bc6f81795c&key=99763370f0763b0f7119aab091cc70c8",
+    "type": "mpd"
+  },
+  {
+    "name": "Discovery Kids Tamil",
+    "slug": "discovery-kids-tamil",
+    "page_url": "https://tamilradios.org/livetv/discovery-kids-tamil",
+    "url": "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+    "type": "mpd"
+  },
+  {
+    "name": "CN Tamil",
+    "slug": "cn-tamil",
+    "page_url": "https://tamilradios.org/livetv/cn-tamil",
+    "url": "https://login.bheem.tv/bpk-tv/22602/output/index.mpd?",
+    "type": "mpd"
+  },
+  {
+    "name": "History TV18 HD Tamil",
+    "slug": "history-tv18-hd-tamil",
+    "page_url": "https://tamilradios.org/livetv/history-tv18-hd-tamil",
+    "url": "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+    "type": "mpd"
+  },
+  {
+    "name": "Jaya Max",
+    "slug": "jaya-max",
+    "page_url": "https://tamilradios.org/livetv/jaya-max",
+    "url": "https://login.bheem.tv/bpk-tv/22374/output/index.mpd?",
+    "type": "mpd"
+  },
+  {
+    "name": "Jaya Movie",
+    "slug": "jaya-movie",
+    "page_url": "https://tamilradios.org/livetv/jaya-movie",
+    "url": "https://login.bheem.tv/bpk-tv/22373/output/index.mpd?",
+    "type": "mpd"
+  },
+  {
+    "name": "Discovery Tamil",
+    "slug": "discovery-tamil-2",
+    "page_url": "https://tamilradios.org/livetv/discovery-tamil-2",
+    "url": "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+    "type": "mpd"
+  },
+  {
+    "name": "Animal Planet HD",
+    "slug": "animal-planet-hd",
+    "page_url": "https://tamilradios.org/livetv/animal-planet-hd",
+    "url": "https://login.bheem.tv/bpk-tv/22052/output/index.mpd?",
+    "type": "mpd"
+  },
+  {
+    "name": "Jaya TV",
+    "slug": "jaya-tv",
+    "page_url": "https://tamilradios.org/livetv/jaya-tv",
+    "url": "https://login.bheem.tv/bpk-tv/22376/output/index.mpd?",
+    "type": "mpd"
+  },
+  {
+    "name": "Sony YAY Tamil",
+    "slug": "sony-yay-tamil",
+    "page_url": "https://tamilradios.org/livetv/sony-yay-tamil",
+    "url": "https://tamilradios.org/dashplayer.php?mpd=https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(SonyYay)/master.mpd?&keyId=582e9e382cb0495886afbabdbdb6fbf7&key=c0f550839b235443724cd007392b6e40",
+    "type": "mpd"
+  },
+  {
+    "name": "Surya TV",
+    "slug": "surya-tv",
+    "page_url": "https://tamilradios.org/livetv/surya-tv",
+    "url": "https://livestream11.sunnxt.com/DolbyVision/SuryaTV_HDR/SuryaTV_HDR_Endpoints/SuryaTV-HDR10-IN-index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Polimer TV",
+    "slug": "polimer-tv",
+    "page_url": "https://tamilradios.org/livetv/polimer-tv",
+    "url": "https://cdn-2.pishow.tv/live/1241/master.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Vasanth TV",
+    "slug": "vasanth-tv",
+    "page_url": "https://tamilradios.org/livetv/vasanth-tv",
+    "url": "https://mumt04.tangotv.in/VASANTHTV/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Makkal TV",
+    "slug": "makkal-tv",
+    "page_url": "https://tamilradios.org/livetv/makkal-tv",
+    "url": "https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Vendhar TV",
+    "slug": "vendhar-tv",
+    "page_url": "https://tamilradios.org/livetv/vendhar-tv",
+    "url": "https://cdn-3.pishow.tv/live/1271/master.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "DD Tamil",
+    "slug": "dd-tamil",
+    "page_url": "https://tamilradios.org/livetv/dd-tamil",
+    "url": "https://cdn-2.pishow.tv/live/26/master.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Isai Aruvi TV",
+    "slug": "isai-aruvi-tv",
+    "page_url": "https://tamilradios.org/livetv/isai-aruvi-tv",
+    "url": "https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Chithiram TV",
+    "slug": "chithiram-tv",
+    "page_url": "https://tamilradios.org/livetv/chithiram-tv",
+    "url": "https://cdn-6.pishow.tv/live/1243/master.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Kalaignar TV",
+    "slug": "kalaignar-tv",
+    "page_url": "https://tamilradios.org/livetv/kalaignar-tv",
+    "url": "https://segment.yuppcdn.net/240122/kalaignartv/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Raj Musix",
+    "slug": "raj-musix",
+    "page_url": "https://tamilradios.org/livetv/raj-musix",
+    "url": "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=748&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJh3tepA8ORw14DtCDzOVkxjc940IAz9qp-JQQ2CU9Gulmib4NMLR5Wn2jJQc-Np8VEGs1_udl7a75pS0S9Z2bSEb7vBLNGG2YjFczeQjmigK6VV33KE1-_WhtXJn5KOquk&vtoken=",
+    "type": "m3u8"
+  },
+  {
+    "name": "Raj Digital Plus",
+    "slug": "raj-digital-plus",
+    "page_url": "https://tamilradios.org/livetv/raj-digital-plus",
+    "url": "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sathiyam TV",
+    "slug": "sathiyam-tv",
+    "page_url": "https://tamilradios.org/livetv/sathiyam-tv",
+    "url": null,
+    "type": null
+  },
+  {
+    "name": "Raj TV",
+    "slug": "raj-tv",
+    "page_url": "https://tamilradios.org/livetv/raj-tv",
+    "url": "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=707&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJjffKNdaGUvlXh2jVwOT81feTIM8_xKkfzkcjp8XgDggDdRx6nE9yVeFGwxZ_G54VDbSH1-TSoiuGGXz_x6_lxBVLtL9Q4SlaY8EyT6ZXpUJg&vtoken=",
+    "type": "m3u8"
+  },
+  {
+    "name": "Puthiya Thalaimurai",
+    "slug": "928",
+    "page_url": "https://tamilradios.org/livetv/928",
+    "url": null,
+    "type": null
+  },
+  {
+    "name": "News Tamil 24x7",
+    "slug": "news-tamil-24x7",
+    "page_url": "https://tamilradios.org/livetv/news-tamil-24x7",
+    "url": null,
+    "type": null
+  },
+  {
+    "name": "Malai Murasu TV",
+    "slug": "malai-murasu-tv",
+    "page_url": "https://tamilradios.org/livetv/malai-murasu-tv",
+    "url": null,
+    "type": null
+  },
+  {
+    "name": "Chanakyaa TV",
+    "slug": "chanakyaa-tv",
+    "page_url": "https://tamilradios.org/livetv/chanakyaa-tv",
+    "url": null,
+    "type": null
+  },
+  {
+    "name": "Tamil Janam TV",
+    "slug": "tamil-janam-tv",
+    "page_url": "https://tamilradios.org/livetv/tamil-janam-tv",
+    "url": null,
+    "type": null
+  },
+  {
+    "name": "News J",
+    "slug": "news-j",
+    "page_url": "https://tamilradios.org/livetv/news-j",
+    "url": null,
+    "type": null
+  },
+  {
+    "name": "IBC Bakthi",
+    "slug": "ibc-bakthi",
+    "page_url": "https://tamilradios.org/livetv/ibc-bakthi",
+    "url": "https://webcast.emn.onl/IBC2/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "IBC Tamil",
+    "slug": "ibc-tamil",
+    "page_url": "https://tamilradios.org/livetv/ibc-tamil",
+    "url": "https://webcast.emn.onl/IBC/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Angel TV",
+    "slug": "angel-tv",
+    "page_url": "https://tamilradios.org/livetv/angel-tv",
+    "url": "https://www.yupptv.com/yupptvnew/channels/angel-tv/live/embed",
+    "type": "yupptv"
+  },
+  {
+    "name": "Sri Sankara Tamil",
+    "slug": "sri-sankara-tamil",
+    "page_url": "https://tamilradios.org/livetv/sri-sankara-tamil",
+    "url": "https://www.yupptv.com/yupptvnew/channels/sri-sankara-tamil/live/embed",
+    "type": "yupptv"
+  },
+  {
+    "name": "SVBC TTD",
+    "slug": "svbc-ttd",
+    "page_url": "https://tamilradios.org/livetv/svbc-ttd",
+    "url": "https://www.yupptv.com/yupptvnew/channels/svbc-2/live/embed",
+    "type": "yupptv"
+  },
+  {
+    "name": "Madha TV",
+    "slug": "madha-tv",
+    "page_url": "https://tamilradios.org/livetv/madha-tv",
+    "url": "https://60e68b19dd194.streamlock.net:55/madhahd1/smil:madhatv.smil/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Kalaignar Seithigal TV",
+    "slug": "kalaignar-seithigal-tv",
+    "page_url": "https://tamilradios.org/livetv/kalaignar-seithigal-tv",
+    "url": "https://www.yupptv.com/yupptvnew/channels/seithigal-tv/live/embed",
+    "type": "yupptv"
+  },
+  {
+    "name": "Sana TV",
+    "slug": "sana-tv",
+    "page_url": "https://tamilradios.org/livetv/sana-tv",
+    "url": "https://galaxyott.live/hls/sanatv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Tamilan TV",
+    "slug": "tamilan-tv",
+    "page_url": "https://tamilradios.org/livetv/tamilan-tv",
+    "url": "https://cdn.zionmediait.com/zionmediaitserver2024/97484f5ce6da96e496a9b87c439835d0.sdp/chunks.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Thanthi TV",
+    "slug": "thanthi-tv",
+    "page_url": "https://tamilradios.org/livetv/thanthi-tv",
+    "url": null,
+    "type": null
+  },
+  {
+    "name": "Polimer News",
+    "slug": "polimer-news",
+    "page_url": "https://tamilradios.org/livetv/polimer-news",
+    "url": "https://www.yupptv.com/yupptvnew/channels/polimer-news/live/embed",
+    "type": "yupptv"
+  },
+  {
+    "name": "Peppers TV",
+    "slug": "peppers-tv",
+    "page_url": "https://tamilradios.org/livetv/peppers-tv",
+    "url": "https://cdn-2.pishow.tv/live/1383/master.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Murasu TV",
+    "slug": "murasu-tv",
+    "page_url": "https://tamilradios.org/livetv/murasu-tv",
+    "url": "https://segment.yuppcdn.net/050522/murasu/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Moon TV",
+    "slug": "moon-tv",
+    "page_url": "https://tamilradios.org/livetv/moon-tv",
+    "url": "https://player.mslivestream.net/mslive/e10bb900976df9177b9a080314f26f86.sdp/chunks.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sirippoli TV",
+    "slug": "sirippoli-tv",
+    "page_url": "https://tamilradios.org/livetv/sirippoli-tv",
+    "url": "https://yuppmedtaorire.akamaized.net/v1/manifest/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/siripoli_nim_https/c4e6500f-ea05-4226-810e-2833ee0075ff/0.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sun News",
+    "slug": "sun-news",
+    "page_url": "https://tamilradios.org/livetv/sun-news",
+    "url": null,
+    "type": null
+  },
+  {
+    "name": "7 Star TV",
+    "slug": "7-star-tv",
+    "page_url": "https://tamilradios.org/livetv/7-star-tv",
+    "url": "http://media.7starcloud.com:1935/live/7star/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Vaanavil TV",
+    "slug": "vaanavil-tv",
+    "page_url": "https://tamilradios.org/livetv/vaanavil-tv",
+    "url": "https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/chunks.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Aus Tamil TV",
+    "slug": "aus-tamil-tv",
+    "page_url": "https://tamilradios.org/livetv/aus-tamil-tv",
+    "url": "http://bk7l2pn7dx53-hls-live.5centscdn.com/austamil/fe01ce2a7fbac8fafaed7c982a04e229.sdp/chunks.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Royal TV",
+    "slug": "royal-tv",
+    "page_url": "https://tamilradios.org/livetv/royal-tv",
+    "url": "https://streamspace.live/hls/jptv/livestream.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Athavan TV",
+    "slug": "athavan-tv",
+    "page_url": "https://tamilradios.org/livetv/athavan-tv",
+    "url": "https://www.yupptv.com/yupptvnew/channels/athavan-tv-hd/live/embed",
+    "type": "yupptv"
+  },
+  {
+    "name": "Thalaa TV",
+    "slug": "thalaa-tv",
+    "page_url": "https://tamilradios.org/livetv/thalaa-tv",
+    "url": "https://www.yupptv.com/yupptvnew/channels/thalaa-tv/live/embed",
+    "type": "yupptv"
+  },
+  {
+    "name": "MN Music",
+    "slug": "mn-music",
+    "page_url": "https://tamilradios.org/livetv/mn-music",
+    "url": "https://mntv.livebox.co.in/musichls/live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Vasantham TV",
+    "slug": "vasantham-tv",
+    "page_url": "https://tamilradios.org/livetv/vasantham-tv",
+    "url": "https://edge3-moblive.yuppcdn.net/trans1sd/smil:vatv07.smil/chunklist_w260511746_b596000.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Udhayam TV",
+    "slug": "udhayam-tv",
+    "page_url": "https://tamilradios.org/livetv/udhayam-tv",
+    "url": "https://ipcloud.live/udhayamtv/live/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Thendral TV",
+    "slug": "thendral-tv",
+    "page_url": "https://tamilradios.org/livetv/thendral-tv",
+    "url": "https://ipcloud.live/thendralmdu/madurai/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "U TV Tamil",
+    "slug": "u-tv-tamil",
+    "page_url": "https://tamilradios.org/livetv/u-tv-tamil",
+    "url": "https://stream.galaxyott.live/live/utv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Kavin TV",
+    "slug": "kavin-tv",
+    "page_url": "https://tamilradios.org/livetv/kavin-tv",
+    "url": "https://live.skystream.in/live/kavintv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Anandham TV",
+    "slug": "anandham-tv",
+    "page_url": "https://tamilradios.org/livetv/anandham-tv",
+    "url": "https://stream.galaxyott.live/live/anandhamtv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Subin TV",
+    "slug": "subin-tv",
+    "page_url": "https://tamilradios.org/livetv/subin-tv",
+    "url": "https://stream.galaxyott.live/live/subintv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Marutham Nelli TV",
+    "slug": "mn-tv",
+    "page_url": "https://tamilradios.org/livetv/mn-tv",
+    "url": "https://mntv.livebox.co.in/mntvhls/live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "No 1 TV",
+    "slug": "no-1-tv",
+    "page_url": "https://tamilradios.org/livetv/no-1-tv",
+    "url": "https://live.skystream.in/live/no1tv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "D TV",
+    "slug": "d-tv",
+    "page_url": "https://tamilradios.org/livetv/d-tv",
+    "url": "https://dtv.livebox.co.in/Dtvhls/Live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Aasirvadham TV",
+    "slug": "aasirvadham-tv",
+    "page_url": "https://tamilradios.org/livetv/aasirvadham-tv",
+    "url": "https://stream.blessingtv.tv:1443/blessingtv-tamillive/mystream_720p/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Nambikkai TV",
+    "slug": "nambikkai-tv",
+    "page_url": "https://tamilradios.org/livetv/nambikkai-tv",
+    "url": "https://mk9qa7n8qwyb-hls-live.wmncdn.net/nambikkaitv/live.stream/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Deva TV",
+    "slug": "deva-tv",
+    "page_url": "https://tamilradios.org/livetv/deva-tv",
+    "url": "https://play.applelive.in/devatv/devatv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "D Bhakti TV",
+    "slug": "d-bhakti-tv",
+    "page_url": "https://tamilradios.org/livetv/d-bhakti-tv",
+    "url": "https://dtv.livebox.co.in/DBhaktihls/Live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "TVI TV",
+    "slug": "tvi-tv",
+    "page_url": "https://tamilradios.org/livetv/tvi-tv",
+    "url": "https://live.cmr24.fm/TVI/HD/chunks.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Tamil 3 TV",
+    "slug": "tamil-3-tv",
+    "page_url": "https://tamilradios.org/livetv/tamil-3-tv",
+    "url": "https://6n3yogbnd9ok-hls-live.5centscdn.com/threetamil/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Tamil Star TV",
+    "slug": "tamil-star-tv",
+    "page_url": "https://tamilradios.org/livetv/tamil-star-tv",
+    "url": "http://media.7starcloud.com:1935/live/7star/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Eye Tamil TV",
+    "slug": "eye-tamil-tv",
+    "page_url": "https://tamilradios.org/livetv/eye-tamil-tv",
+    "url": "https://live.eyetamil.tv/tv/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "SLS TV",
+    "slug": "sls-tv",
+    "page_url": "https://tamilradios.org/livetv/sls-tv",
+    "url": "http://nextgeninfotech.ddns.net:8080/reachtwo/reachtwo.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Mullai TV",
+    "slug": "mullai-tv",
+    "page_url": "https://tamilradios.org/livetv/mullai-tv",
+    "url": "https://ipcloud.live/mullaitv/mullaitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Jupiter Tamil TV",
+    "slug": "jupiter-tamil-tv",
+    "page_url": "https://tamilradios.org/livetv/jupiter-tamil-tv",
+    "url": "https://rtmp.applelive.in/esprimetv/esprimetv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Shalini TV",
+    "slug": "shalini-tv",
+    "page_url": "https://tamilradios.org/livetv/shalini-tv",
+    "url": "http://ipcloud.live:8080/shalinitv/shalinitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Malar TV",
+    "slug": "malar-tv",
+    "page_url": "https://tamilradios.org/livetv/malar-tv",
+    "url": "https://cdn-3.pishow.tv/live/473/master.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Bharathi TV",
+    "slug": "bharathi-tv",
+    "page_url": "https://tamilradios.org/livetv/bharathi-tv",
+    "url": "https://server.sscloud7.in/live/bharathitv/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "SJ Surya TV",
+    "slug": "sj-surya-tv",
+    "page_url": "https://tamilradios.org/livetv/sj-surya-tv",
+    "url": "https://ipcloud.live/nellaitv/suriyatv/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Rasi Music",
+    "slug": "rasi-music",
+    "page_url": "https://tamilradios.org/livetv/rasi-music",
+    "url": "https://mumbai-edge.smartplaytv.in/Rasimusic/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Bright Simrose TV",
+    "slug": "bright-simrose-tv",
+    "page_url": "https://tamilradios.org/livetv/bright-simrose-tv",
+    "url": "https://notvstream.in/brightsimrosetv/brightsimrosetv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Thillai TV",
+    "slug": "thillai-tv",
+    "page_url": "https://tamilradios.org/livetv/thillai-tv",
+    "url": "https://stream.onecloudlive.in/tcn/tcntv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Maniway TV",
+    "slug": "maniway-tv",
+    "page_url": "https://tamilradios.org/livetv/maniway-tv",
+    "url": "https://live.singamcloud.in/bsctv/bsctv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Enthiran TV",
+    "slug": "enthiran-tv",
+    "page_url": "https://tamilradios.org/livetv/enthiran-tv",
+    "url": "https://live.applelive.in/enthirantv/enthirantv/tracks-v1a1/mono.ts.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "STN TV",
+    "slug": "stn-tv",
+    "page_url": "https://tamilradios.org/livetv/stn-tv",
+    "url": "https://play.applelive.in/stntv/stntv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Boss TV",
+    "slug": "boss-tv",
+    "page_url": "https://tamilradios.org/livetv/boss-tv",
+    "url": "https://play.applelive.in/vasantv/vasantv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "MCN HD",
+    "slug": "mcn-hd",
+    "page_url": "https://tamilradios.org/livetv/mcn-hd",
+    "url": "https://play.applelive.in/mcntv/mcntv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Jayam TV",
+    "slug": "jayam-tv",
+    "page_url": "https://tamilradios.org/livetv/jayam-tv",
+    "url": "https://ipcloud.live/jayamtv/jayamtvhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Kovai TV",
+    "slug": "kovai-tv",
+    "page_url": "https://tamilradios.org/livetv/kovai-tv",
+    "url": "https://account31.livebox.co.in/Kovaitvhls/live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sana Plus HD",
+    "slug": "sana-tv-hd",
+    "page_url": "https://tamilradios.org/livetv/sana-tv-hd",
+    "url": "https://galaxyott.live//hls/sanaplus.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Velan TV",
+    "slug": "velan-tv",
+    "page_url": "https://tamilradios.org/livetv/velan-tv",
+    "url": "https://anywhere.pwisetthon.com/http://velantv.phoenixcreations.online/velantv/velantv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "MS Mathan TV",
+    "slug": "ms-mathan-tv",
+    "page_url": "https://tamilradios.org/livetv/ms-mathan-tv",
+    "url": "https://anywhere.pwisetthon.com/http://madhantv.phoenixcreations.online/madhantv/madhantv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Irattaipaathai TV",
+    "slug": "irattaipaathai-tv",
+    "page_url": "https://tamilradios.org/livetv/irattaipaathai-tv",
+    "url": "https://account31.livebox.co.in/IRATTAIPAATHAITVhls/live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "CTN",
+    "slug": "ctn",
+    "page_url": "https://tamilradios.org/livetv/ctn",
+    "url": "https://rtmp.bmlive.net/ctn/ctntn/stream.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Senthur TV",
+    "slug": "senthur-tv",
+    "page_url": "https://tamilradios.org/livetv/senthur-tv",
+    "url": "https://senthurtv-hls.suriyantv.in/live/senthurtv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Velavan TV",
+    "slug": "velavan-tv",
+    "page_url": "https://tamilradios.org/livetv/velavan-tv",
+    "url": "https://rtmp.applelive.in/srivelavantvultrahd/srivelavantvultrahd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Vani TV HD",
+    "slug": "vani-tv-hd",
+    "page_url": "https://tamilradios.org/livetv/vani-tv-hd",
+    "url": "https://live.sscloud7.in/live/vanitvhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Max Movies HD",
+    "slug": "max-movies-hd",
+    "page_url": "https://tamilradios.org/livetv/max-movies-hd",
+    "url": "https://live.maxtn.in/maxmovies/maxmovies/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Max Music HD",
+    "slug": "max-music-hd",
+    "page_url": "https://tamilradios.org/livetv/max-music-hd",
+    "url": "https://live.maxtn.in/maxmusic/maxmusic/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Roja TV",
+    "slug": "roja-tv",
+    "page_url": "https://tamilradios.org/livetv/roja-tv",
+    "url": "https://live.rojatv.cloud/rojatv/rojatv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Roja Movies",
+    "slug": "roja-movies",
+    "page_url": "https://tamilradios.org/livetv/roja-movies",
+    "url": "https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Tharun Movies HD",
+    "slug": "tharun-movies-hd",
+    "page_url": "https://tamilradios.org/livetv/tharun-movies-hd",
+    "url": "https://streaming.livebox.co.in/tharunmovieshls/live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Thaai TV",
+    "slug": "thaai-tv",
+    "page_url": "https://tamilradios.org/livetv/thaai-tv",
+    "url": "https://cdn.anystream.uk:8082/thaitv/thailive/chunks.m3u8?nimblesessionid=970322632",
+    "type": "m3u8"
+  },
+  {
+    "name": "MN TV",
+    "slug": "mn-tv-2",
+    "page_url": "https://tamilradios.org/livetv/mn-tv-2",
+    "url": "https://mntv.livebox.co.in/mntvhls/live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "BTV HD",
+    "slug": "btv-hd",
+    "page_url": "https://tamilradios.org/livetv/btv-hd",
+    "url": "https://rtmp.applelive.in/boobsh/boobsh/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "SK TV",
+    "slug": "sk-tv",
+    "page_url": "https://tamilradios.org/livetv/sk-tv",
+    "url": "https://stream.galaxyott.live/live/sktv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Suriyan TV",
+    "slug": "suriyan-tv",
+    "page_url": "https://tamilradios.org/livetv/suriyan-tv",
+    "url": "https://stream.galaxyott.live/live/suriyantv/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "NTV HD",
+    "slug": "ntv-hd",
+    "page_url": "https://tamilradios.org/livetv/ntv-hd",
+    "url": "https://galaxyott.live//hls/ntv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Gem TV",
+    "slug": "gem-tv",
+    "page_url": "https://tamilradios.org/livetv/gem-tv",
+    "url": "https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Eason TV",
+    "slug": "eason-tv",
+    "page_url": "https://tamilradios.org/livetv/eason-tv",
+    "url": "https://amigofx.com:1936/easontv/easontv/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Tamil Oli TV",
+    "slug": "tamil-oli-tv",
+    "page_url": "https://tamilradios.org/livetv/tamil-oli-tv",
+    "url": "https://view.rcserver.in/tmp_hls7/tamilolitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Tamil TV HD",
+    "slug": "tamil-tv-hd",
+    "page_url": "https://tamilradios.org/livetv/tamil-tv-hd",
+    "url": "https://stream.onecloudlive.in/tamiltv/tamiltvhd/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "KCTV",
+    "slug": "kctv",
+    "page_url": "https://tamilradios.org/livetv/kctv",
+    "url": "https://rtmp.bmlive.net/bms/kctv/stream.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Jith TV",
+    "slug": "jith-tv",
+    "page_url": "https://tamilradios.org/livetv/jith-tv",
+    "url": "https://sscloud7.com/live/jithtv/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "JR Malar TV",
+    "slug": "jr-malar-tv",
+    "page_url": "https://tamilradios.org/livetv/jr-malar-tv",
+    "url": "https://server.sscloud7.in/live/malartv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "JCV Musix",
+    "slug": "jcv-musix",
+    "page_url": "https://tamilradios.org/livetv/jcv-musix",
+    "url": "https://play.applelive.in/jcvtv/jcvmusix.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Raga TV",
+    "slug": "raga-tv",
+    "page_url": "https://tamilradios.org/livetv/raga-tv",
+    "url": "https://live.onecloudlive.in/ragatv/ragatvhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Oli TV HD",
+    "slug": "oli-tv-hd",
+    "page_url": "https://tamilradios.org/livetv/oli-tv-hd",
+    "url": "https://live.olidigital.in/olitv/olitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Kumari TV",
+    "slug": "kumari-tv",
+    "page_url": "https://tamilradios.org/livetv/kumari-tv",
+    "url": "https://rtmp.applelive.in/gvkumaritv/gvkumaritv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Prime TV",
+    "slug": "prime-tv",
+    "page_url": "https://tamilradios.org/livetv/prime-tv",
+    "url": "https://live.applelive.in/primetv/primetv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "MP TV",
+    "slug": "mp-tv",
+    "page_url": "https://tamilradios.org/livetv/mp-tv",
+    "url": "https://stream.sscloud7.in/live/mptv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "G Music",
+    "slug": "g-music",
+    "page_url": "https://tamilradios.org/livetv/g-music",
+    "url": "https://rtmp.applelive.in/gmusic/gmusic/tracks-v1a1/mono.ts.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Tamil Television Network",
+    "slug": "tamil-television-network",
+    "page_url": "https://tamilradios.org/livetv/tamil-television-network",
+    "url": "https://5e5679f71b925.streamlock.net:442/live/ttntv/chunklist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "TDN HD",
+    "slug": "tdn-hd",
+    "page_url": "https://tamilradios.org/livetv/tdn-hd",
+    "url": "https://live.maxtn.in/tdn/tdn/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Surya TV Tamil",
+    "slug": "surya-tv-tamil",
+    "page_url": "https://tamilradios.org/livetv/surya-tv-tamil",
+    "url": "https://galaxyott.live/hls//suryatv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Yet TV",
+    "slug": "yet-tv",
+    "page_url": "https://tamilradios.org/livetv/yet-tv",
+    "url": "https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Dark TV",
+    "slug": "dark-tv",
+    "page_url": "https://tamilradios.org/livetv/dark-tv",
+    "url": "https://play.applelive.in/darktv/darktv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "A2A TV",
+    "slug": "a2a-tv",
+    "page_url": "https://tamilradios.org/livetv/a2a-tv",
+    "url": "https://live.sscloud7.in/live/a2atv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Succes TV Tamil",
+    "slug": "succes-tv-tamil",
+    "page_url": "https://tamilradios.org/livetv/succes-tv-tamil",
+    "url": "https://stream.onecloudlive.in/successtv/successtvhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Manasu TV",
+    "slug": "manasu-tv",
+    "page_url": "https://tamilradios.org/livetv/manasu-tv",
+    "url": "https://stream6.livebox.co.in/manasutvhls/live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Om Sakthi TV",
+    "slug": "om-sakthi-tv",
+    "page_url": "https://tamilradios.org/livetv/om-sakthi-tv",
+    "url": "https://sscloud7.com/live/omsakthitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sakthi TV HD",
+    "slug": "sakthi-tv-hd",
+    "page_url": "https://tamilradios.org/livetv/sakthi-tv-hd",
+    "url": "https://live.sscloud7.in/live/sakthitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Deiva Oli",
+    "slug": "deiva-oli",
+    "page_url": "https://tamilradios.org/livetv/deiva-oli",
+    "url": "https://stream.sscloud7.in/live/deivaoli/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Asoka TV",
+    "slug": "asoka-tv",
+    "page_url": "https://tamilradios.org/livetv/asoka-tv",
+    "url": "https://ipcloud.live/asokatv/asokahd/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "NTN TV",
+    "slug": "ntn-tv",
+    "page_url": "https://tamilradios.org/livetv/ntn-tv",
+    "url": "https://live.skystream.in/live/ntntv/index.m3u8?hls_ctx=1314owa2",
+    "type": "m3u8"
+  },
+  {
+    "name": "PR TV",
+    "slug": "pr-tv",
+    "page_url": "https://tamilradios.org/livetv/pr-tv",
+    "url": "https://play.applelive.in/prtv/prtv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "DTV",
+    "slug": "dtv",
+    "page_url": "https://tamilradios.org/livetv/dtv",
+    "url": "https://stream.d6-pro.com/Dtv/live/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Thalapathy TV",
+    "slug": "thalapathy-tv",
+    "page_url": "https://tamilradios.org/livetv/thalapathy-tv",
+    "url": "https://play.applelive.in/thalapathytv/thalapathytv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Riya TV",
+    "slug": "riya-tv",
+    "page_url": "https://tamilradios.org/livetv/riya-tv",
+    "url": "https://play.applelive.in/riyatv/riyatv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Nila TV Nellai",
+    "slug": "nila-tv-nellai",
+    "page_url": "https://tamilradios.org/livetv/nila-tv-nellai",
+    "url": "https://ipcloud.live/nilatvnellai/nilahd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Harin TV",
+    "slug": "harin-tv",
+    "page_url": "https://tamilradios.org/livetv/harin-tv",
+    "url": "https://ipcloud.live/harintv/harintvhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Time TV",
+    "slug": "time-tv",
+    "page_url": "https://tamilradios.org/livetv/time-tv",
+    "url": "https://live.olidigital.in/timetv/timetv/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Phoenix TV Tamil",
+    "slug": "phoenix-tv-tamil",
+    "page_url": "https://tamilradios.org/livetv/phoenix-tv-tamil",
+    "url": "https://stream.onecloudlive.in/phoenixtv/phoenixtv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Imai TV",
+    "slug": "imai-tv",
+    "page_url": "https://tamilradios.org/livetv/imai-tv",
+    "url": "https://live20.bozztv.com/akamaissh101/ssh101/imaitv/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Nila TV",
+    "slug": "nila-tv",
+    "page_url": "https://tamilradios.org/livetv/nila-tv",
+    "url": "https://live.olidigital.in/nilatv/nilatv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "WE Baduga TV",
+    "slug": "we-baduga-tv",
+    "page_url": "https://tamilradios.org/livetv/we-baduga-tv",
+    "url": "https://rtmp.bmlive.net/webaduga/webaduga/stream.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sky Plus TV",
+    "slug": "sky-plus-tv",
+    "page_url": "https://tamilradios.org/livetv/sky-plus-tv",
+    "url": "https://ipcloud.live/skytv/skytv/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Vasantham",
+    "slug": "vasantham",
+    "page_url": "https://tamilradios.org/livetv/vasantham",
+    "url": "https://stream.onecloudlive.in/dhandapani/vasanthamtv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Devathai TV",
+    "slug": "devathai-tv",
+    "page_url": "https://tamilradios.org/livetv/devathai-tv",
+    "url": "https://hdbox.singamcloud.in/Deavathaitv/Deavathaitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Jeyam Television",
+    "slug": "jeyam-television",
+    "page_url": "https://tamilradios.org/livetv/jeyam-television",
+    "url": "https://jeyamtv.livebox.co.in/JeyamTelevisionhls/JeyamTelevision.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "SMCV HD",
+    "slug": "smcv-hd",
+    "page_url": "https://tamilradios.org/livetv/smcv-hd",
+    "url": "https://singamcloud.in/smcvtv/smcvtv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Yogaa TV",
+    "slug": "yogaa-tv",
+    "page_url": "https://tamilradios.org/livetv/yogaa-tv",
+    "url": "https://ipcloud.live/yogaatv/yogaatv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Roja TV 2",
+    "slug": "roja-tv-2",
+    "page_url": "https://tamilradios.org/livetv/roja-tv-2",
+    "url": "https://anywhere.pwisetthon.com/http://rojatv.phoenixcreations.online/rojatv/rojatv/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sasi TV",
+    "slug": "sasi-tv",
+    "page_url": "https://tamilradios.org/livetv/sasi-tv",
+    "url": "https://anywhere.pwisetthon.com/http://sasitv.phoenixcreations.online/sasitv/sasitv/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Jose TV",
+    "slug": "jose-tv",
+    "page_url": "https://tamilradios.org/livetv/jose-tv",
+    "url": "https://anywhere.pwisetthon.com/http://josetv.phoenixcreations.online/josetv/josetv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "TOP TV",
+    "slug": "top-tv",
+    "page_url": "https://tamilradios.org/livetv/top-tv",
+    "url": "https://anywhere.pwisetthon.com/http://toptv.phoenixcreations.online/toptv/toptv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "RK TV",
+    "slug": "rk-tv",
+    "page_url": "https://tamilradios.org/livetv/rk-tv",
+    "url": "https://anywhere.pwisetthon.com/http://rktv.phoenixcreations.online/rktv/rktv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Maran TV",
+    "slug": "maran-tv",
+    "page_url": "https://tamilradios.org/livetv/maran-tv",
+    "url": "https://server.sscloud7.in/marantv/marantv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Surya HD Digital",
+    "slug": "surya-hd-digital",
+    "page_url": "https://tamilradios.org/livetv/surya-hd-digital",
+    "url": "https://live.sscloud7.in/live/suryatv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Aaryaa TV",
+    "slug": "aarya-tv",
+    "page_url": "https://tamilradios.org/livetv/aarya-tv",
+    "url": "https://live.sscloud7.in/live/aaryaatv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Isai TV",
+    "slug": "isai-tv",
+    "page_url": "https://tamilradios.org/livetv/isai-tv",
+    "url": "https://server.sscloud7.in/isaihd/isaihd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Dharshan TV",
+    "slug": "dharshan-tv",
+    "page_url": "https://tamilradios.org/livetv/dharshan-tv",
+    "url": "https://galaxyott.live/hls/dharshantv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Britain Tamil Bhakthi TV",
+    "slug": "britain-tamil-bhakthi-tv",
+    "page_url": "https://tamilradios.org/livetv/britain-tamil-bhakthi-tv",
+    "url": "https://stream.onecloudlive.in/britaintamil/britaintamil/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sha TV",
+    "slug": "sha-tv",
+    "page_url": "https://tamilradios.org/livetv/sha-tv",
+    "url": "https://play.applelive.in/shatv/shatv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sachin TV",
+    "slug": "sachin-tv",
+    "page_url": "https://tamilradios.org/livetv/sachin-tv",
+    "url": "https://ipcloud.live/sachintv/sachintvhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sachin TV Music",
+    "slug": "sachin-tv-music",
+    "page_url": "https://tamilradios.org/livetv/sachin-tv-music",
+    "url": "https://ipcloud.live/sachintv/musichd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Dhoni TV HD",
+    "slug": "dhoni-tv-hd",
+    "page_url": "https://tamilradios.org/livetv/dhoni-tv-hd",
+    "url": "https://ipcloud.live/sachintv/dhonitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "EET TV",
+    "slug": "eet-tv",
+    "page_url": "https://tamilradios.org/livetv/eet-tv",
+    "url": "https://eu.streamjo.com/eetlive/eettv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Thendral TV Madurai",
+    "slug": "thendral-tv-madurai",
+    "page_url": "https://tamilradios.org/livetv/thendral-tv-madurai",
+    "url": "https://ipcloud.live/thendralmdu/madurai/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Namma Gopi TV",
+    "slug": "namma-gopi-tv",
+    "page_url": "https://tamilradios.org/livetv/namma-gopi-tv",
+    "url": "https://stream.rojatv.cloud/nammagobi/tv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Jeyam TV",
+    "slug": "jeyam-tv",
+    "page_url": "https://tamilradios.org/livetv/jeyam-tv",
+    "url": "https://stream.onecloudlive.in/jeyam/jeyammdu/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "M Television",
+    "slug": "m-television",
+    "page_url": "https://tamilradios.org/livetv/m-television",
+    "url": "https://ipcloud.live/mtv/menhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Aadvik TV",
+    "slug": "aadvik-tv",
+    "page_url": "https://tamilradios.org/livetv/aadvik-tv",
+    "url": "https://ipcloud.live/sachintv/aadviktv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Thirumagal TV",
+    "slug": "thirumagal-tv",
+    "page_url": "https://tamilradios.org/livetv/thirumagal-tv",
+    "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/thirumagal/tv/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Maruthi TV",
+    "slug": "maruthi-tv",
+    "page_url": "https://tamilradios.org/livetv/maruthi-tv",
+    "url": "https://stream.onecloudlive.in/maruthitv/maruthitvhd/tracks-v1a1/mono.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Aadhavan TV",
+    "slug": "aadhavan-tv",
+    "page_url": "https://tamilradios.org/livetv/aadhavan-tv",
+    "url": "https://ipcloud.live/aadhavantv/aadhavan/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "3 Star TV",
+    "slug": "3-star-tv",
+    "page_url": "https://tamilradios.org/livetv/3-star-tv",
+    "url": "https://stream.onecloudlive.in/threestartv/threestarhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "JCV",
+    "slug": "jcv",
+    "page_url": "https://tamilradios.org/livetv/jcv",
+    "url": "https://play.applelive.in/jcvtv/jcvtv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Velicham TV",
+    "slug": "velicham-tv",
+    "page_url": "https://tamilradios.org/livetv/velicham-tv",
+    "url": "https://cdn.smartstream.video/smartstream-us/velichamtv/velichamtv/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Minnal HD",
+    "slug": "minnal-hd",
+    "page_url": "https://tamilradios.org/livetv/minnal-hd",
+    "url": "https://ipcloud.live/app/minnaltv/minnalhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Hai TV",
+    "slug": "hai-tv",
+    "page_url": "https://tamilradios.org/livetv/hai-tv",
+    "url": "https://play.applelive.in/haitv/haitv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "KCTN TV",
+    "slug": "kctn-tv",
+    "page_url": "https://tamilradios.org/livetv/kctn-tv",
+    "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/kctn/tv/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "JJ News Tamil",
+    "slug": "jj-news-tamil",
+    "page_url": "https://tamilradios.org/livetv/jj-news-tamil",
+    "url": "https://live.skystream.in/live/jjnewstamil/index.m3u8?hls_ctx=141308l7",
+    "type": "m3u8"
+  },
+  {
+    "name": "Anandam TV",
+    "slug": "anandam-tv",
+    "page_url": "https://tamilradios.org/livetv/anandam-tv",
+    "url": "https://live1.sscloud7.com/live/anandhamtv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Urchagam TV",
+    "slug": "urchagam-tv",
+    "page_url": "https://tamilradios.org/livetv/urchagam-tv",
+    "url": "https://rtmp.bmlive.net/bms/urchagamtv/stream.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Thendral TV 2",
+    "slug": "thendral-tv-2",
+    "page_url": "https://tamilradios.org/livetv/thendral-tv-2",
+    "url": "https://live.thendralcloud.in/thendraltv/d0dbe915091d400bd8ee7f27f0791303.sdp/chunks.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Eagle TV",
+    "slug": "eagle-tv",
+    "page_url": "https://tamilradios.org/livetv/eagle-tv",
+    "url": "https://rtmp.bmlive.net/bms/eagletv/stream.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Rainbow TV",
+    "slug": "rainbow-tv",
+    "page_url": "https://tamilradios.org/livetv/rainbow-tv",
+    "url": "https://live.skystream.in/live/rainbowtv/index.m3u8?hls_ctx=a7618r13",
+    "type": "m3u8"
+  },
+  {
+    "name": "Ashoka TV",
+    "slug": "ashoka-tv",
+    "page_url": "https://tamilradios.org/livetv/ashoka-tv",
+    "url": "https://app.ashokadigital.net/app/12f5e922/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Sai TV",
+    "slug": "sai-tv",
+    "page_url": "https://tamilradios.org/livetv/sai-tv",
+    "url": "https://app.ashokadigital.net/hls/saitvmdu/index.m3u8?token=DPyPa8qHDyZ2q3",
+    "type": "m3u8"
+  },
+  {
+    "name": "Anbu TV",
+    "slug": "anbu-tv",
+    "page_url": "https://tamilradios.org/livetv/anbu-tv",
+    "url": "https://ipcloud.live/anbutv/anbutvhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Apple TV",
+    "slug": "apple-tv",
+    "page_url": "https://tamilradios.org/livetv/apple-tv",
+    "url": "https://stream.iplive.xyz/appletv/4kpondy/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Nellai TV",
+    "slug": "nellai-tv",
+    "page_url": "https://tamilradios.org/livetv/nellai-tv",
+    "url": "https://stream.onecloudlive.in/nellaitv/nellaitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Params TV",
+    "slug": "params-tv",
+    "page_url": "https://tamilradios.org/livetv/params-tv",
+    "url": "https://app.ashokadigital.net/app/a3e0b02f/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Rock TV",
+    "slug": "rock-tv",
+    "page_url": "https://tamilradios.org/livetv/rock-tv",
+    "url": "https://apis.avmediawork.in/tvhls/rocktv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "RJ Tamil TV",
+    "slug": "rj-tamil-tv",
+    "page_url": "https://tamilradios.org/livetv/rj-tamil-tv",
+    "url": "https://ipcloud.live/rjtamiltv/rjtamil/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "King 24x7",
+    "slug": "king-24x7",
+    "page_url": "https://tamilradios.org/livetv/king-24x7",
+    "url": "https://notvstream.in/kingtv/kingtv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Karthick TV",
+    "slug": "karthick-tv",
+    "page_url": "https://tamilradios.org/livetv/karthick-tv",
+    "url": "https://ipcloud.live/karthick/karthicktvhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Akilam TV",
+    "slug": "akilam-tv",
+    "page_url": "https://tamilradios.org/livetv/akilam-tv",
+    "url": "https://stream.onecloudlive.in/akilamtv/akilamtvhd/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Rio TV",
+    "slug": "rio-tv",
+    "page_url": "https://tamilradios.org/livetv/rio-tv",
+    "url": "https://app.ashokadigital.net/hls/riotv/index.m3u8?token=hYUbjDHukIyAv3",
+    "type": "m3u8"
+  },
+  {
+    "name": "Saami TV",
+    "slug": "saami-tv",
+    "page_url": "https://tamilradios.org/livetv/saami-tv",
+    "url": "https://ipcloud.live/msntv/saamitv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "7 Green 4K",
+    "slug": "7-green-4k",
+    "page_url": "https://tamilradios.org/livetv/7-green-4k",
+    "url": "https://account33.livebox.co.in/7GREEN4Khls/live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Queens TV",
+    "slug": "queens-tv",
+    "page_url": "https://tamilradios.org/livetv/queens-tv",
+    "url": "https://notvstream.in/queens/queens.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Jayam TV 2",
+    "slug": "jayam-tv-2",
+    "page_url": "https://tamilradios.org/livetv/jayam-tv-2",
+    "url": "https://app.ashokadigital.net/app/db285ebc/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Smiley TV",
+    "slug": "smiley-tv",
+    "page_url": "https://tamilradios.org/livetv/smiley-tv",
+    "url": "https://live1.sscloud7.com/live/smileytv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Vanavil TV Kallakurichi",
+    "slug": "vanavil-tv-kallakurichi",
+    "page_url": "https://tamilradios.org/livetv/vanavil-tv-kallakurichi",
+    "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vaanavil/tv/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Visil Max",
+    "slug": "visil-max",
+    "page_url": "https://tamilradios.org/livetv/visil-max",
+    "url": "https://stream.sscloud7.in/live/vishiltv2/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "VCTN TV",
+    "slug": "vctn-tv",
+    "page_url": "https://tamilradios.org/livetv/vctn-tv",
+    "url": "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vctn/tv/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Jothibala TV",
+    "slug": "jothibala-tv",
+    "page_url": "https://tamilradios.org/livetv/jothibala-tv",
+    "url": "https://anywhere.pwisetthon.com/http://jothibalatv.phoenixcreations.online/jothibalatv/jothibalatv/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Akash TV",
+    "slug": "akash-tv",
+    "page_url": "https://tamilradios.org/livetv/akash-tv",
+    "url": "https://account2.livebox.co.in/AkashTvhls/live.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Vikatan TV",
+    "slug": "vikatan-tv",
+    "page_url": "https://tamilradios.org/livetv/vikatan-tv",
+    "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/vikatan-tv/master.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Vedha TV",
+    "slug": "vedha-tv",
+    "page_url": "https://tamilradios.org/livetv/vedha-tv",
+    "url": "https://skystream.in/live/vedha6528/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "NTC TV",
+    "slug": "ntc-tv",
+    "page_url": "https://tamilradios.org/livetv/ntc-tv",
+    "url": "https://galaxyott.live/hls/ntv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Ultimate TV",
+    "slug": "ultimate-tv",
+    "page_url": "https://tamilradios.org/livetv/ultimate-tv",
+    "url": "https://stream.galaxyott.live/live/utv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Anandham TV 2",
+    "slug": "anandham-tv-2",
+    "page_url": "https://tamilradios.org/livetv/anandham-tv-2",
+    "url": "https://stream.galaxyott.live/live/anandhamtv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Strawberry TV",
+    "slug": "aaryaa-tv",
+    "page_url": "https://tamilradios.org/livetv/aaryaa-tv",
+    "url": "https://stream.onecloudlive.in/sachintv/strawberrytv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Thulir TV",
+    "slug": "thulir-tv",
+    "page_url": "https://tamilradios.org/livetv/thulir-tv",
+    "url": "https://view.apserver.in/tmp_hls6/thulirtv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "MSN TV",
+    "slug": "msn-tv",
+    "page_url": "https://tamilradios.org/livetv/msn-tv",
+    "url": "https://ipcloud.live/msntv/msntv/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "King TV",
+    "slug": "king-tv",
+    "page_url": "https://tamilradios.org/livetv/king-tv",
+    "url": "https://rtmp.bmlive.net/kingtv/kingtv/stream.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Kumaran TV",
+    "slug": "kumaran-tv",
+    "page_url": "https://tamilradios.org/livetv/kumaran-tv",
+    "url": "https://stream.rojatv.cloud/kumarantv/gobi/index.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Ganesh TV",
+    "slug": "ganesh-tv",
+    "page_url": "https://tamilradios.org/livetv/ganesh-tv",
+    "url": "https://live.thendralcloud.in/ganeshtvlive/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Mathi TV",
+    "slug": "mathi-tv",
+    "page_url": "https://tamilradios.org/livetv/mathi-tv",
+    "url": "https://notvstream.in/mathitv/mathitv.m3u8",
+    "type": "m3u8"
+  },
+  {
+    "name": "Visil TV",
+    "slug": "visil-tv",
+    "page_url": "https://tamilradios.org/livetv/visil-tv",
+    "url": "https://stream.sscloud7.in/live/vishiltv1/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Durai TV",
+    "slug": "durai-tv",
+    "page_url": "https://tamilradios.org/livetv/durai-tv",
+    "url": "https://ipcloud.live/duraitv/live/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Apple TV Nagercoil",
+    "slug": "apple-tv-nagercoil",
+    "page_url": "https://tamilradios.org/livetv/apple-tv-nagercoil",
+    "url": "https://play.applelive.in/appletv/appletv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Jeyson TV",
+    "slug": "jeyson-tv",
+    "page_url": "https://tamilradios.org/livetv/jeyson-tv",
+    "url": "https://play.applelive.in/jeysontv/jeysontv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Kumari Kathir TV",
+    "slug": "kumari-kathir-tv",
+    "page_url": "https://tamilradios.org/livetv/kumari-kathir-tv",
+    "url": "https://play.applelive.in/jjmax/jjmax.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "JC TV",
+    "slug": "jc-tv",
+    "page_url": "https://tamilradios.org/livetv/jc-tv",
+    "url": "https://play.applelive.in/jctv/jctv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Digital TV",
+    "slug": "digital-tv",
+    "page_url": "https://tamilradios.org/livetv/digital-tv",
+    "url": "https://play.applelive.in/digitaltv/digitaltv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Veera TV",
+    "slug": "veera-tv",
+    "page_url": "https://tamilradios.org/livetv/veera-tv",
+    "url": "https://ipcloud.live/veeratv/veeratvhd/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Subash TV",
+    "slug": "subash-tv",
+    "page_url": "https://tamilradios.org/livetv/subash-tv",
+    "url": "https://ipcloud.live/subashtv/subashhd/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "NTV Trichy",
+    "slug": "ntv-trichy",
+    "page_url": "https://tamilradios.org/livetv/ntv-trichy",
+    "url": "https://notvstream.in/ntv/ntv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Arunai TV",
+    "slug": "arunai-tv",
+    "page_url": "https://tamilradios.org/livetv/arunai-tv",
+    "url": "https://notvstream.in/arunaitv/arunaitv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "RR TV",
+    "slug": "rr-tv",
+    "page_url": "https://tamilradios.org/livetv/rr-tv",
+    "url": "https://notvstream.in/rrtv/rrtv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "SS TV",
+    "slug": "ss-tv",
+    "page_url": "https://tamilradios.org/livetv/ss-tv",
+    "url": "https://notvstream.in/sstv/sstv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "UTV Mayuram",
+    "slug": "utv-mayuram",
+    "page_url": "https://tamilradios.org/livetv/utv-mayuram",
+    "url": "https://notvstream.in/utv/utv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Thirumalai TV",
+    "slug": "thirumalai-tv",
+    "page_url": "https://tamilradios.org/livetv/thirumalai-tv",
+    "url": "https://notvstream.in/thirumalaitv/thirumalaitv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Subi TV",
+    "slug": "subi-tv",
+    "page_url": "https://tamilradios.org/livetv/subi-tv",
+    "url": "https://notvstream.in/subitv/subitv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Hitech TV",
+    "slug": "hitech-tv",
+    "page_url": "https://tamilradios.org/livetv/hitech-tv",
+    "url": "https://notvstream.in/hitechtv/hitechtv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Orange TV",
+    "slug": "orange-tv",
+    "page_url": "https://tamilradios.org/livetv/orange-tv",
+    "url": "https://notvstream.in/orangetv/orangetv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Leo TV",
+    "slug": "leo-tv",
+    "page_url": "https://tamilradios.org/livetv/leo-tv",
+    "url": "https://ipcloud.live/leotv/leotvhd/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "S TV",
+    "slug": "s-tv",
+    "page_url": "https://tamilradios.org/livetv/s-tv",
+    "url": "https://play.applelive.in/stv/stv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Aasai TV",
+    "slug": "aasai-tv",
+    "page_url": "https://tamilradios.org/livetv/aasai-tv",
+    "url": "https://notvstream.in/aasaitv/aasaitv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Aalaya Magimai TV",
+    "slug": "aalaya-magimai-tv",
+    "page_url": "https://tamilradios.org/livetv/aalaya-magimai-tv",
+    "url": "https://app.ashokadigital.net/aalayamagimaitv/aalayamagimaitv/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Dheiveegam TV",
+    "slug": "dheiveegam-tv",
+    "page_url": "https://tamilradios.org/livetv/dheiveegam-tv",
+    "url": "https://stream.singamcloud.in/Dheiveegamtv/Dheiveegamtv/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Amman TV",
+    "slug": "amman-tv",
+    "page_url": "https://tamilradios.org/livetv/amman-tv",
+    "url": "https://app.ashokadigital.net/app/7d1a23ef/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Oscar TV",
+    "slug": "oscar-tv",
+    "page_url": "https://tamilradios.org/livetv/oscar-tv",
+    "url": "https://account21.livebox.co.in/oscartvhls/live.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Temble TV",
+    "slug": "temble-tv",
+    "page_url": "https://tamilradios.org/livetv/temble-tv",
+    "url": "https://notvstream.in/tembletv/tembletv.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Palkar TV",
+    "slug": "palkar-tv",
+    "page_url": "https://tamilradios.org/livetv/palkar-tv",
+    "url": "https://rtmp.applelive.in/palkartv/palkartv/index.m3u8",
+    "type": "mpd"
+  },
+  {
+    "name": "Thamil TV",
+    "slug": "thamil-tv",
+    "page_url": "https://tamilradios.org/livetv/thamil-tv",
+    "url": "https://amigofx.com:1936/tv360/tv360/playlist.m3u8",
+    "type": "mpd"
+  }
+]

@@ -1,0 +1,481 @@
+#EXTM3U
+#EXTINF:-1 tvg-name="Colors Tamil HD" group-title="Tamil Live TV",Colors Tamil HD
+https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=429&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJg_QL6EHJ9XkQqFgNq_aibPaKTEFkZQD0eliNhaBIIa0pgtMqdKkTr50X0wZXG6BeglPUf1Nid0AyVifvi1T2-RSD4R6-1S5-_Hk6AMISUc8WBgItB4Vyxs3GrqueiP_J4&vtoken=
+#EXTINF:-1 tvg-name="Z Tamil HD" group-title="Tamil Live TV",Z Tamil HD
+https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(ZeeThi)/master.mpd&keyId=bd7282e920e5437a9b1f01bc6f81795c&key=99763370f0763b0f7119aab091cc70c8
+#EXTINF:-1 tvg-name="Discovery Kids Tamil" group-title="Tamil Live TV",Discovery Kids Tamil
+https://login.bheem.tv/bpk-tv/22652/output/index.mpd?
+#EXTINF:-1 tvg-name="CN Tamil" group-title="Tamil Live TV",CN Tamil
+https://login.bheem.tv/bpk-tv/22602/output/index.mpd?
+#EXTINF:-1 tvg-name="History TV18 HD Tamil" group-title="Tamil Live TV",History TV18 HD Tamil
+https://login.bheem.tv/bpk-tv/22652/output/index.mpd?
+#EXTINF:-1 tvg-name="Jaya Max" group-title="Tamil Live TV",Jaya Max
+https://login.bheem.tv/bpk-tv/22374/output/index.mpd?
+#EXTINF:-1 tvg-name="Jaya Movie" group-title="Tamil Live TV",Jaya Movie
+https://login.bheem.tv/bpk-tv/22373/output/index.mpd?
+#EXTINF:-1 tvg-name="Discovery Tamil" group-title="Tamil Live TV",Discovery Tamil
+https://login.bheem.tv/bpk-tv/22652/output/index.mpd?
+#EXTINF:-1 tvg-name="Animal Planet HD" group-title="Tamil Live TV",Animal Planet HD
+https://login.bheem.tv/bpk-tv/22052/output/index.mpd?
+#EXTINF:-1 tvg-name="Jaya TV" group-title="Tamil Live TV",Jaya TV
+https://login.bheem.tv/bpk-tv/22376/output/index.mpd?
+#EXTINF:-1 tvg-name="Sony YAY Tamil" group-title="Tamil Live TV",Sony YAY Tamil
+https://tamilradios.org/dashplayer.php?mpd=https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(SonyYay)/master.mpd?&keyId=582e9e382cb0495886afbabdbdb6fbf7&key=c0f550839b235443724cd007392b6e40
+#EXTINF:-1 tvg-name="Surya TV" group-title="Tamil Live TV",Surya TV
+https://livestream11.sunnxt.com/DolbyVision/SuryaTV_HDR/SuryaTV_HDR_Endpoints/SuryaTV-HDR10-IN-index.m3u8
+#EXTINF:-1 tvg-name="Polimer TV" group-title="Tamil Live TV",Polimer TV
+https://cdn-2.pishow.tv/live/1241/master.m3u8
+#EXTINF:-1 tvg-name="Vasanth TV" group-title="Tamil Live TV",Vasanth TV
+https://mumt04.tangotv.in/VASANTHTV/index.m3u8
+#EXTINF:-1 tvg-name="Makkal TV" group-title="Tamil Live TV",Makkal TV
+https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8
+#EXTINF:-1 tvg-name="Vendhar TV" group-title="Tamil Live TV",Vendhar TV
+https://cdn-3.pishow.tv/live/1271/master.m3u8
+#EXTINF:-1 tvg-name="DD Tamil" group-title="Tamil Live TV",DD Tamil
+https://cdn-2.pishow.tv/live/26/master.m3u8
+#EXTINF:-1 tvg-name="Isai Aruvi TV" group-title="Tamil Live TV",Isai Aruvi TV
+https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8
+#EXTINF:-1 tvg-name="Chithiram TV" group-title="Tamil Live TV",Chithiram TV
+https://cdn-6.pishow.tv/live/1243/master.m3u8
+#EXTINF:-1 tvg-name="Kalaignar TV" group-title="Tamil Live TV",Kalaignar TV
+https://segment.yuppcdn.net/240122/kalaignartv/playlist.m3u8
+#EXTINF:-1 tvg-name="Raj Musix" group-title="Tamil Live TV",Raj Musix
+https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=748&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJh3tepA8ORw14DtCDzOVkxjc940IAz9qp-JQQ2CU9Gulmib4NMLR5Wn2jJQc-Np8VEGs1_udl7a75pS0S9Z2bSEb7vBLNGG2YjFczeQjmigK6VV33KE1-_WhtXJn5KOquk&vtoken=
+#EXTINF:-1 tvg-name="Raj Digital Plus" group-title="Tamil Live TV",Raj Digital Plus
+https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8
+#EXTINF:-1 tvg-name="Raj TV" group-title="Tamil Live TV",Raj TV
+https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=707&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJjffKNdaGUvlXh2jVwOT81feTIM8_xKkfzkcjp8XgDggDdRx6nE9yVeFGwxZ_G54VDbSH1-TSoiuGGXz_x6_lxBVLtL9Q4SlaY8EyT6ZXpUJg&vtoken=
+#EXTINF:-1 tvg-name="IBC Bakthi" group-title="Tamil Live TV",IBC Bakthi
+https://webcast.emn.onl/IBC2/index.m3u8
+#EXTINF:-1 tvg-name="IBC Tamil" group-title="Tamil Live TV",IBC Tamil
+https://webcast.emn.onl/IBC/index.m3u8
+#EXTINF:-1 tvg-name="Angel TV" group-title="Tamil Live TV",Angel TV
+https://www.yupptv.com/yupptvnew/channels/angel-tv/live/embed
+#EXTINF:-1 tvg-name="Sri Sankara Tamil" group-title="Tamil Live TV",Sri Sankara Tamil
+https://www.yupptv.com/yupptvnew/channels/sri-sankara-tamil/live/embed
+#EXTINF:-1 tvg-name="SVBC TTD" group-title="Tamil Live TV",SVBC TTD
+https://www.yupptv.com/yupptvnew/channels/svbc-2/live/embed
+#EXTINF:-1 tvg-name="Madha TV" group-title="Tamil Live TV",Madha TV
+https://60e68b19dd194.streamlock.net:55/madhahd1/smil:madhatv.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Kalaignar Seithigal TV" group-title="Tamil Live TV",Kalaignar Seithigal TV
+https://www.yupptv.com/yupptvnew/channels/seithigal-tv/live/embed
+#EXTINF:-1 tvg-name="Sana TV" group-title="Tamil Live TV",Sana TV
+https://galaxyott.live/hls/sanatv.m3u8
+#EXTINF:-1 tvg-name="Tamilan TV" group-title="Tamil Live TV",Tamilan TV
+https://cdn.zionmediait.com/zionmediaitserver2024/97484f5ce6da96e496a9b87c439835d0.sdp/chunks.m3u8
+#EXTINF:-1 tvg-name="Polimer News" group-title="Tamil Live TV",Polimer News
+https://www.yupptv.com/yupptvnew/channels/polimer-news/live/embed
+#EXTINF:-1 tvg-name="Peppers TV" group-title="Tamil Live TV",Peppers TV
+https://cdn-2.pishow.tv/live/1383/master.m3u8
+#EXTINF:-1 tvg-name="Murasu TV" group-title="Tamil Live TV",Murasu TV
+https://segment.yuppcdn.net/050522/murasu/playlist.m3u8
+#EXTINF:-1 tvg-name="Moon TV" group-title="Tamil Live TV",Moon TV
+https://player.mslivestream.net/mslive/e10bb900976df9177b9a080314f26f86.sdp/chunks.m3u8
+#EXTINF:-1 tvg-name="Sirippoli TV" group-title="Tamil Live TV",Sirippoli TV
+https://yuppmedtaorire.akamaized.net/v1/manifest/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/siripoli_nim_https/c4e6500f-ea05-4226-810e-2833ee0075ff/0.m3u8
+#EXTINF:-1 tvg-name="7 Star TV" group-title="Tamil Live TV",7 Star TV
+http://media.7starcloud.com:1935/live/7star/playlist.m3u8
+#EXTINF:-1 tvg-name="Vaanavil TV" group-title="Tamil Live TV",Vaanavil TV
+https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/chunks.m3u8
+#EXTINF:-1 tvg-name="Aus Tamil TV" group-title="Tamil Live TV",Aus Tamil TV
+http://bk7l2pn7dx53-hls-live.5centscdn.com/austamil/fe01ce2a7fbac8fafaed7c982a04e229.sdp/chunks.m3u8
+#EXTINF:-1 tvg-name="Royal TV" group-title="Tamil Live TV",Royal TV
+https://streamspace.live/hls/jptv/livestream.m3u8
+#EXTINF:-1 tvg-name="Athavan TV" group-title="Tamil Live TV",Athavan TV
+https://www.yupptv.com/yupptvnew/channels/athavan-tv-hd/live/embed
+#EXTINF:-1 tvg-name="Thalaa TV" group-title="Tamil Live TV",Thalaa TV
+https://www.yupptv.com/yupptvnew/channels/thalaa-tv/live/embed
+#EXTINF:-1 tvg-name="MN Music" group-title="Tamil Live TV",MN Music
+https://mntv.livebox.co.in/musichls/live.m3u8
+#EXTINF:-1 tvg-name="Vasantham TV" group-title="Tamil Live TV",Vasantham TV
+https://edge3-moblive.yuppcdn.net/trans1sd/smil:vatv07.smil/chunklist_w260511746_b596000.m3u8
+#EXTINF:-1 tvg-name="Udhayam TV" group-title="Tamil Live TV",Udhayam TV
+https://ipcloud.live/udhayamtv/live/index.m3u8
+#EXTINF:-1 tvg-name="Thendral TV" group-title="Tamil Live TV",Thendral TV
+https://ipcloud.live/thendralmdu/madurai/index.m3u8
+#EXTINF:-1 tvg-name="U TV Tamil" group-title="Tamil Live TV",U TV Tamil
+https://stream.galaxyott.live/live/utv/index.m3u8
+#EXTINF:-1 tvg-name="Kavin TV" group-title="Tamil Live TV",Kavin TV
+https://live.skystream.in/live/kavintv/index.m3u8
+#EXTINF:-1 tvg-name="Anandham TV" group-title="Tamil Live TV",Anandham TV
+https://stream.galaxyott.live/live/anandhamtv/index.m3u8
+#EXTINF:-1 tvg-name="Subin TV" group-title="Tamil Live TV",Subin TV
+https://stream.galaxyott.live/live/subintv/index.m3u8
+#EXTINF:-1 tvg-name="Marutham Nelli TV" group-title="Tamil Live TV",Marutham Nelli TV
+https://mntv.livebox.co.in/mntvhls/live.m3u8
+#EXTINF:-1 tvg-name="No 1 TV" group-title="Tamil Live TV",No 1 TV
+https://live.skystream.in/live/no1tv/index.m3u8
+#EXTINF:-1 tvg-name="D TV" group-title="Tamil Live TV",D TV
+https://dtv.livebox.co.in/Dtvhls/Live.m3u8
+#EXTINF:-1 tvg-name="Aasirvadham TV" group-title="Tamil Live TV",Aasirvadham TV
+https://stream.blessingtv.tv:1443/blessingtv-tamillive/mystream_720p/playlist.m3u8
+#EXTINF:-1 tvg-name="Nambikkai TV" group-title="Tamil Live TV",Nambikkai TV
+https://mk9qa7n8qwyb-hls-live.wmncdn.net/nambikkaitv/live.stream/playlist.m3u8
+#EXTINF:-1 tvg-name="Deva TV" group-title="Tamil Live TV",Deva TV
+https://play.applelive.in/devatv/devatv.m3u8
+#EXTINF:-1 tvg-name="D Bhakti TV" group-title="Tamil Live TV",D Bhakti TV
+https://dtv.livebox.co.in/DBhaktihls/Live.m3u8
+#EXTINF:-1 tvg-name="TVI TV" group-title="Tamil Live TV",TVI TV
+https://live.cmr24.fm/TVI/HD/chunks.m3u8
+#EXTINF:-1 tvg-name="Tamil 3 TV" group-title="Tamil Live TV",Tamil 3 TV
+https://6n3yogbnd9ok-hls-live.5centscdn.com/threetamil/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8
+#EXTINF:-1 tvg-name="Tamil Star TV" group-title="Tamil Live TV",Tamil Star TV
+http://media.7starcloud.com:1935/live/7star/playlist.m3u8
+#EXTINF:-1 tvg-name="Eye Tamil TV" group-title="Tamil Live TV",Eye Tamil TV
+https://live.eyetamil.tv/tv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="SLS TV" group-title="Tamil Live TV",SLS TV
+http://nextgeninfotech.ddns.net:8080/reachtwo/reachtwo.m3u8
+#EXTINF:-1 tvg-name="Mullai TV" group-title="Tamil Live TV",Mullai TV
+https://ipcloud.live/mullaitv/mullaitv/index.m3u8
+#EXTINF:-1 tvg-name="Jupiter Tamil TV" group-title="Tamil Live TV",Jupiter Tamil TV
+https://rtmp.applelive.in/esprimetv/esprimetv/index.m3u8
+#EXTINF:-1 tvg-name="Shalini TV" group-title="Tamil Live TV",Shalini TV
+http://ipcloud.live:8080/shalinitv/shalinitv/index.m3u8
+#EXTINF:-1 tvg-name="Malar TV" group-title="Tamil Live TV",Malar TV
+https://cdn-3.pishow.tv/live/473/master.m3u8
+#EXTINF:-1 tvg-name="Bharathi TV" group-title="Tamil Live TV",Bharathi TV
+https://server.sscloud7.in/live/bharathitv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="SJ Surya TV" group-title="Tamil Live TV",SJ Surya TV
+https://ipcloud.live/nellaitv/suriyatv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Rasi Music" group-title="Tamil Live TV",Rasi Music
+https://mumbai-edge.smartplaytv.in/Rasimusic/index.m3u8
+#EXTINF:-1 tvg-name="Bright Simrose TV" group-title="Tamil Live TV",Bright Simrose TV
+https://notvstream.in/brightsimrosetv/brightsimrosetv.m3u8
+#EXTINF:-1 tvg-name="Thillai TV" group-title="Tamil Live TV",Thillai TV
+https://stream.onecloudlive.in/tcn/tcntv/index.m3u8
+#EXTINF:-1 tvg-name="Maniway TV" group-title="Tamil Live TV",Maniway TV
+https://live.singamcloud.in/bsctv/bsctv/index.m3u8
+#EXTINF:-1 tvg-name="Enthiran TV" group-title="Tamil Live TV",Enthiran TV
+https://live.applelive.in/enthirantv/enthirantv/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-name="STN TV" group-title="Tamil Live TV",STN TV
+https://play.applelive.in/stntv/stntv.m3u8
+#EXTINF:-1 tvg-name="Boss TV" group-title="Tamil Live TV",Boss TV
+https://play.applelive.in/vasantv/vasantv.m3u8
+#EXTINF:-1 tvg-name="MCN HD" group-title="Tamil Live TV",MCN HD
+https://play.applelive.in/mcntv/mcntv.m3u8
+#EXTINF:-1 tvg-name="Jayam TV" group-title="Tamil Live TV",Jayam TV
+https://ipcloud.live/jayamtv/jayamtvhd/index.m3u8
+#EXTINF:-1 tvg-name="Kovai TV" group-title="Tamil Live TV",Kovai TV
+https://account31.livebox.co.in/Kovaitvhls/live.m3u8
+#EXTINF:-1 tvg-name="Sana Plus HD" group-title="Tamil Live TV",Sana Plus HD
+https://galaxyott.live//hls/sanaplus.m3u8
+#EXTINF:-1 tvg-name="Velan TV" group-title="Tamil Live TV",Velan TV
+https://anywhere.pwisetthon.com/http://velantv.phoenixcreations.online/velantv/velantv/index.m3u8
+#EXTINF:-1 tvg-name="MS Mathan TV" group-title="Tamil Live TV",MS Mathan TV
+https://anywhere.pwisetthon.com/http://madhantv.phoenixcreations.online/madhantv/madhantv/index.m3u8
+#EXTINF:-1 tvg-name="Irattaipaathai TV" group-title="Tamil Live TV",Irattaipaathai TV
+https://account31.livebox.co.in/IRATTAIPAATHAITVhls/live.m3u8
+#EXTINF:-1 tvg-name="CTN" group-title="Tamil Live TV",CTN
+https://rtmp.bmlive.net/ctn/ctntn/stream.m3u8
+#EXTINF:-1 tvg-name="Senthur TV" group-title="Tamil Live TV",Senthur TV
+https://senthurtv-hls.suriyantv.in/live/senthurtv/index.m3u8
+#EXTINF:-1 tvg-name="Velavan TV" group-title="Tamil Live TV",Velavan TV
+https://rtmp.applelive.in/srivelavantvultrahd/srivelavantvultrahd/index.m3u8
+#EXTINF:-1 tvg-name="Vani TV HD" group-title="Tamil Live TV",Vani TV HD
+https://live.sscloud7.in/live/vanitvhd/index.m3u8
+#EXTINF:-1 tvg-name="Max Movies HD" group-title="Tamil Live TV",Max Movies HD
+https://live.maxtn.in/maxmovies/maxmovies/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Max Music HD" group-title="Tamil Live TV",Max Music HD
+https://live.maxtn.in/maxmusic/maxmusic/index.m3u8
+#EXTINF:-1 tvg-name="Roja TV" group-title="Tamil Live TV",Roja TV
+https://live.rojatv.cloud/rojatv/rojatv/index.m3u8
+#EXTINF:-1 tvg-name="Roja Movies" group-title="Tamil Live TV",Roja Movies
+https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8
+#EXTINF:-1 tvg-name="Tharun Movies HD" group-title="Tamil Live TV",Tharun Movies HD
+https://streaming.livebox.co.in/tharunmovieshls/live.m3u8
+#EXTINF:-1 tvg-name="Thaai TV" group-title="Tamil Live TV",Thaai TV
+https://cdn.anystream.uk:8082/thaitv/thailive/chunks.m3u8?nimblesessionid=970322632
+#EXTINF:-1 tvg-name="MN TV" group-title="Tamil Live TV",MN TV
+https://mntv.livebox.co.in/mntvhls/live.m3u8
+#EXTINF:-1 tvg-name="BTV HD" group-title="Tamil Live TV",BTV HD
+https://rtmp.applelive.in/boobsh/boobsh/index.m3u8
+#EXTINF:-1 tvg-name="SK TV" group-title="Tamil Live TV",SK TV
+https://stream.galaxyott.live/live/sktv/index.m3u8
+#EXTINF:-1 tvg-name="Suriyan TV" group-title="Tamil Live TV",Suriyan TV
+https://stream.galaxyott.live/live/suriyantv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="NTV HD" group-title="Tamil Live TV",NTV HD
+https://galaxyott.live//hls/ntv.m3u8
+#EXTINF:-1 tvg-name="Gem TV" group-title="Tamil Live TV",Gem TV
+https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlist.m3u8
+#EXTINF:-1 tvg-name="Eason TV" group-title="Tamil Live TV",Eason TV
+https://amigofx.com:1936/easontv/easontv/playlist.m3u8
+#EXTINF:-1 tvg-name="Tamil Oli TV" group-title="Tamil Live TV",Tamil Oli TV
+https://view.rcserver.in/tmp_hls7/tamilolitv/index.m3u8
+#EXTINF:-1 tvg-name="Tamil TV HD" group-title="Tamil Live TV",Tamil TV HD
+https://stream.onecloudlive.in/tamiltv/tamiltvhd/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="KCTV" group-title="Tamil Live TV",KCTV
+https://rtmp.bmlive.net/bms/kctv/stream.m3u8
+#EXTINF:-1 tvg-name="Jith TV" group-title="Tamil Live TV",Jith TV
+https://sscloud7.com/live/jithtv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="JR Malar TV" group-title="Tamil Live TV",JR Malar TV
+https://server.sscloud7.in/live/malartv/index.m3u8
+#EXTINF:-1 tvg-name="JCV Musix" group-title="Tamil Live TV",JCV Musix
+https://play.applelive.in/jcvtv/jcvmusix.m3u8
+#EXTINF:-1 tvg-name="Raga TV" group-title="Tamil Live TV",Raga TV
+https://live.onecloudlive.in/ragatv/ragatvhd/index.m3u8
+#EXTINF:-1 tvg-name="Oli TV HD" group-title="Tamil Live TV",Oli TV HD
+https://live.olidigital.in/olitv/olitv/index.m3u8
+#EXTINF:-1 tvg-name="Kumari TV" group-title="Tamil Live TV",Kumari TV
+https://rtmp.applelive.in/gvkumaritv/gvkumaritv/index.m3u8
+#EXTINF:-1 tvg-name="Prime TV" group-title="Tamil Live TV",Prime TV
+https://live.applelive.in/primetv/primetv/index.m3u8
+#EXTINF:-1 tvg-name="MP TV" group-title="Tamil Live TV",MP TV
+https://stream.sscloud7.in/live/mptv/index.m3u8
+#EXTINF:-1 tvg-name="G Music" group-title="Tamil Live TV",G Music
+https://rtmp.applelive.in/gmusic/gmusic/tracks-v1a1/mono.ts.m3u8
+#EXTINF:-1 tvg-name="Tamil Television Network" group-title="Tamil Live TV",Tamil Television Network
+https://5e5679f71b925.streamlock.net:442/live/ttntv/chunklist.m3u8
+#EXTINF:-1 tvg-name="TDN HD" group-title="Tamil Live TV",TDN HD
+https://live.maxtn.in/tdn/tdn/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Surya TV Tamil" group-title="Tamil Live TV",Surya TV Tamil
+https://galaxyott.live/hls//suryatv.m3u8
+#EXTINF:-1 tvg-name="Yet TV" group-title="Tamil Live TV",Yet TV
+https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8
+#EXTINF:-1 tvg-name="Dark TV" group-title="Tamil Live TV",Dark TV
+https://play.applelive.in/darktv/darktv.m3u8
+#EXTINF:-1 tvg-name="A2A TV" group-title="Tamil Live TV",A2A TV
+https://live.sscloud7.in/live/a2atv/index.m3u8
+#EXTINF:-1 tvg-name="Succes TV Tamil" group-title="Tamil Live TV",Succes TV Tamil
+https://stream.onecloudlive.in/successtv/successtvhd/index.m3u8
+#EXTINF:-1 tvg-name="Manasu TV" group-title="Tamil Live TV",Manasu TV
+https://stream6.livebox.co.in/manasutvhls/live.m3u8
+#EXTINF:-1 tvg-name="Om Sakthi TV" group-title="Tamil Live TV",Om Sakthi TV
+https://sscloud7.com/live/omsakthitv/index.m3u8
+#EXTINF:-1 tvg-name="Sakthi TV HD" group-title="Tamil Live TV",Sakthi TV HD
+https://live.sscloud7.in/live/sakthitv/index.m3u8
+#EXTINF:-1 tvg-name="Deiva Oli" group-title="Tamil Live TV",Deiva Oli
+https://stream.sscloud7.in/live/deivaoli/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Asoka TV" group-title="Tamil Live TV",Asoka TV
+https://ipcloud.live/asokatv/asokahd/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="NTN TV" group-title="Tamil Live TV",NTN TV
+https://live.skystream.in/live/ntntv/index.m3u8?hls_ctx=1314owa2
+#EXTINF:-1 tvg-name="PR TV" group-title="Tamil Live TV",PR TV
+https://play.applelive.in/prtv/prtv.m3u8
+#EXTINF:-1 tvg-name="DTV" group-title="Tamil Live TV",DTV
+https://stream.d6-pro.com/Dtv/live/index.m3u8
+#EXTINF:-1 tvg-name="Thalapathy TV" group-title="Tamil Live TV",Thalapathy TV
+https://play.applelive.in/thalapathytv/thalapathytv.m3u8
+#EXTINF:-1 tvg-name="Riya TV" group-title="Tamil Live TV",Riya TV
+https://play.applelive.in/riyatv/riyatv.m3u8
+#EXTINF:-1 tvg-name="Nila TV Nellai" group-title="Tamil Live TV",Nila TV Nellai
+https://ipcloud.live/nilatvnellai/nilahd/index.m3u8
+#EXTINF:-1 tvg-name="Harin TV" group-title="Tamil Live TV",Harin TV
+https://ipcloud.live/harintv/harintvhd/index.m3u8
+#EXTINF:-1 tvg-name="Time TV" group-title="Tamil Live TV",Time TV
+https://live.olidigital.in/timetv/timetv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Phoenix TV Tamil" group-title="Tamil Live TV",Phoenix TV Tamil
+https://stream.onecloudlive.in/phoenixtv/phoenixtv/index.m3u8
+#EXTINF:-1 tvg-name="Imai TV" group-title="Tamil Live TV",Imai TV
+https://live20.bozztv.com/akamaissh101/ssh101/imaitv/playlist.m3u8
+#EXTINF:-1 tvg-name="Nila TV" group-title="Tamil Live TV",Nila TV
+https://live.olidigital.in/nilatv/nilatv/index.m3u8
+#EXTINF:-1 tvg-name="WE Baduga TV" group-title="Tamil Live TV",WE Baduga TV
+https://rtmp.bmlive.net/webaduga/webaduga/stream.m3u8
+#EXTINF:-1 tvg-name="Sky Plus TV" group-title="Tamil Live TV",Sky Plus TV
+https://ipcloud.live/skytv/skytv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Vasantham" group-title="Tamil Live TV",Vasantham
+https://stream.onecloudlive.in/dhandapani/vasanthamtv/index.m3u8
+#EXTINF:-1 tvg-name="Devathai TV" group-title="Tamil Live TV",Devathai TV
+https://hdbox.singamcloud.in/Deavathaitv/Deavathaitv/index.m3u8
+#EXTINF:-1 tvg-name="Jeyam Television" group-title="Tamil Live TV",Jeyam Television
+https://jeyamtv.livebox.co.in/JeyamTelevisionhls/JeyamTelevision.m3u8
+#EXTINF:-1 tvg-name="SMCV HD" group-title="Tamil Live TV",SMCV HD
+https://singamcloud.in/smcvtv/smcvtv/index.m3u8
+#EXTINF:-1 tvg-name="Yogaa TV" group-title="Tamil Live TV",Yogaa TV
+https://ipcloud.live/yogaatv/yogaatv/index.m3u8
+#EXTINF:-1 tvg-name="Roja TV 2" group-title="Tamil Live TV",Roja TV 2
+https://anywhere.pwisetthon.com/http://rojatv.phoenixcreations.online/rojatv/rojatv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Sasi TV" group-title="Tamil Live TV",Sasi TV
+https://anywhere.pwisetthon.com/http://sasitv.phoenixcreations.online/sasitv/sasitv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Jose TV" group-title="Tamil Live TV",Jose TV
+https://anywhere.pwisetthon.com/http://josetv.phoenixcreations.online/josetv/josetv/index.m3u8
+#EXTINF:-1 tvg-name="TOP TV" group-title="Tamil Live TV",TOP TV
+https://anywhere.pwisetthon.com/http://toptv.phoenixcreations.online/toptv/toptv/index.m3u8
+#EXTINF:-1 tvg-name="RK TV" group-title="Tamil Live TV",RK TV
+https://anywhere.pwisetthon.com/http://rktv.phoenixcreations.online/rktv/rktv/index.m3u8
+#EXTINF:-1 tvg-name="Maran TV" group-title="Tamil Live TV",Maran TV
+https://server.sscloud7.in/marantv/marantv/index.m3u8
+#EXTINF:-1 tvg-name="Surya HD Digital" group-title="Tamil Live TV",Surya HD Digital
+https://live.sscloud7.in/live/suryatv/index.m3u8
+#EXTINF:-1 tvg-name="Aaryaa TV" group-title="Tamil Live TV",Aaryaa TV
+https://live.sscloud7.in/live/aaryaatv/index.m3u8
+#EXTINF:-1 tvg-name="Isai TV" group-title="Tamil Live TV",Isai TV
+https://server.sscloud7.in/isaihd/isaihd/index.m3u8
+#EXTINF:-1 tvg-name="Dharshan TV" group-title="Tamil Live TV",Dharshan TV
+https://galaxyott.live/hls/dharshantv.m3u8
+#EXTINF:-1 tvg-name="Britain Tamil Bhakthi TV" group-title="Tamil Live TV",Britain Tamil Bhakthi TV
+https://stream.onecloudlive.in/britaintamil/britaintamil/index.m3u8
+#EXTINF:-1 tvg-name="Sha TV" group-title="Tamil Live TV",Sha TV
+https://play.applelive.in/shatv/shatv.m3u8
+#EXTINF:-1 tvg-name="Sachin TV" group-title="Tamil Live TV",Sachin TV
+https://ipcloud.live/sachintv/sachintvhd/index.m3u8
+#EXTINF:-1 tvg-name="Sachin TV Music" group-title="Tamil Live TV",Sachin TV Music
+https://ipcloud.live/sachintv/musichd/index.m3u8
+#EXTINF:-1 tvg-name="Dhoni TV HD" group-title="Tamil Live TV",Dhoni TV HD
+https://ipcloud.live/sachintv/dhonitv/index.m3u8
+#EXTINF:-1 tvg-name="EET TV" group-title="Tamil Live TV",EET TV
+https://eu.streamjo.com/eetlive/eettv.m3u8
+#EXTINF:-1 tvg-name="Thendral TV Madurai" group-title="Tamil Live TV",Thendral TV Madurai
+https://ipcloud.live/thendralmdu/madurai/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Namma Gopi TV" group-title="Tamil Live TV",Namma Gopi TV
+https://stream.rojatv.cloud/nammagobi/tv/index.m3u8
+#EXTINF:-1 tvg-name="Jeyam TV" group-title="Tamil Live TV",Jeyam TV
+https://stream.onecloudlive.in/jeyam/jeyammdu/index.m3u8
+#EXTINF:-1 tvg-name="M Television" group-title="Tamil Live TV",M Television
+https://ipcloud.live/mtv/menhd/index.m3u8
+#EXTINF:-1 tvg-name="Aadvik TV" group-title="Tamil Live TV",Aadvik TV
+https://ipcloud.live/sachintv/aadviktv/index.m3u8
+#EXTINF:-1 tvg-name="Thirumagal TV" group-title="Tamil Live TV",Thirumagal TV
+https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/thirumagal/tv/playlist.m3u8
+#EXTINF:-1 tvg-name="Maruthi TV" group-title="Tamil Live TV",Maruthi TV
+https://stream.onecloudlive.in/maruthitv/maruthitvhd/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Aadhavan TV" group-title="Tamil Live TV",Aadhavan TV
+https://ipcloud.live/aadhavantv/aadhavan/index.m3u8
+#EXTINF:-1 tvg-name="3 Star TV" group-title="Tamil Live TV",3 Star TV
+https://stream.onecloudlive.in/threestartv/threestarhd/index.m3u8
+#EXTINF:-1 tvg-name="JCV" group-title="Tamil Live TV",JCV
+https://play.applelive.in/jcvtv/jcvtv.m3u8
+#EXTINF:-1 tvg-name="Velicham TV" group-title="Tamil Live TV",Velicham TV
+https://cdn.smartstream.video/smartstream-us/velichamtv/velichamtv/playlist.m3u8
+#EXTINF:-1 tvg-name="Minnal HD" group-title="Tamil Live TV",Minnal HD
+https://ipcloud.live/app/minnaltv/minnalhd/index.m3u8
+#EXTINF:-1 tvg-name="Hai TV" group-title="Tamil Live TV",Hai TV
+https://play.applelive.in/haitv/haitv.m3u8
+#EXTINF:-1 tvg-name="KCTN TV" group-title="Tamil Live TV",KCTN TV
+https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/kctn/tv/playlist.m3u8
+#EXTINF:-1 tvg-name="JJ News Tamil" group-title="Tamil Live TV",JJ News Tamil
+https://live.skystream.in/live/jjnewstamil/index.m3u8?hls_ctx=141308l7
+#EXTINF:-1 tvg-name="Anandam TV" group-title="Tamil Live TV",Anandam TV
+https://live1.sscloud7.com/live/anandhamtv/index.m3u8
+#EXTINF:-1 tvg-name="Urchagam TV" group-title="Tamil Live TV",Urchagam TV
+https://rtmp.bmlive.net/bms/urchagamtv/stream.m3u8
+#EXTINF:-1 tvg-name="Thendral TV 2" group-title="Tamil Live TV",Thendral TV 2
+https://live.thendralcloud.in/thendraltv/d0dbe915091d400bd8ee7f27f0791303.sdp/chunks.m3u8
+#EXTINF:-1 tvg-name="Eagle TV" group-title="Tamil Live TV",Eagle TV
+https://rtmp.bmlive.net/bms/eagletv/stream.m3u8
+#EXTINF:-1 tvg-name="Rainbow TV" group-title="Tamil Live TV",Rainbow TV
+https://live.skystream.in/live/rainbowtv/index.m3u8?hls_ctx=a7618r13
+#EXTINF:-1 tvg-name="Ashoka TV" group-title="Tamil Live TV",Ashoka TV
+https://app.ashokadigital.net/app/12f5e922/index.m3u8
+#EXTINF:-1 tvg-name="Sai TV" group-title="Tamil Live TV",Sai TV
+https://app.ashokadigital.net/hls/saitvmdu/index.m3u8?token=DPyPa8qHDyZ2q3
+#EXTINF:-1 tvg-name="Anbu TV" group-title="Tamil Live TV",Anbu TV
+https://ipcloud.live/anbutv/anbutvhd/index.m3u8
+#EXTINF:-1 tvg-name="Apple TV" group-title="Tamil Live TV",Apple TV
+https://stream.iplive.xyz/appletv/4kpondy/index.m3u8
+#EXTINF:-1 tvg-name="Nellai TV" group-title="Tamil Live TV",Nellai TV
+https://stream.onecloudlive.in/nellaitv/nellaitv/index.m3u8
+#EXTINF:-1 tvg-name="Params TV" group-title="Tamil Live TV",Params TV
+https://app.ashokadigital.net/app/a3e0b02f/index.m3u8
+#EXTINF:-1 tvg-name="Rock TV" group-title="Tamil Live TV",Rock TV
+https://apis.avmediawork.in/tvhls/rocktv.m3u8
+#EXTINF:-1 tvg-name="RJ Tamil TV" group-title="Tamil Live TV",RJ Tamil TV
+https://ipcloud.live/rjtamiltv/rjtamil/index.m3u8
+#EXTINF:-1 tvg-name="King 24x7" group-title="Tamil Live TV",King 24x7
+https://notvstream.in/kingtv/kingtv.m3u8
+#EXTINF:-1 tvg-name="Karthick TV" group-title="Tamil Live TV",Karthick TV
+https://ipcloud.live/karthick/karthicktvhd/index.m3u8
+#EXTINF:-1 tvg-name="Akilam TV" group-title="Tamil Live TV",Akilam TV
+https://stream.onecloudlive.in/akilamtv/akilamtvhd/index.m3u8
+#EXTINF:-1 tvg-name="Rio TV" group-title="Tamil Live TV",Rio TV
+https://app.ashokadigital.net/hls/riotv/index.m3u8?token=hYUbjDHukIyAv3
+#EXTINF:-1 tvg-name="Saami TV" group-title="Tamil Live TV",Saami TV
+https://ipcloud.live/msntv/saamitv/index.m3u8
+#EXTINF:-1 tvg-name="7 Green 4K" group-title="Tamil Live TV",7 Green 4K
+https://account33.livebox.co.in/7GREEN4Khls/live.m3u8
+#EXTINF:-1 tvg-name="Queens TV" group-title="Tamil Live TV",Queens TV
+https://notvstream.in/queens/queens.m3u8
+#EXTINF:-1 tvg-name="Jayam TV 2" group-title="Tamil Live TV",Jayam TV 2
+https://app.ashokadigital.net/app/db285ebc/index.m3u8
+#EXTINF:-1 tvg-name="Smiley TV" group-title="Tamil Live TV",Smiley TV
+https://live1.sscloud7.com/live/smileytv/index.m3u8
+#EXTINF:-1 tvg-name="Vanavil TV Kallakurichi" group-title="Tamil Live TV",Vanavil TV Kallakurichi
+https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vaanavil/tv/playlist.m3u8
+#EXTINF:-1 tvg-name="Visil Max" group-title="Tamil Live TV",Visil Max
+https://stream.sscloud7.in/live/vishiltv2/index.m3u8
+#EXTINF:-1 tvg-name="VCTN TV" group-title="Tamil Live TV",VCTN TV
+https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vctn/tv/playlist.m3u8
+#EXTINF:-1 tvg-name="Jothibala TV" group-title="Tamil Live TV",Jothibala TV
+https://anywhere.pwisetthon.com/http://jothibalatv.phoenixcreations.online/jothibalatv/jothibalatv/playlist.m3u8
+#EXTINF:-1 tvg-name="Akash TV" group-title="Tamil Live TV",Akash TV
+https://account2.livebox.co.in/AkashTvhls/live.m3u8
+#EXTINF:-1 tvg-name="Vikatan TV" group-title="Tamil Live TV",Vikatan TV
+https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/vikatan-tv/master.m3u8
+#EXTINF:-1 tvg-name="Vedha TV" group-title="Tamil Live TV",Vedha TV
+https://skystream.in/live/vedha6528/index.m3u8
+#EXTINF:-1 tvg-name="NTC TV" group-title="Tamil Live TV",NTC TV
+https://galaxyott.live/hls/ntv.m3u8
+#EXTINF:-1 tvg-name="Ultimate TV" group-title="Tamil Live TV",Ultimate TV
+https://stream.galaxyott.live/live/utv/index.m3u8
+#EXTINF:-1 tvg-name="Anandham TV 2" group-title="Tamil Live TV",Anandham TV 2
+https://stream.galaxyott.live/live/anandhamtv/index.m3u8
+#EXTINF:-1 tvg-name="Strawberry TV" group-title="Tamil Live TV",Strawberry TV
+https://stream.onecloudlive.in/sachintv/strawberrytv/index.m3u8
+#EXTINF:-1 tvg-name="Thulir TV" group-title="Tamil Live TV",Thulir TV
+https://view.apserver.in/tmp_hls6/thulirtv/index.m3u8
+#EXTINF:-1 tvg-name="MSN TV" group-title="Tamil Live TV",MSN TV
+https://ipcloud.live/msntv/msntv/index.m3u8
+#EXTINF:-1 tvg-name="King TV" group-title="Tamil Live TV",King TV
+https://rtmp.bmlive.net/kingtv/kingtv/stream.m3u8
+#EXTINF:-1 tvg-name="Kumaran TV" group-title="Tamil Live TV",Kumaran TV
+https://stream.rojatv.cloud/kumarantv/gobi/index.m3u8
+#EXTINF:-1 tvg-name="Ganesh TV" group-title="Tamil Live TV",Ganesh TV
+https://live.thendralcloud.in/ganeshtvlive/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8
+#EXTINF:-1 tvg-name="Mathi TV" group-title="Tamil Live TV",Mathi TV
+https://notvstream.in/mathitv/mathitv.m3u8
+#EXTINF:-1 tvg-name="Visil TV" group-title="Tamil Live TV",Visil TV
+https://stream.sscloud7.in/live/vishiltv1/index.m3u8
+#EXTINF:-1 tvg-name="Durai TV" group-title="Tamil Live TV",Durai TV
+https://ipcloud.live/duraitv/live/index.m3u8
+#EXTINF:-1 tvg-name="Apple TV Nagercoil" group-title="Tamil Live TV",Apple TV Nagercoil
+https://play.applelive.in/appletv/appletv.m3u8
+#EXTINF:-1 tvg-name="Jeyson TV" group-title="Tamil Live TV",Jeyson TV
+https://play.applelive.in/jeysontv/jeysontv.m3u8
+#EXTINF:-1 tvg-name="Kumari Kathir TV" group-title="Tamil Live TV",Kumari Kathir TV
+https://play.applelive.in/jjmax/jjmax.m3u8
+#EXTINF:-1 tvg-name="JC TV" group-title="Tamil Live TV",JC TV
+https://play.applelive.in/jctv/jctv.m3u8
+#EXTINF:-1 tvg-name="Digital TV" group-title="Tamil Live TV",Digital TV
+https://play.applelive.in/digitaltv/digitaltv.m3u8
+#EXTINF:-1 tvg-name="Veera TV" group-title="Tamil Live TV",Veera TV
+https://ipcloud.live/veeratv/veeratvhd/index.m3u8
+#EXTINF:-1 tvg-name="Subash TV" group-title="Tamil Live TV",Subash TV
+https://ipcloud.live/subashtv/subashhd/index.m3u8
+#EXTINF:-1 tvg-name="NTV Trichy" group-title="Tamil Live TV",NTV Trichy
+https://notvstream.in/ntv/ntv.m3u8
+#EXTINF:-1 tvg-name="Arunai TV" group-title="Tamil Live TV",Arunai TV
+https://notvstream.in/arunaitv/arunaitv.m3u8
+#EXTINF:-1 tvg-name="RR TV" group-title="Tamil Live TV",RR TV
+https://notvstream.in/rrtv/rrtv.m3u8
+#EXTINF:-1 tvg-name="SS TV" group-title="Tamil Live TV",SS TV
+https://notvstream.in/sstv/sstv.m3u8
+#EXTINF:-1 tvg-name="UTV Mayuram" group-title="Tamil Live TV",UTV Mayuram
+https://notvstream.in/utv/utv.m3u8
+#EXTINF:-1 tvg-name="Thirumalai TV" group-title="Tamil Live TV",Thirumalai TV
+https://notvstream.in/thirumalaitv/thirumalaitv.m3u8
+#EXTINF:-1 tvg-name="Subi TV" group-title="Tamil Live TV",Subi TV
+https://notvstream.in/subitv/subitv.m3u8
+#EXTINF:-1 tvg-name="Hitech TV" group-title="Tamil Live TV",Hitech TV
+https://notvstream.in/hitechtv/hitechtv.m3u8
+#EXTINF:-1 tvg-name="Orange TV" group-title="Tamil Live TV",Orange TV
+https://notvstream.in/orangetv/orangetv.m3u8
+#EXTINF:-1 tvg-name="Leo TV" group-title="Tamil Live TV",Leo TV
+https://ipcloud.live/leotv/leotvhd/index.m3u8
+#EXTINF:-1 tvg-name="S TV" group-title="Tamil Live TV",S TV
+https://play.applelive.in/stv/stv.m3u8
+#EXTINF:-1 tvg-name="Aasai TV" group-title="Tamil Live TV",Aasai TV
+https://notvstream.in/aasaitv/aasaitv.m3u8
+#EXTINF:-1 tvg-name="Aalaya Magimai TV" group-title="Tamil Live TV",Aalaya Magimai TV
+https://app.ashokadigital.net/aalayamagimaitv/aalayamagimaitv/index.m3u8
+#EXTINF:-1 tvg-name="Dheiveegam TV" group-title="Tamil Live TV",Dheiveegam TV
+https://stream.singamcloud.in/Dheiveegamtv/Dheiveegamtv/index.m3u8
+#EXTINF:-1 tvg-name="Amman TV" group-title="Tamil Live TV",Amman TV
+https://app.ashokadigital.net/app/7d1a23ef/index.m3u8
+#EXTINF:-1 tvg-name="Oscar TV" group-title="Tamil Live TV",Oscar TV
+https://account21.livebox.co.in/oscartvhls/live.m3u8
+#EXTINF:-1 tvg-name="Temble TV" group-title="Tamil Live TV",Temble TV
+https://notvstream.in/tembletv/tembletv.m3u8
+#EXTINF:-1 tvg-name="Palkar TV" group-title="Tamil Live TV",Palkar TV
+https://rtmp.applelive.in/palkartv/palkartv/index.m3u8
+#EXTINF:-1 tvg-name="Thamil TV" group-title="Tamil Live TV",Thamil TV
+https://amigofx.com:1936/tv360/tv360/playlist.m3u8

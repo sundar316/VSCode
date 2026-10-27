@@ -1,0 +1,5286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamil Live TV</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --bg: #07070f;
+        --surface: #10101a;
+        --surface2: #181828;
+        --border: #252540;
+        --accent: #e63946;
+        --accent2: #f4a261;
+        --text: #f0f0f8;
+        --muted: #5a5a7a;
+        --card: #0f0f1e;
+        --live: #ff3b30;
+        --green: #2ed573;
+        --orange: #ffa502;
+        --blue: #0984e3;
+        --purple: #a29bfe;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        overflow: hidden;
+      }
+
+      /* ══ LANDING ══ */
+      #landing {
+        position: fixed;
+        inset: 0;
+        background: var(--bg);
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      #landing.hidden {
+        display: none;
+      }
+
+      .land-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface);
+        flex-shrink: 0;
+      }
+      .land-logo {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 24px;
+        letter-spacing: 3px;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .land-logo .live-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--live);
+        animation: pulse 1.5s ease-in-out infinite;
+        flex-shrink: 0;
+      }
+      .land-header-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .land-search {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 8px 13px;
+        width: 240px;
+      }
+      .land-search input {
+        background: none;
+        border: none;
+        outline: none;
+        color: var(--text);
+        font-size: 13px;
+        width: 100%;
+        font-family: "Inter", sans-serif;
+      }
+      .land-search input::placeholder {
+        color: var(--muted);
+      }
+      .hdr-btn {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: "Inter", sans-serif;
+        transition: opacity 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .hdr-btn:hover {
+        opacity: 0.82;
+      }
+      .hdr-btn.red {
+        background: var(--accent);
+      }
+      .hdr-btn.blue {
+        background: var(--blue);
+      }
+      .hdr-btn.orange {
+        background: var(--orange);
+      }
+      .hdr-btn.green {
+        background: #1a8a3e;
+      }
+
+      /* scan progress bar */
+      #scan-bar {
+        height: 3px;
+        background: var(--border);
+        flex-shrink: 0;
+        display: none;
+        position: relative;
+        overflow: hidden;
+      }
+      #scan-bar.show {
+        display: block;
+      }
+      #scan-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, var(--green), var(--accent));
+        transition: width 0.3s;
+      }
+      #scan-text {
+        padding: 6px 24px;
+        font-size: 11px;
+        color: var(--muted);
+        background: var(--surface);
+        flex-shrink: 0;
+        display: none;
+      }
+      #scan-text.show {
+        display: block;
+      }
+
+      /* tabs */
+      .land-tabs-wrap {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .land-tabs {
+        display: flex;
+        gap: 0;
+        padding: 0 20px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .land-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .tab-btn {
+        padding: 10px 16px;
+        border: none;
+        background: none;
+        color: var(--muted);
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        transition: all 0.2s;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .tab-btn.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+      .tab-btn:hover:not(.active) {
+        color: var(--text);
+      }
+
+      /* category sub-bar */
+      #cat-bar {
+        display: flex !important;
+        gap: 6px;
+        padding: 8px 24px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        border-top: 1px solid var(--border);
+      }
+      #cat-bar::-webkit-scrollbar {
+        display: none;
+      }
+      .cat-pill {
+        padding: 5px 14px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 600;
+        cursor: pointer;
+        border: 1px solid var(--border);
+        background: var(--surface2);
+        color: var(--muted);
+        white-space: nowrap;
+        transition: all 0.2s;
+        flex-shrink: 0;
+      }
+      .cat-pill:hover {
+        color: var(--text);
+        border-color: var(--muted);
+      }
+      .cat-pill.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+
+      /* body */
+      .land-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 18px 24px 28px;
+      }
+      .land-body::-webkit-scrollbar {
+        width: 4px;
+      }
+      .land-body::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 2px;
+      }
+      .section-hdr {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .section-label {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 15px;
+        letter-spacing: 2px;
+        color: var(--muted);
+      }
+      .section-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      /* grid */
+      .channel-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+      }
+      .ch-card {
+        background: var(--card);
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 10px 12px;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        position: relative;
+        overflow: hidden;
+      }
+      .ch-card:hover,
+      .ch-card:focus {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        background: var(--surface2);
+        outline: none;
+      }
+      .ch-card.tv-focus {
+        border-color: #f4a261 !important;
+        transform: scale(1.08);
+        background: #202035;
+        box-shadow:
+          0 0 0 4px rgba(244, 162, 97, 0.3),
+          0 0 20px rgba(244, 162, 97, 0.5);
+      }
+      .ch-card.status-broken {
+        border-color: rgba(255, 59, 48, 0.4);
+        opacity: 0.55;
+      }
+      .ch-card.status-broken:hover {
+        opacity: 1;
+        background: #120a0a;
+      }
+      .ch-card.status-working {
+        border-color: rgba(46, 213, 115, 0.3);
+      }
+
+      .ch-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--surface2), var(--border));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 13px;
+        color: var(--accent2);
+        text-align: center;
+        line-height: 1.2;
+        padding: 4px;
+        flex-shrink: 0;
+      }
+      .ch-name-card {
+        font-size: 10.5px;
+        font-weight: 500;
+        text-align: center;
+        color: var(--text);
+        line-height: 1.4;
+      }
+      .ch-type-badge {
+        font-size: 8px;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .badge-m3u8 {
+        background: rgba(46, 213, 115, 0.12);
+        color: var(--green);
+      }
+      .badge-mpd {
+        background: rgba(255, 165, 0, 0.12);
+        color: var(--orange);
+      }
+      .badge-yupptv,
+      .badge-embed {
+        background: rgba(230, 57, 70, 0.12);
+        color: var(--accent);
+      }
+      .badge-missing {
+        background: rgba(255, 255, 255, 0.08);
+        color: #777;
+      }
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+      }
+      .sd-working {
+        background: var(--green);
+        box-shadow: 0 0 4px var(--green);
+      }
+      .sd-broken {
+        background: var(--live);
+      }
+
+      .fav-btn {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 12px;
+        opacity: 0.3;
+        transition: opacity 0.2s;
+        color: var(--accent2);
+        padding: 3px;
+        line-height: 1;
+      }
+      .fav-btn:hover,
+      .fav-btn.faved {
+        opacity: 1;
+      }
+      /* Updated Dislike Button */
+      .dislike-btn {
+        position: absolute;
+        top: 7px;
+        right: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        opacity: 0.4;
+        transition: opacity 0.2s;
+        color: #ff4757;
+        padding: 3px;
+        line-height: 1;
+        z-index: 2;
+      }
+      .dislike-btn:hover,
+      .dislike-btn.disliked {
+        opacity: 1;
+      }
+      .ch-num {
+        position: absolute;
+        top: 7px;
+        left: 9px;
+        font-size: 9px;
+        color: var(--muted);
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 1px;
+      }
+      .cat-label-chip {
+        font-size: 8px;
+        padding: 1px 5px;
+        border-radius: 3px;
+        background: rgba(162, 155, 254, 0.12);
+        color: var(--purple);
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
+      .no-results {
+        text-align: center;
+        color: var(--muted);
+        padding: 60px 20px;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.3);
+        }
+      }
+      @keyframes pop {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.6);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .fav-btn.pop,
+      .dislike-btn.pop {
+        animation: pop 0.3s ease;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* ══ MODAL ══ */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(10px);
+        z-index: 500;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .modal-overlay.show {
+        display: flex;
+      }
+      .modal-box {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 26px;
+        width: 100%;
+        max-width: 500px;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+      .modal-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: var(--accent);
+        margin-bottom: 18px;
+      }
+      .modal-field {
+        margin-bottom: 13px;
+      }
+      .modal-field label {
+        display: block;
+        font-size: 11px;
+        color: var(--muted);
+        margin-bottom: 5px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .modal-field input,
+      .modal-field select {
+        width: 100%;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 10px 13px;
+        color: var(--text);
+        font-size: 13px;
+        font-family: "Inter", sans-serif;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .modal-field input:focus,
+      .modal-field select:focus {
+        border-color: var(--accent);
+      }
+      .modal-field select option {
+        background: var(--surface2);
+      }
+      .modal-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+      }
+      .modal-save {
+        flex: 1;
+        padding: 10px;
+        background: var(--accent);
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        min-width: 80px;
+      }
+      .modal-del {
+        padding: 10px 14px;
+        background: #1e0608;
+        border: 1px solid var(--live);
+        border-radius: 8px;
+        color: var(--live);
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+      }
+      .modal-cancel {
+        padding: 10px 16px;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: var(--muted);
+        font-size: 13px;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+      }
+      .modal-note {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 12px;
+        line-height: 1.7;
+        border-top: 1px solid var(--border);
+        padding-top: 12px;
+      }
+      .modal-extra-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .modal-extra-btn {
+        padding: 7px 12px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--surface2);
+        color: var(--muted);
+        font-size: 11px;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+      .modal-extra-btn:hover {
+        border-color: var(--accent2);
+        color: var(--accent2);
+      }
+
+      /* sleep timer modal */
+      #sleep-modal .modal-box {
+        max-width: 340px;
+      }
+      .sleep-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 4px;
+      }
+      .sleep-opt {
+        padding: 14px;
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.2s;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .sleep-opt:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .sleep-opt.active-sleep {
+        border-color: var(--accent);
+        background: rgba(230, 57, 70, 0.1);
+        color: var(--accent);
+      }
+
+      /* ══ PLAYER ══ */
+      #player-view {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        z-index: 200;
+        display: none;
+      }
+      #player-view.active {
+        display: block;
+      }
+      #video-container {
+        width: 100%;
+
+        height: 100%;
+
+        display: flex;
+
+        background: #000;
+
+        overflow: hidden;
+      }
+
+      video,
+      #embed-iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      #embed-iframe {
+        border: none;
+        display: none;
+      }
+      .tv-mode video {
+        object-fit: cover;
+        background: #000;
+      }
+      .tv-mode .ch-card:hover {
+        transform: none;
+      }
+
+      /* ── OSD ── */
+      #ch-osd {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.9) 55%);
+        padding: 60px 36px 26px;
+        opacity: 0;
+        transition: opacity 0.4s;
+        pointer-events: none;
+        z-index: 3;
+      }
+      #ch-osd.show {
+        opacity: 1;
+      }
+      .osd-cat {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--accent2);
+        margin-bottom: 4px;
+        text-transform: uppercase;
+      }
+      .osd-num {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 13px;
+        letter-spacing: 3px;
+        color: var(--muted);
+        margin-bottom: 2px;
+      }
+      .osd-name {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 36px;
+        letter-spacing: 2px;
+        color: #fff;
+        line-height: 1;
+      }
+      .osd-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+      }
+      .osd-live {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: var(--live);
+        border-radius: 4px;
+        padding: 3px 9px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .osd-live .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #fff;
+        animation: pulse 1s infinite;
+      }
+      .osd-type-tag {
+        font-size: 9px;
+        padding: 2px 7px;
+        border-radius: 3px;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* ── LOADING ── */
+      #loading-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.88);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        z-index: 10;
+      }
+      #loading-overlay.hidden {
+        display: none;
+      }
+      .spinner {
+        width: 46px;
+        height: 46px;
+        border: 3px solid var(--border);
+        border-top-color: var(--accent);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      .loading-name {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 22px;
+        letter-spacing: 2px;
+        color: var(--text);
+      }
+      .loading-sub {
+        font-size: 11px;
+        color: var(--muted);
+      }
+
+      /* ── ERROR ── */
+      #error-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.93);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        z-index: 11;
+        padding: 20px;
+        text-align: center;
+      }
+      #error-overlay.show {
+        display: flex;
+      }
+      .err-icon {
+        font-size: 40px;
+      }
+      .err-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: var(--accent);
+      }
+      .err-msg {
+        font-size: 12px;
+        color: var(--muted);
+        max-width: 300px;
+        line-height: 1.7;
+      }
+      .err-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 4px;
+      }
+      .err-btn {
+        padding: 9px 20px;
+        background: var(--accent);
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+      }
+      .err-btn.sec {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        color: var(--muted);
+      }
+      .err-skip {
+        font-size: 11px;
+        color: var(--muted);
+        cursor: pointer;
+        text-decoration: underline;
+        margin-top: 2px;
+      }
+
+      /* ── TOPBAR ── */
+      #tv-topbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 20px;
+        background: linear-gradient(rgba(0, 0, 0, 0.85), transparent);
+        opacity: 0;
+        transition: opacity 0.4s;
+        pointer-events: none;
+        z-index: 5;
+      }
+      #tv-topbar.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .tv-logo {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 17px;
+        letter-spacing: 3px;
+        color: var(--accent);
+      }
+      .topbar-right {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+      #clock-tv {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.5);
+        min-width: 38px;
+      }
+      #sleep-countdown {
+        font-size: 10px;
+        color: var(--accent2);
+        display: none;
+        padding: 3px 8px;
+        background: rgba(244, 162, 97, 0.1);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        border-radius: 6px;
+      }
+      #sleep-countdown.show {
+        display: block;
+      }
+      .topbar-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #fff;
+        padding: 7px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        backdrop-filter: blur(8px);
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        min-height: 40px;
+        min-width: 40px;
+        justify-content: center;
+      }
+      .topbar-btn:hover,
+      .topbar-btn:focus {
+        background: rgba(255, 255, 255, 0.2);
+        outline: none;
+      }
+
+      /* ── BADGES / OVERLAYS ── */
+      #mute-badge {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.82);
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 16px;
+        padding: 12px 22px;
+        font-size: 26px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        z-index: 15;
+      }
+      #mute-badge.show {
+        opacity: 1;
+      }
+      #skip-banner {
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(230, 57, 70, 0.92);
+        border-radius: 24px;
+        padding: 7px 16px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        z-index: 12;
+      }
+      #skip-banner.show {
+        opacity: 1;
+      }
+      #toast {
+        position: absolute;
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.85);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 8px 18px;
+        font-size: 12px;
+        font-weight: 500;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        z-index: 16;
+        white-space: nowrap;
+      }
+      #toast.show {
+        opacity: 1;
+      }
+
+      /* ── REMOTE BUTTONS ── */
+      #remote-btns {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        align-items: center;
+      }
+
+      .remote-btn {
+        width: 42px;
+
+        height: 42px;
+
+        border-radius: 12px;
+
+        border: none;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        color: white;
+
+        font-size: 18px;
+
+        cursor: pointer;
+
+        transition: 0.2s;
+      }
+
+      .remote-btn:hover {
+        background: #e63946;
+
+        transform: scale(1.08);
+      }
+
+      #video-area {
+        flex: 1;
+
+        position: relative;
+
+        background: #000;
+
+        overflow: hidden;
+      }
+
+      #category-select {
+        width: 72px;
+
+        margin-top: 10px;
+
+        background: #181818 !important;
+
+        color: #ffffff !important;
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        border-radius: 10px;
+
+        padding: 8px 6px;
+
+        font-size: 11px;
+
+        outline: none;
+
+        cursor: pointer;
+
+        appearance: none;
+
+        -webkit-appearance: none;
+
+        text-align: center;
+      }
+
+      #category-select option {
+        background: #181818;
+
+        color: #ffffff;
+      }
+
+      #category-wrapper {
+        margin-top: auto;
+
+        position: relative;
+      }
+
+      #category-btn {
+        width: 46px;
+        height: 46px;
+
+        border: none;
+
+        border-radius: 12px;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        color: #fff;
+
+        font-size: 11px;
+
+        cursor: pointer;
+      }
+
+      #category-menu {
+        position: absolute;
+
+        right: 80px;
+
+        bottom: 0;
+
+        width: 190px;
+
+        background: #101010;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        border-radius: 16px;
+
+        padding: 10px;
+
+        display: none;
+
+        z-index: 99999;
+
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.55);
+      }
+
+      .category-item {
+        padding: 14px 16px;
+
+        border-radius: 12px;
+
+        color: #fff;
+
+        cursor: pointer;
+
+        font-size: 15px;
+
+        margin-bottom: 6px;
+
+        background: rgba(255, 255, 255, 0.04);
+
+        transition: 0.2s;
+      }
+
+      .category-item:hover {
+        background: #e63946;
+      }
+
+      @media (max-width: 768px) {
+        #remote-btns {
+          right: 8px;
+
+          gap: 8px;
+
+          padding: 8px 6px;
+        }
+
+        .remote-btn {
+          width: 38px;
+          height: 38px;
+
+          font-size: 16px;
+        }
+      }
+      .remote-btn:focus {
+        background: rgba(230, 57, 70, 0.5);
+        border-color: var(--accent);
+        outline: none;
+      }
+      .remote-btn:active {
+        transform: scale(0.88);
+      }
+      @media (min-width: 1200px) {
+        .remote-btn {
+          width: 56px;
+          height: 56px;
+          font-size: 24px;
+        }
+      }
+
+      /* ── CHANNEL SWITCHER ── */
+      #ch-switcher {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(16px);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 16px 26px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        z-index: 20;
+        min-width: 200px;
+      }
+      #ch-switcher.show {
+        opacity: 1;
+      }
+      .sw-arrow {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .sw-prev,
+      .sw-next {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .sw-curr {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 24px;
+        color: #fff;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+
+      #side-controls {
+        width: 74px;
+
+        background: #0c0c0c;
+
+        border-left: 1px solid rgba(255, 255, 255, 0.06);
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 12px 6px;
+
+        gap: 12px;
+
+        flex-shrink: 0;
+
+        position: relative;
+      }
+
+      /* ── SIDEBAR ── */
+      #ch-sidebar {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 270px;
+        background: rgba(7, 7, 15, 0.96);
+        backdrop-filter: blur(20px);
+        border-left: 1px solid var(--border);
+        transform: translateX(100%);
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+        z-index: 9;
+        overflow: hidden;
+      }
+      #ch-sidebar.open {
+        transform: translateX(0);
+      }
+      .sidebar-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 13px 11px;
+        border-bottom: 1px solid var(--border);
+        flex-shrink: 0;
+      }
+      .sidebar-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 16px;
+        letter-spacing: 2px;
+        color: var(--accent);
+      }
+      .sidebar-close {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid var(--border);
+        color: var(--muted);
+        width: 30px;
+        height: 30px;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+      }
+      .sidebar-close:hover,
+      .sidebar-close:focus {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+        outline: none;
+      }
+      .sidebar-cat-tabs {
+        display: flex;
+        gap: 4px;
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--border);
+        overflow-x: auto;
+        scrollbar-width: none;
+        flex-shrink: 0;
+      }
+      .sidebar-cat-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .sb-cat {
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        border: 1px solid var(--border);
+        background: none;
+        color: var(--muted);
+        white-space: nowrap;
+        transition: all 0.2s;
+      }
+      .sb-cat.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      .sidebar-search {
+        padding: 7px 10px;
+        border-bottom: 1px solid var(--border);
+        flex-shrink: 0;
+      }
+      .sidebar-search input {
+        width: 100%;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 6px 10px;
+        color: var(--text);
+        font-size: 12px;
+        font-family: "Inter", sans-serif;
+        outline: none;
+      }
+      .sidebar-search input:focus {
+        border-color: var(--accent);
+      }
+      .sidebar-search input::placeholder {
+        color: var(--muted);
+      }
+      .sidebar-list {
+        flex: 1;
+        overflow-y: auto;
+      }
+      .sidebar-list::-webkit-scrollbar {
+        width: 3px;
+      }
+      .sidebar-list::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 2px;
+      }
+      .sidebar-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 10px 12px;
+        cursor: pointer;
+        transition: background 0.15s;
+        border-bottom: 1px solid rgba(37, 37, 64, 0.4);
+      }
+      .sidebar-item:hover,
+      .sidebar-item:focus {
+        background: var(--surface2);
+        outline: none;
+      }
+      .sidebar-item.active-si {
+        background: rgba(230, 57, 70, 0.1);
+        border-left: 3px solid var(--accent);
+        padding-left: 9px;
+      }
+      .si-num {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 12px;
+        color: var(--muted);
+        width: 22px;
+        flex-shrink: 0;
+      }
+      .si-name {
+        font-size: 11.5px;
+        font-weight: 500;
+        flex: 1;
+        line-height: 1.3;
+      }
+      .si-badge {
+        font-size: 7px;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .si-wd {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .si-wd.ok {
+        background: var(--green);
+      }
+      .si-wd.bad {
+        background: var(--live);
+      }
+
+      /* ── KB HINTS ── */
+      #kb-hints {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 8px 14px;
+        background: rgba(0, 0, 0, 0.5);
+        border-top-left-radius: 10px;
+        opacity: 0;
+        transition: opacity 0.4s;
+        font-size: 9px;
+        color: var(--muted);
+        line-height: 1.9;
+        pointer-events: none;
+      }
+      #kb-hints.show {
+        opacity: 1;
+      }
+      .kb-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .kb-key {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 3px;
+        padding: 0 4px;
+        font-size: 8px;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 2px;
+      }
+      #embed-iframe {
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="landing">
+      <div class="land-header">
+        <div class="land-logo">
+          <div class="live-dot"></div>
+          TAMIL LIVE TV
+        </div>
+        <div class="land-header-right">
+          <div class="land-search">
+            <span style="color: var(--muted); font-size: 13px">🔍</span>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search channels…"
+              autocomplete="off"
+            />
+          </div>
+          <button class="hdr-btn red" onclick="openAddModal()">+ Add</button>
+          <button
+            class="hdr-btn blue"
+            onclick="openSleepModal()"
+            title="Sleep Timer"
+          >
+            ⏱ Sleep
+          </button>
+          <button
+            class="hdr-btn orange"
+            id="scan-btn"
+            onclick="runHealthScanner()"
+          >
+            🩺 Scan
+          </button>
+          <button
+            class="hdr-btn green"
+            onclick="exportMasterJSON()"
+            title="Download Segmented JSON"
+          >
+            💾 Export
+          </button>
+        </div>
+      </div>
+
+      <div id="scan-bar"><div id="scan-fill"></div></div>
+      <div id="scan-text"></div>
+
+      <div class="land-tabs-wrap">
+        <div class="land-tabs" id="main-tabs">
+          <button class="tab-btn active" data-tab="working">🟢 Working</button>
+          <button class="tab-btn" data-tab="all">All Channels</button>
+          <button class="tab-btn" data-tab="fav">❤ Favourites</button>
+          <button class="tab-btn" data-tab="hidden">🚫 Hidden</button>
+          <button
+            class="tab-btn"
+            data-tab="manage"
+            style="color: var(--accent2); margin-left: auto"
+          >
+            ⚙ Manage
+          </button>
+        </div>
+        <div id="cat-bar"></div>
+      </div>
+
+      <div class="land-body">
+        <div class="section-hdr">
+          <div class="section-label" id="section-label">WORKING CHANNELS</div>
+          <div
+            class="section-actions"
+            id="section-actions"
+            style="display: none"
+          >
+            <button
+              class="hdr-btn blue"
+              style="font-size: 11px; padding: 6px 11px"
+              onclick="exportM3U()"
+            >
+              📺 Export M3U
+            </button>
+            <button
+              class="hdr-btn red"
+              style="font-size: 11px; padding: 6px 11px"
+              onclick="clearBrokenCache()"
+            >
+              🗑 Clear Broken Cache
+            </button>
+          </div>
+        </div>
+        <div class="channel-grid" id="channel-grid"></div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="add-modal">
+      <div class="modal-box">
+        <div class="modal-title" id="modal-title">+ ADD CHANNEL</div>
+        <div class="modal-field">
+          <label>CHANNEL NAME</label
+          ><input type="text" id="add-name" placeholder="e.g. Sun TV" />
+        </div>
+        <div class="modal-field">
+          <label>STREAM URL</label
+          ><input
+            type="text"
+            id="add-url"
+            placeholder="https://…/playlist.m3u8"
+          />
+        </div>
+        <div class="modal-field">
+          <label>STREAM TYPE</label>
+          <select id="add-type">
+            <option value="m3u8">HLS / m3u8</option>
+            <option value="mpd">DASH / mpd</option>
+            <option value="yupptv">YuppTV Embed</option>
+            <option value="embed">YouTube / Generic Embed</option>
+          </select>
+        </div>
+        <div class="modal-field">
+          <label>CATEGORY</label>
+          <select id="add-cat">
+            <option value="Entertainment">Entertainment</option>
+            <option value="News">News</option>
+            <option value="Music">Music</option>
+            <option value="Movies">Movies</option>
+            <option value="Kids">Kids</option>
+            <option value="Devotional">Devotional</option>
+            <option value="Documentary">Documentary</option>
+            <option value="Sports">Sports</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button class="modal-save" onclick="saveChannel()">Save</button>
+          <button
+            class="modal-del"
+            id="del-btn"
+            style="display: none"
+            onclick="deleteChannel()"
+          >
+            🗑 Delete
+          </button>
+          <button class="modal-cancel" onclick="closeAddModal()">Cancel</button>
+        </div>
+        <div class="modal-note">
+          💡 Changes live in this browser. Click <b>Export JSON</b> (top-right)
+          → replace <code>tamil_tv_sources.json</code> on your host so all
+          devices get the update.
+          <div
+            class="modal-extra-actions"
+            id="modal-extra-actions"
+            style="display: none; margin-top: 8px"
+          >
+            <button class="modal-extra-btn" onclick="importFile()">
+              ⬆ Import JSON
+            </button>
+            <input
+              type="file"
+              id="import-file"
+              accept=".json"
+              style="display: none"
+              onchange="importChannels(event)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="sleep-modal">
+      <div class="modal-box">
+        <div class="modal-title">⏱ SLEEP TIMER</div>
+        <div style="font-size: 12px; color: var(--muted); margin-bottom: 14px">
+          TV will stop after the selected time.
+        </div>
+        <div class="sleep-options">
+          <div class="sleep-opt" onclick="setSleep(15)">15 min</div>
+          <div class="sleep-opt" onclick="setSleep(30)">30 min</div>
+          <div class="sleep-opt" onclick="setSleep(60)">1 hour</div>
+          <div class="sleep-opt" onclick="setSleep(120)">2 hours</div>
+          <div
+            class="sleep-opt"
+            onclick="setSleep(0)"
+            style="grid-column: 1/-1; color: var(--muted)"
+          >
+            Cancel Timer
+          </div>
+        </div>
+        <div class="modal-actions" style="margin-top: 14px">
+          <button
+            class="modal-cancel"
+            onclick="
+              document.getElementById('sleep-modal').classList.remove('show')
+            "
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="player-view">
+      <div id="video-container">
+        <div id="video-area">
+          <video id="video-el" playsinline></video>
+
+          <iframe
+            id="embed-iframe"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+
+          <div id="loading-overlay">
+            <div class="spinner"></div>
+            <div class="loading-name" id="loading-name">Loading…</div>
+            <div class="loading-sub" id="loading-sub">Connecting to stream</div>
+          </div>
+
+          <div id="error-overlay">
+            <div class="err-icon">📡</div>
+            <div class="err-title">Stream Unavailable</div>
+            <div id="err-msg" class="err-msg">
+              This channel may be offline or geo-restricted.
+            </div>
+            <div class="err-actions">
+              <button class="err-btn" onclick="retryStream()">↺ Retry</button>
+              <button class="err-btn sec" onclick="goHome()">⌂ Home</button>
+            </div>
+            <div class="err-skip" onclick="skipToNext()">Skip to next →</div>
+          </div>
+
+          <div id="mute-badge">🔇</div>
+          <div id="skip-banner">⏭ Skipping…</div>
+          <div id="toast"></div>
+
+          <div id="tv-topbar">
+            <div class="tv-logo">Tamil Live TV</div>
+            <div class="topbar-right">
+              <div id="sleep-countdown"></div>
+              <div id="clock-tv"></div>
+              <button
+                class="topbar-btn"
+                id="mute-btn"
+                onclick="toggleMute()"
+                title="Mute (M)"
+              >
+                🔊
+              </button>
+              <button
+                class="topbar-btn"
+                id="fav-topbar-btn"
+                onclick="toggleFavCurrent()"
+                title="Favourite (F)"
+              >
+                👍
+              </button>
+              <button
+                class="topbar-btn"
+                id="dislike-topbar-btn"
+                onclick="dislikeCurrentAndSkip()"
+                title="Hide Channel"
+              >
+                👎
+              </button>
+              <button
+                class="topbar-btn"
+                onclick="openSleepModal()"
+                title="Sleep Timer"
+              >
+                ⏱
+              </button>
+              <button
+                class="topbar-btn"
+                onclick="toggleSidebar()"
+                title="Channels (L)"
+              >
+                ☰
+              </button>
+              <button class="topbar-btn" onclick="goHome()" title="Home (H)">
+                ⌂
+              </button>
+            </div>
+          </div>
+
+          <div id="ch-osd">
+            <div class="osd-cat" id="osd-cat"></div>
+            <div class="osd-num" id="osd-num">CH 1</div>
+            <div class="osd-name" id="osd-name">Channel</div>
+            <div class="osd-meta">
+              <div class="osd-live">
+                <div class="dot"></div>
+                LIVE
+              </div>
+              <span class="osd-type-tag" id="osd-type"></span>
+            </div>
+          </div>
+
+          <div id="kb-hints">
+            <div class="kb-row"><span class="kb-key">↑↓</span> Channel</div>
+            <div class="kb-row"><span class="kb-key">M</span> Mute</div>
+            <div class="kb-row"><span class="kb-key">L</span> List</div>
+            <div class="kb-row"><span class="kb-key">F</span> Fav</div>
+            <div class="kb-row"><span class="kb-key">H</span> Home</div>
+          </div>
+
+          <div id="ch-switcher">
+            <div class="sw-arrow">▲</div>
+            <div class="sw-prev" id="sw-prev"></div>
+            <div class="sw-curr" id="sw-curr"></div>
+            <div class="sw-next" id="sw-next"></div>
+            <div class="sw-arrow">▼</div>
+          </div>
+
+          <div id="ch-sidebar">
+            <div class="sidebar-head">
+              <div class="sidebar-title">📺 CHANNELS</div>
+              <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+            </div>
+            <div class="sidebar-cat-tabs" id="sb-cat-tabs"></div>
+            <div class="sidebar-search">
+              <input
+                type="text"
+                id="sidebar-search"
+                placeholder="Search…"
+                autocomplete="off"
+              />
+            </div>
+            <div class="sidebar-list" id="sidebar-list"></div>
+          </div>
+        </div>
+        <div id="side-controls">
+          <div id="remote-btns">
+            <button
+              class="remote-btn"
+              onclick="toggleFullScreen()"
+              type="button"
+            >
+              ⛶
+            </button>
+
+            <button
+              id="mute-remote"
+              class="remote-btn"
+              onclick="toggleMute()"
+              type="button"
+            >
+              🔊
+            </button>
+
+            <button
+              class="remote-btn"
+              onclick="toggleFavCurrent()"
+              type="button"
+            >
+              👍
+            </button>
+
+            <button class="remote-btn" onclick="dislikeCurrentAndSkip()">
+              👎
+            </button>
+
+            <button class="remote-btn" onclick="toggleSidebar()">☰</button>
+
+            <button class="remote-btn" onclick="changeChannel(-1)">▲</button>
+
+            <button class="remote-btn" onclick="goHome()">⌂</button>
+
+            <button class="remote-btn" onclick="changeChannel(1)">▼</button>
+          </div>
+
+          <div id="category-wrapper">
+            <button id="category-btn">All</button>
+
+            <div id="category-menu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ══════════════════════════════════════════
+      //  DATA
+      // ══════════════════════════════════════════
+      let categoryFilteredChannels = [];
+      const MASTER_JSON_PATH = "tamil_tv_sources.json";
+
+      // Embedded fallback with FULLY CATEGORIZED 164 CHANNELS
+      const EMBEDDED_CHANNELS = [
+        {
+          name: "Colors Tamil HD",
+          slug: "colors-tamil-hd",
+          url: "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=429&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJg_QL6EHJ9XkQqFgNq_aibPaKTEFkZQD0eliNhaBIIa0pgtMqdKkTr50X0wZXG6BeglPUf1Nid0AyVifvi1T2-RSD4R6-1S5-_Hk6AMISUc8WBgItB4Vyxs3GrqueiP_J4&vtoken=",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Z Tamil HD",
+          slug: "z-tamil-hd",
+          url: "https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(ZeeThi)/master.mpd&keyId=bd7282e920e5437a9b1f01bc6f81795c&key=99763370f0763b0f7119aab091cc70c8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Discovery Kids Tamil",
+          slug: "discovery-kids-tamil",
+          url: "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+          type: "mpd",
+          status: "broken",
+          category: "Kids",
+        },
+        {
+          name: "CN Tamil",
+          slug: "cn-tamil",
+          url: "https://login.bheem.tv/bpk-tv/22602/output/index.mpd?",
+          type: "mpd",
+          status: "broken",
+          category: "Kids",
+        },
+        {
+          name: "History TV18 HD Tamil",
+          slug: "history-tv18-hd-tamil",
+          url: "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+          type: "mpd",
+          status: "broken",
+          category: "Documentary",
+        },
+        {
+          name: "Jaya Max",
+          slug: "jaya-max",
+          url: "https://login.bheem.tv/bpk-tv/22374/output/index.mpd?",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Jaya Movie",
+          slug: "jaya-movie",
+          url: "https://login.bheem.tv/bpk-tv/22373/output/index.mpd?",
+          type: "mpd",
+          status: "broken",
+          category: "Movies",
+        },
+        {
+          name: "Discovery Tamil",
+          slug: "discovery-tamil-2",
+          url: "https://login.bheem.tv/bpk-tv/22652/output/index.mpd?",
+          type: "mpd",
+          status: "broken",
+          category: "Documentary",
+        },
+        {
+          name: "Animal Planet HD",
+          slug: "animal-planet-hd",
+          url: "https://login.bheem.tv/bpk-tv/22052/output/index.mpd?",
+          type: "mpd",
+          status: "broken",
+          category: "Documentary",
+        },
+        {
+          name: "Jaya TV",
+          slug: "jaya-tv",
+          url: "https://login.bheem.tv/bpk-tv/22376/output/index.mpd?",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Sony YAY Tamil",
+          slug: "sony-yay-tamil",
+          url: "https://tamilradios.org/dashplayer.php?mpd=https://tamilradios.org/dashplayer.php?mpd=https://unifi-live2.secureswiftcontent.com/Content/DASH/Live/channel(SonyYay)/master.mpd?&keyId=582e9e382cb0495886afbabdbdb6fbf7&key=c0f550839b235443724cd007392b6e40",
+          type: "mpd",
+          status: "broken",
+          category: "Kids",
+        },
+        {
+          name: "Surya TV",
+          slug: "surya-tv",
+          url: "https://livestream11.sunnxt.com/DolbyVision/SuryaTV_HDR/SuryaTV_HDR_Endpoints/SuryaTV-HDR10-IN-index.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Polimer TV",
+          slug: "polimer-tv",
+          url: "https://cdn-2.pishow.tv/live/1241/master.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Vasanth TV",
+          slug: "vasanth-tv",
+          url: "https://mumt04.tangotv.in/VASANTHTV/index.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Makkal TV",
+          slug: "makkal-tv",
+          url: "https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Vendhar TV",
+          slug: "vendhar-tv",
+          url: "https://cdn-3.pishow.tv/live/1271/master.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "DD Tamil",
+          slug: "dd-tamil",
+          url: "https://cdn-2.pishow.tv/live/26/master.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Isai Aruvi TV",
+          slug: "isai-aruvi-tv",
+          url: "https://segment.yuppcdn.net/140622/isaiaruvi/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Music",
+        },
+        {
+          name: "Chithiram TV",
+          slug: "chithiram-tv",
+          url: "https://cdn-6.pishow.tv/live/1243/master.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Kids",
+        },
+        {
+          name: "Kalaignar TV",
+          slug: "kalaignar-tv",
+          url: "https://segment.yuppcdn.net/240122/kalaignartv/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Raj Musix",
+          slug: "raj-musix",
+          url: "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=748&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJh3tepA8ORw14DtCDzOVkxjc940IAz9qp-JQQ2CU9Gulmib4NMLR5Wn2jJQc-Np8VEGs1_udl7a75pS0S9Z2bSEb7vBLNGG2YjFczeQjmigK6VV33KE1-_WhtXJn5KOquk&vtoken=",
+          type: "m3u8",
+          status: "broken",
+          category: "Music",
+        },
+        {
+          name: "Raj Digital Plus",
+          slug: "raj-digital-plus",
+          url: "https://livestream.rajtv.tv/hlslive/Admin/px08241087/live/RajTV_Digital_plus/master_1.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Sathiyam TV",
+          slug: "sathiyam-tv",
+          url: null,
+          type: null,
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "Raj TV",
+          slug: "raj-tv",
+          url: "https://tamilradios.org/stream.php?url=https://m3uplay.com/leo/live.m3u8?cid=707&chunks=RxIQjyNtpUwxT6SbNXD4QpeWtuoM8UlNK6l5vzZ2kJjffKNdaGUvlXh2jVwOT81feTIM8_xKkfzkcjp8XgDggDdRx6nE9yVeFGwxZ_G54VDbSH1-TSoiuGGXz_x6_lxBVLtL9Q4SlaY8EyT6ZXpUJg&vtoken=",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Puthiya Thalaimurai",
+          slug: "928",
+          url: null,
+          type: null,
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "News Tamil 24x7",
+          slug: "news-tamil-24x7",
+          url: "https://www.yupptv.com/yupptvnew/channels/news-tamil/live/embed",
+          type: "yupptv",
+          status: "working",
+          category: "News",
+        },
+        {
+          name: "Malai Murasu TV",
+          slug: "malai-murasu-tv",
+          url: null,
+          type: null,
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "Chanakyaa TV",
+          slug: "chanakyaa-tv",
+          url: null,
+          type: null,
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "Tamil Janam TV",
+          slug: "tamil-janam-tv",
+          url: null,
+          type: null,
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "News J",
+          slug: "news-j",
+          url: null,
+          type: null,
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "IBC Bakthi",
+          slug: "ibc-bakthi",
+          url: "https://webcast.emn.onl/IBC2/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "IBC Tamil",
+          slug: "ibc-tamil",
+          url: "https://webcast.emn.onl/IBC/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Angel TV",
+          slug: "angel-tv",
+          url: "https://www.yupptv.com/yupptvnew/channels/angel-tv/live/embed",
+          type: "yupptv",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "Sri Sankara Tamil",
+          slug: "sri-sankara-tamil",
+          url: "https://www.yupptv.com/yupptvnew/channels/sri-sankara-tamil/live/embed",
+          type: "yupptv",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "SVBC TTD",
+          slug: "svbc-ttd",
+          url: "https://www.yupptv.com/yupptvnew/channels/svbc-2/live/embed",
+          type: "yupptv",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "Madha TV",
+          slug: "madha-tv",
+          url: "https://60e68b19dd194.streamlock.net:55/madhahd1/smil:madhatv.smil/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "Kalaignar Seithigal TV",
+          slug: "kalaignar-seithigal-tv",
+          url: "https://www.yupptv.com/yupptvnew/channels/seithigal-tv/live/embed",
+          type: "yupptv",
+          status: "working",
+          category: "News",
+        },
+        {
+          name: "Sana TV",
+          slug: "sana-tv",
+          url: "https://galaxyott.live/hls/sanatv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Tamilan TV",
+          slug: "tamilan-tv",
+          url: "https://cdn.zionmediait.com/zionmediaitserver2024/97484f5ce6da96e496a9b87c439835d0.sdp/chunks.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Thanthi TV",
+          slug: "thanthi-tv",
+          url: null,
+          type: null,
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "Polimer News",
+          slug: "polimer-news",
+          url: "https://www.yupptv.com/yupptvnew/channels/polimer-news/live/embed",
+          type: "yupptv",
+          status: "working",
+          category: "News",
+        },
+        {
+          name: "Peppers TV",
+          slug: "peppers-tv",
+          url: "https://cdn-2.pishow.tv/live/1383/master.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Murasu TV",
+          slug: "murasu-tv",
+          url: "https://segment.yuppcdn.net/050522/murasu/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Moon TV",
+          slug: "moon-tv",
+          url: "https://player.mslivestream.net/mslive/e10bb900976df9177b9a080314f26f86.sdp/chunks.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Sirippoli TV",
+          slug: "sirippoli-tv",
+          url: "https://yuppmedtaorire.akamaized.net/v1/manifest/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/siripoli_nim_https/c4e6500f-ea05-4226-810e-2833ee0075ff/0.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Sun News",
+          slug: "sun-news",
+          url: null,
+          type: null,
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "7 Star TV",
+          slug: "7-star-tv",
+          url: "http://media.7starcloud.com:1935/live/7star/playlist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Vaanavil TV",
+          slug: "vaanavil-tv",
+          url: "https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/chunks.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Aus Tamil TV",
+          slug: "aus-tamil-tv",
+          url: "http://bk7l2pn7dx53-hls-live.5centscdn.com/austamil/fe01ce2a7fbac8fafaed7c982a04e229.sdp/chunks.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Royal TV",
+          slug: "royal-tv",
+          url: "https://streamspace.live/hls/jptv/livestream.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Athavan TV",
+          slug: "athavan-tv",
+          url: "https://www.yupptv.com/yupptvnew/channels/athavan-tv-hd/live/embed",
+          type: "yupptv",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Thalaa TV",
+          slug: "thalaa-tv",
+          url: "https://www.yupptv.com/yupptvnew/channels/thalaa-tv/live/embed",
+          type: "yupptv",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "MN Music",
+          slug: "mn-music",
+          url: "https://mntv.livebox.co.in/musichls/live.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Music",
+        },
+        {
+          name: "Vasantham TV",
+          slug: "vasantham-tv",
+          url: "https://edge3-moblive.yuppcdn.net/trans1sd/smil:vatv07.smil/chunklist_w260511746_b596000.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Udhayam TV",
+          slug: "udhayam-tv",
+          url: "https://ipcloud.live/udhayamtv/live/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Thendral TV",
+          slug: "thendral-tv",
+          url: "https://ipcloud.live/thendralmdu/madurai/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "U TV Tamil",
+          slug: "u-tv-tamil",
+          url: "https://stream.galaxyott.live/live/utv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Kavin TV",
+          slug: "kavin-tv",
+          url: "https://live.skystream.in/live/kavintv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Anandham TV",
+          slug: "anandham-tv",
+          url: "https://stream.galaxyott.live/live/anandhamtv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Subin TV",
+          slug: "subin-tv",
+          url: "https://stream.galaxyott.live/live/subintv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Marutham Nelli TV",
+          slug: "mn-tv",
+          url: "https://mntv.livebox.co.in/mntvhls/live.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "No 1 TV",
+          slug: "no-1-tv",
+          url: "https://live.skystream.in/live/no1tv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "D TV",
+          slug: "d-tv",
+          url: "https://dtv.livebox.co.in/Dtvhls/Live.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Aasirvadham TV",
+          slug: "aasirvadham-tv",
+          url: "https://stream.blessingtv.tv:1443/blessingtv-tamillive/mystream_720p/playlist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "Nambikkai TV",
+          slug: "nambikkai-tv",
+          url: "https://mk9qa7n8qwyb-hls-live.wmncdn.net/nambikkaitv/live.stream/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "Deva TV",
+          slug: "deva-tv",
+          url: "https://play.applelive.in/devatv/devatv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "D Bhakti TV",
+          slug: "d-bhakti-tv",
+          url: "https://dtv.livebox.co.in/DBhaktihls/Live.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "TVI TV",
+          slug: "tvi-tv",
+          url: "https://live.cmr24.fm/TVI/HD/chunks.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Tamil 3 TV",
+          slug: "tamil-3-tv",
+          url: "https://6n3yogbnd9ok-hls-live.5centscdn.com/threetamil/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Tamil Star TV",
+          slug: "tamil-star-tv",
+          url: "http://media.7starcloud.com:1935/live/7star/playlist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Eye Tamil TV",
+          slug: "eye-tamil-tv",
+          url: "https://live.eyetamil.tv/tv/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "SLS TV",
+          slug: "sls-tv",
+          url: "http://nextgeninfotech.ddns.net:8080/reachtwo/reachtwo.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Mullai TV",
+          slug: "mullai-tv",
+          url: "https://ipcloud.live/mullaitv/mullaitv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Jupiter Tamil TV",
+          slug: "jupiter-tamil-tv",
+          url: "https://rtmp.applelive.in/esprimetv/esprimetv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Shalini TV",
+          slug: "shalini-tv",
+          url: "http://ipcloud.live:8080/shalinitv/shalinitv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Malar TV",
+          slug: "malar-tv",
+          url: "https://cdn-3.pishow.tv/live/473/master.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Bharathi TV",
+          slug: "bharathi-tv",
+          url: "https://server.sscloud7.in/live/bharathitv/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "SJ Surya TV",
+          slug: "sj-surya-tv",
+          url: "https://ipcloud.live/nellaitv/suriyatv/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Rasi Music",
+          slug: "rasi-music",
+          url: "https://mumbai-edge.smartplaytv.in/Rasimusic/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Music",
+        },
+        {
+          name: "Bright Simrose TV",
+          slug: "bright-simrose-tv",
+          url: "https://notvstream.in/brightsimrosetv/brightsimrosetv.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Thillai TV",
+          slug: "thillai-tv",
+          url: "https://stream.onecloudlive.in/tcn/tcntv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Maniway TV",
+          slug: "maniway-tv",
+          url: "https://live.singamcloud.in/bsctv/bsctv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Enthiran TV",
+          slug: "enthiran-tv",
+          url: "https://live.applelive.in/enthirantv/enthirantv/tracks-v1a1/mono.ts.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "STN TV",
+          slug: "stn-tv",
+          url: "https://play.applelive.in/stntv/stntv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Boss TV",
+          slug: "boss-tv",
+          url: "https://play.applelive.in/vasantv/vasantv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "MCN HD",
+          slug: "mcn-hd",
+          url: "https://play.applelive.in/mcntv/mcntv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Jayam TV",
+          slug: "jayam-tv",
+          url: "https://ipcloud.live/jayamtv/jayamtvhd/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Kovai TV",
+          slug: "kovai-tv",
+          url: "https://account31.livebox.co.in/Kovaitvhls/live.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Sana Plus HD",
+          slug: "sana-tv-hd",
+          url: "https://galaxyott.live//hls/sanaplus.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Velan TV",
+          slug: "velan-tv",
+          url: "https://anywhere.pwisetthon.com/http://velantv.phoenixcreations.online/velantv/velantv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "MS Mathan TV",
+          slug: "ms-mathan-tv",
+          url: "https://anywhere.pwisetthon.com/http://madhantv.phoenixcreations.online/madhantv/madhantv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Irattaipaathai TV",
+          slug: "irattaipaathai-tv",
+          url: "https://account31.livebox.co.in/IRATTAIPAATHAITVhls/live.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "CTN",
+          slug: "ctn",
+          url: "https://rtmp.bmlive.net/ctn/ctntn/stream.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Senthur TV",
+          slug: "senthur-tv",
+          url: "https://senthurtv-hls.suriyantv.in/live/senthurtv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Velavan TV",
+          slug: "velavan-tv",
+          url: "https://rtmp.applelive.in/srivelavantvultrahd/srivelavantvultrahd/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Vani TV HD",
+          slug: "vani-tv-hd",
+          url: "https://live.sscloud7.in/live/vanitvhd/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Max Movies HD",
+          slug: "max-movies-hd",
+          url: "https://live.maxtn.in/maxmovies/maxmovies/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Movies",
+        },
+        {
+          name: "Max Music HD",
+          slug: "max-music-hd",
+          url: "https://live.maxtn.in/maxmusic/maxmusic/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Music",
+        },
+        {
+          name: "Roja TV",
+          slug: "roja-tv",
+          url: "https://live.rojatv.cloud/rojatv/rojatv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Roja Movies",
+          slug: "roja-movies",
+          url: "https://stream.rojatv.cloud/rojatv/rojatv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Movies",
+        },
+        {
+          name: "Tharun Movies HD",
+          slug: "tharun-movies-hd",
+          url: "https://streaming.livebox.co.in/tharunmovieshls/live.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Movies",
+        },
+        {
+          name: "Thaai TV",
+          slug: "thaai-tv",
+          url: "https://cdn.anystream.uk:8082/thaitv/thailive/chunks.m3u8?nimblesessionid=970322632",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "MN TV",
+          slug: "mn-tv-2",
+          url: "https://mntv.livebox.co.in/mntvhls/live.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "BTV HD",
+          slug: "btv-hd",
+          url: "https://rtmp.applelive.in/boobsh/boobsh/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "SK TV",
+          slug: "sk-tv",
+          url: "https://stream.galaxyott.live/live/sktv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Suriyan TV",
+          slug: "suriyan-tv",
+          url: "https://stream.galaxyott.live/live/suriyantv/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "NTV HD",
+          slug: "ntv-hd",
+          url: "https://galaxyott.live//hls/ntv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Gem TV",
+          slug: "gem-tv",
+          url: "https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Eason TV",
+          slug: "eason-tv",
+          url: "https://amigofx.com:1936/easontv/easontv/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Tamil Oli TV",
+          slug: "tamil-oli-tv",
+          url: "https://view.rcserver.in/tmp_hls7/tamilolitv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Tamil TV HD",
+          slug: "tamil-tv-hd",
+          url: "https://stream.onecloudlive.in/tamiltv/tamiltvhd/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "KCTV",
+          slug: "kctv",
+          url: "https://rtmp.bmlive.net/bms/kctv/stream.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Jith TV",
+          slug: "jith-tv",
+          url: "https://sscloud7.com/live/jithtv/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "JR Malar TV",
+          slug: "jr-malar-tv",
+          url: "https://server.sscloud7.in/live/malartv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "JCV Musix",
+          slug: "jcv-musix",
+          url: "https://play.applelive.in/jcvtv/jcvmusix.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Music",
+        },
+        {
+          name: "Raga TV",
+          slug: "raga-tv",
+          url: "https://live.onecloudlive.in/ragatv/ragatvhd/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Music",
+        },
+        {
+          name: "Oli TV HD",
+          slug: "oli-tv-hd",
+          url: "https://live.olidigital.in/olitv/olitv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Kumari TV",
+          slug: "kumari-tv",
+          url: "https://rtmp.applelive.in/gvkumaritv/gvkumaritv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Prime TV",
+          slug: "prime-tv",
+          url: "https://live.applelive.in/primetv/primetv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "MP TV",
+          slug: "mp-tv",
+          url: "https://stream.sscloud7.in/live/mptv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "G Music",
+          slug: "g-music",
+          url: "https://rtmp.applelive.in/gmusic/gmusic/tracks-v1a1/mono.ts.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Music",
+        },
+        {
+          name: "Tamil Television Network",
+          slug: "tamil-television-network",
+          url: "https://5e5679f71b925.streamlock.net:442/live/ttntv/chunklist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "TDN HD",
+          slug: "tdn-hd",
+          url: "https://live.maxtn.in/tdn/tdn/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Surya TV Tamil",
+          slug: "surya-tv-tamil",
+          url: "https://galaxyott.live/hls//suryatv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Yet TV",
+          slug: "yet-tv",
+          url: "https://live.yettelevision.com:5443/LiveApp/streams/yettv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Dark TV",
+          slug: "dark-tv",
+          url: "https://play.applelive.in/darktv/darktv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "A2A TV",
+          slug: "a2a-tv",
+          url: "https://live.sscloud7.in/live/a2atv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Succes TV Tamil",
+          slug: "succes-tv-tamil",
+          url: "https://stream.onecloudlive.in/successtv/successtvhd/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Manasu TV",
+          slug: "manasu-tv",
+          url: "https://stream6.livebox.co.in/manasutvhls/live.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Om Sakthi TV",
+          slug: "om-sakthi-tv",
+          url: "https://sscloud7.com/live/omsakthitv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "Sakthi TV HD",
+          slug: "sakthi-tv-hd",
+          url: "https://live.sscloud7.in/live/sakthitv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "Deiva Oli",
+          slug: "deiva-oli",
+          url: "https://stream.sscloud7.in/live/deivaoli/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "Asoka TV",
+          slug: "asoka-tv",
+          url: "https://ipcloud.live/asokatv/asokahd/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "NTN TV",
+          slug: "ntn-tv",
+          url: "https://live.skystream.in/live/ntntv/index.m3u8?hls_ctx=1314owa2",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "PR TV",
+          slug: "pr-tv",
+          url: "https://play.applelive.in/prtv/prtv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "DTV",
+          slug: "dtv",
+          url: "https://stream.d6-pro.com/Dtv/live/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Thalapathy TV",
+          slug: "thalapathy-tv",
+          url: "https://play.applelive.in/thalapathytv/thalapathytv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Riya TV",
+          slug: "riya-tv",
+          url: "https://play.applelive.in/riyatv/riyatv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Nila TV Nellai",
+          slug: "nila-tv-nellai",
+          url: "https://ipcloud.live/nilatvnellai/nilahd/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Harin TV",
+          slug: "harin-tv",
+          url: "https://ipcloud.live/harintv/harintvhd/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Time TV",
+          slug: "time-tv",
+          url: "https://live.olidigital.in/timetv/timetv/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Phoenix TV Tamil",
+          slug: "phoenix-tv-tamil",
+          url: "https://stream.onecloudlive.in/phoenixtv/phoenixtv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Imai TV",
+          slug: "imai-tv",
+          url: "https://live20.bozztv.com/akamaissh101/ssh101/imaitv/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Nila TV",
+          slug: "nila-tv",
+          url: "https://live.olidigital.in/nilatv/nilatv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "WE Baduga TV",
+          slug: "we-baduga-tv",
+          url: "https://rtmp.bmlive.net/webaduga/webaduga/stream.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Sky Plus TV",
+          slug: "sky-plus-tv",
+          url: "https://ipcloud.live/skytv/skytv/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Vasantham",
+          slug: "vasantham",
+          url: "https://stream.onecloudlive.in/dhandapani/vasanthamtv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Devathai TV",
+          slug: "devathai-tv",
+          url: "https://hdbox.singamcloud.in/Deavathaitv/Deavathaitv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "Jeyam Television",
+          slug: "jeyam-television",
+          url: "https://jeyamtv.livebox.co.in/JeyamTelevisionhls/JeyamTelevision.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "SMCV HD",
+          slug: "smcv-hd",
+          url: "https://singamcloud.in/smcvtv/smcvtv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Yogaa TV",
+          slug: "yogaa-tv",
+          url: "https://ipcloud.live/yogaatv/yogaatv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "Roja TV 2",
+          slug: "roja-tv-2",
+          url: "https://anywhere.pwisetthon.com/http://rojatv.phoenixcreations.online/rojatv/rojatv/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Sasi TV",
+          slug: "sasi-tv",
+          url: "https://anywhere.pwisetthon.com/http://sasitv.phoenixcreations.online/sasitv/sasitv/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Jose TV",
+          slug: "jose-tv",
+          url: "https://anywhere.pwisetthon.com/http://josetv.phoenixcreations.online/josetv/josetv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "TOP TV",
+          slug: "top-tv",
+          url: "https://anywhere.pwisetthon.com/http://toptv.phoenixcreations.online/toptv/toptv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "RK TV",
+          slug: "rk-tv",
+          url: "https://anywhere.pwisetthon.com/http://rktv.phoenixcreations.online/rktv/rktv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Maran TV",
+          slug: "maran-tv",
+          url: "https://server.sscloud7.in/marantv/marantv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Surya HD Digital",
+          slug: "surya-hd-digital",
+          url: "https://live.sscloud7.in/live/suryatv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Aaryaa TV",
+          slug: "aarya-tv",
+          url: "https://live.sscloud7.in/live/aaryaatv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Isai TV",
+          slug: "isai-tv",
+          url: "https://server.sscloud7.in/isaihd/isaihd/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Music",
+        },
+        {
+          name: "Dharshan TV",
+          slug: "dharshan-tv",
+          url: "https://galaxyott.live/hls/dharshantv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Britain Tamil Bhakthi TV",
+          slug: "britain-tamil-bhakthi-tv",
+          url: "https://stream.onecloudlive.in/britaintamil/britaintamil/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "Sha TV",
+          slug: "sha-tv",
+          url: "https://play.applelive.in/shatv/shatv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Sachin TV",
+          slug: "sachin-tv",
+          url: "https://ipcloud.live/sachintv/sachintvhd/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Sachin TV Music",
+          slug: "sachin-tv-music",
+          url: "https://ipcloud.live/sachintv/musichd/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Music",
+        },
+        {
+          name: "Dhoni TV HD",
+          slug: "dhoni-tv-hd",
+          url: "https://ipcloud.live/sachintv/dhonitv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "EET TV",
+          slug: "eet-tv",
+          url: "https://eu.streamjo.com/eetlive/eettv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Thendral TV Madurai",
+          slug: "thendral-tv-madurai",
+          url: "https://ipcloud.live/thendralmdu/madurai/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Namma Gopi TV",
+          slug: "namma-gopi-tv",
+          url: "https://stream.rojatv.cloud/nammagobi/tv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Jeyam TV",
+          slug: "jeyam-tv",
+          url: "https://stream.onecloudlive.in/jeyam/jeyammdu/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "M Television",
+          slug: "m-television",
+          url: "https://ipcloud.live/mtv/menhd/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Aadvik TV",
+          slug: "aadvik-tv",
+          url: "https://ipcloud.live/sachintv/aadviktv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Thirumagal TV",
+          slug: "thirumagal-tv",
+          url: "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/thirumagal/tv/playlist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Maruthi TV",
+          slug: "maruthi-tv",
+          url: "https://stream.onecloudlive.in/maruthitv/maruthitvhd/tracks-v1a1/mono.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Aadhavan TV",
+          slug: "aadhavan-tv",
+          url: "https://ipcloud.live/aadhavantv/aadhavan/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "3 Star TV",
+          slug: "3-star-tv",
+          url: "https://stream.onecloudlive.in/threestartv/threestarhd/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "JCV",
+          slug: "jcv",
+          url: "https://play.applelive.in/jcvtv/jcvtv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Velicham TV",
+          slug: "velicham-tv",
+          url: "https://cdn.smartstream.video/smartstream-us/velichamtv/velichamtv/playlist.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Minnal HD",
+          slug: "minnal-hd",
+          url: "https://ipcloud.live/app/minnaltv/minnalhd/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Hai TV",
+          slug: "hai-tv",
+          url: "https://play.applelive.in/haitv/haitv.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "KCTN TV",
+          slug: "kctn-tv",
+          url: "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/kctn/tv/playlist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "JJ News Tamil",
+          slug: "jj-news-tamil",
+          url: "https://live.skystream.in/live/jjnewstamil/index.m3u8?hls_ctx=141308l7",
+          type: "m3u8",
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "Anandam TV",
+          slug: "anandam-tv",
+          url: "https://live1.sscloud7.com/live/anandhamtv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Urchagam TV",
+          slug: "urchagam-tv",
+          url: "https://rtmp.bmlive.net/bms/urchagamtv/stream.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Thendral TV 2",
+          slug: "thendral-tv-2",
+          url: "https://live.thendralcloud.in/thendraltv/d0dbe915091d400bd8ee7f27f0791303.sdp/chunks.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Eagle TV",
+          slug: "eagle-tv",
+          url: "https://rtmp.bmlive.net/bms/eagletv/stream.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Rainbow TV",
+          slug: "rainbow-tv",
+          url: "https://live.skystream.in/live/rainbowtv/index.m3u8?hls_ctx=a7618r13",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Ashoka TV",
+          slug: "ashoka-tv",
+          url: "https://app.ashokadigital.net/app/12f5e922/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Sai TV",
+          slug: "sai-tv",
+          url: "https://app.ashokadigital.net/hls/saitvmdu/index.m3u8?token=DPyPa8qHDyZ2q3",
+          type: "m3u8",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "Anbu TV",
+          slug: "anbu-tv",
+          url: "https://ipcloud.live/anbutv/anbutvhd/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Apple TV",
+          slug: "apple-tv",
+          url: "https://stream.iplive.xyz/appletv/4kpondy/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Nellai TV",
+          slug: "nellai-tv",
+          url: "https://stream.onecloudlive.in/nellaitv/nellaitv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Params TV",
+          slug: "params-tv",
+          url: "https://app.ashokadigital.net/app/a3e0b02f/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Rock TV",
+          slug: "rock-tv",
+          url: "https://apis.avmediawork.in/tvhls/rocktv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "RJ Tamil TV",
+          slug: "rj-tamil-tv",
+          url: "https://ipcloud.live/rjtamiltv/rjtamil/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "King 24x7",
+          slug: "king-24x7",
+          url: "https://notvstream.in/kingtv/kingtv.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "News",
+        },
+        {
+          name: "Karthick TV",
+          slug: "karthick-tv",
+          url: "https://ipcloud.live/karthick/karthicktvhd/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Akilam TV",
+          slug: "akilam-tv",
+          url: "https://stream.onecloudlive.in/akilamtv/akilamtvhd/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Rio TV",
+          slug: "rio-tv",
+          url: "https://app.ashokadigital.net/hls/riotv/index.m3u8?token=hYUbjDHukIyAv3",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Saami TV",
+          slug: "saami-tv",
+          url: "https://ipcloud.live/msntv/saamitv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "7 Green 4K",
+          slug: "7-green-4k",
+          url: "https://account33.livebox.co.in/7GREEN4Khls/live.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Queens TV",
+          slug: "queens-tv",
+          url: "https://notvstream.in/queens/queens.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Jayam TV 2",
+          slug: "jayam-tv-2",
+          url: "https://app.ashokadigital.net/app/db285ebc/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Smiley TV",
+          slug: "smiley-tv",
+          url: "https://live1.sscloud7.com/live/smileytv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Vanavil TV Kallakurichi",
+          slug: "vanavil-tv-kallakurichi",
+          url: "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vaanavil/tv/playlist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Visil Max",
+          slug: "visil-max",
+          url: "https://stream.sscloud7.in/live/vishiltv2/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "VCTN TV",
+          slug: "vctn-tv",
+          url: "https://anywhere.pwisetthon.com/http://ttv.7starcloud.com:1935/vctn/tv/playlist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Jothibala TV",
+          slug: "jothibala-tv",
+          url: "https://anywhere.pwisetthon.com/http://jothibalatv.phoenixcreations.online/jothibalatv/jothibalatv/playlist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Akash TV",
+          slug: "akash-tv",
+          url: "https://account2.livebox.co.in/AkashTvhls/live.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Vikatan TV",
+          slug: "vikatan-tv",
+          url: "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/vikatan-tv/master.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Vedha TV",
+          slug: "vedha-tv",
+          url: "https://skystream.in/live/vedha6528/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "NTC TV",
+          slug: "ntc-tv",
+          url: "https://galaxyott.live/hls/ntv.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Ultimate TV",
+          slug: "ultimate-tv",
+          url: "https://stream.galaxyott.live/live/utv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Anandham TV 2",
+          slug: "anandham-tv-2",
+          url: "https://stream.galaxyott.live/live/anandhamtv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Strawberry TV",
+          slug: "aaryaa-tv",
+          url: "https://stream.onecloudlive.in/sachintv/strawberrytv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Thulir TV",
+          slug: "thulir-tv",
+          url: "https://view.apserver.in/tmp_hls6/thulirtv/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "MSN TV",
+          slug: "msn-tv",
+          url: "https://ipcloud.live/msntv/msntv/index.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "King TV",
+          slug: "king-tv",
+          url: "https://rtmp.bmlive.net/kingtv/kingtv/stream.m3u8",
+          type: "m3u8",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Kumaran TV",
+          slug: "kumaran-tv",
+          url: "https://stream.rojatv.cloud/kumarantv/gobi/index.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Ganesh TV",
+          slug: "ganesh-tv",
+          url: "https://live.thendralcloud.in/ganeshtvlive/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Mathi TV",
+          slug: "mathi-tv",
+          url: "https://notvstream.in/mathitv/mathitv.m3u8",
+          type: "m3u8",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Visil TV",
+          slug: "visil-tv",
+          url: "https://stream.sscloud7.in/live/vishiltv1/index.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Durai TV",
+          slug: "durai-tv",
+          url: "https://ipcloud.live/duraitv/live/index.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Apple TV Nagercoil",
+          slug: "apple-tv-nagercoil",
+          url: "https://play.applelive.in/appletv/appletv.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Jeyson TV",
+          slug: "jeyson-tv",
+          url: "https://play.applelive.in/jeysontv/jeysontv.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Kumari Kathir TV",
+          slug: "kumari-kathir-tv",
+          url: "https://play.applelive.in/jjmax/jjmax.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "JC TV",
+          slug: "jc-tv",
+          url: "https://play.applelive.in/jctv/jctv.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Digital TV",
+          slug: "digital-tv",
+          url: "https://play.applelive.in/digitaltv/digitaltv.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Veera TV",
+          slug: "veera-tv",
+          url: "https://ipcloud.live/veeratv/veeratvhd/index.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Subash TV",
+          slug: "subash-tv",
+          url: "https://ipcloud.live/subashtv/subashhd/index.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "NTV Trichy",
+          slug: "ntv-trichy",
+          url: "https://notvstream.in/ntv/ntv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Arunai TV",
+          slug: "arunai-tv",
+          url: "https://notvstream.in/arunaitv/arunaitv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "RR TV",
+          slug: "rr-tv",
+          url: "https://notvstream.in/rrtv/rrtv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "SS TV",
+          slug: "ss-tv",
+          url: "https://notvstream.in/sstv/sstv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "UTV Mayuram",
+          slug: "utv-mayuram",
+          url: "https://notvstream.in/utv/utv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Thirumalai TV",
+          slug: "thirumalai-tv",
+          url: "https://notvstream.in/thirumalaitv/thirumalaitv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Subi TV",
+          slug: "subi-tv",
+          url: "https://notvstream.in/subitv/subitv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Hitech TV",
+          slug: "hitech-tv",
+          url: "https://notvstream.in/hitechtv/hitechtv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Orange TV",
+          slug: "orange-tv",
+          url: "https://notvstream.in/orangetv/orangetv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Leo TV",
+          slug: "leo-tv",
+          url: "https://ipcloud.live/leotv/leotvhd/index.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "S TV",
+          slug: "s-tv",
+          url: "https://play.applelive.in/stv/stv.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Aasai TV",
+          slug: "aasai-tv",
+          url: "https://notvstream.in/aasaitv/aasaitv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Aalaya Magimai TV",
+          slug: "aalaya-magimai-tv",
+          url: "https://app.ashokadigital.net/aalayamagimaitv/aalayamagimaitv/index.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "Dheiveegam TV",
+          slug: "dheiveegam-tv",
+          url: "https://stream.singamcloud.in/Dheiveegamtv/Dheiveegamtv/index.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Devotional",
+        },
+        {
+          name: "Amman TV",
+          slug: "amman-tv",
+          url: "https://app.ashokadigital.net/app/7d1a23ef/index.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "Oscar TV",
+          slug: "oscar-tv",
+          url: "https://account21.livebox.co.in/oscartvhls/live.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Temble TV",
+          slug: "temble-tv",
+          url: "https://notvstream.in/tembletv/tembletv.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Devotional",
+        },
+        {
+          name: "Palkar TV",
+          slug: "palkar-tv",
+          url: "https://rtmp.applelive.in/palkartv/palkartv/index.m3u8",
+          type: "mpd",
+          status: "broken",
+          category: "Entertainment",
+        },
+        {
+          name: "Thamil TV",
+          slug: "thamil-tv",
+          url: "https://amigofx.com:1936/tv360/tv360/playlist.m3u8",
+          type: "mpd",
+          status: "working",
+          category: "Entertainment",
+        },
+        {
+          name: "Thanthi TV",
+          slug: "custom-thanthi-tv-1779646726592",
+          url: "https://www.youtube.com/embed/rCra_7vhDlY?si=CSirX8RMVD_PoFLn",
+          type: "embed",
+          custom: true,
+          status: "working",
+          category: "News",
+        },
+        {
+          name: "24x7 Live Tamil Songs",
+          slug: "custom-24x7-live-tamil-songs-1779723567027",
+          url: "https://www.youtube.com/embed/Yb8kSxx9z9M?si=tuWttx1clVWKHSA3",
+          type: "embed",
+          custom: true,
+          fav: true,
+          status: "working",
+          category: "Music",
+        },
+      ];
+
+      const isTV =
+        /TV|SMART-TV|SmartTV|Tizen|Web0S|WebOS|HbbTV|NetCast|Viera|BRAVIA|Android TV/i.test(
+          navigator.userAgent,
+        );
+
+      if (isTV) {
+        document.body.classList.add("tv-mode");
+      }
+
+      let CHANNELS = [];
+      let localChanges = JSON.parse(
+        localStorage.getItem("tltv_lc") ||
+          '{"added":[],"edited":[],"deleted":[]}',
+      );
+      let failedSlugs = JSON.parse(localStorage.getItem("tltv_failed") || "[]");
+      let dislikedSlugs = JSON.parse(
+        localStorage.getItem("tltv_disliked") || "[]",
+      );
+      let scanDone = false;
+
+      // ══════════════════════════════════════════
+      //  BOOTSTRAP
+      // ══════════════════════════════════════════
+      window.onload = async () => {
+        await loadChannels();
+        setInterval(updateClock, 1000);
+        updateClock();
+        buildCatBar();
+        buildSbCatTabs();
+        buildLanding();
+        renderGrid();
+        setupCategoryDropdown();
+      };
+
+      let focusedIndex = 0;
+
+      function getVisibleCards() {
+        return [...document.querySelectorAll(".ch-card")];
+      }
+
+      // 1. Initialize the dropdown items and clicks
+      function setupCategoryDropdown() {
+        const menu = document.getElementById("category-menu");
+        const btn = document.getElementById("category-btn");
+
+        // Populate the menu using your existing CATEGORIES array
+        menu.innerHTML = CATEGORIES.map(
+          (c) =>
+            `<div class="category-item" onclick="setPlayerCategory('${c}')">${c}</div>`,
+        ).join("");
+
+        // Toggle menu visibility when clicking the button
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          menu.style.display =
+            menu.style.display === "block" ? "none" : "block";
+        });
+
+        // Close the menu if the user clicks anywhere else on the screen
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("#category-wrapper")) {
+            menu.style.display = "none";
+          }
+        });
+      }
+
+      // 2. Handle clicking a category from the dropdown
+      window.setPlayerCategory = function (cat) {
+        currentCat = cat; // This updates the main global variable
+        document.getElementById("category-btn").textContent = cat;
+        document.getElementById("category-menu").style.display = "none";
+        showToast(`Category set to: ${cat}`);
+
+        // If the current channel doesn't match the new category, skip to one that does
+        if (
+          currentCat !== "All" &&
+          CHANNELS[currentIdx].category !== currentCat
+        ) {
+          changeChannel(1);
+        }
+      };
+
+      function updateTVFocus() {
+        const cards = getVisibleCards();
+
+        cards.forEach((card) => {
+          card.classList.remove("tv-focus");
+        });
+
+        if (cards[focusedIndex]) {
+          cards[focusedIndex].classList.add("tv-focus");
+
+          cards[focusedIndex].scrollIntoView({
+            block: "center",
+            behavior: "smooth",
+          });
+        }
+      }
+
+      function playFocusedChannel() {
+        const cards = getVisibleCards();
+
+        if (cards[focusedIndex]) {
+          cards[focusedIndex].click();
+        }
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (!isTV) return;
+
+        const cards = getVisibleCards();
+
+        switch (e.key) {
+          case "ArrowDown":
+            e.preventDefault();
+
+            if (focusedIndex < cards.length - 1) {
+              focusedIndex++;
+            }
+
+            updateTVFocus();
+            break;
+
+          case "ArrowUp":
+            e.preventDefault();
+
+            if (focusedIndex > 0) {
+              focusedIndex--;
+            }
+
+            updateTVFocus();
+            break;
+
+          case "Enter":
+            e.preventDefault();
+            playFocusedChannel();
+            break;
+
+          case "Backspace":
+          case "Escape":
+            e.preventDefault();
+            goHome();
+            break;
+        }
+      });
+
+      async function loadChannels() {
+        let base = EMBEDDED_CHANNELS;
+        try {
+          const res = await fetch(MASTER_JSON_PATH + "?t=" + Date.now());
+          if (res.ok) {
+            const data = await res.json();
+            // FIX: Check if it's the new segmented JSON or the old standard array
+            base = Array.isArray(data)
+              ? data
+              : data.all_raw || EMBEDDED_CHANNELS;
+          }
+        } catch (e) {
+          /* use embedded */
+        }
+
+        // Apply local edits
+        CHANNELS = base.filter((c) => !localChanges.deleted.includes(c.slug));
+        localChanges.edited.forEach((ed) => {
+          const i = CHANNELS.findIndex((c) => c.slug === ed.slug);
+          if (i !== -1) CHANNELS[i] = ed;
+          else CHANNELS.push(ed);
+        });
+        localChanges.added.forEach((a) => {
+          if (!CHANNELS.some((c) => c.slug === a.slug)) CHANNELS.push(a);
+        });
+
+        // Restore statuses from last scan
+        const savedStatuses = JSON.parse(
+          localStorage.getItem("tltv_statuses") || "{}",
+        );
+        CHANNELS.forEach((ch) => {
+          if (savedStatuses[ch.slug]) ch.status = savedStatuses[ch.slug];
+        });
+      }
+
+      // ══════════════════════════════════════════
+      //  STATE
+      // ══════════════════════════════════════════
+      let currentIdx = 0;
+      let hls = null;
+      let currentTab = "working";
+      let currentCat = "All";
+      let currentSbCat = "All";
+      let searchQ = "";
+      let sidebarOpen = false;
+      let uiVisible = true;
+      let isMuted = false;
+      let failCount = 0;
+      let editingSlug = null;
+      let uiTimer,
+        osdTimer,
+        switcherTimer,
+        muteTimer,
+        toastTimer,
+        sleepTimer,
+        sleepEndTimer;
+      let sleepMins = 0;
+      let sleepSecsLeft = 0;
+      let scanning = false;
+      const isTVMode = () =>
+        window.matchMedia("(hover:none) and (pointer:coarse)").matches ||
+        /TV|SmartTV|SMART-TV|Tizen|WebOS/i.test(navigator.userAgent);
+
+      const CATEGORIES = [
+        "All",
+        "Entertainment",
+        "News",
+        "Music",
+        "Movies",
+        "Kids",
+        "Devotional",
+        "Documentary",
+        "Sports",
+        "Other",
+      ];
+      const CAT_ICONS = {
+        All: "📺",
+        Entertainment: "🎭",
+        News: "📰",
+        Music: "🎵",
+        Movies: "🎬",
+        Kids: "🧸",
+        Devotional: "🪔",
+        Documentary: "🌍",
+        Sports: "⚽",
+        Other: "📡",
+      };
+
+      // ══════════════════════════════════════════
+      //  LANDING
+      // ══════════════════════════════════════════
+      function buildLanding() {
+        document.querySelectorAll(".tab-btn").forEach((b) => {
+          b.addEventListener("click", () => {
+            document
+              .querySelectorAll(".tab-btn")
+              .forEach((x) => x.classList.remove("active"));
+            b.classList.add("active");
+            currentTab = b.dataset.tab;
+            document.getElementById("section-actions").style.display =
+              currentTab === "manage" ? "flex" : "none";
+            renderGrid();
+          });
+        });
+        document
+          .getElementById("search-input")
+          .addEventListener("input", (e) => {
+            searchQ = e.target.value.toLowerCase();
+            renderGrid();
+          });
+      }
+
+      function buildCatBar() {
+        const bar = document.getElementById("cat-bar");
+        bar.innerHTML = CATEGORIES.map(
+          (c) =>
+            `<div class="cat-pill ${c === currentCat ? "active" : ""}" onclick="selectCat('${c}')">${CAT_ICONS[c] || ""} ${c}</div>`,
+        ).join("");
+      }
+
+      function selectCat(c) {
+        currentCat = c;
+        buildCatBar();
+        renderGrid();
+      }
+
+      function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch((err) => {
+            console.log(`Error: ${err.message}`);
+          });
+        } else {
+          document.exitFullscreen();
+        }
+      }
+
+      // Global Dislike function for the grid cards
+      window.toggleDislike = function (e, slug) {
+        if (e) e.stopPropagation();
+        if (dislikedSlugs.includes(slug)) {
+          dislikedSlugs = dislikedSlugs.filter((s) => s !== slug);
+          showToast("Channel Restored");
+        } else {
+          dislikedSlugs.push(slug);
+          showToast("Channel Hidden");
+        }
+        localStorage.setItem("tltv_disliked", JSON.stringify(dislikedSlugs));
+        renderGrid();
+      };
+
+      // Global Dislike function for inside the video player
+      window.dislikeCurrentAndSkip = function () {
+        if (document.activeElement) document.activeElement.blur(); // Fixes the "stuck selected" bug
+        if (!CHANNELS[currentIdx]) return;
+        const slug = CHANNELS[currentIdx].slug;
+        if (!dislikedSlugs.includes(slug)) {
+          dislikedSlugs.push(slug);
+          localStorage.setItem("tltv_disliked", JSON.stringify(dislikedSlugs));
+        }
+        showToast("Channel Hidden! Skipping...");
+        skipToNext();
+        renderGrid();
+      };
+
+      function filteredChannels() {
+        let list = [...CHANNELS];
+
+        // Apply the universal category filter first
+        if (currentCat !== "All")
+          list = list.filter((c) => c.category === currentCat);
+
+        // Tab filters
+        if (currentTab === "working") {
+          // Strictly prevent explicit 'broken' statuses from appearing here.
+          list = list.filter(
+            (c) =>
+              (c.status === "working" ||
+                (!scanDone &&
+                  c.status !== "broken" &&
+                  c.url &&
+                  !failedSlugs.includes(c.slug))) &&
+              !dislikedSlugs.includes(c.slug),
+          );
+        } else if (currentTab === "all") {
+          list = list.filter((c) => !dislikedSlugs.includes(c.slug));
+        } else if (currentTab === "hidden") {
+          list = list.filter((c) => dislikedSlugs.includes(c.slug));
+        } else if (currentTab === "fav") {
+          list = list.filter(
+            (c) => c.fav === true && !dislikedSlugs.includes(c.slug),
+          );
+        }
+
+        // Hide missing URLs in standard viewing tabs
+        if (
+          currentTab !== "manage" &&
+          currentTab !== "hidden" &&
+          currentTab !== "all"
+        ) {
+          list = list.filter((c) => c.url);
+        }
+
+        // Text search
+        if (searchQ)
+          list = list.filter((c) => c.name.toLowerCase().includes(searchQ));
+        return list;
+      }
+
+      function renderGrid() {
+        const grid = document.getElementById("channel-grid");
+        const list = filteredChannels();
+        const LABELS = {
+          working: "🟢 WORKING CHANNELS",
+          all: "ALL CHANNELS",
+          fav: "FAVOURITES",
+          hidden: "🚫 HIDDEN CHANNELS",
+          manage: "⚙ MANAGE CHANNELS",
+        };
+
+        let labelTxt = LABELS[currentTab] || "CHANNELS";
+        if (currentCat !== "All") labelTxt += ` — ${currentCat.toUpperCase()}`;
+        document.getElementById("section-label").textContent =
+          labelTxt + (searchQ ? ` — "${searchQ}"` : "") + ` (${list.length})`;
+
+        if (!list.length) {
+          const msgs = {
+            working: scanDone
+              ? "No working channels found. Run 🩺 Scan first."
+              : "No channels available. Run 🩺 Scan to check live status.",
+            fav: "No favourites yet. ❤ a channel!",
+            hidden: "No hidden channels.",
+          };
+          grid.innerHTML = `<div class="no-results">${msgs[currentTab] || "No channels found."}</div>`;
+          return;
+        }
+
+        grid.innerHTML = list
+          .map((ch) => {
+            const idx = CHANNELS.indexOf(ch);
+            const initials = ch.name
+              .split(" ")
+              .slice(0, 2)
+              .map((w) => w[0] || "")
+              .join("")
+              .toUpperCase();
+            const tc =
+              {
+                m3u8: "badge-m3u8",
+                mpd: "badge-mpd",
+                yupptv: "badge-yupptv",
+                embed: "badge-embed",
+              }[ch.type] || "badge-m3u8";
+            const isFav = ch.fav === true;
+            const isDisliked = dislikedSlugs.includes(ch.slug);
+            const hasScan = ch.status === "working" || ch.status === "broken";
+            const statusDot = hasScan
+              ? `<div class="status-dot ${ch.status === "working" ? "sd-working" : "sd-broken"}"></div>`
+              : "";
+            const cardCls =
+              ch.status === "broken"
+                ? "status-broken"
+                : ch.status === "working"
+                  ? "status-working"
+                  : "";
+
+            if (currentTab === "manage") {
+              const statusText = !ch.url
+                ? "NO URL"
+                : ch.status === "broken"
+                  ? "BROKEN"
+                  : (ch.type || "").toUpperCase();
+              const badgeCls =
+                !ch.url || ch.status === "broken" ? "badge-missing" : tc;
+              return `<div class="ch-card ${cardCls}" tabindex="0" onclick="openEditModal(event,'${ch.slug}')" onkeydown="if(event.key==='Enter')openEditModal(null,'${ch.slug}')">
+        ${statusDot}
+        <div class="ch-avatar" style="background:rgba(244,162,97,.15);color:var(--accent2)">✎</div>
+        <div class="ch-name-card">${ch.name}</div>
+        <span class="ch-type-badge ${badgeCls}">${statusText}</span>
+        <span class="cat-label-chip">${ch.category || "—"}</span>
+      </div>`;
+            }
+
+            return `<div class="ch-card ${cardCls}" tabindex="0" onclick="launchChannel(${idx})" onkeydown="if(event.key==='Enter'||event.key===' ')launchChannel(${idx})">
+      ${hasScan ? statusDot : `<span class="ch-num">${idx + 1}</span>`}
+      <button class="dislike-btn ${isDisliked ? "disliked" : ""}" onclick="toggleDislike(event,'${ch.slug}')" title="Hide/Unhide">👎</button>
+      <button class="fav-btn ${isFav ? "faved" : ""}" onclick="toggleFav(event,'${ch.slug}')">${isFav ? "❤" : "♡"}</button>
+      <div class="ch-avatar">${initials}</div>
+      <div class="ch-name-card">${ch.name}</div>
+      <span class="ch-type-badge ${tc}">${(ch.type || "").toUpperCase()}</span>
+      <span class="cat-label-chip">${ch.category || "—"}</span>
+    </div>`;
+          })
+          .join("");
+        if (isTV) {
+          setTimeout(updateTVFocus, 500);
+        }
+      }
+
+      // ══════════════════════════════════════════
+      //  HEALTH SCANNER
+      // ══════════════════════════════════════════
+      async function runHealthScanner() {
+        if (scanning) return;
+        if (
+          !confirm(
+            `This will check all ${CHANNELS.length} channels. It may take 2-3 minutes. Working channels will become the default landing. Continue?`,
+          )
+        )
+          return;
+        scanning = true;
+        scanDone = false;
+        document.getElementById("scan-btn").textContent = "⏳ Scanning…";
+        document.getElementById("scan-bar").classList.add("show");
+        document.getElementById("scan-text").classList.add("show");
+
+        let working = 0,
+          broken = 0;
+        const statuses = {};
+        const CONCURRENCY = 6;
+        let queue = [...CHANNELS];
+        let activeWorkers = 0;
+        let processed = 0;
+
+        await new Promise((resolve) => {
+          function runNext() {
+            if (queue.length === 0 && activeWorkers === 0) {
+              resolve();
+              return;
+            }
+            while (activeWorkers < CONCURRENCY && queue.length > 0) {
+              const ch = queue.shift();
+              activeWorkers++;
+              testChannel(ch).then((ok) => {
+                ch.status = ok ? "working" : "broken";
+                statuses[ch.slug] = ch.status;
+                if (ok) working++;
+                else broken++;
+                processed++;
+                const pct = Math.round((processed / CHANNELS.length) * 100);
+                document.getElementById("scan-fill").style.width = pct + "%";
+                document.getElementById("scan-text").textContent =
+                  `🩺 Scanning ${processed}/${CHANNELS.length} — ✅ ${working} Working | ❌ ${broken} Broken | Checking: ${ch.name}`;
+                activeWorkers--;
+                runNext();
+              });
+            }
+          }
+          runNext();
+        });
+
+        localStorage.setItem("tltv_statuses", JSON.stringify(statuses));
+        saveLocalChanges();
+        scanDone = true;
+        scanning = false;
+        document.getElementById("scan-btn").textContent = "🩺 Re-Scan";
+        document.getElementById("scan-text").textContent =
+          `✅ Scan Complete — ${working} Working | ${broken} Broken. Working tab is now your live channel list.`;
+        // Switch to working tab
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document.querySelector('[data-tab="working"]').classList.add("active");
+        currentTab = "working";
+        renderGrid();
+      }
+
+      function testChannel(ch) {
+        return new Promise((resolve) => {
+          if (!ch.url) {
+            resolve(false);
+            return;
+          }
+          if (
+            ch.type === "embed" ||
+            ch.type === "yupptv" ||
+            ch.url.includes("youtube") ||
+            ch.url.includes("youtu.be")
+          ) {
+            resolve(true);
+            return;
+          }
+          const timeout = setTimeout(() => {
+            try {
+              hlsT && hlsT.destroy();
+            } catch (e) {}
+            resolve(false);
+          }, 7000);
+          let hlsT = null;
+          if (
+            (ch.url.includes(".m3u8") || ch.url.includes("m3u8")) &&
+            Hls.isSupported()
+          ) {
+            hlsT = new Hls({
+              manifestLoadingTimeOut: 6000,
+              manifestLoadingMaxRetry: 0,
+            });
+            hlsT.loadSource(ch.url);
+            hlsT.on(Hls.Events.MANIFEST_PARSED, () => {
+              clearTimeout(timeout);
+              hlsT.destroy();
+              resolve(true);
+            });
+            hlsT.on(Hls.Events.ERROR, (_, d) => {
+              if (d.fatal) {
+                clearTimeout(timeout);
+                hlsT.destroy();
+                resolve(false);
+              }
+            });
+          } else {
+            const v = document.createElement("video");
+            v.src = ch.url;
+            v.onloadedmetadata = () => {
+              clearTimeout(timeout);
+              resolve(true);
+            };
+            v.onerror = () => {
+              clearTimeout(timeout);
+              resolve(false);
+            };
+          }
+        });
+      }
+
+      // ══════════════════════════════════════════
+      //  CHANNEL LAUNCH
+      // ══════════════════════════════════════════
+      function launchChannel(idx) {
+        if (idx < 0 || idx >= CHANNELS.length) return;
+        const ch = CHANNELS[idx];
+        if (!ch.url) {
+          showToast("No stream URL for this channel");
+          return;
+        }
+        currentIdx = idx;
+        failCount = 0;
+        clearTimeout(window._skipTimeout);
+        document.getElementById("landing").classList.add("hidden");
+        document.getElementById("player-view").classList.add("active");
+        loadStream(ch);
+        showOSD();
+        showUI();
+        buildSidebar();
+        updateFavBtns();
+        document.getElementById("remote-btns").classList.add("show");
+      }
+
+      function goHome() {
+        stopStream();
+        clearTimeout(window._skipTimeout);
+        document.getElementById("player-view").classList.remove("active");
+        document.getElementById("landing").classList.remove("hidden");
+        document.getElementById("ch-sidebar").classList.remove("open");
+        sidebarOpen = false;
+        renderGrid();
+      }
+
+      // ══════════════════════════════════════════
+      //  STREAM LOADER
+      // ══════════════════════════════════════════
+      function loadStream(ch) {
+        hideError();
+        showLoading(ch.name);
+        clearTimeout(window._loadTimeout);
+        clearTimeout(window._skipTimeout);
+        const video = document.getElementById("video-el");
+        const iframe = document.getElementById("embed-iframe");
+        video.style.display = "block";
+        iframe.style.display = "none";
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+        if (hls) {
+          hls.destroy();
+          hls = null;
+        }
+        iframe.src = "about:blank";
+
+        let url = ch.url;
+
+        // ─ YouTube & embeds
+        if (
+          ch.type === "yupptv" ||
+          ch.type === "embed" ||
+          url.includes("youtube.com") ||
+          url.includes("youtu.be")
+        ) {
+          iframe.style.display = "block";
+          video.style.display = "none";
+          let vId = null;
+          if (url.includes("youtube.com/watch?v="))
+            vId = new URL(url).searchParams.get("v");
+          else if (url.includes("youtu.be/"))
+            vId = url.split("youtu.be/")[1].split("?")[0];
+          else if (url.includes("youtube.com/embed/"))
+            vId = url.split("youtube.com/embed/")[1].split("?")[0];
+          else if (url.includes("youtube.com/live/"))
+            vId = url.split("youtube.com/live/")[1].split("?")[0];
+          if (vId)
+            url = `https://www.youtube.com/embed/${vId}?autoplay=1&mute=${isMuted ? 1 : 0}&controls=0&disablekb=1&enablejsapi=1&playsinline=1&rel=0`;
+          iframe.src = url;
+          iframe.style.background = "#000";
+          hideLoading();
+          return;
+        }
+
+        // ─ HLS
+        const isHLS = /\.m3u8|m3u8|chunks|playlist|index/i.test(url);
+        if (isHLS && Hls.isSupported()) {
+          hls = new Hls({
+            enableWorker: true,
+            lowLatencyMode: true,
+            backBufferLength: 30,
+            manifestLoadingTimeOut: 12000,
+            manifestLoadingMaxRetry: 1,
+          });
+          hls.loadSource(url);
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            video.muted = isMuted;
+            video.play().catch(() => {
+              video.muted = true;
+              video.play().catch(() => {});
+            });
+            hideLoading();
+          });
+          hls.on(Hls.Events.ERROR, (_, d) => {
+            if (d.fatal) onStreamError(ch);
+          });
+        } else if (
+          isHLS &&
+          video.canPlayType("application/vnd.apple.mpegurl")
+        ) {
+          video.src = url;
+          video.muted = isMuted;
+          video.addEventListener(
+            "loadedmetadata",
+            () => {
+              video.play().catch(() => {});
+              hideLoading();
+            },
+            { once: true },
+          );
+          video.addEventListener("error", () => onStreamError(ch), {
+            once: true,
+          });
+        } else {
+          video.src = url;
+          video.muted = isMuted;
+          video.addEventListener(
+            "canplay",
+            () => {
+              video.play().catch(() => {});
+              hideLoading();
+            },
+            { once: true },
+          );
+          video.addEventListener("error", () => onStreamError(ch), {
+            once: true,
+          });
+        }
+        window._loadTimeout = setTimeout(() => {
+          if (
+            !document
+              .getElementById("loading-overlay")
+              .classList.contains("hidden")
+          )
+            onStreamError(ch);
+        }, 13000);
+      }
+
+      function onStreamError(ch) {
+        clearTimeout(window._loadTimeout);
+        if (!failedSlugs.includes(ch.slug)) {
+          failedSlugs.push(ch.slug);
+          localStorage.setItem("tltv_failed", JSON.stringify(failedSlugs));
+        }
+        ch.status = "broken";
+        failCount++;
+        if (failCount < 8) {
+          showSkipBanner();
+          clearTimeout(window._skipTimeout);
+          window._skipTimeout = setTimeout(skipToNext, 2200);
+        } else {
+          failCount = 0;
+          showError("Too many failures. Please pick another channel.");
+        }
+      }
+
+      function skipToNext() {
+        hideError();
+        document.getElementById("skip-banner").classList.remove("show");
+        let tries = 0,
+          next = (currentIdx + 1) % CHANNELS.length;
+
+        // Skip broken, hidden, missing URLs, AND ensure category match
+        while (
+          (CHANNELS[next].status === "broken" ||
+            failedSlugs.includes(CHANNELS[next].slug) ||
+            dislikedSlugs.includes(CHANNELS[next].slug) ||
+            !CHANNELS[next].url ||
+            (currentCat !== "All" && CHANNELS[next].category !== currentCat)) &&
+          tries < CHANNELS.length
+        ) {
+          next = (next + 1) % CHANNELS.length;
+          tries++;
+        }
+        currentIdx = next;
+        failCount = 0;
+        loadStream(CHANNELS[currentIdx]);
+        showOSD();
+        buildSidebar();
+        updateFavBtns();
+      }
+
+      function retryStream() {
+        failedSlugs = failedSlugs.filter(
+          (s) => s !== CHANNELS[currentIdx].slug,
+        );
+        localStorage.setItem("tltv_failed", JSON.stringify(failedSlugs));
+        CHANNELS[currentIdx].status = null;
+        failCount = 0;
+        hideError();
+        loadStream(CHANNELS[currentIdx]);
+      }
+
+      function stopStream() {
+        clearTimeout(window._loadTimeout);
+        clearTimeout(window._skipTimeout);
+        const v = document.getElementById("video-el");
+        if (hls) {
+          hls.destroy();
+          hls = null;
+        }
+        v.pause();
+        v.removeAttribute("src");
+        v.load();
+        document.getElementById("embed-iframe").src = "about:blank";
+      }
+
+      function showLoading(n) {
+        document.getElementById("loading-overlay").classList.remove("hidden");
+        document.getElementById("loading-name").textContent = n || "Loading…";
+        document.getElementById("loading-sub").textContent = "Connecting…";
+      }
+      function hideLoading() {
+        clearTimeout(window._loadTimeout);
+        document.getElementById("loading-overlay").classList.add("hidden");
+      }
+      function showError(m) {
+        hideLoading();
+        document.getElementById("error-overlay").classList.add("show");
+        if (m) document.getElementById("err-msg").textContent = m;
+      }
+      function hideError() {
+        document.getElementById("error-overlay").classList.remove("show");
+      }
+
+      // ══════════════════════════════════════════
+      //  OSD & UI
+      // ══════════════════════════════════════════
+      function showOSD() {
+        if (!CHANNELS[currentIdx]) return;
+        const ch = CHANNELS[currentIdx];
+        document.getElementById("osd-cat").textContent =
+          (CAT_ICONS[ch.category] || "📡") + " " + (ch.category || "");
+        document.getElementById("osd-num").textContent = `CH ${currentIdx + 1}`;
+        document.getElementById("osd-name").textContent = ch.name;
+        document.getElementById("osd-type").textContent = (
+          ch.type || ""
+        ).toUpperCase();
+        const osd = document.getElementById("ch-osd");
+        osd.classList.add("show");
+        clearTimeout(osdTimer);
+        osdTimer = setTimeout(() => osd.classList.remove("show"), 2400);
+      }
+
+      function toggleMute() {
+        isMuted = !isMuted;
+        document.getElementById("video-el").muted = isMuted;
+        const iframe = document.getElementById("embed-iframe");
+        if (iframe.style.display === "block" && iframe.contentWindow)
+          iframe.contentWindow.postMessage(
+            JSON.stringify({
+              event: "command",
+              func: isMuted ? "mute" : "unMute",
+            }),
+            "*",
+          );
+        const icon = isMuted ? "🔇" : "🔊";
+        const muteBadge = document.getElementById("mute-badge");
+        const muteBtn = document.getElementById("mute-btn");
+        const muteRemote = document.getElementById("mute-remote");
+        if (muteBadge) {
+          muteBadge.textContent = icon;
+          muteBadge.classList.add("show");
+        }
+        if (muteBtn) muteBtn.textContent = icon;
+        if (muteRemote) muteRemote.textContent = icon;
+        clearTimeout(muteTimer);
+        muteTimer = setTimeout(() => muteBadge?.classList.remove("show"), 1400);
+        showUI();
+      }
+
+      function showUI() {
+        uiVisible = true;
+        ["tv-topbar", "kb-hints", "remote-btns"].forEach((id) =>
+          document.getElementById(id).classList.add("show"),
+        );
+        clearTimeout(uiTimer);
+        uiTimer = setTimeout(hideUI, 5000);
+      }
+      function hideUI() {
+        if (sidebarOpen) return;
+        uiVisible = false;
+        document.getElementById("tv-topbar").classList.remove("show");
+        document.getElementById("kb-hints").classList.remove("show");
+        if (!isTVMode())
+          document.getElementById("remote-btns").classList.remove("show");
+      }
+
+      document
+        .getElementById("player-view")
+        .addEventListener("mousemove", showUI);
+      document.getElementById("player-view").addEventListener("click", (e) => {
+        const sb = document.getElementById("ch-sidebar");
+        if (
+          !sb.contains(e.target) &&
+          !e.target.closest("#tv-topbar") &&
+          !e.target.closest("#remote-btns")
+        ) {
+          if (!uiVisible) showUI();
+          else hideUI();
+        }
+      });
+
+      function showToast(msg) {
+        const t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
+      }
+      function showSkipBanner() {
+        const b = document.getElementById("skip-banner");
+        b.classList.add("show");
+        setTimeout(() => b.classList.remove("show"), 2100);
+      }
+
+      // ══════════════════════════════════════════
+      //  CHANNEL NAVIGATION
+      // ══════════════════════════════════════════
+      function changeChannel(dir) {
+        if (document.activeElement) document.activeElement.blur(); // Unfocus buttons
+        clearTimeout(window._skipTimeout);
+        let next = (currentIdx + dir + CHANNELS.length) % CHANNELS.length,
+          tries = 0;
+
+        // Skip broken, hidden, missing URLs, AND ensure category match from dropdown
+        while (
+          (CHANNELS[next].status === "broken" ||
+            failedSlugs.includes(CHANNELS[next].slug) ||
+            dislikedSlugs.includes(CHANNELS[next].slug) ||
+            !CHANNELS[next].url ||
+            (currentCat !== "All" && CHANNELS[next].category !== currentCat)) &&
+          tries < CHANNELS.length
+        ) {
+          next = (next + dir + CHANNELS.length) % CHANNELS.length;
+          tries++;
+        }
+
+        currentIdx = next;
+        failCount = 0;
+        showSwitcher();
+        loadStream(CHANNELS[currentIdx]);
+        showOSD();
+        buildSidebar();
+        updateFavBtns();
+      }
+
+      function showSwitcher() {
+        const L = CHANNELS.length;
+        document.getElementById("sw-prev").textContent =
+          "▲ " + CHANNELS[(currentIdx - 1 + L) % L].name;
+        document.getElementById("sw-curr").textContent =
+          CHANNELS[currentIdx].name;
+        document.getElementById("sw-next").textContent =
+          "▼ " + CHANNELS[(currentIdx + 1) % L].name;
+        const sw = document.getElementById("ch-switcher");
+        sw.classList.add("show");
+        clearTimeout(switcherTimer);
+        switcherTimer = setTimeout(() => sw.classList.remove("show"), 2000);
+      }
+
+      // ══════════════════════════════════════════
+      //  SIDEBAR
+      // ══════════════════════════════════════════
+      function buildSbCatTabs() {
+        const tabs = document.getElementById("sb-cat-tabs");
+        tabs.innerHTML = ["All", ...CATEGORIES.filter((c) => c !== "All")]
+          .map(
+            (c) =>
+              `<button type="button" class="sb-cat ${c === currentSbCat ? "active" : ""}" onclick="setSbCat('${c}')">${CAT_ICONS[c] || ""} ${c}</button>`,
+          )
+          .join("");
+      }
+      function setSbCat(c) {
+        currentSbCat = c;
+        buildSbCatTabs();
+        buildSidebar();
+      }
+
+      function buildSidebar() {
+        const q = document.getElementById("sidebar-search").value.toLowerCase();
+        let list = CHANNELS.filter(
+          (c) =>
+            c.url &&
+            !dislikedSlugs.includes(c.slug) &&
+            (currentSbCat === "All" || c.category === currentSbCat) &&
+            (!q || c.name.toLowerCase().includes(q)),
+        );
+        document.getElementById("sidebar-list").innerHTML = list
+          .map((ch) => {
+            const idx = CHANNELS.indexOf(ch);
+            const tc =
+              {
+                m3u8: "badge-m3u8",
+                mpd: "badge-mpd",
+                yupptv: "badge-yupptv",
+                embed: "badge-embed",
+              }[ch.type] || "badge-m3u8";
+            const wd =
+              ch.status === "working"
+                ? "ok"
+                : ch.status === "broken"
+                  ? "bad"
+                  : "";
+            return `<div class="sidebar-item ${idx === currentIdx ? "active-si" : ""}" tabindex="0"
+      onclick="launchChannel(${idx})" onkeydown="if(event.key==='Enter')launchChannel(${idx})">
+      ${wd ? `<div class="si-wd ${wd}"></div>` : `<span class="si-num">${idx + 1}</span>`}
+      <span class="si-name">${ch.name}</span>
+      <span class="si-badge ${tc}">${(ch.type || "").toUpperCase()}</span>
+    </div>`;
+          })
+          .join("");
+        const active = document.querySelector(".sidebar-item.active-si");
+        if (active && sidebarOpen)
+          active.scrollIntoView({ block: "center", behavior: "smooth" });
+      }
+      document
+        .getElementById("sidebar-search")
+        .addEventListener("input", buildSidebar);
+
+      function toggleSidebar() {
+        sidebarOpen = !sidebarOpen;
+        document
+          .getElementById("ch-sidebar")
+          .classList.toggle("open", sidebarOpen);
+        if (sidebarOpen) {
+          buildSidebar();
+          showUI();
+        }
+      }
+      function closeSidebar() {
+        sidebarOpen = false;
+        document.getElementById("ch-sidebar").classList.remove("open");
+      }
+
+      // ══════════════════════════════════════════
+      //  FAVOURITES
+      // ══════════════════════════════════════════
+      function toggleFav(e, slug) {
+        e.stopPropagation();
+        const ch = CHANNELS.find((c) => c.slug === slug);
+        if (!ch) return;
+        ch.fav = !ch.fav;
+        upsertEdit(ch);
+        saveLocalChanges();
+        const btn = e.currentTarget;
+        btn.classList.toggle("faved", ch.fav);
+        btn.textContent = ch.fav ? "❤" : "♡";
+        btn.classList.add("pop");
+        btn.addEventListener(
+          "animationend",
+          () => btn.classList.remove("pop"),
+          { once: true },
+        );
+        if (currentTab === "fav") renderGrid();
+        updateFavBtns();
+      }
+      function toggleFavCurrent() {
+        if (!CHANNELS[currentIdx]) return;
+        const ch = CHANNELS[currentIdx];
+        ch.fav = !ch.fav;
+        upsertEdit(ch);
+        saveLocalChanges();
+        updateFavBtns();
+        showToast(ch.fav ? "❤ Added to favourites" : "Removed from favourites");
+        showUI();
+      }
+      function isFav(slug) {
+        const ch = CHANNELS.find((c) => c.slug === slug);
+        return ch && ch.fav === true;
+      }
+      function updateFavBtns() {
+        if (!CHANNELS[currentIdx]) return;
+        const ch = CHANNELS[currentIdx];
+        const favBtn = document.getElementById("fav-topbar-btn");
+
+        if (favBtn) {
+          favBtn.textContent = ch.fav === true ? "❤" : "🤍";
+        }
+      }
+
+      // ══════════════════════════════════════════
+      //  ADD / EDIT / DELETE
+      // ══════════════════════════════════════════
+      function openAddModal() {
+        editingSlug = null;
+        document.getElementById("modal-title").textContent = "+ ADD CHANNEL";
+        document.getElementById("add-name").value = "";
+        document.getElementById("add-url").value = "";
+        document.getElementById("add-type").value = "m3u8";
+        document.getElementById("add-cat").value = "Entertainment";
+        document.getElementById("del-btn").style.display = "none";
+        document.getElementById("modal-extra-actions").style.display = "flex";
+        document.getElementById("add-modal").classList.add("show");
+      }
+      function openEditModal(e, slug) {
+        if (e) e.stopPropagation();
+        const ch = CHANNELS.find((c) => c.slug === slug);
+        if (!ch) return;
+        editingSlug = slug;
+        document.getElementById("modal-title").textContent = "✎ EDIT CHANNEL";
+        document.getElementById("add-name").value = ch.name || "";
+        document.getElementById("add-url").value = ch.url || "";
+        document.getElementById("add-type").value = ch.type || "m3u8";
+        document.getElementById("add-cat").value =
+          ch.category || "Entertainment";
+        document.getElementById("del-btn").style.display = "inline-block";
+        document.getElementById("modal-extra-actions").style.display = "none";
+        document.getElementById("add-modal").classList.add("show");
+      }
+      function closeAddModal() {
+        document.getElementById("add-modal").classList.remove("show");
+      }
+
+      function saveChannel() {
+        const name = document.getElementById("add-name").value.trim();
+        const url = document.getElementById("add-url").value.trim();
+        const type = document.getElementById("add-type").value;
+        const cat = document.getElementById("add-cat").value;
+        if (!name || !url) {
+          alert("Name and URL are required.");
+          return;
+        }
+        if (editingSlug) {
+          const ch = CHANNELS.find((c) => c.slug === editingSlug);
+          if (ch) {
+            ch.name = name;
+            ch.url = url;
+            ch.type = type;
+            ch.category = cat;
+            ch.status = null;
+            upsertEdit(ch);
+          }
+        } else {
+          const slug = "custom-" + Date.now();
+          const ch = {
+            name,
+            slug,
+            url,
+            type,
+            category: cat,
+            custom: true,
+            fav: false,
+          };
+          CHANNELS.push(ch);
+          localChanges.added.push(ch);
+        }
+        saveLocalChanges();
+        closeAddModal();
+        renderGrid();
+        buildSidebar();
+      }
+
+      function deleteChannel() {
+        if (!editingSlug || !confirm("Delete this channel?")) return;
+        CHANNELS = CHANNELS.filter((c) => c.slug !== editingSlug);
+        localChanges.deleted.push(editingSlug);
+        localChanges.added = localChanges.added.filter(
+          (c) => c.slug !== editingSlug,
+        );
+        localChanges.edited = localChanges.edited.filter(
+          (c) => c.slug !== editingSlug,
+        );
+        saveLocalChanges();
+        closeAddModal();
+        renderGrid();
+        buildSidebar();
+      }
+
+      function upsertEdit(ch) {
+        const i = localChanges.edited.findIndex((x) => x.slug === ch.slug);
+        if (i >= 0) localChanges.edited[i] = ch;
+        else localChanges.edited.push(ch);
+      }
+      function saveLocalChanges() {
+        localStorage.setItem("tltv_lc", JSON.stringify(localChanges));
+      }
+
+      // ══════════════════════════════════════════
+      //  EXPORT / IMPORT (Updated: Segmented Export)
+      // ══════════════════════════════════════════
+      function exportMasterJSON() {
+        const segmented = {
+          working: CHANNELS.filter(
+            (c) => c.status === "working" && !dislikedSlugs.includes(c.slug),
+          ),
+          broken: CHANNELS.filter(
+            (c) => c.status === "broken" && !dislikedSlugs.includes(c.slug),
+          ),
+          hidden: CHANNELS.filter((c) => dislikedSlugs.includes(c.slug)),
+          all_raw: CHANNELS,
+        };
+        const blob = new Blob([JSON.stringify(segmented, null, 2)], {
+          type: "application/json",
+        });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "segmented_tamil_tv_sources.json";
+        a.click();
+        localChanges = { added: [], edited: [], deleted: [] };
+        saveLocalChanges();
+        showToast("Segmented JSON Downloaded!");
+      }
+
+      function exportM3U() {
+        let m3u = "#EXTM3U";
+        CHANNELS.forEach((ch) => {
+          if (
+            ch.url &&
+            ch.type !== "embed" &&
+            !ch.url.includes("youtube") &&
+            !dislikedSlugs.includes(ch.slug)
+          )
+            m3u += `#EXTINF:-1 tvg-id="${ch.slug}" tvg-name="${ch.name}" group-title="${ch.category || "Tamil"}",${ch.name}\n${ch.url}\n`;
+        });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([m3u], { type: "text/plain" }));
+        a.download = "TamilLiveTV.m3u";
+        a.click();
+      }
+      function clearBrokenCache() {
+        failedSlugs = [];
+        localStorage.removeItem("tltv_failed");
+        CHANNELS.forEach((c) => {
+          if (c.status === "broken") c.status = null;
+        });
+        localStorage.removeItem("tltv_statuses");
+        scanDone = false;
+        renderGrid();
+        showToast("Broken cache cleared!");
+      }
+      function importFile() {
+        document.getElementById("import-file").click();
+      }
+      function importChannels(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        const r = new FileReader();
+        r.onload = (ev) => {
+          try {
+            let imp = JSON.parse(ev.target.result);
+            // FIX: Allow importing of segmented JSON
+            if (!Array.isArray(imp) && imp.all_raw) imp = imp.all_raw;
+            if (!Array.isArray(imp)) throw new Error("Not an array");
+
+            let count = 0;
+            imp.forEach((c) => {
+              if (!c.name || !c.url) return;
+              if (!c.slug)
+                c.slug =
+                  "custom-" +
+                  Date.now() +
+                  "-" +
+                  Math.random().toString(36).slice(2);
+              if (!c.type) c.type = "m3u8";
+              if (!c.category) c.category = "Entertainment";
+              c.custom = true;
+              if (!CHANNELS.some((x) => x.slug === c.slug)) {
+                CHANNELS.push(c);
+                localChanges.added.push(c);
+                count++;
+              }
+            });
+            saveLocalChanges();
+            renderGrid();
+            buildSidebar();
+            alert(`Imported ${count} channels!`);
+          } catch (err) {
+            alert("Invalid JSON: " + err.message);
+          }
+        };
+        r.readAsText(file);
+        e.target.value = "";
+      }
+
+      // ══════════════════════════════════════════
+      //  SLEEP TIMER
+      // ══════════════════════════════════════════
+      function openSleepModal() {
+        document.getElementById("sleep-modal").classList.add("show");
+        document
+          .querySelectorAll(".sleep-opt")
+          .forEach((o) => o.classList.remove("active-sleep"));
+      }
+      function setSleep(mins) {
+        clearTimeout(sleepEndTimer);
+        clearInterval(sleepTimer);
+        document.getElementById("sleep-modal").classList.remove("show");
+        if (mins === 0) {
+          sleepMins = 0;
+          document.getElementById("sleep-countdown").classList.remove("show");
+          showToast("Sleep timer cancelled");
+          return;
+        }
+        sleepMins = mins;
+        sleepSecsLeft = mins * 60;
+        document.getElementById("sleep-countdown").classList.add("show");
+        updateSleepDisplay();
+        sleepTimer = setInterval(() => {
+          sleepSecsLeft--;
+          updateSleepDisplay();
+          if (sleepSecsLeft <= 0) {
+            clearInterval(sleepTimer);
+            sleepOff();
+          }
+        }, 1000);
+        showToast(`Sleep timer set for ${mins} min`);
+      }
+      function updateSleepDisplay() {
+        const m = Math.floor(sleepSecsLeft / 60),
+          s = sleepSecsLeft % 60;
+        document.getElementById("sleep-countdown").textContent =
+          `⏱ ${m}:${s.toString().padStart(2, "0")}`;
+      }
+      function sleepOff() {
+        stopStream();
+        document.getElementById("player-view").classList.remove("active");
+        document.getElementById("landing").classList.remove("hidden");
+        document.getElementById("sleep-countdown").classList.remove("show");
+        sidebarOpen = false;
+        renderGrid();
+        showToast("Sleep timer ended. Goodnight! 🌙");
+      }
+
+      // ══════════════════════════════════════════
+      //  CLOCK
+      // ══════════════════════════════════════════
+      function updateClock() {
+        document.getElementById("clock-tv").textContent =
+          new Date().toLocaleTimeString("en-IN", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+      }
+
+      // ══════════════════════════════════════════
+      //  KEYBOARD — all devices
+      // ══════════════════════════════════════════
+      const KEY_MAP = {
+        ArrowUp: () => changeChannel(-1),
+        ArrowDown: () => changeChannel(1),
+        ArrowLeft: () => changeChannel(-1),
+        ArrowRight: () => changeChannel(1),
+        PageUp: () => changeChannel(-1),
+        PageDown: () => changeChannel(1),
+        ChannelUp: () => changeChannel(-1),
+        ChannelDown: () => changeChannel(1),
+        MediaTrackPrevious: () => changeChannel(-1),
+        MediaTrackNext: () => changeChannel(1),
+        m: toggleMute,
+        M: toggleMute,
+        AudioVolumeMute: toggleMute,
+        MediaVolumeMute: toggleMute,
+        VolumeMute: toggleMute,
+        l: toggleSidebar,
+        L: toggleSidebar,
+        h: goHome,
+        H: goHome,
+        GoBack: () => {
+          if (sidebarOpen) closeSidebar();
+          else goHome();
+        },
+        Back: () => {
+          if (sidebarOpen) closeSidebar();
+          else goHome();
+        },
+        BrowserBack: () => {
+          if (sidebarOpen) closeSidebar();
+          else goHome();
+        },
+        f: toggleFavCurrent,
+        F: toggleFavCurrent,
+        Escape: () => {
+          if (sidebarOpen) closeSidebar();
+          else hideUI();
+        },
+        MediaPlay: () =>
+          document
+            .getElementById("video-el")
+            .play()
+            .catch(() => {}),
+        MediaPause: () => document.getElementById("video-el").pause(),
+        MediaPlayPause: () => {
+          const v = document.getElementById("video-el");
+          v.paused ? v.play().catch(() => {}) : v.pause();
+        },
+        427: () => changeChannel(1),
+        428: () => changeChannel(-1),
+        VolumeUp: null,
+        VolumeDown: null,
+      };
+
+      document.addEventListener("keydown", (e) => {
+        const inPlayer = document
+          .getElementById("player-view")
+          .classList.contains("active");
+        if (!inPlayer) return;
+        const fn = KEY_MAP[e.key] || KEY_MAP[e.keyCode];
+        if (fn && e.key !== "VolumeUp" && e.key !== "VolumeDown") {
+          e.preventDefault();
+          fn();
+          showUI();
+        }
+      });
+
+      // Touch / swipe
+      let tx = null,
+        ty = null;
+      document.getElementById("player-view").addEventListener(
+        "touchstart",
+        (e) => {
+          tx = e.touches[0].clientX;
+          ty = e.touches[0].clientY;
+        },
+        { passive: true },
+      );
+      document.getElementById("player-view").addEventListener(
+        "touchend",
+        (e) => {
+          if (tx === null) return;
+          const dx = tx - e.changedTouches[0].clientX,
+            dy = ty - e.changedTouches[0].clientY;
+          if (Math.abs(dy) > 80 && Math.abs(dy) > Math.abs(dx)) {
+            changeChannel(dy > 0 ? 1 : -1);
+            showUI();
+          } else if (Math.abs(dx) > 80 && Math.abs(dx) > Math.abs(dy)) {
+            if (dx > 0) toggleSidebar();
+            else goHome();
+          }
+          tx = ty = null;
+        },
+        { passive: true },
+      );
+
+      // ══════════════════════════════════════════
+      //  CONSOLE UTILS
+      // ══════════════════════════════════════════
+      window.resetAll = () => {
+        localStorage.clear();
+        location.reload();
+      };
+      window.resetFailed = () => {
+        failedSlugs = [];
+        localStorage.removeItem("tltv_failed");
+        CHANNELS.forEach((c) => {
+          if (c.status === "broken") c.status = null;
+        });
+        localStorage.removeItem("tltv_statuses");
+        scanDone = false;
+        renderGrid();
+      };
+    </script>
+  </body>
+</html>
